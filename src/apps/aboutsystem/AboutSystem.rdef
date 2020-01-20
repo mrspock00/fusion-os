@@ -1,0 +1,40 @@
+
+resource app_signature "application/x-vnd.Haiku-About";
+
+resource app_name_catalog_entry "x-vnd.Haiku-About:System name:AboutSystem";
+
+resource app_version {
+	major  = 1,
+	middle = 0,
+	minor  = 0,
+
+	variety = B_APPV_BETA,
+
+	internal = 0,
+
+	short_info = "AboutHaiku",
+	long_info = "AboutHaiku ©2005-2009 Haiku, Inc."
+};
+
+resource app_flags B_SINGLE_LAUNCH;
+
+#ifdef HAIKU_DISTRO_COMPATIBILITY_OFFICIAL
+#ifdef HAIKU_OFFICIAL_RELEASE
+resource(1, "logo.png") #'PNG ' import "../../../data/artwork/HAIKU logo - black on white - tiny.png";
+#else
+resource(1, "logo.png") #'PNG ' import "../../../data/artwork/HAIKU logo - black on white - tiny - versioned.png";
+#endif
+#endif
+
+resource vector_icon {
+	$"6E636966080500020012020000003D4000BDA0000000004B20004A1000000166"
+	$"FF0185020006023B9FD5BB5F703EB9983EED9F45BFBF47198C00C58430FFDD7A"
+	$"29020006023B9FD5BB5F703EB9983EED9F458FBF46F98C00FFD760FFED9D4602"
+	$"0106023A92A83CB28FBE9EAD3C7FB14AD62345F48000DA4C05FEFFB643020106"
+	$"0238A0813CE469C005F53BACE94A363C4A200000FDB33DFFDA4C0502010602BD"
+	$"28863D5C6CBC9389BC6BC14A2CA14A720100FDD15BFFDA4C050200060234B4D1"
+	$"373C1EBC495639D36848DA034AE25A00FFD75FFFA4370B010605A60324245850"
+	$"504F3F38423842B800BDAE080A0100000A00001001178400040A0500000A0600"
+	$"000A0401002024200A0200000A0700000A03000815FF"
+};
+

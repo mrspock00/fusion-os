@@ -1,0 +1,31 @@
+SubDir HAIKU_TOP src preferences mail ProviderInfo ;
+
+HAIKU_PROVIDER_INFOS =
+	aol.com
+	arcor.de
+	cern.ch
+	free.fr
+	freenet.de
+	gmail.com
+	gmx.de
+	googlemail.com
+	hotmail.com
+	laposte.net
+	lycos.de
+	mymail.ch
+	netcologne.de
+	o2online.de
+	physik.rwth-aachen.de
+	rwth-aachen.de
+	shaw.ca
+	t-online.de
+	telus.net
+	web.de
+	yahoo.com
+	yahoo.de
+;
+
+for file in $(HAIKU_PROVIDER_INFOS) {
+	ResAttr $(file) : "$(file).rdef" : true ;
+}
+

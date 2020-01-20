@@ -1,0 +1,41 @@
+SubDir HAIKU_TOP src tests apps haikudepot ;
+
+AddSubDirSupportedPlatforms libbe_test ;
+
+SubDirHdrs [ FDirName $(HAIKU_TOP) src apps haikudepot ] ;
+SubDirHdrs [ FDirName $(HAIKU_TOP) src apps haikudepot server ] ;
+SubDirHdrs [ FDirName $(HAIKU_TOP) src apps haikudepot server dumpexportrepository ] ;
+
+UsePrivateHeaders shared ;
+
+local sourceDirs =
+	server
+	server/dumpexportrepository
+;
+
+local sourceDir ;
+for sourceDir in $(sourceDirs) {
+	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps haikudepot $(sourceDir) ] ;
+}
+SEARCH_SOURCE += [ FDirName $(HAIKUDEPOT_GENERATED_SOURCES_DIRECTORY)
+	dumpexportrepositorybulklistener ] ;
+SEARCH_SOURCE += [ FDirName $(HAIKUDEPOT_GENERATED_SOURCES_DIRECTORY)
+	dumpexportrepositorymodel ] ;
+
+UnitTestLib haikudepottest.so :
+	HaikuDepotTestAddon.cpp
+
+	DumpExportRepositorySource.cpp
+	DumpExportRepositorySourceMirror.cpp
+	DumpExportRepository.cpp
+	DumpExportRepositoryJsonListener.cpp
+	DumpExportRepositoryJsonListenerTest.cpp
+
+	ListTest.cpp
+
+	StandardMetaData.cpp
+	StandardMetaDataJsonEventListener.cpp
+	StandardMetaDataJsonEventListenerTest.cpp
+
+	: be shared bnetapi package [ TargetLibstdc++ ] [ TargetLibsupc++ ]
+;

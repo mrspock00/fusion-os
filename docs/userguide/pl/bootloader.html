@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+<!-- 
+ *
+ * Copyright 2008-2019, Haiku. All rights reserved.
+ * Distributed under the terms of the MIT License.
+ *
+ * Authors:
+ *		Humdinger <humdingerb@gmail.com>
+ * Translators:
+ *		Kacper Kasper
+ *
+-->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="robots" content="all" />
+	<title>Moduł rozruchu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
+</head>
+<body>
+
+<div id="banner">
+<div><span>Podręcznik użytkownika</span></div>
+</div>
+
+<div class="nav">
+<div class="inner">
+<ul class="lang-menu">
+<li class="now"><img src="../images/flags/pl.png" alt="" /> Polski</li>
+<li><a href="../id/bootloader.html"><img src="../images/flags/id.png" alt="" />Bahasa Indonesia</a></li>
+<li><a href="../ca/bootloader.html"><img src="../images/flags/ca.png" alt="" />Català</a></li>
+<li><a href="../de/bootloader.html"><img src="../images/flags/de.png" alt="" />Deutsch</a></li>
+<li><a href="../en/bootloader.html"><img src="../images/flags/gb.png" alt="" />English</a></li>
+<li><a href="../es/bootloader.html"><img src="../images/flags/es.png" alt="" />Español</a></li>
+<li><a href="../fr/bootloader.html"><img src="../images/flags/fr.png" alt="" />Français</a></li>
+<li><a href="../fur/bootloader.html"><img src="../images/flags/fur.png" alt="" />Furlan</a></li>
+<li><a href="../it/bootloader.html"><img src="../images/flags/it.png" alt="" />Italiano</a></li>
+<li><a href="../hu/bootloader.html"><img src="../images/flags/hu.png" alt="" />Magyar</a></li>
+<li><a href="../pt_PT/bootloader.html"><img src="../images/flags/pt_PT.png" alt="" />Português</a></li>
+<li><a href="../pt_BR/bootloader.html"><img src="../images/flags/pt_BR.png" alt="" />Português (Brazil)</a></li>
+<li><a href="../ro/bootloader.html"><img src="../images/flags/ro.png" alt="" />Română</a></li>
+<li><a href="../sk/bootloader.html"><img src="../images/flags/sk.png" alt="" />Slovenčina</a></li>
+<li><a href="../fi/bootloader.html"><img src="../images/flags/fi.png" alt="" />Suomi</a></li>
+<li><a href="../sv_SE/bootloader.html"><img src="../images/flags/sv_SE.png" alt="" />Svenska</a></li>
+<li><a href="../zh_CN/bootloader.html"><img src="../images/flags/zh_CN.png" alt="" /> 中文 ［中文］</a></li>
+<li><a href="../ru/bootloader.html"><img src="../images/flags/ru.png" alt="" />Русский</a></li>
+<li><a href="../uk/bootloader.html"><img src="../images/flags/uk.png" alt="" />Українська</a></li>
+<li><a href="../jp/bootloader.html"><img src="../images/flags/jp.png" alt="" />日本語</a></li>
+</ul>
+<span>
+    <!-- «  <a href="installation.html">Installing Haiku</a> 
+::  -->
+    <a href="contents.html" class="uplink">Spis treści</a> 
+::  <a href="filesystem-layout.html">Układ systemu plików</a>  »
+</span></div>
+</div>
+
+<div id="content">
+<div>
+<div class="box-info">Tłumaczenie tej strony jest niekompletne. Nieukończone części wyświetlane są w języku angielskim.</div>
+
+<h1>Moduł rozruchu</h1>
+
+<p>Opcje modułu rozruchu Haiku mogą być pomocne jeśli doświadczasz problemów sprzętowych lub chcesz wybrać konkretną instalację Haiku do uruchomienia, w przypadku gdy masz ich więcej (np. na płycie CD lub dysku USB). Przydają się również w przypadku problemów z oprogramowaniem, uniemożliwiających poprawny rozruch systemu. Zobacz sekcję <a href="#troubleshooting">Rozwiązywanie problemów</a> poniżej.</p>
+<p>Aby wyświetlić menu wyboru opcji modułu rozruchu, należy wcisnąć i przytrzymać klawisz <span class="key">SHIFT</span> przed rozpoczęciem procesu uruchamiania systemu. Jeżeli jest zainstalowane menu rozruchowe, można przytrzymać <span class="key">SHIFT</span> tuż przed zatwierdzeniem systemu do uruchomienia. W przypadku gdy Haiku jest jedynym systemem operacyjnym zainstalowanym na komputerze, <span class="key">SHIFT</span> może być wciśnięty już w momencie wyświetlania komunikatów BIOS-u.</p>
+<div class="box-info">On computers that use UEFI for booting instead of the classic BIOS, you need to use the <span class="key">SPACEBAR</span> instead.</div>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="options" name="options">Opcje modułu rozruchu</a></h2>
+<p>Moduł rozruchu oferuje cztery menu:</p>
+<table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
+<tr><td><b>Select boot volume</b></td><td> </td><td>Pozwala wybrać instalację Haiku do uruchomienia (więcej w sekcji <a href="#troubleshooting">Rozwiązywanie problemów</a> poniżej).</td></tr>
+<tr><td><b>Select safe mode options</b></td><td> </td><td>Oferuje kilka opcji do wypróbowania w przypadku problemów ze sprzętem, niestabilności systemu lub niedziałającego oprogramowania. Przy podświetlaniu poszczególnych opcji, na dole ekranu pojawia się krótkie wyjaśnienie ich działania.</td></tr>
+<tr><td></td><td></td><td>
+	<p><span class="menu">Safe mode</span><br />
+		Przełącza system w tryb awaryjny. Ta opcją można być włączona niezależnie od innych.</p>
+	<p><span class="menu">Disable user add-ons</span><br />
+		Zapobiega ładowaniu rozszerzeń zainstalowanych przez użytkownika. Tylko rozszerzenia z katalogu systemowego zostaną załadowane. Zobacz sekcję <a href="#troubleshooting">Rozwiązywanie problemów</a>.</p>
+	<p><span class="menu">Disable IDE DMA</span><br />
+		Wyłącza tryb DMA interfejsu IDE, poświęcając wydajność na rzecz kompatybilności.</p>
+	<p><span class="menu">Ignore memory beyond 4 GiB</span><br />
+		Ignoruje pamięć powyżej 4 GiB, ignorując instrukcje w pliku ustawień jądra.
+</p>
+	<p><span class="menu">Use fail-safe graphics driver</span><br />
+		Zapobiega ładowaniu sterowników graficznych, zamiast tego system użyje trybu VESA.</p>
+	<p><span class="menu">Disable IO-APIC</span><br />
+		Wyłącza IO APIC do trasowania przerwań, wymuszając użycie starego interfejsu PIC.</p>
+	<p><span class="menu">Disable local APIC</span><br />
+		Wyłącza lokalne APIC, dodatkowo wyłączając wszystkie rdzenie procesora, prócz jednego.</p>
+	<p><span class="menu">Disable SMP</span><br />
+		Wyłącza wszystkie rdzenie procesora, prócz jednego.</p>
+	<p><span class="menu">Don't call the BIOS</span><br />
+		Zapobiega wywoływaniu funkcji BIOS-u przez system.</p>
+	<p><span class="menu">Disable APM</span><br />
+		Wyłącza sprzętową obsługę Advanced Power Management, ignorując instrukcje w pliku ustawień jądra.</p>
+	<p><span class="menu">Disable ACPI</span><br />
+		Wyłącza sprzętową obsługę Advanced Configuration and Power Interface, ignorując instrukcje w pliku ustawień jądra.</p>
+	<p><span class="menu">Blacklist entries</span><br />
+		Pozwala określić pliki, które mają być ignorowane przez system, np. w celu tymczasowego wyłączenia sterowników. Zobacz sekcję <a href="#troubleshooting">Rozwiązywanie problemów</a>.</p></td></tr>
+<tr><td><b>Select debug options</b></td><td> </td><td>Tutaj znajdują się opcje pomocne przy badaniu problemów oraz pozyskiwaniu informacji do <a href="../../welcome/pl/bugreports.html">zgłoszenia błędu</a>. Tak jak w przypadku menu opisanego wyżej, krótkie wyjaśnienie każdej opcji pojawia się na dole ekranu.</td></tr>
+<tr><td></td><td></td><td>
+	<p><span class="menu">Enable serial debug output</span><br />
+		Włącza przekazywanie dziennika systemu na port szeregowy (domyślne parametry: 115200, 8N1).</p>
+	<p><span class="menu">Enable on screen debug output</span><br />
+		Wyświetla dziennik systemu na ekranie podczas rozruchu, zamiast zwyczajnego logo.</p>
+	<p><span class="menu">Disable on screen paging</span><br />
+		Wyłącza stronicowanie dziennika wypisywanego na ekran.</p>
+	<p><span class="menu">Enable debug syslog</span><br />
+		Na czas jednej sesji, włącza specjalny bufor dziennika systemu, do którego moduł rozruchu będzie mieć dostęp po restarcie komputera.</p>
+	<p><span class="menu">Display current boot loader log</span><br />
+		Wyświetla dziennik modułu rozruchu (do zamknięcia służy klawisz <span class="key">Q</span>).</p>
+	<p><span class="menu">Add advanced debug option</span><br />
+		Pozwala na ręczne podanie opcji zaawansowanych.</p></td></tr>
+<tr><td></td><td></td><td>Jeżeli opcja <span class="menu">Enable debug syslog</span> jest aktywna, miękki restart po wystąpieniu awarii wyświetla dodatkowo poniższe opcje:</td></tr>
+<tr><td></td><td></td><td>	<p><span class="menu">Save syslog from previous session during boot</span><br />
+		Zapisuje podczas rozruchu dziennik systemu z poprzedniej sesji do pliku <span class="path">/var/log/previous_syslog</span>.</p>
+	<p><span class="menu">Display syslog from previous session</span><br />
+		Wyświetla dziennik systemu z poprzedniej sesji.</p>
+	<p><span class="menu">Save syslog from previous session</span><br />
+		Zapisuje dziennik systemu z poprzedniej sesji Haiku na dysk. Obecnie tylko partycje FAT32 są obsługiwane.</p></td></tr>
+<tr><td class="onelinetop"><b>Select screen resolution</b></td><td> </td><td>Pozwala wymusić określoną rozdzielczość i głębię kolorów.</td></tr>
+</table>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="troubleshooting" name="troubleshooting">Rozwiązywanie problemów</a></h2>
+<p>Jeżeli Haiku nie uruchamia się na Twoim sprzęcie od razu, wypróbuj różne opcje z menu <span class="menu">Select safe mode options</span>. W każdym wypadku rozważ wypełnienie <a href="../../welcome/pl/bugreports.html">zgłoszenia o błędzie</a>.</p>
+<p>Z drugiej strony, w przypadku gdy Haiku odmawia posłuszeństwa po zainstalowaniu jakiegoś oprogramowania, zwłaszcza sterowników, jest kilka możliwości przywrócenia systemu do działania, aby było możliwe usunięcie problemowego pakietu:</p>
+<ul>
+<li><p>Aktywowanie <span class="menu">Safe mode</span> zapobiegnie uruchomienie większości serwerów, usług i skryptu UserBootscript.</p></li>
+<li><p>Aktywowanie <span class="menu">Disable user add-ons</span> zapobiegnie ładowaniu jakichkolwiek rozszerzeń (sterowników, translatorów, itd.) zainstalowanych w hierarchii katalogu domowego.</p></li>
+<li><p>If activating <span class="menu">Use fail-safe graphics driver</span> solves your troubles by falling back to VESA graphics, you can make the setting permanent by removing the <tt>#</tt> of the line <i>#fail_safe_video_mode true</i> in the text file <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span>.</p></li>
+<li><p>Jeżeli problematyczny sterownik, rozszerzenie, itd. są zainstalowane w hierarchii katalogu systemowego, sprawa się komplikuje, ponieważ ten obszar systemu plików jest tylko do odczytu. W tym miejscu do gry wkracza opcja <span class="menu">Blacklist entries</span>. Przy jej pomocy możesz poruszać się po katalogu systemowym i wyłączyć komponent odpowiedzialny za problemy klawiszami <span class="key">SPACE</span> lub <span class="key">RETURN</span>. <span class="key">ESC</span> cofa do katalogu wyżej.</p>
+<p>W sieci dostępny jest artykuł <a href="http://www.haiku-os.org/blog/barrett/2013-12-15_how_permanently_blacklist_package_file">How to Permanently Blacklist a Package File</a> (ang.) wyjaśniający jak zachować to ustawienie.</p></li>
+<li><p>Under <span class="menu">Select boot volume</span> you can specify what former "version" of Haiku to boot. Every time you un/install a package, the old state is saved and you can boot into it by choosing it from the list presented in the boot loader options.<br />
+So, if you encounter boot problems after installing some package, boot a Haiku state from before that time and uninstall the offending package.</p></li>
+</ul>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="booting" name="booting">Rozruch Haiku</a></h2>
+<p>Po aktywowaniu pożądanych opcji, należy wrócić do głównego menu i kontynuować rozruch (<span class="menu">Continue booting</span>). Wyświetli się wtedy taki ekran:</p>
+<img src="../images/bootloader-images/boot-screen.png" alt="boot-screen.png" />
+
+<p>Jeżeli wszystko jest w porządku, symbole będą szybko zapalać się jeden po drugim.<br />
+Każdy z symboli mniej więcej odpowiada poniższym etapom rozruchu:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0"> 
+	<tr><td><b>Atom</b></td><td style="width:10px;"> </td><td>Inicjalizacja modułów.</td></tr>
+	<tr><td><b>Dysk + lupa</b></td><td> </td><td>Tworzenie korzenia systemu plików (<span class="path">/</span>) i montowanie devfs (<span class="path">/dev</span>).</td></tr>
+	<tr><td><b>Karta rozszerzeń</b></td><td> </td><td>Inicjalizacja menedżera urządzeń.</td></tr>
+	<tr><td><b>Dysk rozruchowy</b></td><td> </td><td>Montowanie dysku rozruchowego.</td></tr>
+	<tr><td><b>Mikroprocesor</b></td><td> </td><td>Ładowanie modułów obsługi procesora.</td></tr>
+	<tr><td><b>Katalog</b></td><td> </td><td>Końcowa inicjalizacja podsystemów.</td></tr>
+	<tr><td><b>Rakieta</b></td><td> </td><td>Launch_daemon uruchomił system.</td></tr>
+</table>
+
+</div>
+</div>
+
+<div class="nav">
+<div class="inner"><span>
+    <!-- «  <a href="installation.html">Installing Haiku</a> 
+::  -->
+    <a href="contents.html" class="uplink">Spis treści</a> 
+::  <a href="filesystem-layout.html">Układ systemu plików</a>  »
+</span></div>
+</div>
+
+</body>
+</html>

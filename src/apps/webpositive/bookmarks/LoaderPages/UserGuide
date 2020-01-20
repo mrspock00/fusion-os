@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="all" />
+	<title>The Haiku User Guide</title>
+	<style type="text/css">
+		html {
+			margin: 0;
+			padding: 0;
+			background: #FFF;
+		}
+		body {
+			text-align: center;
+			color: #333333;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+		}
+		#banner {
+			position: relative;
+			left: 0;
+			top: 0;
+			text-align: center;
+			height: 84px;
+			min-width: 40em;
+			background: #eeeeee;
+		}
+		#banner span {
+			color: #333333;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-family: Myriad Pro,Myriad Web Pro Regular,Lucida Grande,Geneva,Trebuchet MS,sans-serif;
+			font-weight: bold;
+			font-size: 32px;
+		}
+		div.nav {
+			text-align: center;
+			min-width: 40em;
+			left: 0;
+			top: 0;
+			background: #e0e0e0;
+			font-weight: bold;
+			padding: 0;
+		}
+	</style>
+	<script type="text/javascript">
+		var l = window.navigator.userLanguage || window.navigator.language;
+		l = l.replace(/-/g, "_");
+
+		switch (l) {
+			case "pt_PT":
+			case "pt":
+				l = "pt_PT";
+				break;
+			case "sv":
+				l = "sv_SE";
+				break;
+			case "zh_Hans_CN":
+			case "zh_Hans":
+			case "zh":
+				l = "zh_CN";
+				break;
+			default:
+				if (l.indexOf("_") == 2) {
+					var n = l.split("_");
+					if (n[0] == n[1].toLowerCase())
+						l = n[0];
+				}
+				break;
+		}
+
+		var offlineBase = "file:///boot/system/documentation/userguide/";
+		var onlineBase = "https://www.haiku-os.org/docs/userguide/";
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("HEAD", offlineBase, false);
+		xmlhttp.send();
+		if (xmlhttp.responseText == "")
+			offlineBase = "file:///boot/home/config/documentation/userguide/";
+
+		var offLine = offlineBase + l + '/contents.html';
+		var onLine = onlineBase + l + '/contents.html';
+		var offLine_en = offlineBase + '/en/contents.html';
+		var onLine_en = onlineBase + 'en/contents.html';
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("HEAD", offLine, false);
+		xmlhttp.send();
+		switch (xmlhttp.responseText)
+		{
+			case "":
+				xmlhttp.open("HEAD", offLine_en, false);
+				xmlhttp.send();
+				switch(xmlhttp.responseText)
+				{
+					case "":
+						xmlhttp.open("HEAD", onLine, false);
+						xmlhttp.send();
+						switch(xmlhttp.status)
+						{
+							case 200:
+								window.location = onLine;
+								break;
+							default:
+								window.location = onLine_en;
+								break;
+						}
+						break;
+					default:
+						window.location = offLine_en;
+						break;
+				}
+				break;
+			default:
+				window.location = offLine;
+				break;
+		}
+		var neg1 = "The 'User Guide' package is missing on your system.";
+		var neg2 = "The online version of the 'User Guide' package isn't reachable either…";
+		var neg3 = "Once you have established an internet connection, you can install a";
+		var neg4 = "'User Guide' package of your preferred language with the HaikuDepot";
+		var neg5 = "application available from Deskbar's Applications menu.";
+
+		setTimeout(
+			function(val1, val2, val3, val4, val5, val6) {
+				document.getElementById('heading').innerHTML = val1;
+				document.getElementById('msg1').innerHTML = val2;
+				document.getElementById('msg2').innerHTML = val3;
+				document.getElementById('msg3').innerHTML = val4;
+				document.getElementById('msg4').innerHTML = val5;
+				document.getElementById('msg5').innerHTML = val6;
+			},
+			3000, 'Sorry', neg1, neg2, neg3, neg4, neg5);
+	</script>
+</head>
+
+<body>
+	<div id="banner">
+		<span>&nbsp;</span>
+	</div>
+	<div class="nav">
+		<span id="heading">&nbsp;</span>
+	</div>
+	<p><br /></p>
+	<p><span id="msg1"></span></p>
+	<p><span id="msg2"></span></p>
+	<p><span id="msg3"></span><br />
+	<span id="msg4"></span><br />
+	<span id="msg5"></span></p>
+</body>
+</html>

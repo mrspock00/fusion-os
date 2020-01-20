@@ -1,0 +1,11 @@
+SubDir HAIKU_TOP src tests servers app drawing_modes ;
+
+AddSubDirSupportedPlatforms libbe_test ;
+
+UseHeaders [ FDirName os app ] ;
+UseHeaders [ FDirName os interface ] ;
+
+Application DrawingModes :
+	DrawingModes.cpp
+	: [ TargetLibstdc++ ] be
+;

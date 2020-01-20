@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+<!-- 
+ *
+ * Copyright 2008-2019, Haiku. All rights reserved.
+ * Distributed under the terms of the MIT License.
+ *
+ * Authors:
+ *		Humdinger <humdingerb@gmail.com>
+ * Translators:
+ *		Humdinger
+ *		kervas
+ *		miguel~1.mx
+ *		Oscar Carballal
+ *
+-->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="robots" content="all" />
+	<title>Cargador de arranque</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
+</head>
+<body>
+
+<div id="banner">
+<div><span>Guía del usuario</span></div>
+</div>
+
+<div class="nav">
+<div class="inner">
+<ul class="lang-menu">
+<li class="now"><img src="../images/flags/es.png" alt="" /> Español</li>
+<li><a href="../id/bootloader.html"><img src="../images/flags/id.png" alt="" />Bahasa Indonesia</a></li>
+<li><a href="../ca/bootloader.html"><img src="../images/flags/ca.png" alt="" />Català</a></li>
+<li><a href="../de/bootloader.html"><img src="../images/flags/de.png" alt="" />Deutsch</a></li>
+<li><a href="../en/bootloader.html"><img src="../images/flags/gb.png" alt="" />English</a></li>
+<li><a href="../fr/bootloader.html"><img src="../images/flags/fr.png" alt="" />Français</a></li>
+<li><a href="../fur/bootloader.html"><img src="../images/flags/fur.png" alt="" />Furlan</a></li>
+<li><a href="../it/bootloader.html"><img src="../images/flags/it.png" alt="" />Italiano</a></li>
+<li><a href="../hu/bootloader.html"><img src="../images/flags/hu.png" alt="" />Magyar</a></li>
+<li><a href="../pl/bootloader.html"><img src="../images/flags/pl.png" alt="" />Polski</a></li>
+<li><a href="../pt_PT/bootloader.html"><img src="../images/flags/pt_PT.png" alt="" />Português</a></li>
+<li><a href="../pt_BR/bootloader.html"><img src="../images/flags/pt_BR.png" alt="" />Português (Brazil)</a></li>
+<li><a href="../ro/bootloader.html"><img src="../images/flags/ro.png" alt="" />Română</a></li>
+<li><a href="../sk/bootloader.html"><img src="../images/flags/sk.png" alt="" />Slovenčina</a></li>
+<li><a href="../fi/bootloader.html"><img src="../images/flags/fi.png" alt="" />Suomi</a></li>
+<li><a href="../sv_SE/bootloader.html"><img src="../images/flags/sv_SE.png" alt="" />Svenska</a></li>
+<li><a href="../zh_CN/bootloader.html"><img src="../images/flags/zh_CN.png" alt="" /> 中文 ［中文］</a></li>
+<li><a href="../ru/bootloader.html"><img src="../images/flags/ru.png" alt="" />Русский</a></li>
+<li><a href="../uk/bootloader.html"><img src="../images/flags/uk.png" alt="" />Українська</a></li>
+<li><a href="../jp/bootloader.html"><img src="../images/flags/jp.png" alt="" />日本語</a></li>
+</ul>
+<span>
+    <!-- «  <a href="installation.html">Installing Haiku</a> 
+::  -->
+    <a href="contents.html" class="uplink">Contenido</a> 
+::  <a href="filesystem-layout.html">Disposición del sistema de archivos</a>  »
+</span></div>
+</div>
+
+<div id="content">
+<div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el inglés original.</div>
+
+<h1>Cargador de arranque</h1>
+
+<p>Las opciones del cargador de arranque de Haiku pueden ayudarle cuando experimente problemas de hardware o quiera elegir cual instalación de Haiku quiere iniciar, en caso que disponga de más de una (seguramente en un CD de instalación o unidad USB).<br />
+También viene muy bien para cuando ha instalado algún componente de software que muestra problemas, previniendo el arranque del sistema, vea <a href="#troubleshooting">Resolución de problemas</a> abajo.</p>
+<p>Para visualizar las opciones del cargador de arranque, hay que mantener presionada la techa <span class="key">Mayús</span> (SHIFT) antes del comienzo del proceso de arranque de Haiku. En de haber un administrador de arranque instalado, empiece a presionar la tecla antes de seleccionar Haiku desde el mismo. Si Haiku es el único sistema operativo instalado, empiece a presionar la tecla mientras se viualizan los mensajes de arranque del BIOS.</p>
+<div class="box-info">On computers that use UEFI for booting instead of the classic BIOS, you need to use the <span class="key">SPACEBAR</span> instead.</div>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="options" name="options">Opciones del Cargador de Arranque</a></h2>
+<p>Una vez allí, se le ofrecerán tres menús:</p>
+<table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
+<tr><td><b>Seleccionar volumen de arranque</b></td><td> </td><td>Elija qué instalación/versión de Haiku desea iniciar (vea <a href="#troubleshooting">Diagnóstico de Problemas</a> below).</td></tr>
+<tr><td><b>Seleccionar opciones de modo seguro</b><br />
+</td><td> </td><td>Existen muchas opciones para probarse en caso de que tenga un problema de hardware o si el sistema se vuelve inestable o no arranca debido a una extensión (add-on) con mal comportamiento. Al mover la barra de selección a una opción, una pequeña explicación aparecerá en la parte inferior de la pantalla.
+</td></tr>
+<tr><td></td><td></td><td>
+	<p><span class="menu">Safe mode (Modo a prueba de fallas)</span><br />
+		Pone el sistema en modo a prueba de fallas. Esto puede habilitarse independiente de otras opciones.</p>
+	<p><span class="menu">Disable user add-ons (Desactivar extensiones de usuario)</span><br />
+		Previene que se carguen todas las extensiones (add-ons) de usuario. Sólo se utilizarán las extensiones del directorio de sistema. Vea abajo <a href="#troubleshooting">Resolución de problemas</a>.</p>
+	<p><span class="menu">Disable IDE DMA (Desactivar DMA IDE)</span><br />
+		Desactiva DMA IDE, mejorando la compatibilidad IDE a costa de rendimiento.</p>
+	<p><span class="menu">Ignore memory beyond 4 GiB (Ignorar memoria arriba de 4GiB)</span><br />
+		Ignora toda la memoría más allá del límite de 4 GiB, invalidando el ajuste en el fichero de configuración del núcleo (kernel).
+</p>
+	<p><span class="menu">Use fail-safe video mode (Utilizar modo de vídeo a prueba de fallas)</span><br />
+		El sistema usará el modo VESA y no intentará usar ningún controlador de vídeo.</p>
+	<p><span class="menu">Disable IO-APIC (Desactivar IO-APIC)</span><br />
+		Desactiva el uso de IO APIC para enrutamiento de interruptores, obligando el uso de PIC anticuado.</p>
+	<p><span class="menu">Disable local APIC (Desactivar APIC local)</span><br />
+		Desactiva el APIC local, y también desactiva SMP.</p>
+	<p><span class="menu">Disable SMP (Desactivar SMP)</span><br />
+		Desactiva todos los núcleos del CPU excepto uno.</p>
+	<p><span class="menu">Don't call the BIOS (No llamar el BIOS)</span><br />
+		Detiene al sistema de llamar las funciones del BIOS.</p>
+	<p><span class="menu">Disable APM (Desactivar APM)</span><br />
+		Desactiva el soporte de hardware para el Administrador Avanzado de Energía, anulando el ajuste de APM del archivo de configuración del núcleo (kernel).</p>
+	<p><span class="menu">Disable ACPI (Desactivar ACPI)</span><br />
+		Desactiva soporte de hardware para la Interface de Energía y Configuración Avanzada, anulando el ajuste de ACPI del archivo de configuración del núcleo (kernel).</p>
+	<p><span class="menu">Blacklist entries (Entradas de lista negra)</span><br />
+		Permite elegir ficheros del sistema para ser ignorados. Esto es útil para, por ejemplo, desactivar controladores temporalmente. Vea <a href="#troubleshooting">Resolución de problemas</a> abajo.</p></td></tr>
+<tr><td><b>Selección de opciones de depuración</b>
+</td><td> </td><td>Aquí encontrará bastantes opciones que le ayudarán con la depuración o en obtener detalles para un <a href="../../welcome/en/bugreports.html">reporte de fallo</a>. De nuevo, una explicación corta de cada opción se muestra abajo.</td></tr>
+<tr><td></td><td></td><td>
+	<p><span class="menu">Enable serial debug output (Habilitar la salida de depuración serial)</span><br />
+		Enciende el re-envío de la salida del registro de sistema a la interfaz serial (predeterminado: 115200, 8N1).</p>
+	<p><span class="menu">Enable on screen debug output (Habilitar la salida de depuración en pantalla)</span><br />
+		Muestra la salida de depuración en pantalla mientra el sistema arranca, en lugar del logo de arranque normal.</p>
+	<p><span class="menu">Disable on screen paging (Desactivar paginación en pantalla)</span><br />
+		Desactiva la paginación cuando la salida de depuración a pantalla está activado.</p>
+	<p><span class="menu">Enable debug syslog (Habilitar el historial depuración de eventos de sistema)</span><br />
+		Activa un búfer especial de historial de sistema en memoria para la sesión que el cargador de arranque podrá acceder luego de reiniciar el equipo "en caliente".</p>
+	<p><span class="menu">Display current boot loader log (Mostrar historial actual de cargador de arranque</span><br />
+		Muestra la información de depuración que ha registrado el cargador de arranque (presione <span class="key">Q</span> para salir del registro)</p>
+	<p><span class="menu">Add advanced debug option (Añadir opciones de depuración avanzada)</span><br />
+		Permite ingresar opciones avanzadas de depuración directamente.</p></td></tr>
+<tr><td></td><td></td><td>Si la opción "<i>Enable debug syslog (Habilitar depurador de registro de sistema)</i>" es activada, un reinicio luego de un cuelgue mostrará estas opciones adicionales:</td></tr>
+<tr><td></td><td></td><td>	<p><span class="menu">Save syslog from previous session during boot (Guardar el syslog de la sesión previa en el arranque)</span><br />
+		Guarda el historial de eventos de sistema de la sesión anterior de Haiku al archivo /var/log/previous_syslog al arrancar.</p>
+	<p><span class="menu">Display syslog from previous session (Mostrar el historial de eventos de sistema de la sesión anterior)</span><br />
+		Muestra el historial de eventos de sistema de la sesión anterior de Haiku</p>
+	<p><span class="menu">Save syslog from previous session (Guardar historial de eventos de sistema de sesión previa)</span><br />
+		Guarda el historial de eventos de sistema de la sesión anterior de Haiku al disco. Actualmente sólo son soportados los volumenes FAT32.</p></td></tr>
+<tr><td class="onelinetop"><b>Seleccionar resolución de pantalla</b></td><td> </td><td>Le permite forzar una cierta resolución de pantalla y profundidad de color.</td></tr>
+</table>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="troubleshooting" name="troubleshooting">Resolución de problemas</a></h2>
+<p>Si Haiku se rehusa a arrancar en su equipo desde el principio, intente configurar diferentes opciones bajo <span class="menu">Seleccione opciones de modo seguro</span>. Considere registrar un <a href="../../welcome/en/bugreports.html">informe de fallos</a> de cualquier forma.</p>
+<p>Por el otro lado, si Haiku sólo empieza a dar problemas hasta después que ha instalado algún software, particularmente controladores de dispositivos, tiene varias opciones para lograr que Haiku pueda arrancar otra vez para poder desinstalar el paquete infractor:</p>
+<ul>
+<li><p>Activar el <span class="menu">modo seguro</span> prevendrá que inicien la mayoría de los servidores, servicios de fondo (daemons) y el UserBootScript.</p></li>
+<li><p>Activar la opción <span class="menu">Deshabilitar extensiones (add-ons) de usuario</span> prevendrá el uso de cualquier extensión (controladores, traductores, etc.) que tenga instalados en su jerarquía bajo su carpeta personal Home.</p></li>
+<li><p>Si logra resolver sus problemas al activar la opción de <span class="menu">Utilizar controlador de gráficos a prueba de fallas</span> recurriendo a gráficos VESA, puede hacer que el ajuste sea permanente, quitando el <tt>#</tt> de la línea que dice <i>#fail_safe_video_mode true</i> en el archivo de texto <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span>.</p></li>
+<li><p>
+Si un controlador, extensión, etc. infractor está instalado bajo la jerarquía del sistema, las cosas se vuelven un poco más complicadas, porque esa área es de sólo léctura. Aquí, las <span class="menu">Entradas de lista negra</span> hacen su parte. Con ellas, puede navegar a través de toda la jerarquía del sistema y deshabilitar el componente que está causando problemas, al activar una de las entradas con la tecla<span class="key">ESPACIADORA</span> o <span class="key">RETORNO</span>. <span class="key">ESC</span> lo regresa un nivel arriba al directorio padre.</p>
+<p>Existe un artículo en línea, <a href="http://www.haiku-os.org/blog/barrett/2013-12-15_how_permanently_blacklist_package_file">Cómo incluir un paquete en la lista negra permanentemente (en inglés)</a>, que muestra cómo lograr que se mantengan los cambios.</p></li>
+<li><p>Bajo <span class="menu">Select boot volume (Elija el volumen de arranque)</span> puede especificar cuál versión anterior de Haiku a arrancar. Cada vez que instale/desinstale un paquete, el estado anterior se guarda y puede iniciar en él seleccionandolo de la lista presentada en las opciones del cargador de arranque.<br />
+Por tanto, si encuentra problemas de arranque después de instalar algún paquete, inicie una versión de Haiku previa a ese momento, y desinstale el paquete infractor.</p></li>
+</ul>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="booting" name="booting">Arranque de Haiku</a></h2>
+<p>Tras activar una o más opciones, puede regresar de nuevo al menú principal y continuará iniciando, lo cual se presentará con esta pantalla de arranque:</p>
+<img src="../images/bootloader-images/boot-screen.png" alt="boot-screen.png" />
+
+<p>Si  todo funciona bien, se deben iluminar un símbolo tras otro rápidamente.<br />
+Los deferentes símbolos se corresponden con estas etapas de inicio:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0"> 
+	<tr><td><b>Átomo</b></td><td style="width:10px;"> </td><td>Iniciación de módulos.</td></tr>
+	<tr><td><b>Disco y lupa</b></td><td> </td><td>Creación de rootfs (<span class="path">/</span>) y montaje de devfs (<span class="path">/dev</span>).</td></tr>
+	<tr><td><b>Tarjeta plug-in</b></td><td> </td><td>Iniciación de gestor de dispositivos.</td></tr>
+	<tr><td><b>Disco de arranque</b></td><td> </td><td>Montaje de disco de arranque.</td></tr>
+	<tr><td><b>Chip</b></td><td> </td><td>Carga de módulos específicos de CPU.</td></tr>
+	<tr><td><b>Carpeta</b></td><td> </td><td>Inicialización final de subsistemas.</td></tr>
+	<tr><td><b>Cohete</b></td><td> </td><td>El Launch_daemon (servicio lanzador) ha iniciado el sistema.</td></tr>
+</table>
+
+</div>
+</div>
+
+<div class="nav">
+<div class="inner"><span>
+    <!-- «  <a href="installation.html">Installing Haiku</a> 
+::  -->
+    <a href="contents.html" class="uplink">Contenido</a> 
+::  <a href="filesystem-layout.html">Disposición del sistema de archivos</a>  »
+</span></div>
+</div>
+
+</body>
+</html>
