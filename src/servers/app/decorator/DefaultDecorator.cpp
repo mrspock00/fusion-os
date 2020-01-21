@@ -1,20 +1,4 @@
-/*
- * Copyright 2001-2015 Haiku, Inc.
- * Distributed under the terms of the MIT License.
- *
- * Authors:
- *		Stephan Aßmus, superstippi@gmx.de
- *		DarkWyrm, bpmagic@columbus.rr.com
- *		Ryan Leavengood, leavengood@gmail.com
- *		Philippe Saint-Pierre, stpere@gmail.com
- *		John Scipione, jscipione@gmail.com
- *		Ingo Weinhold, ingo_weinhold@gmx.de
- *		Clemens Zeidler, haiku@clemens-zeidler.de
- *		Joseph Groover <looncraz@looncraz.net>
- */
-
-
-/*!	Default and fallback decorator for the app_server - the yellow tabs */
+/* Telif Hakkı 2020 Fegeya*/
 
 
 #include "DefaultDecorator.h"
@@ -548,7 +532,7 @@ DefaultDecorator::_DrawTitle(Decorator::Tab* _tab, BRect rect)
 
 	BPoint titlePos;
 	if (tab->look != kLeftTitledWindowLook) {
-		titlePos.x = closeRect.IsValid() ? closeRect.right + tab->textOffset
+		titlePos.x = closeRect.IsValid() ? closeRect.left + tab->textOffset
 			: tabRect.left + tab->textOffset;
 		titlePos.y = floorf(((tabRect.top + 2.0) + tabRect.bottom
 			+ fontHeight.ascent + fontHeight.descent) / 2.0

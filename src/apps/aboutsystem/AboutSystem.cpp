@@ -898,7 +898,7 @@ AboutView::_CreateCreditsView()
 	font.SetSize(font.Size() + 4);
 
 	fCreditsView->SetFontAndColor(&font, B_FONT_ALL, &kHaikuGreen);
-	fCreditsView->Insert("FegeyaOS\n");
+	fCreditsView->Insert("FegeyaOS Beta 1\n");
 
 	char string[1024];
 	time_t time = ::time(NULL);

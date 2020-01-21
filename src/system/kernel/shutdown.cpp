@@ -1,8 +1,4 @@
-/*
- * Copyright 2009, Olivier Coursière. All rights reserved.
- * Copyright 2004, Axel Dörfler, axeld@pinc-software.de. All rights reserved.
- * Distributed under the terms of the MIT License.
- */
+/* Telif hakkı 2020 Fegeya */
 
 
 #include <kernel.h>
@@ -44,4 +40,5 @@ _user_shutdown(bool reboot)
 		return B_NOT_ALLOWED;
 	return system_shutdown(reboot);
 }
+
 

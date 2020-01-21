@@ -1,14 +1,4 @@
-/*
- * Copyright 2001-2016 Haiku, Inc. All rights reserved
- * Distributed under the terms of the MIT License.
- *
- * Authors:
- *		Stephan Aßmus, superstippi@gmx.de
- *		Axel Dörfler, axeld@pinc-software.de
- *		Adrian Oanca, adioanca@cotty.iren.ro
- *		John Scipione, jscipione@gmail.com
- */
-
+/* Fegeya telif hakkı 2018*/
 
 #include <Window.h>
 

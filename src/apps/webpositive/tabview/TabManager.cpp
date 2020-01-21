@@ -627,7 +627,7 @@ void WebTabView::_DrawCloseButton(BView* owner, BRect& frame,
 
 	if (fClicked && fOverCloseRect) {
 		// Draw the button frame
-		BRect buttonRect(closeRect.InsetByCopy(-4, -4));
+		BRect buttonRect(closeRect.InsetByCopy(-7, -7));
 		be_control_look->DrawButtonFrame(owner, buttonRect, updateRect,
 			base, base,
 			BControlLook::B_ACTIVATED | BControlLook::B_BLEND_FRAME);

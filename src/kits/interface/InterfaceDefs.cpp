@@ -1,18 +1,4 @@
-/*
- * Copyright 2001-2015, Haiku, Inc.
- * Distributed under the terms of the MIT License.
- *
- * Authors:
- *		DarkWyrm <bpmagic@columbus.rr.com>
- *		Caz <turok2@currantbun.com>
- *		Axel Dörfler, axeld@pinc-software.de
- *		Michael Lotz <mmlr@mlotz.ch>
- *		Wim van der Meer <WPJvanderMeer@gmail.com>
- *		Joseph Groover <looncraz@looncraz.net>
- */
 
-
-/*!	Global functions and variables for the Interface Kit */
 
 
 #include <InterfaceDefs.h>

@@ -1,8 +1,4 @@
-/*
- * Copyright 2003-2013, Axel Dörfler, axeld@pinc-software.de.
- * Distributed under the terms of the MIT License.
- */
-
+/* Telif hakkı Fegeya 2020*/
 
 #include "menu.h"
 #include "loader.h"

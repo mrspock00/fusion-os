@@ -263,8 +263,8 @@ TBarApp::InitSettings()
 
 	clock_settings clock;
 	clock.showSeconds = false;
-	clock.showDayOfWeek = false;
-	clock.showTimeZone = false;
+	clock.showDayOfWeek = true;
+	clock.showTimeZone = true;
 
 	BPath dirPath;
 	const char* settingsFileName = "settings";

@@ -1,16 +1,4 @@
-/*
- *	Copyright 2001-2015 Haiku Inc. All rights reserved.
- *  Distributed under the terms of the MIT License.
- *
- *	Authors:
- *		Marc Flerackers (mflerackers@androme.be)
- *		Mike Wilber
- *		Stefano Ceccherini (burton666@libero.it)
- *		Ivan Tonizza
- *		Stephan Aßmus <superstippi@gmx.de>
- *		Ingo Weinhold, ingo_weinhold@gmx.de
- */
-
+/*Telif hakkı Fegeya 2019*/
 
 #include <Button.h>
 
