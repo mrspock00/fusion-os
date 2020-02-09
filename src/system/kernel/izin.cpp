@@ -12,18 +12,20 @@
 #define A_IZIN 1
 #define N_IZIN 0
 
-void izinsis()
+void izinsis(int b)
 {
     int iz_a;
 	if(iz.izin_onyuk == true)
     {
         iz_a = iz.izin_onyuk;
         
+	b = 0; // b sonradan alinacak
 	if(iz_a == failed) 
 	{
 		dprintf("loading kernel failed number is: 1");
 	} else {
-		failed = 1; // sistem onyuklenmez
+		failed = 1;
+		b = 1; // sistem onyuklenmez
 	}	
 	
     }

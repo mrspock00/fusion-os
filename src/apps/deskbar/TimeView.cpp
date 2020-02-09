@@ -1,31 +1,24 @@
 /*
 Open Tracker License
-
 Terms and Conditions
-
 Copyright (c) 1991-2000, Be Incorporated. All rights reserved.
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
 the Software without restriction, including without limitation the rights to
 use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
 of the Software, and to permit persons to whom the Software is furnished to do
 so, subject to the following conditions:
-
 The above copyright notice and this permission notice applies to all licensees
 and shall be included in all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF TITLE, MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
 BE INCORPORATED BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
 AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 Except as contained in this notice, the name of Be Incorporated shall not be
 used in advertising or otherwise to promote the sale, use or other dealings in
 this Software without prior written authorization from Be Incorporated.
-
 Tracker(TM), Be(R), BeOS(R), and BeIA(TM) are trademarks or registered
 trademarks of Be Incorporated in the United States and other countries. Other
 brand product names are registered trademarks or trademarks of their respective
@@ -52,8 +45,8 @@ All rights reserved.
 #include <Window.h>
 
 #include "BarApp.h"
-#include "StatusView.h"
 #include "CalendarMenuWindow.h"
+#include "StatusView.h"
 
 
 static const float kHMargin = 2.0;
@@ -76,6 +69,7 @@ TTimeView::TTimeView(float maxWidth, float height)
 	fShowSeconds(false),
 	fShowDayOfWeek(false),
 	fShowTimeZone(false),
+	fCalendarWindow(NULL),
 	fTimeFormat(NULL),
 	fDateFormat(NULL)
 {
@@ -106,6 +100,9 @@ TTimeView::TTimeView(BMessage* data)
 
 TTimeView::~TTimeView()
 {
+	if (fCalendarWindow != NULL)
+		fCalendarWindow->Quit();
+
 	delete fTimeFormat;
 	delete fDateFormat;
 }
@@ -369,13 +366,13 @@ TTimeView::SetShowTimeZone(bool show)
 void
 TTimeView::ShowCalendar(BPoint where)
 {
-	if (fCalendarWindow.IsValid()) {
+	if (fCalendarWindowMessenger.IsValid()) {
 		// If the calendar is already shown, just activate it
 		BMessage activate(B_SET_PROPERTY);
 		activate.AddSpecifier("Active");
 		activate.AddBool("data", true);
 
-		if (fCalendarWindow.SendMessage(&activate) == B_OK)
+		if (fCalendarWindowMessenger.SendMessage(&activate) == B_OK)
 			return;
 	}
 
@@ -385,10 +382,16 @@ TTimeView::ShowCalendar(BPoint where)
 	if (where.y >= BScreen().Frame().bottom)
 		where.y -= (Bounds().Height() + 4.0);
 
-	CalendarMenuWindow* window = new CalendarMenuWindow(where);
-	fCalendarWindow = BMessenger(window);
+	fCalendarWindow = new CalendarMenuWindow(where);
+	fCalendarWindowMessenger = BMessenger(fCalendarWindow);
+	fCalendarWindow->Show();
+}
 
-	window->Show();
+
+bool
+TTimeView::IsShowingCalendar()
+{
+	return fCalendarWindow != NULL && !fCalendarWindow->IsHidden();
 }
 
 
@@ -413,6 +416,7 @@ TTimeView::UpdateTimeFormat()
 	delete fDateFormat;
 	fDateFormat = new BDateFormat(BLocale::Default());
 }
+
 
 void
 TTimeView::GetCurrentTime()

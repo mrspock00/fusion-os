@@ -7,7 +7,7 @@
  * Distributed under the terms of the NewOS License.
  */
 
-
+/* Fegeya 2019 */
 /*! This is main - initializes the kernel and launches the Bootscript */
 
 

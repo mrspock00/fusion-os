@@ -16,7 +16,8 @@
 #include <boot/platform.h>
 #include <boot/stdio.h>
 #include <boot/partitions.h>
-
+#include <Catalog.h>
+#include <Locale.h>
 #include <unistd.h>
 #include <string.h>
 #include "zarar.h"
@@ -105,7 +106,6 @@ is_bootable(Directory *volume)
 	return true;
 }
 
-
 status_t
 load_kernel(stage2_args* args, BootVolume& volume)
 {
@@ -173,6 +173,18 @@ load_modules_from(BootVolume& volume, const char* path)
 }
 
 
+/*status_t
+add_de_in_ram(bool load)
+{	
+	if(load == true)
+	{	
+				
+	} else {
+	dprintf("This is not loading or RAM is full");
+	}
+
+	
+}	*/
 status_t
 load_modules(stage2_args* args, BootVolume& volume)
 {
@@ -208,6 +220,5 @@ load_modules(stage2_args* args, BootVolume& volume)
 	load_modules_from(volume, path);
 	snprintf(path, sizeof(path), "%s/%s", sAddonPaths[0], "partitioning_systems");
 	load_modules_from(volume, path);
-
 	return B_OK;
 }
