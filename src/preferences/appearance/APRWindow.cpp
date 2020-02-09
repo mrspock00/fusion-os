@@ -18,7 +18,6 @@
 #include <Messenger.h>
 #include <SeparatorView.h>
 #include <TabView.h>
-
 #include "AntialiasingSettingsView.h"
 #include "APRView.h"
 #include "defs.h"
@@ -92,7 +91,6 @@ APRWindow::MessageReceived(BMessage *message)
 			fColorsView->SetDefaults();
 			fLookAndFeelSettings->SetDefaults();
 			fAntialiasingSettings->SetDefaults();
-
 			_UpdateButtons();
 			break;
 
@@ -101,7 +99,6 @@ APRWindow::MessageReceived(BMessage *message)
 			fColorsView->Revert();
 			fLookAndFeelSettings->Revert();
 			fAntialiasingSettings->Revert();
-
 			_UpdateButtons();
 			break;
 

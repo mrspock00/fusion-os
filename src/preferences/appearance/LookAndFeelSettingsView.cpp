@@ -94,7 +94,7 @@ LookAndFeelSettingsView::LookAndFeelSettingsView(const char* name)
 	fControlLookMenuField->SetToolTip(B_TRANSLATE("No effect on running applications"));
 
 
-
+	_BuildModulsMenu();
 	// scroll bar arrow style
 	BBox* arrowStyleBox = new BBox("arrow style");
 	arrowStyleBox->SetLabel(B_TRANSLATE("Arrow style"));
@@ -295,6 +295,51 @@ LookAndFeelSettingsView::_BuildDecorMenu()
 
 void
 LookAndFeelSettingsView::_BuildControlLookMenu()
+{
+	BPathFinder pathFinder;
+	BStringList paths;
+	BDirectory dir;
+	BString currentLook;
+
+	BPrivate::get_control_look(currentLook);
+
+	fControlLookMenu = new BPopUpMenu(B_TRANSLATE("Choose ControlLook"));
+
+	BMessage* message = new BMessage(kMsgSetControlLook);
+	message->AddString("control_look", "");
+
+	BMenuItem* item = new BMenuItem(B_TRANSLATE("Default"), message);
+	if (currentLook == "")
+		item->SetMarked(true);
+	fControlLookMenu->AddItem(item);
+
+	status_t error = pathFinder.FindPaths(B_FIND_PATH_ADD_ONS_DIRECTORY,
+		"control_look", paths);
+
+	for (int i = 0; i < paths.CountStrings(); ++i) {
+		if (error != B_OK || dir.SetTo(paths.StringAt(i)) != B_OK)
+			continue;
+
+		BEntry entry;
+		for (; dir.GetNextEntry(&entry) == B_OK;) {
+			BPath path(paths.StringAt(i), entry.Name());
+			BString name(entry.Name());
+			name.RemoveLast("ControlLook");
+			name.Trim();
+
+			message = new BMessage(kMsgSetControlLook);
+			message->AddString("control_look", path.Path());
+
+			item = new BMenuItem(name.String(), message);
+			if (currentLook == path.Path())
+				item->SetMarked(true);
+			fControlLookMenu->AddItem(item);
+		}
+	}
+}
+
+void
+LookAndFeelSettingsView::_BuildModulsMenu()
 {
 	BPathFinder pathFinder;
 	BStringList paths;

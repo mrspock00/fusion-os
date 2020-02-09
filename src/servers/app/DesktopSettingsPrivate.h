@@ -94,6 +94,7 @@ public:
 
 			status_t			SetControlLook(const char* path);
 			const BString&		ControlLook() const;
+			const BString&		ModulsLook() const;
 
 private:
 			void				_SetDefaults();

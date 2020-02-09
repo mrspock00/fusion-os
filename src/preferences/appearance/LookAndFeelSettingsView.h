@@ -42,6 +42,7 @@ private:
 			void				_SetDecor(BPrivate::DecorInfo* decorInfo);
 
 			void				_BuildDecorMenu();
+			void 				_BuildModulsMenu();
 			void				_AdoptToCurrentDecor();
 			void				_AdoptInterfaceToCurrentDecor();
 
