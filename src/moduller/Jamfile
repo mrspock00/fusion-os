@@ -1,4 +1,0 @@
-SubDir HAIKU_TOP src moduller ;
-
-SubInclude HAIKU_TOP src moduller m1-bl ;
-
