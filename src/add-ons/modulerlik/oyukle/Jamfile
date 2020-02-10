@@ -1,9 +1,0 @@
-SubDir HAIKU_TOP src add-ons modulerlik oyukle ;
-
-
-Addon oyukle :
-	onyukleyici_cl.cpp
-	onyukleyici_restart.cpp
-
-	: be libaccelerantscommon.a
-;
