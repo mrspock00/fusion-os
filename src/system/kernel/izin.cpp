@@ -18,7 +18,6 @@ void izinsis(int b)
 	if(iz.izin_onyuk == true)
     {
         iz_a = iz.izin_onyuk;
-        
 	b = 0; // b sonradan alinacak
 	if(iz_a == failed) 
 	{
@@ -27,11 +26,18 @@ void izinsis(int b)
 		failed = 1;
 		b = 1; // sistem onyuklenmez
 	}	
-	
     }
+}
 
+void 
+izin_class::izin_onyuk(izin* izs, bool ef)
+{
 
 
 
 
 }
+
+
+
+

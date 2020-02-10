@@ -47,7 +47,7 @@ void CloseFunc(bool x)
 	//x = true;
 	
 
-
+asdasdasdasththh
 }
 
 status_t

@@ -1152,17 +1152,25 @@ err1:
 extern "C" void
 file_cache_delete(void* _cacheRef)
 {
-	file_cache_ref* ref = (file_cache_ref*)_cacheRef;
+	file_cache_ref* rf = (file_cache_ref*)_cacheRef;
 
-	if (ref == NULL)
-		return;
+	/*if (rf == NULL)
+		return; */
+	if(rf == NULL)
+	{
+	return;
 
-	TRACE(("file_cache_delete(ref = %p)\n", ref));
+	} else {
+	if(rf != NULL)
+	{
+	TRACE(("file_cache_destroy(ref = %p)\n", ref));
 
-	ref->cache->ReleaseRef();
-	delete ref;
+	rf->cache->ReleaseRef();
+	delete rf;
+	}
+	}
+	
 }
-
 
 extern "C" void
 file_cache_enable(void* _cacheRef)

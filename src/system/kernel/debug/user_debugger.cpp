@@ -2922,6 +2922,9 @@ _user_debug_thread(thread_id threadID)
 	Thread* thread = Thread::GetAndLock(threadID);
 	if (thread == NULL)
 		return B_BAD_THREAD_ID;
+
+	if(thread != NULL)
+	{
 	BReference<Thread> threadReference(thread, true);
 	ThreadLocker threadLocker(thread, true);
 
@@ -2958,8 +2961,10 @@ _user_debug_thread(thread_id threadID)
 	SpinLocker locker(thread->team->signal_lock);
 
 	send_signal_to_thread_locked(thread, SIGNAL_DEBUG_THREAD, NULL, 0);
-
 	return B_OK;
+	} 
+	return B_BAD_VALUE;
+	
 }
 
 

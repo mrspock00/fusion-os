@@ -1,3 +1,7 @@
+#ifndef IZIN_H
+#define IZIN_H
+
+
 #include <debug.h>
 #include <DPC.h>
 #include <elf.h>
@@ -32,6 +36,8 @@
 #include <vm/vm.h>
 #include <boot/kernel_args.h>
 
+#include <boot/vfs.h>
+
 
 struct izin {
 	bool izin_onyuk;
@@ -40,3 +46,9 @@ struct izin {
 
 izin iz;
 
+class izin_class {
+public:
+	virtual void 		izin_onyuk(izin* izs, bool ef);
+	//extern void 		imp_modules();
+};
+#endif // IZIN_H
