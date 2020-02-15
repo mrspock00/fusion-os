@@ -109,24 +109,24 @@ is_bootable(Directory *volume)
 status_t
 load_kernel(stage2_args* args, BootVolume& volume)
 {
+
 	const char *name;
 	int fd = find_kernel(volume, &name);
 	if (fd < B_OK)
 		return fd;
 
 	dprintf("load kernel %s...\n", name);
-
+	// kernel yuklenir.
 	elf_init();
 	preloaded_image *image;
 	status_t status = elf_load_image(fd, &image);
-
+	
 	close(fd);
-
 	if (status < B_OK) {
 		dprintf("loading kernel failed: %" B_PRIx32 "!\n", status);
 		return status;
 	}
-
+	
 	gKernelArgs.kernel_image = image;
 
 	status = elf_relocate_image(gKernelArgs.kernel_image);
@@ -136,7 +136,7 @@ load_kernel(stage2_args* args, BootVolume& volume)
 	}
 
 	gKernelArgs.kernel_image->name = kernel_args_strdup(name);
-
+	
 	return B_OK;
 }
 
@@ -189,7 +189,6 @@ status_t
 load_modules(stage2_args* args, BootVolume& volume)
 {
 		
-
 	// ToDo: this should be mostly replaced by a hardware oriented detection mechanism
 
 	int32 i = 0;

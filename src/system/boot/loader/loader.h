@@ -8,7 +8,6 @@
 
 #include <boot/vfs.h>
 
-
 extern bool is_bootable(Directory* volume);
 extern status_t load_kernel(stage2_args* args, BootVolume& volume);
 extern status_t load_modules(stage2_args* args, BootVolume& volume);

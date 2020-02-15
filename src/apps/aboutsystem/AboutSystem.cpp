@@ -913,10 +913,10 @@ AboutView::_CreateCreditsView()
 	fCreditsView->Insert(string);
 
 	fCreditsView->SetFontAndColor(be_plain_font, B_FONT_ALL, &kDarkGrey);
-	fCreditsView->Insert(B_TRANSLATE("The copyright to the FegeyaOS code is "
+	fCreditsView->Insert(B_TRANSLATE("The copyright to the Fusion code is "
 		"property of Fegeya. "
-		"FegeyaOS" B_UTF8_REGISTERED
-		" and the FegeyaOS logo" B_UTF8_REGISTERED
+		"Fusion" B_UTF8_REGISTERED
+		" and the Fusion logo" B_UTF8_REGISTERED
 		" are registered trademarks of Fegeya"
 		"\n\n"));
 

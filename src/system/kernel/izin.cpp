@@ -1,5 +1,6 @@
 
 
+#include <Roster.h>
 
 #include <string.h>
 
@@ -7,7 +8,7 @@
 #include <OS.h>
 #include "../boot/loader/zarar.h"
 #include "izin.h"
-
+#include "../boot/loader/loader.h"
 // bootloader_h'dan alinacak olan booldan kontrol edilecek
 #define A_IZIN 1
 #define N_IZIN 0
@@ -29,12 +30,16 @@ void izinsis(int b)
     }
 }
 
+void
+izin_class::izin_shutdown(izin* izs, bool f)
+{
+	
+
+
+} 
 void 
 izin_class::izin_onyuk(izin* izs, bool ef)
-{
-
-
-
+{	
 
 }
 

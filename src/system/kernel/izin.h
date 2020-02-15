@@ -49,6 +49,7 @@ izin iz;
 class izin_class {
 public:
 	virtual void 		izin_onyuk(izin* izs, bool ef);
+	virtual void 		izin_shutdown(izin* iz, bool f);
 	//extern void 		imp_modules();
 };
 #endif // IZIN_H
