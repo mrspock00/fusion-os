@@ -31,5 +31,5 @@ jam -q -j2 @nightly-anyboot
 
 
 
-FegeyaOS, GPLv3 ile lisanslanmıştır.
-
+Fusion, GPLv3 ile lisanslanmıştır.
+Fusion, Haiku'yu baz alır.
