@@ -26,7 +26,7 @@
 #include <posix/xsi_semaphore.h>
 #include <real_time_clock.h>
 #include <sem.h>
-#include <smp.h>
+#include <smp.h>    
 #include <system_profiler.h>
 #include <team.h>
 #include <timer.h>

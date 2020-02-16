@@ -86,6 +86,7 @@ find_kernel(BootVolume& volume, const char** name = NULL)
 }
 
 
+
 bool
 is_bootable(Directory *volume)
 {
@@ -185,10 +186,19 @@ add_de_in_ram(bool load)
 
 	
 }	*/
+
+struct Operation {
+	bool boolean;
+	bool stage1;
+	bool stage2;
+	bool stage3;
+};
+
+
 status_t
 load_modules(stage2_args* args, BootVolume& volume)
 {
-		
+	Operation as;
 	// ToDo: this should be mostly replaced by a hardware oriented detection mechanism
 
 	int32 i = 0;
@@ -210,6 +220,7 @@ load_modules(stage2_args* args, BootVolume& volume)
 			char path[B_FILE_NAME_LENGTH];
 			snprintf(path, sizeof(path), "%s/%s", sAddonPaths[0], paths[i]);
 			load_modules_from(volume, path);
+			as.stage1 = true;
 		}
 	}
 
@@ -219,5 +230,53 @@ load_modules(stage2_args* args, BootVolume& volume)
 	load_modules_from(volume, path);
 	snprintf(path, sizeof(path), "%s/%s", sAddonPaths[0], "partitioning_systems");
 	load_modules_from(volume, path);
+	//as.stage1 = as.stage2; this code its code given an error
 	return B_OK;
 }
+void op(bool iz_n)
+{
+	Operation as;
+	const char *pth[] = {"true","false", NULL};
+	for(int32 i = 0; pth[i]; i++)
+	{
+		if(strcmp(pth[i], "true") == 1)
+		{
+			iz_n = true;
+			as.boolean = iz_n;
+
+		} else {
+			if(strcmp(pth[i], "false") == 1)
+			{
+				iz_n = false;
+				as.boolean = iz_n;
+			}
+		}
+
+	} 
+}
+
+
+
+void
+Bootloader_s::BootLoader_stage3(BootVolume& volume, stage3_t* n, bool boolean)
+{
+	
+	Operation as;
+	const char *path_izin[] = {"izin", NULL};
+	boolean = true;
+	if(boolean == true)
+	{
+		for(int32 i = 0; path_izin[i]; i++) 
+		{
+			char paths_f[B_FILE_NAME_LENGTH];
+			load_modules_from(volume, paths_f);
+			boolean = true;	
+			as.stage3 = true;
+		}
+	} else {
+		//n = false;
+		boolean = true;
+	}
+	op(true);
+}
+// not typedef struct this is only struct because not use a_t
