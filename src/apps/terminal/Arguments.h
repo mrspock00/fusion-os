@@ -27,6 +27,7 @@ public:
 	const char* WorkingDir() const	{ return fWorkingDirectory; }
 	bool StandardShell() const		{ return fStandardShell; }
 	bool FullScreen() const			{ return fFullScreen; }
+	bool OpenNotepad() const		{ return fOpenNotepad; }
 	bool UsageRequested() const		{ return fUsageRequested; }
 	void GetShellArguments(int& argc, const char* const*& argv) const;
 
@@ -41,6 +42,7 @@ private:
 	const char**	fShellArguments;
 	const char*		fTitle;
 	const char*		fWorkingDirectory;
+	bool			fOpenNotepad;
 };
 
 

@@ -45,9 +45,11 @@ public:
 
 			void				SetDefaults();
 			void				Revert();
+			void 				SetDarkMode();
 
 			bool				IsDefaultable();
 			bool				IsRevertable();
+			bool				IsDarkable();
 
 private:
 			void				_SetColor(color_which which, rgb_color color);
@@ -69,6 +71,7 @@ private:
 			BMessage			fPrevColors;
 			BMessage			fDefaultColors;
 			BMessage			fCurrentColors;
+			BMessage			fDarkColors;
 };
 
 #endif	// APR_VIEW_H_

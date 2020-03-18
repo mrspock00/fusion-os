@@ -26,7 +26,10 @@ public:
 			void			SetDefaults();
 			void			Revert();
 			bool			IsDefaultable();
-			bool			IsRevertable();
+			bool			IsRevertable();	
+		//	bool			IsDarkable();
+		
+
 
 private:
 			void			_BuildAntialiasingMenu();

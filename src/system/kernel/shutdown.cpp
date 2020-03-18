@@ -42,3 +42,14 @@ _user_shutdown(bool reboot)
 }
 
 
+status_t
+_user_recovery_mode(bool reboot)
+{
+
+	if(reboot == true)
+	{
+	system_shutdown(reboot);
+
+	}
+	return system_shutdown(reboot);
+}

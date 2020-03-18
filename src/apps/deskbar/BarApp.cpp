@@ -234,9 +234,9 @@ void
 TBarApp::InitSettings()
 {
 	desk_settings settings;
-	settings.vertical = fDefaultSettings.vertical = true;
+	settings.vertical = fDefaultSettings.vertical = false;
 	settings.left = fDefaultSettings.left = true;
-	settings.top = fDefaultSettings.top = false;
+	settings.top = fDefaultSettings.top = true;
 	settings.state = fDefaultSettings.state = kMiniState;
 	settings.width = fDefaultSettings.width = gMinimumWindowWidth;
 	settings.switcherLoc = fDefaultSettings.switcherLoc = BPoint(5000, 5000);

@@ -18,7 +18,7 @@ SYSTEM_BIN += [ FFilterByBuildFeatures
 SYSTEM_APPS += [ FFilterByBuildFeatures
 	ActivityMonitor AutoRaise
 	CodyCam
-    Installer LegacyPackageInstaller
+    Installer LaunchBox LegacyPackageInstaller
     PowerStatus
 	RemoteDesktop
 ] ;
@@ -30,6 +30,7 @@ DESKBAR_APPLICATIONS +=
 
 DESKBAR_DESKTOP_APPLETS +=
 	AutoRaise
+	LaunchBox
 	PowerStatus
 ;
 

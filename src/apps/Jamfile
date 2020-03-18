@@ -23,6 +23,7 @@ HaikuSubInclude gradients ;
 HaikuSubInclude haiku3d ;
 HaikuSubInclude icon-o-matic ;
 HaikuSubInclude installer ;
+HaikuSubInclude launchbox ;
 HaikuSubInclude login ;
 HaikuSubInclude magnify ;
 HaikuSubInclude mail ;

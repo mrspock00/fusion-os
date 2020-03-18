@@ -24,6 +24,6 @@ const ColorDescription* get_color_description(int32 index);
 int32 color_description_count(void);
 void get_default_colors(BMessage* storage);
 void get_current_colors(BMessage* storage);
-
+void get_dark_colors(BMessage* storage);
 
 #endif	// COLORS_H

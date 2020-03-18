@@ -32,9 +32,11 @@ private:
 			void			_UpdateButtons();
 			bool			_IsDefaultable() const;
 			bool			_IsRevertable() const;
-
+			bool			_IsDarkable()	const;
+			bool	x;
 		APRView*			fColorsView;
 		BButton*			fDefaultsButton;
+		BButton*			fDarkModeButton;
 		BButton*			fRevertButton;
 
 		AntialiasingSettingsView* fAntialiasingSettings;

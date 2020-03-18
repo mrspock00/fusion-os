@@ -90,10 +90,8 @@ rule DefineDefaultBuildProfiles
 				openssh
 				p7zip
 				pdfwriter
-				pe
 				python
 				timgmsoundfont
-				vision
 				wpa_supplicant
 				wqy_microhei
 				# xz_utils can't be built with gcc2, so we install it for
@@ -133,7 +131,7 @@ rule DefineDefaultBuildProfiles
 		}
 
 		case "nightly-*" : {
-			Echo Building FegeyaOS  ;
+			Echo Building Fegeya Fusion  ;
 			HAIKU_ROOT_USER_NAME ?= user ;
 			HAIKU_ROOT_USER_REAL_NAME ?= "Yourself" ;
 			AddGroupToHaikuImage party : 101 : user sshd ;
@@ -151,8 +149,6 @@ rule DefineDefaultBuildProfiles
 				openssh
 				openssl
 				p7zip
-				pe
-				vision
 				wpa_supplicant
 				# xz_utils can't be built with gcc2, so we install it for
 				# primary gcc 4 architectures or gcc 2 hybrids.

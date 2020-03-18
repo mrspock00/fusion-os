@@ -12,7 +12,7 @@
 namespace BPrivate {
 
 extern const rgb_color* kDefaultColors;
-
+extern const rgb_color* kDarkColors; // Dark Modu icin ekleme
 }	// namespace BPrivate
 
 #endif // _DEFAULT_COLORS_H

@@ -1,14 +1,4 @@
-/*
- * Copyright 2018, Jérôme Duval, jerome.duval@gmail.com.
- * Copyright 2002-2015, Axel Dörfler, axeld@pinc-software.de.
- * Distributed under the terms of the MIT License.
- *
- * Copyright 2001-2002, Travis Geiselbrecht. All rights reserved.
- * Distributed under the terms of the NewOS License.
- */
-
-/* Fegeya 2019 */
-/*! This is main - initializes the kernel and launches the Bootscript */
+/* Telif hakki Fegeya 2020*/
 
 
 #include <string.h>

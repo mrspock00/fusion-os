@@ -31,7 +31,7 @@
 #include "Colors.h"
 #include "ColorWhichListView.h"
 #include "ColorWhichItem.h"
-
+#include "boolx.h"
 
 #undef B_TRANSLATION_CONTEXT
 #define B_TRANSLATION_CONTEXT "Colors tab"
@@ -196,7 +196,9 @@ APRView::LoadSettings()
 {
 	get_default_colors(&fDefaultColors);
 	get_current_colors(&fCurrentColors);
+	get_dark_colors(&fDarkColors);
 	fPrevColors = fCurrentColors;
+	
 }
 
 
@@ -232,8 +234,22 @@ APRView::Revert()
 
 	Window()->PostMessage(kMsgUpdate);
 }
+void 
+APRView::SetDarkMode()
+{
+	is_dark = true;
+	_SetUIColors(fDarkColors);
+	_UpdatePreviews(fDarkColors);
 
+	rgb_color renk = fDarkColors.GetColor(ui_color_name(fWhich),
+		make_color(255, 0, 255));
+	fPicker->SetValue(renk);
+	fColorPreview->SetColor(renk);
+	fColorPreview->Invalidate();
+	Window()->PostMessage(kMsgUpdate);
+	// Dark mode acik! Kapatmak icin default || revert 
 
+}
 bool
 APRView::IsDefaultable()
 {
@@ -247,7 +263,11 @@ APRView::IsRevertable()
 	return !fPrevColors.HasSameData(fCurrentColors);
 }
 
-
+bool
+APRView::IsDarkable()
+{
+	return !fDarkColors.HasSameData(fCurrentColors);
+}
 void
 APRView::_SetColor(color_which which, rgb_color color)
 {

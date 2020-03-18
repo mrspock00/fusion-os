@@ -32,7 +32,8 @@ Arguments::Arguments(int defaultArgsNum, const char* const* defaultArgs)
 	  fShellArgumentCount(0),
 	  fShellArguments(NULL),
 	  fTitle(NULL),
-	  fWorkingDirectory(NULL)
+	  fWorkingDirectory(NULL),
+	  fOpenNotepad(false)
 {
 	_SetShellArguments(defaultArgsNum, defaultArgs);
 }
@@ -42,6 +43,7 @@ Arguments::~Arguments()
 {
 	_SetShellArguments(0, NULL);
 }
+
 
 
 void
@@ -66,9 +68,14 @@ Arguments::Parse(int argc, const char* const* argv)
 					fUsageRequested = true;
 				else
 					fWorkingDirectory = argv[++argi];
-			} else if (strcmp(arg, "-f") == 0
-					|| strcmp(arg, "--fullscreen") == 0)
+			} else if (strcmp(arg, "-f") == 0 
+					|| strcmp(arg, "--fullscreen") == 0){
 				fFullScreen = true;
+			} else if (strcmp(arg, "-n") == 0
+					|| strcmp(arg, "notepad") == 0){
+					fOpenNotepad = true;
+					printf("test");
+			}
 			else {
 				// illegal option
 				fprintf(stderr, B_TRANSLATE("Unrecognized option \"%s\"\n"),

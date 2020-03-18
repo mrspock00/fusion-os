@@ -23,7 +23,7 @@
 #include "defs.h"
 #include "FontView.h"
 #include "LookAndFeelSettingsView.h"
-
+#include "boolx.h"
 
 #undef B_TRANSLATION_CONTEXT
 #define B_TRANSLATION_CONTEXT "APRWindow"
@@ -31,7 +31,7 @@
 
 static const uint32 kMsgSetDefaults = 'dflt';
 static const uint32 kMsgRevert = 'rvrt';
-
+static const uint32 kdarkmode =  'dark';
 
 APRWindow::APRWindow(BRect frame)
 	:
@@ -41,6 +41,10 @@ APRWindow::APRWindow(BRect frame)
 {
 	fDefaultsButton = new BButton("defaults", B_TRANSLATE("Defaults"),
 		new BMessage(kMsgSetDefaults), B_WILL_DRAW);
+
+
+	fDarkModeButton = new BButton("darkmode", B_TRANSLATE("Dark Mode"),
+		new BMessage(kdarkmode), B_WILL_DRAW);
 
 	fRevertButton = new BButton("revert", B_TRANSLATE("Revert"),
 		new BMessage(kMsgRevert), B_WILL_DRAW);
@@ -72,6 +76,7 @@ APRWindow::APRWindow(BRect frame)
 		.AddGroup(B_HORIZONTAL)
 			.Add(fDefaultsButton)
 			.Add(fRevertButton)
+			.Add(fDarkModeButton)
 			.SetInsets(B_USE_WINDOW_SPACING, B_USE_DEFAULT_SPACING,
 				B_USE_DEFAULT_SPACING, 0)
 			.AddGlue();
@@ -114,16 +119,14 @@ APRWindow::_UpdateButtons()
 {
 	fDefaultsButton->SetEnabled(_IsDefaultable());
 	fRevertButton->SetEnabled(_IsRevertable());
+	fDarkModeButton->SetEnabled(_IsDarkable());
 }
 
 
 bool
 APRWindow::_IsDefaultable() const
 {
-//	printf("fonts defaultable: %d\n", fFontSettings->IsDefaultable());
-//	printf("colors defaultable: %d\n", fColorsView->IsDefaultable());
-//	printf("AA defaultable: %d\n", fAntialiasingSettings->IsDefaultable());
-//	printf("decor defaultable: %d\n", fLookAndFeelSettings->IsDefaultable());
+	is_dark = false;
 	return fFontSettings->IsDefaultable()
 		|| fColorsView->IsDefaultable()
 		|| fLookAndFeelSettings->IsDefaultable()
@@ -134,12 +137,21 @@ APRWindow::_IsDefaultable() const
 bool
 APRWindow::_IsRevertable() const
 {
-//	printf("fonts revertable: %d\n", fFontSettings->IsRevertable());
-//	printf("colors revertable: %d\n", fColorsView->IsRevertable());
-//	printf("AA revertable: %d\n", fAntialiasingSettings->IsRevertable());
-//	printf("decor revertable: %d\n", fLookAndFeelSettings->IsRevertable());
+	is_dark = false;
 	return fFontSettings->IsRevertable()
 		|| fColorsView->IsRevertable()
 		|| fLookAndFeelSettings->IsRevertable()
 		|| fAntialiasingSettings->IsRevertable();
+}
+
+bool
+APRWindow::_IsDarkable() const 
+{
+	is_dark = true;
+	return fFontSettings->IsDefaultable()
+		|| fColorsView->IsDarkable()
+		|| fLookAndFeelSettings->IsDefaultable()
+		|| fAntialiasingSettings->IsDefaultable();
+
+
 }

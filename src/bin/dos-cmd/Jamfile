@@ -1,0 +1,9 @@
+SubDir HAIKU_TOP src bin dos-cmd ;
+
+BinCommand dos-cmd : 
+	notepad.cpp
+	:
+	shared package be
+	[ TargetLibsupc++ ] [ TargetLibstdc++ ]
+;
+
