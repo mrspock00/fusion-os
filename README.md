@@ -1,10 +1,10 @@
-# fegeya-os
-FegeyaOS Deposu
+# fusion-os
+Fegeya Fusion
 
 
-# İnşa etmek:
+# Build:
 
-# Paketleri yükleyin: 
+# Install packages: 
 
 Ubuntu/Debian = sudo apt install git nasm autoconf automake texinfo flex bison gawk build-essential unzip wget zip less zlib1g-dev xorriso libtool mtools gcc-multilib python3
 
@@ -19,17 +19,19 @@ Arch = sudo pacman -S base-devel bison git texinfo nasm openssh unzip curl wget 
 FreeBSD = sudo pkg install bison git nasm gawk texinfo xorriso wget u-boot-tools mtools linuxfdisk curl python3 gcc gmake
 
 
-# Konfigure et:
+# Configure:
 
 mkdir generated.x86_64; cd generated.x86_64
 ../configure --build-cross-tools x86_64 ../../buildtools
 
-# İnşa et:
+# Build:
 
-jam -q -j2 @nightly-anyboot
-
-
+jam -q -j<yourcpucore> @nightly-anyboot
 
 
-Fusion, GPLv3 ile lisanslanmıştır.
-Fusion, Haiku'yu baz alır.
+Build Jam:
+Not now (You're should using Haiku's Buildtools. There in: https://github.com/haiku/buildtools)
+
+
+Fusion, licensed with GPLv3.
+Fusion based of OpenBeOS(Haiku).
