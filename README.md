@@ -26,7 +26,7 @@ mkdir generated.x86_64; cd generated.x86_64
 
 # Build:
 
-jam -q -j<yourcpucore> @nightly-anyboot
+jam -q -j(yourcpucore) @nightly-anyboot
 
 
 Build Jam:
