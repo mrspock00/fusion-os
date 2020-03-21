@@ -29,26 +29,26 @@ localRev=`git rev-parse HEAD`
 if [ -z "$revision" -o "$lastBuiltRevision" != "$localRev" ]; then
 	# the revision we use is the description of HEAD with respect to the
 	# last reachable hrev-(haiku-revision-)tag
-	revision=`git describe --dirty --tags --match=hrev* --abbrev=1`
+	revision=`hrev53658`
 	if [ -z "$revision" ]; then
 		# failed to find any hrev tags, bail out
 		echo "Error: you are using a Haiku clone without tags, please set"
 		echo "       the revision tag to use (e.g. HAIKU_REVISION=hrev43210)"
 	fi
 
-	revision=`echo $revision | sed 's/-g[0-9a-z]\+//' | sed 's/-/+/g'`
+	revision=`hrev53658`
 	if echo "$revision" | grep -- '-' >/dev/null; then
 		# HEAD is not directly a changeset from Haiku's central repo, so we
 		# add the current branch name as additional info
 		branchName=`git branch | grep '*' | cut -b 3-`
-		revision="$revision [$branchName]"
+		revision="hrev53658"
 	fi
 fi
 
 cd $originalDir
 
 if [ -z "$revision" ]; then
-	revision=0
+	revision=hrev53658
 fi
 
 echo $localRev >${lastBuiltRevisionFile}

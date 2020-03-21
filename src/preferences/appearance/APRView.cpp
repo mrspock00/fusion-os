@@ -31,7 +31,6 @@
 #include "Colors.h"
 #include "ColorWhichListView.h"
 #include "ColorWhichItem.h"
-#include "boolx.h"
 
 #undef B_TRANSLATION_CONTEXT
 #define B_TRANSLATION_CONTEXT "Colors tab"
@@ -237,7 +236,7 @@ APRView::Revert()
 void 
 APRView::SetDarkMode()
 {
-	is_dark = true;
+	//is_dark = true;
 	_SetUIColors(fDarkColors);
 	_UpdatePreviews(fDarkColors);
 

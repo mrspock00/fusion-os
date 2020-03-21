@@ -23,7 +23,7 @@
 #include <String.h>
 #include "Colors.h"
 //#include <APRWindow.h>  gerek yok, ayrica ayni yolda degil.
-#include "boolx.h"
+//#include "boolx.h"
 #undef B_TRANSLATION_CONTEXT
 #define B_TRANSLATION_CONTEXT "Colors tab"
 
@@ -105,15 +105,15 @@ get_default_colors(BMessage* message)
 
 	for (int32 index = 0; index < kColorWhichCount; ++index) {
 		color_which which = index_to_color_which(index);
-		if(is_dark == true)
-		{
+		//if(is_dark == true)
+		//{
 		message->AddColor(ui_color_name(which),
 		BPrivate::kDarkColors[index]);
-		} else {
-		message->AddColor(ui_color_name(which),
-		BPrivate::kDefaultColors[index]);
+		//} else {
+		//message->AddColor(ui_color_name(which),
+		//BPrivate::kDefaultColors[index]);
 
-		}
+		//}
 	}
 }
 
