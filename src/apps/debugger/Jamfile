@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src apps debugger ;
+SubDir FUSION_TOP src apps debugger ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 UsePrivateHeaders debugger ;
 UsePrivateHeaders [ FDirName debugger arch ] ;
@@ -54,7 +54,7 @@ SEARCH_SOURCE += [ FDirName $(SUBDIR) user_interface report ] ;
 SEARCH_SOURCE += [ FDirName $(SUBDIR) util ] ;
 
 local debugAnalyzerSources
-	= [ FDirName $(HAIKU_TOP) src apps debuganalyzer ] ;
+	= [ FDirName $(FUSION_TOP) src apps debuganalyzer ] ;
 
 SubDirHdrs [ FDirName $(debugAnalyzerSources) gui ] ;
 

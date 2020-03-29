@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers dvb cx23882 ;
+SubDir FUSION_TOP src add-ons kernel drivers dvb cx23882 ;
 
 UsePrivateHeaders drivers ;
 

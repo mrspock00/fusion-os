@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tools vmdkimage ;
+SubDir FUSION_TOP src tools vmdkimage ;
 
 UsePrivateHeaders kernel ;
 UsePrivateHeaders vmdk ;

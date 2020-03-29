@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin network arp ;
+SubDir FUSION_TOP src bin network arp ;
 
 UsePrivateHeaders net ;
 UsePrivateSystemHeaders ;

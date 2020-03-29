@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits interface ;
+SubDir FUSION_TOP src kits interface ;
 
 # If defined allows to run applications without the registrar
 # -- for development only, of course.
@@ -22,7 +22,7 @@ SetSubDirSupportedPlatforms haiku libbe_test ;
 UseLibraryHeaders agg ;
 UsePrivateHeaders app input print interface locale shared support tracker ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src kits tracker ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src kits tracker ] ;
 
 
 local architectureObject ;

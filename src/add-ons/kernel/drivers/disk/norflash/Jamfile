@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers disk norflash ;
+SubDir FUSION_TOP src add-ons kernel drivers disk norflash ;
 
 UsePrivateHeaders drivers kernel ;
 

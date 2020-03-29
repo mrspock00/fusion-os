@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps gradients ;
+SubDir FUSION_TOP src apps gradients ;
 
 Application Gradients :
 	GradientsApp.cpp

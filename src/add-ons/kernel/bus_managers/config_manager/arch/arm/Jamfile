@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers config_manager arch $(TARGET_ARCH) ;
+SubDir FUSION_TOP src add-ons kernel bus_managers config_manager arch $(TARGET_ARCH) ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) $(DOTDOT) ] ;
 

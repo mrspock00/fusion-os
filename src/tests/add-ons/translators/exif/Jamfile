@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src tests add-ons translators exif ;
+SubDir FUSION_TOP src tests add-ons translators exif ;
 
-SubDirSysHdrs [ FDirName $(HAIKU_TOP) src add-ons translators jpeg ] ;
-SubDirSysHdrs [ FDirName $(HAIKU_TOP) src add-ons translators raw ] ;
+SubDirSysHdrs [ FDirName $(FUSION_TOP) src add-ons translators jpeg ] ;
+SubDirSysHdrs [ FDirName $(FUSION_TOP) src add-ons translators raw ] ;
 	# for TIFF.h and ReadHelper.h
 
 SimpleTest dump_exif :
@@ -13,5 +13,5 @@ SimpleTest dump_exif :
 
 SEARCH on [ FGristFiles 
 		exif_parser.cpp
-	] = [ FDirName $(HAIKU_TOP) src add-ons translators jpeg ] ;
+	] = [ FDirName $(FUSION_TOP) src add-ons translators jpeg ] ;
 

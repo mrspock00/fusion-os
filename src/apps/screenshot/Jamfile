@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps screenshot ;
+SubDir FUSION_TOP src apps screenshot ;
 
 HAIKU_MULTIPLE_LOCALIZED_TARGETS on $(SUBDIR) = 1 ;
 

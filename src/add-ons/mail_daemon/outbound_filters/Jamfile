@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons mail_daemon outbound_filters ;
+SubDir FUSION_TOP src add-ons mail_daemon outbound_filters ;
 
-SubInclude HAIKU_TOP src add-ons mail_daemon outbound_filters fortune ;
+SubInclude FUSION_TOP src add-ons mail_daemon outbound_filters fortune ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons translators png ;
+SubDir FUSION_TOP src add-ons translators png ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) shared ] ;
 

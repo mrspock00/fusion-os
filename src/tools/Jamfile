@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tools ;
+SubDir FUSION_TOP src tools ;
 
 UsePrivateBuildHeaders app storage ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src/bin ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src/bin ] ;
 
 local beapi_tools =
 	<build>catattr
@@ -78,41 +78,41 @@ BuildPlatformMain <build>xres : xres.cpp : $(HOST_LIBBE) $(HOST_LIBSTDC++)
 
 SEARCH on [ FGristFiles
 		Mime.cpp
-	] = [ FDirName $(HAIKU_TOP) src build libbe storage ] ;
+	] = [ FDirName $(FUSION_TOP) src build libbe storage ] ;
 
 SEARCH on [ FGristFiles
 		UpdateMimeInfoThread.cpp MimeUpdateThread.cpp database_support.cpp
-	] = [ FDirName $(HAIKU_TOP) src build libbe storage mime ] ;
+	] = [ FDirName $(FUSION_TOP) src build libbe storage mime ] ;
 
 SEARCH on [ FGristFiles
 		ColorQuantizer.cpp
-	] = [ FDirName $(HAIKU_TOP) src kits shared ] ;
+	] = [ FDirName $(FUSION_TOP) src kits shared ] ;
 
-SubInclude HAIKU_TOP src tools addattr ;
-SubInclude HAIKU_TOP src tools anyboot ;
-SubInclude HAIKU_TOP src tools bfs_shell ;
-SubInclude HAIKU_TOP src tools cppunit ;
-SubInclude HAIKU_TOP src tools create_repository_config ;
-SubInclude HAIKU_TOP src tools elfsymbolpatcher ;
-SubInclude HAIKU_TOP src tools fixup_amiga_boot_checksum ;
-SubInclude HAIKU_TOP src tools fixup_tos_boot_checksum ;
-SubInclude HAIKU_TOP src tools fs_shell ;
-SubInclude HAIKU_TOP src tools gensyscalls ;
-SubInclude HAIKU_TOP src tools get_package_dependencies ;
-SubInclude HAIKU_TOP src tools hack_coff ;
-SubInclude HAIKU_TOP src tools hvif2png ;
-SubInclude HAIKU_TOP src tools keymap ;
-SubInclude HAIKU_TOP src tools locale ;
-SubInclude HAIKU_TOP src tools makebootable ;
-SubInclude HAIKU_TOP src tools opd_to_package_info ;
-SubInclude HAIKU_TOP src tools package ;
-SubInclude HAIKU_TOP src tools package_repo ;
-SubInclude HAIKU_TOP src tools rc ;
-SubInclude HAIKU_TOP src tools remote_disk_server ;
-SubInclude HAIKU_TOP src tools resattr ;
-SubInclude HAIKU_TOP src tools translation ;
-SubInclude HAIKU_TOP src tools unflatten ;
-SubInclude HAIKU_TOP src tools unzip ;
-SubInclude HAIKU_TOP src tools update_package_requires ;
-SubInclude HAIKU_TOP src tools vmdkimage ;
-SubInclude HAIKU_TOP src tools zip ;
+SubInclude FUSION_TOP src tools addattr ;
+SubInclude FUSION_TOP src tools anyboot ;
+SubInclude FUSION_TOP src tools bfs_shell ;
+SubInclude FUSION_TOP src tools cppunit ;
+SubInclude FUSION_TOP src tools create_repository_config ;
+SubInclude FUSION_TOP src tools elfsymbolpatcher ;
+SubInclude FUSION_TOP src tools fixup_amiga_boot_checksum ;
+SubInclude FUSION_TOP src tools fixup_tos_boot_checksum ;
+SubInclude FUSION_TOP src tools fs_shell ;
+SubInclude FUSION_TOP src tools gensyscalls ;
+SubInclude FUSION_TOP src tools get_package_dependencies ;
+SubInclude FUSION_TOP src tools hack_coff ;
+SubInclude FUSION_TOP src tools hvif2png ;
+SubInclude FUSION_TOP src tools keymap ;
+SubInclude FUSION_TOP src tools locale ;
+SubInclude FUSION_TOP src tools makebootable ;
+SubInclude FUSION_TOP src tools opd_to_package_info ;
+SubInclude FUSION_TOP src tools package ;
+SubInclude FUSION_TOP src tools package_repo ;
+SubInclude FUSION_TOP src tools rc ;
+SubInclude FUSION_TOP src tools remote_disk_server ;
+SubInclude FUSION_TOP src tools resattr ;
+SubInclude FUSION_TOP src tools translation ;
+SubInclude FUSION_TOP src tools unflatten ;
+SubInclude FUSION_TOP src tools unzip ;
+SubInclude FUSION_TOP src tools update_package_requires ;
+SubInclude FUSION_TOP src tools vmdkimage ;
+SubInclude FUSION_TOP src tools zip ;

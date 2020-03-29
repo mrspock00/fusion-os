@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests kits interface pictureprint ;
+SubDir FUSION_TOP src tests kits interface pictureprint ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers libs print libprint ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers libs print libprint ] ;
 
 UsePrivateHeaders interface print ;
 

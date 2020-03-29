@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin pc ;
+SubDir FUSION_TOP src bin pc ;
 
 BinCommand pc :
 	pc.c

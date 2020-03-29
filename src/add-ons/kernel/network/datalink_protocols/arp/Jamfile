@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network datalink_protocols arp ;
+SubDir FUSION_TOP src add-ons kernel network datalink_protocols arp ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;

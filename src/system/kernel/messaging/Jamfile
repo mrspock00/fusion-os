@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src system kernel messaging ;
+SubDir FUSION_TOP src system kernel messaging ;
 
 UsePrivateHeaders [ FDirName kernel ] ;
 UsePrivateHeaders [ FDirName kernel util ] ;
 #UsePrivateHeaders [ FDirName kernel disk_device_manager ] ;
 #UsePrivateHeaders [ FDirName kernel fs ] ;
 UsePrivateHeaders shared ;
-UseHeaders [ FDirName $(HAIKU_TOP) src system kernel disk_device_manager ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src system kernel disk_device_manager ] ;
 	# for "Locker.h"
 
 KernelMergeObject kernel_messaging.o :

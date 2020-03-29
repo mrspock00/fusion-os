@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons accelerants nvidia ;
+SubDir FUSION_TOP src add-ons accelerants nvidia ;
 
 UsePrivateHeaders graphics ;
 UsePrivateHeaders [ FDirName graphics nvidia ] ;
@@ -22,4 +22,4 @@ Addon nvidia.accelerant :
 
 Depends nvidia.accelerant : nvidia ;
 
-SubInclude HAIKU_TOP src add-ons accelerants nvidia engine ;
+SubInclude FUSION_TOP src add-ons accelerants nvidia engine ;

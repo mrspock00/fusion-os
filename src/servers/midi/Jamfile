@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers midi ;
+SubDir FUSION_TOP src servers midi ;
 
 UsePrivateHeaders app midi shared storage ;
 

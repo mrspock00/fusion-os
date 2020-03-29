@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tools translation bitsinfo ;
+SubDir FUSION_TOP src tools translation bitsinfo ;
 
 BinCommand bitsinfo :
 	bitsinfo.cpp

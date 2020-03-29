@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers disk virtual nbd ;
+SubDir FUSION_TOP src add-ons kernel drivers disk virtual nbd ;
 
 UsePrivateHeaders drivers ;
 UsePrivateKernelHeaders ;

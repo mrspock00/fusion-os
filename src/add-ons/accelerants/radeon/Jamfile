@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons accelerants radeon ;
+SubDir FUSION_TOP src add-ons accelerants radeon ;
 
 UsePrivateHeaders graphics ;
 UsePrivateHeaders [ FDirName graphics radeon ] ;

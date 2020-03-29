@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons disk_systems bfs ;
+SubDir FUSION_TOP src add-ons disk_systems bfs ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders shared storage ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems bfs ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel file_systems bfs ] ;
 
 AddResources <disk_system>bfs : BFSAddOn.rdef ;
 

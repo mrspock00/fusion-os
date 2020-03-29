@@ -1,2 +1,2 @@
-SubDir HAIKU_TOP src add-ons kernel cpu risc64 ;
+SubDir FUSION_TOP src add-ons kernel cpu risc64 ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix glibc wcsmbs ;
+SubDir FUSION_TOP src system libroot posix glibc wcsmbs ;
 
 SubDirCcFlags -D_GNU_SOURCE -DUSE_IN_LIBIO ;
 
@@ -7,18 +7,18 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 	on $(architectureObject) {
 		local architecture = $(TARGET_PACKAGING_ARCH) ;
 
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch
 			$(TARGET_ARCH) ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch
 			generic ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc libio ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc wcsmbs ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc iconv ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc locale ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc stdlib ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc ctype ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc libio ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc wcsmbs ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc iconv ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc locale ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc stdlib ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc ctype ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc ;
 
 		UsePrivateHeaders libroot ;
 

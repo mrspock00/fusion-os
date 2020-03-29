@@ -11,11 +11,11 @@ MakeLocate $(HAIKU_CD) : $(HAIKU_CD_DIR) ;
 # prepare the script that initializes the shell variables
 HAIKU_CD_INIT_VARIABLES_SCRIPT = <HaikuCD>haiku.cd-init-vars ;
 local script = $(HAIKU_CD_INIT_VARIABLES_SCRIPT) ;
-MakeLocate $(script) : $(HAIKU_OUTPUT_DIR) ;
+MakeLocate $(script) : $(FUSION_OUTPUT_DIR) ;
 Always $(script) ;
 
-AddVariableToScript $(script) : sourceDir : $(HAIKU_TOP) ;
-AddVariableToScript $(script) : outputDir : $(HAIKU_OUTPUT_DIR) ;
+AddVariableToScript $(script) : sourceDir : $(FUSION_TOP) ;
+AddVariableToScript $(script) : outputDir : $(FUSION_OUTPUT_DIR) ;
 AddVariableToScript $(script) : tmpDir : $(HAIKU_TMP_DIR) ;
 AddVariableToScript $(script) : isCD : 1 ;
 AddVariableToScript $(script) : cdLabel : $(HAIKU_CD_LABEL) ;

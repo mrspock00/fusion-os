@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits media soundplayer ;
+SubDir FUSION_TOP src tests kits media soundplayer ;
 
 SimpleTest <test>SimplePlayerTest
 	: SimplePlayerTest.cpp

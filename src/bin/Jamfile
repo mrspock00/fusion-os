@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin ;
+SubDir FUSION_TOP src bin ;
 
 HAIKU_MULTIPLE_LOCALIZED_TARGETS on $(SUBDIR) = 1 ;
 
@@ -6,7 +6,7 @@ AddSubDirSupportedPlatforms libbe_test ;
 
 UsePrivateHeaders app interface shared storage support tracker usb ;
 UsePrivateSystemHeaders ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel file_cache ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel file_cache ;
 UseBuildFeatureHeaders ncurses ;
 
 local haiku-utils_rsrc = [ FGristFiles haiku-utils.rsrc ] ;
@@ -244,41 +244,41 @@ DoCatalogs filepanel
 	: filepanel.cpp
 ;
 
-SubInclude HAIKU_TOP src bin addattr ;
-SubInclude HAIKU_TOP src bin bfs_tools ;
-SubInclude HAIKU_TOP src bin cddb_lookup ;
-SubInclude HAIKU_TOP src bin consoled ;
-SubInclude HAIKU_TOP src bin desklink ;
-SubInclude HAIKU_TOP src bin dos-cmd ;
-SubInclude HAIKU_TOP src bin fwcontrol ;
-SubInclude HAIKU_TOP src bin hid_decode ;
-SubInclude HAIKU_TOP src bin keymap ;
-SubInclude HAIKU_TOP src bin keystore ;
-SubInclude HAIKU_TOP src bin listdev ;
-SubInclude HAIKU_TOP src bin listusb ;
-SubInclude HAIKU_TOP src bin locale ;
-SubInclude HAIKU_TOP src bin makebootable ;
-#SubInclude HAIKU_TOP src bin makeudfimage ;
-SubInclude HAIKU_TOP src bin mail_utils ;
-SubInclude HAIKU_TOP src bin media_client ;
-SubInclude HAIKU_TOP src bin mkdos ;
-SubInclude HAIKU_TOP src bin mkfs ;
-SubInclude HAIKU_TOP src bin multiuser ;
-SubInclude HAIKU_TOP src bin package ;
-SubInclude HAIKU_TOP src bin package_repo ;
-SubInclude HAIKU_TOP src bin pc ;
-SubInclude HAIKU_TOP src bin pcmcia-cs ;
-SubInclude HAIKU_TOP src bin pkgman ;
-SubInclude HAIKU_TOP src bin rc ;
-SubInclude HAIKU_TOP src bin screen_blanker ;
-SubInclude HAIKU_TOP src bin screenmode ;
-SubInclude HAIKU_TOP src bin writembr ;
+SubInclude FUSION_TOP src bin addattr ;
+SubInclude FUSION_TOP src bin bfs_tools ;
+SubInclude FUSION_TOP src bin cddb_lookup ;
+SubInclude FUSION_TOP src bin consoled ;
+SubInclude FUSION_TOP src bin desklink ;
+SubInclude FUSION_TOP src bin dos-cmd ;
+SubInclude FUSION_TOP src bin fwcontrol ;
+SubInclude FUSION_TOP src bin hid_decode ;
+SubInclude FUSION_TOP src bin keymap ;
+SubInclude FUSION_TOP src bin keystore ;
+SubInclude FUSION_TOP src bin listdev ;
+SubInclude FUSION_TOP src bin listusb ;
+SubInclude FUSION_TOP src bin locale ;
+SubInclude FUSION_TOP src bin makebootable ;
+#SubInclude FUSION_TOP src bin makeudfimage ;
+SubInclude FUSION_TOP src bin mail_utils ;
+SubInclude FUSION_TOP src bin media_client ;
+SubInclude FUSION_TOP src bin mkdos ;
+SubInclude FUSION_TOP src bin mkfs ;
+SubInclude FUSION_TOP src bin multiuser ;
+SubInclude FUSION_TOP src bin package ;
+SubInclude FUSION_TOP src bin package_repo ;
+SubInclude FUSION_TOP src bin pc ;
+SubInclude FUSION_TOP src bin pcmcia-cs ;
+SubInclude FUSION_TOP src bin pkgman ;
+SubInclude FUSION_TOP src bin rc ;
+SubInclude FUSION_TOP src bin screen_blanker ;
+SubInclude FUSION_TOP src bin screenmode ;
+SubInclude FUSION_TOP src bin writembr ;
 
 # debugging tools
-SubInclude HAIKU_TOP src bin debug ;
+SubInclude FUSION_TOP src bin debug ;
 
 # Network command line tools
-SubInclude HAIKU_TOP src bin network ;
+SubInclude FUSION_TOP src bin network ;
 
 # Other stuff
-SubInclude HAIKU_TOP src bin filteredquery ;
+SubInclude FUSION_TOP src bin filteredquery ;

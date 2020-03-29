@@ -1,17 +1,17 @@
-SubDir HAIKU_TOP src add-ons network_settings dialup ;
+SubDir FUSION_TOP src add-ons network_settings dialup ;
 
 UsePublicHeaders [ FDirName add-ons network_settings ] ;
 UsePrivateHeaders app libroot kernel net shared ;
 UsePrivateSystemHeaders ;
 UsePrivateKernelHeaders ; # FIXME: shouldn't be needed
-UseHeaders [ FDirName $(HAIKU_TOP) src preferences network ] : false ;
+UseHeaders [ FDirName $(FUSION_TOP) src preferences network ] : false ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared libppp headers ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared libkernelppp headers ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared libppp headers ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared libkernelppp headers ] : true ;
 
 # additonal headers for built-in add-ons:
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp pppoe ] : true ; # PPPoE
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp ipcp ] : true ; # IPCP
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp pppoe ] : true ; # PPPoE
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp ipcp ] : true ; # IPCP
 
 AddResources DialUp : DialUpPreflet.rdef ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons disk_systems btrfs ;
+SubDir FUSION_TOP src add-ons disk_systems btrfs ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders shared storage ;
@@ -7,9 +7,9 @@ UseBuildFeatureHeaders zlib ;
 Includes [ FGristFiles BTRFSAddOn.cpp ]
 	: [ BuildFeatureAttribute zlib : headers ] ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src libs uuid ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs uuid ] : true ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems btrfs ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel file_systems btrfs ] ;
 
 AddResources <disk_system>btrfs : BTRFSAddOn.rdef ;
 

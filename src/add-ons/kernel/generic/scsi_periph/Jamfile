@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src add-ons kernel generic scsi_periph ;
+SubDir FUSION_TOP src add-ons kernel generic scsi_periph ;
 
 UsePrivateHeaders drivers ;
 UsePrivateKernelHeaders ;
-SubDirHdrs $(HAIKU_TOP) src system kernel device_manager ;
+SubDirHdrs $(FUSION_TOP) src system kernel device_manager ;
 
 # disable debug output, if debugging is disabled
 if $(DEBUG) = 0 {

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel platform atari_m68k ;
+SubDir FUSION_TOP src system kernel platform atari_m68k ;
 
 SubDirCcFlags $(TARGET_KERNEL_PIC_CCFLAGS) ;
 SubDirC++Flags $(TARGET_KERNEL_PIC_CCFLAGS) ;

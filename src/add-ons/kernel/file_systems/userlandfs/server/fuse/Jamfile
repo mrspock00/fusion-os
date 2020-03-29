@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems userlandfs server fuse ;
+SubDir FUSION_TOP src add-ons kernel file_systems userlandfs server fuse ;
 
-local userlandFSTop = [ FDirName $(HAIKU_TOP) src add-ons kernel
+local userlandFSTop = [ FDirName $(FUSION_TOP) src add-ons kernel
 	file_systems userlandfs ] ;
 local userlandFSIncludes = [ PrivateHeaders userlandfs ] ;
 
@@ -36,4 +36,4 @@ SharedLibrary libuserlandfs_fuse.so
 ;
 
 SEARCH on [ FGristFiles mime_ext_table.c ]
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems shared ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems shared ] ;

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests add-ons input_server ;
+SubDir FUSION_TOP src tests add-ons input_server ;
 
-SubDirHdrs $(HAIKU_TOP) src add-ons input_server devices keyboard ;
+SubDirHdrs $(FUSION_TOP) src add-ons input_server devices keyboard ;
 UsePrivateHeaders input shared tracker  ;
 UsePrivateSystemHeaders ;
 
@@ -13,5 +13,5 @@ SimpleTest TeamMonitorTest :
 
 SEARCH on [ FGristFiles
 		TeamMonitorWindow.cpp TeamListItem.cpp
-	] = [ FDirName $(HAIKU_TOP) src add-ons input_server devices keyboard ] ;
+	] = [ FDirName $(FUSION_TOP) src add-ons input_server devices keyboard ] ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex ParameterView ;
+SubDir FUSION_TOP src apps cortex ParameterView ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) NodeManager ] ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network devices ethernet ;
+SubDir FUSION_TOP src add-ons kernel network devices ethernet ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;

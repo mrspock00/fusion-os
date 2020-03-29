@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons screen_savers message ;
+SubDir FUSION_TOP src add-ons screen_savers message ;
 
 UsePrivateHeaders screen_saver ;
 	# For BuildDefaultSettingsView

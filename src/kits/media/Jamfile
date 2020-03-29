@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits media ;
+SubDir FUSION_TOP src kits media ;
 
 UsePrivateHeaders app media shared ;
 UsePrivateHeaders [ FDirName media experimental ] ;

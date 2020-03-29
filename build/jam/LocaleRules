@@ -156,7 +156,7 @@ rule DoCatalogs target : signature : sources : sourceLanguage : regexp
 
 	# find translations
 	local translationsDir
-		= [ FDirName $(HAIKU_TOP) data catalogs $(subdir) ] ;
+		= [ FDirName $(FUSION_TOP) data catalogs $(subdir) ] ;
 	local translations = [ Glob $(translationsDir) : *.catkeys ] ;
 	translations = [ FGristFiles $(translations:BS) ] ;
 	SEARCH on $(translations) += $(translationsDir) ;

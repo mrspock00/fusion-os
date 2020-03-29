@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix glibc libio ;
+SubDir FUSION_TOP src system libroot posix glibc libio ;
 
 # For now, all wide character functions are disabled,
 # obprintf() is also disabled, because we don't have
@@ -11,16 +11,16 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 	on $(architectureObject) {
 		local architecture = $(TARGET_PACKAGING_ARCH) ;
 
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch
 			$(TARGET_ARCH) ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch
 			generic ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc stdio-common ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc libio ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc locale ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc iconv ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc stdio-common ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc libio ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc locale ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc iconv ;
 
 		UsePrivateHeaders libroot ;
 

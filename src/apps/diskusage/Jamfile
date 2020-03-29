@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src apps diskusage ;
+SubDir FUSION_TOP src apps diskusage ;
 
 UsePrivateHeaders mount shared tracker storage ;
-SubDirHdrs $(HAIKU_TOP) src kits tracker ;
+SubDirHdrs $(FUSION_TOP) src kits tracker ;
 
 Application DiskUsage :
 	App.cpp

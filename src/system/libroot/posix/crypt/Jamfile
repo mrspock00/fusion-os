@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix crypt ;
+SubDir FUSION_TOP src system libroot posix crypt ;
 
 UsePrivateHeaders libroot ;
 UsePrivateSystemHeaders ;

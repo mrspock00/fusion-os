@@ -1,5 +1,5 @@
-SubDir HAIKU_TOP src add-ons kernel power ;
+SubDir FUSION_TOP src add-ons kernel power ;
 
-SubInclude HAIKU_TOP src add-ons kernel power cpufreq ;
-SubInclude HAIKU_TOP src add-ons kernel power cpuidle ;
+SubInclude FUSION_TOP src add-ons kernel power cpufreq ;
+SubInclude FUSION_TOP src add-ons kernel power cpuidle ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin network traceroute ;
+SubDir FUSION_TOP src bin network traceroute ;
 
 local defines = [ FDefines HAVE_MALLOC_H=1 HAVE_SYS_SELECT=1 HAVE_NET_ROUTE_H=1
 			   HAVE_STRERROR=1 HAVE_USLEEP=1 HAVE_SETLINEBUF=1

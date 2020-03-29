@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps webpositive ;
+SubDir FUSION_TOP src apps webpositive ;
 
 SubDirC++Flags $(defines) -Wno-error=sequence-point -Wno-error=format-truncation ;
 SubDirCcFlags $(defines) -Wno-error=sequence-point -Wno-error=format-truncation ;
@@ -55,7 +55,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		local sourceDir ;
 		for sourceDir in $(sourceDirs) {
 			SEARCH_SOURCE
-				+= [ FDirName $(HAIKU_TOP) src apps webpositive $(sourceDir) ] ;
+				+= [ FDirName $(FUSION_TOP) src apps webpositive $(sourceDir) ] ;
 		}
 
 		Includes [ FGristFiles $(sources) ]
@@ -66,7 +66,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		# private OS headers
 		UseLibraryHeaders icon ;
 		UsePrivateHeaders interface shared tracker ;
-		SubDirHdrs $(HAIKU_TOP) src kits tracker ;
+		SubDirHdrs $(FUSION_TOP) src kits tracker ;
 
 		Application WebPositive :
 			$(sources)

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers debug ;
+SubDir FUSION_TOP src servers debug ;
 
 UsePrivateHeaders app ;
 UsePrivateHeaders debug ;

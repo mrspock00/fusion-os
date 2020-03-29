@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits storage ;
+SubDir FUSION_TOP src tests kits storage ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -31,10 +31,10 @@ UnitTestLib libstoragetest.so
 {
 	local resdir = <src!tests!kits!storage>resources ;
 	MakeLocate $(resdir) : $(TARGET_UNIT_TEST_DIR) ;
-	RelSymLink $(resdir) : [ FDirName $(HAIKU_TOP) src tests kits storage resources ] : false ;
+	RelSymLink $(resdir) : [ FDirName $(FUSION_TOP) src tests kits storage resources ] : false ;
 	Depends libstoragetest.so : $(resdir) ;
 }
 
-SubInclude HAIKU_TOP src tests kits storage disk_device ;
-SubInclude HAIKU_TOP src tests kits storage testapps ;
-SubInclude HAIKU_TOP src tests kits storage virtualdrive ;
+SubInclude FUSION_TOP src tests kits storage disk_device ;
+SubInclude FUSION_TOP src tests kits storage testapps ;
+SubInclude FUSION_TOP src tests kits storage virtualdrive ;

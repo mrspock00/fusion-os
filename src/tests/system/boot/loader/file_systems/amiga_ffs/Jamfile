@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src tests system boot loader file_systems amiga_ffs ;
+SubDir FUSION_TOP src tests system boot loader file_systems amiga_ffs ;
 
 UsePrivateKernelHeaders ;
 UsePrivateSystemHeaders ;
 UsePrivateHeaders [ FDirName kernel disk_device_manager ] ;
 UsePrivateHeaders [ FDirName storage ] ;
-SubDirSysHdrs $(HAIKU_TOP) src tests system boot loader ;
-SubDirHdrs $(HAIKU_TOP) src system boot loader file_systems amiga_ffs ;
+SubDirSysHdrs $(FUSION_TOP) src tests system boot loader ;
+SubDirHdrs $(FUSION_TOP) src system boot loader file_systems amiga_ffs ;
 
 ObjectDefines
 	amiga_ffs.cpp
@@ -28,4 +28,4 @@ KernelStaticLibrary boottest_amiga_ffs :
 
 SEARCH on [ FGristFiles
 		amiga_ffs.cpp Volume.cpp Directory.cpp File.cpp
-	] = [ FDirName $(HAIKU_TOP) src system boot loader file_systems amiga_ffs ] ;
+	] = [ FDirName $(FUSION_TOP) src system boot loader file_systems amiga_ffs ] ;

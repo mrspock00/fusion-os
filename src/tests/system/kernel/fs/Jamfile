@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system kernel fs ;
+SubDir FUSION_TOP src tests system kernel fs ;
 
 UsePrivateKernelHeaders ;
 
@@ -16,4 +16,4 @@ UnitTestLib libkernelfstest.so :
 # Tell Jam where to find the kernle sources
 SEARCH on [ FGristFiles
 		KPath.cpp
-	] = [ FDirName $(HAIKU_TOP) src system kernel fs ] ;
+	] = [ FDirName $(FUSION_TOP) src system kernel fs ] ;

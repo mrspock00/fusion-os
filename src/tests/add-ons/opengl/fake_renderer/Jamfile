@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons opengl fake_renderer ;
+SubDir FUSION_TOP src tests add-ons opengl fake_renderer ;
 
 UsePrivateHeaders interface opengl ;
 

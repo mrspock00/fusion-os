@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons input_server devices wacom ;
+SubDir FUSION_TOP src add-ons input_server devices wacom ;
 
 UsePrivateHeaders input ;
 

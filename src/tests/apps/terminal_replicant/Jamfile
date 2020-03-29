@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests apps terminal_replicant ;
+SubDir FUSION_TOP src tests apps terminal_replicant ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src apps terminal ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src apps terminal ] ;
 
 Application RepliTerminal : 
 	main.cpp	

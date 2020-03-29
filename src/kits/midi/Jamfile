@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits midi ;
+SubDir FUSION_TOP src kits midi ;
 
 UsePrivateHeaders midi ;
 

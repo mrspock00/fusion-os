@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers audio null ;
+SubDir FUSION_TOP src add-ons kernel drivers audio null ;
 
 UsePrivateHeaders audio ;
 

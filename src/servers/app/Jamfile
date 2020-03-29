@@ -1,15 +1,15 @@
-SubDir HAIKU_TOP src servers app ;
+SubDir FUSION_TOP src servers app ;
 
 UseLibraryHeaders agg ;
 UsePrivateHeaders app graphics input interface kernel shared storage support ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing Painter ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing interface local ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing interface remote ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app stackandtile ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing Painter ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing interface local ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing interface remote ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app stackandtile ] ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app decorator ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app decorator ] ;
 local decorator_src =
 	DecorManager.cpp
 	Decorator.cpp
@@ -20,7 +20,7 @@ local decorator_src =
 	WindowBehaviour.cpp
 	;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app font ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app font ] ;
 local font_src =
 	FontCache.cpp
 	FontCacheEntry.cpp
@@ -116,9 +116,9 @@ Server app_server :
 	: app_server.rdef
 ;
 
-SEARCH on [ FGristFiles $(decorator_src) ] = [ FDirName $(HAIKU_TOP) src servers app decorator ] ;
-SEARCH on [ FGristFiles $(font_src) ] = [ FDirName $(HAIKU_TOP) src servers app font ] ;
+SEARCH on [ FGristFiles $(decorator_src) ] = [ FDirName $(FUSION_TOP) src servers app decorator ] ;
+SEARCH on [ FGristFiles $(font_src) ] = [ FDirName $(FUSION_TOP) src servers app font ] ;
 
 
-SubInclude HAIKU_TOP src servers app drawing ;
-SubInclude HAIKU_TOP src servers app stackandtile ;
+SubInclude FUSION_TOP src servers app drawing ;
+SubInclude FUSION_TOP src servers app stackandtile ;

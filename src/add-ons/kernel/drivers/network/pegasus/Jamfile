@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network pegasus ;
+SubDir FUSION_TOP src add-ons kernel drivers network pegasus ;
 
-SubDirSysHdrs $(HAIKU_TOP) headers os drivers ;
+SubDirSysHdrs $(FUSION_TOP) headers os drivers ;
 
 # For ether_driver.h
 UsePrivateHeaders net ;

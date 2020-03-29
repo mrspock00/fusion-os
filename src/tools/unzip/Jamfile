@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools unzip ;
+SubDir FUSION_TOP src tools unzip ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin unzip ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin unzip ] ;
 
 if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
 	DEFINES += HAVE_TERMIOS_H=1 HAS_JUNK_EXTRA_FIELD_OPTION=1 ;

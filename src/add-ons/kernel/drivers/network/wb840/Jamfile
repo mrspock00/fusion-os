@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network wb840 ;
+SubDir FUSION_TOP src add-ons kernel drivers network wb840 ;
 
 # set some additional flags
 # For ether_driver.h

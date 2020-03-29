@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps diskprobe ;
+SubDir FUSION_TOP src apps diskprobe ;
 
 UsePrivateHeaders interface shared ;
 

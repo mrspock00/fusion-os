@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src apps cortex addons LoggingConsumer ;
+SubDir FUSION_TOP src apps cortex addons LoggingConsumer ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src apps cortex addons common ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps cortex addons common ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src apps cortex addons common ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src apps cortex addons common ] ;
 
 Addon cortex_logging_consumer.media_addon :
 	LoggingConsumerApp.cpp

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app no_pointer_history ;
+SubDir FUSION_TOP src tests servers app no_pointer_history ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

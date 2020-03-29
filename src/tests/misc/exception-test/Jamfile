@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests misc exception-test ;
+SubDir FUSION_TOP src tests misc exception-test ;
 
 SharedLibrary libexceptiontest.so
 	: exceptions.cpp

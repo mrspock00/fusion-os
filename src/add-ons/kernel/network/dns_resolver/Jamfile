@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network dns_resolver ;
+SubDir FUSION_TOP src add-ons kernel network dns_resolver ;
 
-SubInclude HAIKU_TOP src add-ons kernel network dns_resolver kernel_add_on ;
-SubInclude HAIKU_TOP src add-ons kernel network dns_resolver server ;
+SubInclude FUSION_TOP src add-ons kernel network dns_resolver kernel_add_on ;
+SubInclude FUSION_TOP src add-ons kernel network dns_resolver server ;

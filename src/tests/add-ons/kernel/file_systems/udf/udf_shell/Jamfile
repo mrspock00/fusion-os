@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems udf udf_shell ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems udf udf_shell ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems udf ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel file_systems udf ] ;
 
 # prevent inclusion of HaikuBuildCompatibility.h
 DEFINES += HAIKU_BUILD_COMPATIBILITY_H ;
@@ -27,17 +27,17 @@ if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
 	fsShellCommandLibs = $(HOST_NETWORK_LIBS) ;
 }
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers build ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build ] : true ;
 
 if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os ] : true ;
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os support ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os support ] : true ;
 }
 
 UsePrivateHeaders shared storage ;
 UsePrivateHeaders fs_shell ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers private ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src tools fs_shell ] ;
+UseHeaders [ FDirName $(FUSION_TOP) headers private ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src tools fs_shell ] ;
 
 BuildPlatformMain <build>udf_shell
 	:

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers pci arch ppc ;
+SubDir FUSION_TOP src add-ons kernel bus_managers pci arch ppc ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) $(DOTDOT) ] ;
 UsePrivateHeaders kernel [ FDirName kernel arch $(TARGET_ARCH) ] 

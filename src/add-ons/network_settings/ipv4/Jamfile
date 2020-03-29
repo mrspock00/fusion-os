@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src add-ons network_settings ipv4 ;
+SubDir FUSION_TOP src add-ons network_settings ipv4 ;
 
 UsePublicHeaders [ FDirName add-ons network_settings ] ;
 UsePrivateHeaders shared ;
-UseHeaders [ FDirName $(HAIKU_TOP) src preferences network ] : false ;
+UseHeaders [ FDirName $(FUSION_TOP) src preferences network ] : false ;
 
 AddResources IPv4Interface : IPv4Interface.rdef ;
 

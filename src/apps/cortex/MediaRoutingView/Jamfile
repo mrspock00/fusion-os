@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex MediaRoutingView ;
+SubDir FUSION_TOP src apps cortex MediaRoutingView ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) DiagramView ] ;

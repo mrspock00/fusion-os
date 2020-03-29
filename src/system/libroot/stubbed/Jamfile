@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot stubbed ;
+SubDir FUSION_TOP src system libroot stubbed ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup ] {
@@ -20,7 +20,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		local stubbedLibroot
 			= [ MultiArchDefaultGristFiles libroot.so : stubbed ] ;
 		local versionScript
-			= [ FDirName $(HAIKU_TOP) src system libroot libroot_versions ] ;
+			= [ FDirName $(FUSION_TOP) src system libroot libroot_versions ] ;
 		LINKFLAGS on $(stubbedLibroot)
 			= -shared -soname=libroot.so --version-script $(versionScript) ;
 		Ld $(stubbedLibroot) : $(stubsObject) ;

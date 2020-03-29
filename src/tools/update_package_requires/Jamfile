@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tools update_package_requires ;
+SubDir FUSION_TOP src tools update_package_requires ;
 
 UsePrivateBuildHeaders shared ;
 

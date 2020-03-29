@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system glue arch arm64 ;
+SubDir FUSION_TOP src system glue arch arm64 ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup arm64 ] {

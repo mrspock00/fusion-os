@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems bfs bufferPool ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems bfs bufferPool ;
 
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel file_systems bfs ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel file_systems bfs ;
 UsePrivateKernelHeaders ;
 
 {
@@ -16,5 +16,5 @@ SimpleTest bfsBufferTest
 
 # Tell Jam where to find these sources
 SEARCH on [ FGristFiles BufferPool.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems bfs ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems bfs ] ;
 

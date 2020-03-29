@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits storage testapps ;
+SubDir FUSION_TOP src tests kits storage testapps ;
 
 UsePrivateHeaders shared storage ;
 

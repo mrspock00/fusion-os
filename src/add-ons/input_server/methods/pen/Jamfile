@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons input_server methods pen ;
+SubDir FUSION_TOP src add-ons input_server methods pen ;
 
 UsePrivateHeaders interface ;
 SubDirSysHdrs [ FDirName $(SUBDIR) compat ] ;

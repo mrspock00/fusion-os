@@ -1,18 +1,18 @@
-SubDir HAIKU_TOP src tests kits ;
+SubDir FUSION_TOP src tests kits ;
 
-SubInclude HAIKU_TOP src tests kits app ;
-SubInclude HAIKU_TOP src tests kits device ;
-SubInclude HAIKU_TOP src tests kits game ;
-SubInclude HAIKU_TOP src tests kits interface ;
-SubInclude HAIKU_TOP src tests kits locale ;
-SubInclude HAIKU_TOP src tests kits mail ;
-SubInclude HAIKU_TOP src tests kits media ;
-SubInclude HAIKU_TOP src tests kits midi ;
-SubInclude HAIKU_TOP src tests kits net ;
-SubInclude HAIKU_TOP src tests kits opengl ;
-SubInclude HAIKU_TOP src tests kits package ;
-SubInclude HAIKU_TOP src tests kits shared ;
-SubInclude HAIKU_TOP src tests kits storage ;
-SubInclude HAIKU_TOP src tests kits support ;
-SubInclude HAIKU_TOP src tests kits translation ;
+SubInclude FUSION_TOP src tests kits app ;
+SubInclude FUSION_TOP src tests kits device ;
+SubInclude FUSION_TOP src tests kits game ;
+SubInclude FUSION_TOP src tests kits interface ;
+SubInclude FUSION_TOP src tests kits locale ;
+SubInclude FUSION_TOP src tests kits mail ;
+SubInclude FUSION_TOP src tests kits media ;
+SubInclude FUSION_TOP src tests kits midi ;
+SubInclude FUSION_TOP src tests kits net ;
+SubInclude FUSION_TOP src tests kits opengl ;
+SubInclude FUSION_TOP src tests kits package ;
+SubInclude FUSION_TOP src tests kits shared ;
+SubInclude FUSION_TOP src tests kits storage ;
+SubInclude FUSION_TOP src tests kits support ;
+SubInclude FUSION_TOP src tests kits translation ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex support ;
+SubDir FUSION_TOP src apps cortex support ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 

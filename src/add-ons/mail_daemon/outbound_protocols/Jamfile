@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons mail_daemon outbound_protocols ;
+SubDir FUSION_TOP src add-ons mail_daemon outbound_protocols ;
 
-SubInclude HAIKU_TOP src add-ons mail_daemon outbound_protocols smtp ;
+SubInclude FUSION_TOP src add-ons mail_daemon outbound_protocols smtp ;
 

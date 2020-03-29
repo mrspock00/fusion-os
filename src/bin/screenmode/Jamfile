@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src bin screenmode ;
+SubDir FUSION_TOP src bin screenmode ;
 
 UsePrivateHeaders [ FDirName graphics common ] ;
 UsePrivateHeaders [ FDirName graphics radeon ] ;
 	# for multimon.h
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src preferences screen ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src preferences screen ] ;
 
 BinCommand screenmode :
 	screenmode.cpp

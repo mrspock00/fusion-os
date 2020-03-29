@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs linprog ;
+SubDir FUSION_TOP src libs linprog ;
 
 SetSubDirSupportedPlatforms haiku haiku_host libbe_test ;
 

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems userlandfs server ;
+SubDir FUSION_TOP src add-ons kernel file_systems userlandfs server ;
 
-local userlandFSTop = [ FDirName $(HAIKU_TOP) src add-ons kernel
+local userlandFSTop = [ FDirName $(FUSION_TOP) src add-ons kernel
 	file_systems userlandfs ] ;
 local userlandFSIncludes = [ PrivateHeaders userlandfs ] ;
 

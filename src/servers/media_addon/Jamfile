@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers media_addon ;
+SubDir FUSION_TOP src servers media_addon ;
 
 UsePrivateHeaders media shared storage ;
 UsePrivateSystemHeaders ;

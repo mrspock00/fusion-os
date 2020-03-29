@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons tracker mark_as ;
+SubDir FUSION_TOP src add-ons tracker mark_as ;
 
 UsePrivateHeaders mail ;
 

@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src preferences shortcuts ;
+SubDir FUSION_TOP src preferences shortcuts ;
 
 UsePrivateHeaders interface ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons input_server filters shortcut_catcher ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons input_server filters shortcut_catcher ] ;
 
 Preference Shortcuts :
 	main.cpp

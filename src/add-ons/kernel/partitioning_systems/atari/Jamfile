@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel partitioning_systems atari ;
+SubDir FUSION_TOP src add-ons kernel partitioning_systems atari ;
 
 UsePrivateHeaders [ FDirName kernel disk_device_manager ] ;
 UsePrivateHeaders [ FDirName kernel ] ;

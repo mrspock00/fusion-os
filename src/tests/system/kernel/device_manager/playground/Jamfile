@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system kernel device_manager playground ;
+SubDir FUSION_TOP src tests system kernel device_manager playground ;
 
 UseHeaders $(HAIKU_PRIVATE_KERNEL_HEADERS) : true ;
 UsePrivateHeaders shared ;

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src libs libtelnet ;
+SubDir FUSION_TOP src libs libtelnet ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 StaticLibrary libtelnet.a :
 	auth.c

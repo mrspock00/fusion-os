@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools bfs_shell ;
+SubDir FUSION_TOP src tools bfs_shell ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems bfs ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel file_systems bfs ] ;
 
 # prevent inclusion of HaikuBuildCompatibility.h
 DEFINES += HAIKU_BUILD_COMPATIBILITY_H ;
@@ -35,17 +35,17 @@ if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
 	fsShellCommandLibs = $(HOST_NETWORK_LIBS) ;
 }
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers build ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build ] : true ;
 
 if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os ] : true ;
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os support ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os support ] : true ;
 }
 
 UsePrivateHeaders shared storage ;
 UsePrivateHeaders fs_shell ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers private ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src tools fs_shell ] ;
+UseHeaders [ FDirName $(FUSION_TOP) headers private ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src tools fs_shell ] ;
 
 local bfsSource =
 	bfs_disk_system.cpp
@@ -87,4 +87,4 @@ BuildPlatformMain <build>bfs_fuse
 ;
 
 SEARCH on [ FGristFiles QueryParserUtils.cpp ]
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems shared ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems shared ] ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits net urlRequest ;
+SubDir FUSION_TOP src tests kits net urlRequest ;
 
 Application urlProtocolListener_test
 	: urlProtocolListener_test.cpp

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin debug ltrace arch x86_64 ;
+SubDir FUSION_TOP src bin debug ltrace arch x86_64 ;
 
 UsePrivateSystemHeaders ;
 

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src preferences notifications ;
+SubDir FUSION_TOP src preferences notifications ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src servers notification ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers notification ] : true ;
 
 UsePrivateHeaders interface notification ;
 

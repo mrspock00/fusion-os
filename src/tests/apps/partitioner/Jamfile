@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests apps partitioner ;
+SubDir FUSION_TOP src tests apps partitioner ;
 
 UsePrivateHeaders shared ;
 UsePrivateHeaders storage ;

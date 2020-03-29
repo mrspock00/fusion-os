@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers audio emuxki ;
+SubDir FUSION_TOP src add-ons kernel drivers audio emuxki ;
 
 UsePrivateSystemHeaders ;
 UsePrivateHeaders audio device ;

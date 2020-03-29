@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src add-ons mail_daemon inbound_protocols imap ;
+SubDir FUSION_TOP src add-ons mail_daemon inbound_protocols imap ;
 
 UsePublicHeaders [ FDirName add-ons mail_daemon ] ;
 UsePrivateHeaders mail shared ;
 SubDirHdrs [ FDirName $(SUBDIR) imap_lib ] ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers os add-ons mail_daemon ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers os add-ons mail_daemon ] ;
 
 AddResources IMAP : IMAP.rdef ;
 
@@ -28,7 +28,7 @@ Addon IMAP :
 ;
 
 SEARCH on [ FGristFiles Commands.cpp Protocol.cpp Response.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons mail_daemon inbound_protocols imap
+	= [ FDirName $(FUSION_TOP) src add-ons mail_daemon inbound_protocols imap
 		imap_lib ] ;
 
 DoCatalogs IMAP :

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin debug ;
+SubDir FUSION_TOP src bin debug ;
 
 UsePrivateHeaders debug ;
 UsePrivateHeaders libroot ;

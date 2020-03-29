@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons screen_savers slideshowsaver ;
+SubDir FUSION_TOP src add-ons screen_savers slideshowsaver ;
 
 AddResources Message : SlideShowSaver.rdef ;
 

@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests add-ons kernel partitioning_systems ;
+SubDir FUSION_TOP src tests add-ons kernel partitioning_systems ;
 
 UsePrivateHeaders interface kernel shared storage ;
 UsePrivateSystemHeaders ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits storage disk_device ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits storage disk_device ] ;
 	# DiskDeviceTypes.cpp
 
 SimpleTest PartitioningSystemsTest :
@@ -22,7 +22,7 @@ SimpleTest PartitioningSystemsTest :
 }
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems amiga ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems amiga ] ;
 
 Addon <userland>amiga_rdb :
 	amiga_rdb.cpp
@@ -30,7 +30,7 @@ Addon <userland>amiga_rdb :
 ;
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems intel ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems intel ] ;
 
 Addon <userland>intel :
 	intel.cpp
@@ -43,7 +43,7 @@ Addon <userland>intel :
 ;
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems efi ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems efi ] ;
 
 Addon <userland>efi_gpt :
 	gpt.cpp
@@ -51,7 +51,7 @@ Addon <userland>efi_gpt :
 	: <nogrist>PartitioningSystemsTest libkernelland_emu.so
 ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems
 	session ] ;
 
 Addon <userland>session :

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons locale catalogs plaintext ;
+SubDir FUSION_TOP src add-ons locale catalogs plaintext ;
 
 UsePublicHeaders locale ;
 UsePrivateHeaders locale shared ;

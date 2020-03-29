@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network ppp shared libkernelppp ;
+SubDir FUSION_TOP src add-ons kernel network ppp shared libkernelppp ;
 
 SubDirC++Flags -fno-rtti ;
 
@@ -8,7 +8,7 @@ UsePrivateHeaders net ;
 UsePrivateHeaders libroot net ;
 UsePrivateHeaders [ FDirName kernel ] ;
 UsePrivateHeaders [ FDirName kernel util ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared
 	libkernelppp headers ] : true ;
 
 KernelStaticLibrary libkernelppp.a :
@@ -34,4 +34,4 @@ KernelStaticLibrary libkernelppp.a :
 ;
 
 SEARCH on [ FGristFiles kernel_cpp.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	= [ FDirName $(FUSION_TOP) src system kernel util ] ;

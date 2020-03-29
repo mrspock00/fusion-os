@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media media-add-ons equalizer ;
+SubDir FUSION_TOP src add-ons media media-add-ons equalizer ;
 
 AddResources equalizer.media_addon : Equalizer.rdef ;
 

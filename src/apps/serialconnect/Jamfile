@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src apps serialconnect ;
+SubDir FUSION_TOP src apps serialconnect ;
 
-SubDirSysHdrs [ FDirName $(HAIKU_TOP) src apps serialconnect libvterm include ] ;
-SubDirSysHdrs [ FDirName $(HAIKU_TOP) headers private interface ] ;
+SubDirSysHdrs [ FDirName $(FUSION_TOP) src apps serialconnect libvterm include ] ;
+SubDirSysHdrs [ FDirName $(FUSION_TOP) headers private interface ] ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps serialconnect libvterm src ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src apps serialconnect libvterm src ] ;
 
 Application SerialConnect :
 	CustomRateWindow.cpp

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src system boot platform u-boot arch ppc ;
+SubDir FUSION_TOP src system boot platform u-boot arch ppc ;
 
-SubDirHdrs $(HAIKU_TOP) src system boot platform $(TARGET_BOOT_PLATFORM) ;
+SubDirHdrs $(FUSION_TOP) src system boot platform $(TARGET_BOOT_PLATFORM) ;
 UsePrivateSystemHeaders ;
 UsePrivateHeaders kernel [ FDirName kernel arch $(TARGET_KERNEL_ARCH) ] 
 	[ FDirName kernel boot platform $(HAIKU_BOOT_PLATFORM) ] ;
@@ -30,4 +30,4 @@ BootMergeObject boot_platform_u-boot_ppc.o :
 ;
 
 SEARCH on [ FGristFiles arch_cpu_asm.S ]
-    = [ FDirName $(HAIKU_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;
+    = [ FDirName $(FUSION_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;

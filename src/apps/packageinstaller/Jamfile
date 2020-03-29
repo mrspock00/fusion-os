@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src apps packageinstaller ;
+SubDir FUSION_TOP src apps packageinstaller ;
 
 UsePrivateHeaders shared interface ;
 UseBuildFeatureHeaders zlib ;
 
-#SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits interface ] ;
+#SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits interface ] ;
 
 Includes [ FGristFiles PackageItem.cpp ]
 	: [ BuildFeatureAttribute zlib : headers ] ;

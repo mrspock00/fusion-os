@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin debug strace ;
+SubDir FUSION_TOP src bin debug strace ;
 
 UsePrivateHeaders device ;
 UsePrivateHeaders drivers ;

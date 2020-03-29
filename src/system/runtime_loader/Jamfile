@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system runtime_loader ;
+SubDir FUSION_TOP src system runtime_loader ;
 
 
 if $(TARGET_ARCH) = x86_64
@@ -18,7 +18,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 			# for "PathBuffer.h"
 		UsePrivateSystemHeaders ;
 
-		ObjectHdrs find_directory.cpp : $(HAIKU_TOP)/src/system/libroot/os ;
+		ObjectHdrs find_directory.cpp : $(FUSION_TOP)/src/system/libroot/os ;
 
 		# Don't let gcc inject built-in function code. This will cause
 		# dependencies to libroot, which we don't link against.
@@ -76,13 +76,13 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		;
 
 		SEARCH on [ FGristFiles kernel_cpp.cpp ]
-			= [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+			= [ FDirName $(FUSION_TOP) src system kernel util ] ;
 		SEARCH on [ FGristFiles kernel_vsprintf.cpp ]
-			= [ FDirName $(HAIKU_TOP) src system kernel lib ] ;
+			= [ FDirName $(FUSION_TOP) src system kernel lib ] ;
 		SEARCH on [ FGristFiles KMessage.cpp ]
-			= [ FDirName $(HAIKU_TOP) src system kernel messaging ] ;
+			= [ FDirName $(FUSION_TOP) src system kernel messaging ] ;
 		SEARCH on [ FGristFiles find_directory.cpp ]
-			= [ FDirName $(HAIKU_TOP) src system libroot os ] ;
+			= [ FDirName $(FUSION_TOP) src system libroot os ] ;
 
 		local sources =
 			add_ons.cpp
@@ -110,7 +110,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 			[ TargetKernelLibsupc++ ]
 			[ TargetKernelLibgcc ]
 			[ TargetKernelLibgcceh ]
-			: $(HAIKU_TOP)/src/system/ldscripts/$(TARGET_ARCH)/runtime_loader.ld
+			: $(FUSION_TOP)/src/system/ldscripts/$(TARGET_ARCH)/runtime_loader.ld
 			: --no-undefined -shared -soname=runtime_loader
 		;
 	}

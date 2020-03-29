@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests servers app stacktile ;
+SubDir FUSION_TOP src tests servers app stacktile ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) os app ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) os interface ] ;
+UseHeaders [ FDirName $(FUSION_TOP) os app ] ;
+UseHeaders [ FDirName $(FUSION_TOP) os interface ] ;
 UsePrivateHeaders interface ;
 
 Application StackTileTest :

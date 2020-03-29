@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems userlandfs ramfs ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems userlandfs ramfs ;
 
-local userlandFSTop = [ FDirName $(HAIKU_TOP) src add-ons kernel
+local userlandFSTop = [ FDirName $(FUSION_TOP) src add-ons kernel
 	file_systems userlandfs ] ;
 local userlandFSIncludes = [ PrivateHeaders userlandfs ] ;
-local ramFSTop = [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems ramfs ] ;
+local ramFSTop = [ FDirName $(FUSION_TOP) src add-ons kernel file_systems ramfs ] ;
 
 DEFINES += USER=1 ;
 
@@ -49,5 +49,5 @@ Addon <userland>ramfs
 	: libuserlandfs_haiku_kernel.so
 ;
 
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems userlandfs ramfs
+SubInclude FUSION_TOP src tests add-ons kernel file_systems userlandfs ramfs
 	beos_interface ;

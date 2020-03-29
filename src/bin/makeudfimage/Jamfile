@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src bin makeudfimage ;
+SubDir FUSION_TOP src bin makeudfimage ;
 
 UsePrivateHeaders [ FDirName kernel util ] ;	# For kernel_cpp.h
-SubDirHdrs [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems udf ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src add-ons kernel file_systems udf ] ;
 
 {
 	local defines = [ FDefines USER ] ; 
@@ -38,5 +38,5 @@ BinCommand makeudfimage
 ;
 
 SEARCH on [ FGristFiles DString.cpp UdfDebug.cpp UdfString.cpp UdfStructures.cpp Utils.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems udf ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems udf ] ;
 

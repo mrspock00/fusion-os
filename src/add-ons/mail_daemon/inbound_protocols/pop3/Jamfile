@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons mail_daemon inbound_protocols pop3 ;
+SubDir FUSION_TOP src add-ons mail_daemon inbound_protocols pop3 ;
 
 UsePublicHeaders [ FDirName add-ons mail_daemon ] ;
 UsePrivateHeaders mail shared ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers os add-ons mail_daemon ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers os add-ons mail_daemon ] ;
 
 AddResources POP3 : POP3.rdef ;
 

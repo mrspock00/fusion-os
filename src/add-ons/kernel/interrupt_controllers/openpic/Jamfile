@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel interrupt_controllers openpic ;
+SubDir FUSION_TOP src add-ons kernel interrupt_controllers openpic ;
 
 UsePrivateHeaders kernel ;
 UsePrivateHeaders shared ;

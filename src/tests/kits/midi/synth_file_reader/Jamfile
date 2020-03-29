@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits midi synth_file_reader ;
+SubDir FUSION_TOP src tests kits midi synth_file_reader ;
 
 UsePrivateHeaders shared ;
 

@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons print drivers ;
+SubDir FUSION_TOP src add-ons print drivers ;
 
-SubInclude HAIKU_TOP src add-ons print drivers canon_lips ;
-SubInclude HAIKU_TOP src add-ons print drivers gutenprint ;
-SubInclude HAIKU_TOP src add-ons print drivers lpstyl ;
-SubInclude HAIKU_TOP src add-ons print drivers pcl5 ;
-SubInclude HAIKU_TOP src add-ons print drivers pcl6 ;
-SubInclude HAIKU_TOP src add-ons print drivers postscript ;
-SubInclude HAIKU_TOP src add-ons print drivers preview ;
+SubInclude FUSION_TOP src add-ons print drivers canon_lips ;
+SubInclude FUSION_TOP src add-ons print drivers gutenprint ;
+SubInclude FUSION_TOP src add-ons print drivers lpstyl ;
+SubInclude FUSION_TOP src add-ons print drivers pcl5 ;
+SubInclude FUSION_TOP src add-ons print drivers pcl6 ;
+SubInclude FUSION_TOP src add-ons print drivers postscript ;
+SubInclude FUSION_TOP src add-ons print drivers preview ;

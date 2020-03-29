@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps resedit ;
+SubDir FUSION_TOP src apps resedit ;
 
 UsePrivateHeaders shared interface ;
 
@@ -8,7 +8,7 @@ if ! $(TARGET_PLATFORM_HAIKU_COMPATIBLE) {
 	columnViewSources = ColumnListView.cpp ColumnTypes.cpp ;
 }
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits interface ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits interface ] ;
 
 Application ResEdit :
 	$(columnViewSources)

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems bfs ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems bfs ;
 
 SimpleTest bfs_allocator_invalidate_largest :
 	bfs_allocator_invalidate_largest.cpp
@@ -8,10 +8,10 @@ SimpleTest bfs_attribute_iterator_test :
 	bfs_attribute_iterator_test.cpp
 	: be ;
 
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems bfs array ;
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems bfs bufferPool ;
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems bfs btree ;
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems bfs dump_log ;
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems bfs fragmenter ;
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems bfs queries ;
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems bfs structureSizes ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems bfs array ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems bfs bufferPool ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems bfs btree ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems bfs dump_log ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems bfs fragmenter ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems bfs queries ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems bfs structureSizes ;

@@ -42,7 +42,7 @@ local fuseHeaders =
 ;
 fuseHeaders = $(fuseHeaders:G=userlandfs!fuse) ;
 SEARCH on $(fuseHeaders)
-	= [ FDirName $(HAIKU_TOP) headers private userlandfs fuse ] ;
+	= [ FDirName $(FUSION_TOP) headers private userlandfs fuse ] ;
 AddFilesToPackage develop headers userlandfs fuse : $(fuseHeaders) ;
 
 BuildHaikuPackage $(userlandFSPackage) : userland_fs ;

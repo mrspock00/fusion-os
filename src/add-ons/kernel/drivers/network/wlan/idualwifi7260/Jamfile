@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network wlan idualwifi7260 ;
+SubDir FUSION_TOP src add-ons kernel drivers network wlan idualwifi7260 ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_network compat ]
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_network compat ]
 	: true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_wlan ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_wlan ] : true ;
 UsePrivateHeaders net system ;
 UsePrivateKernelHeaders ;
 

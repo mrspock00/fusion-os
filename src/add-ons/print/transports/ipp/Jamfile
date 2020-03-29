@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons print transports ipp ;
+SubDir FUSION_TOP src add-ons print transports ipp ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src add-ons print transports shared ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src add-ons print transports shared ] ;
 
 UsePrivateHeaders shared print ;
 

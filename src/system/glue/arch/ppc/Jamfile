@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system glue arch ppc ;
+SubDir FUSION_TOP src system glue arch ppc ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup ppc ] {

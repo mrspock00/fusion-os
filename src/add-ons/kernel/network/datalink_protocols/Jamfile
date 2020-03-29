@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network datalink_protocols ;
+SubDir FUSION_TOP src add-ons kernel network datalink_protocols ;
 
 HaikuSubInclude arp ;
 HaikuSubInclude ethernet_frame ;

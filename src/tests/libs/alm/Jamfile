@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests libs alm ;
+SubDir FUSION_TOP src tests libs alm ;
 
 UseLibraryHeaders linprog alm ;
 UsePrivateHeaders shared ;

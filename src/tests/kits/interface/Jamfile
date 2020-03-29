@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits interface ;
+SubDir FUSION_TOP src tests kits interface ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -199,14 +199,14 @@ SimpleTest WindowStackTest :
 SEARCH on [ FGristFiles
 		ScrollView.cpp CheckBox.cpp ChannelSlider.cpp ChannelControl.cpp
 		Slider.cpp Control.cpp
-	] = [ FDirName $(HAIKU_TOP) src kits interface ] ;
+	] = [ FDirName $(FUSION_TOP) src kits interface ] ;
 
-SubInclude HAIKU_TOP src tests kits interface bprintjob ;
-SubInclude HAIKU_TOP src tests kits interface bfont ;
-SubInclude HAIKU_TOP src tests kits interface bshelf ;
-SubInclude HAIKU_TOP src tests kits interface flatten_picture ;
-SubInclude HAIKU_TOP src tests kits interface layout ;
-SubInclude HAIKU_TOP src tests kits interface look ;
-SubInclude HAIKU_TOP src tests kits interface menu menuworld ;
-SubInclude HAIKU_TOP src tests kits interface picture ;
-SubInclude HAIKU_TOP src tests kits interface pictureprint ;
+SubInclude FUSION_TOP src tests kits interface bprintjob ;
+SubInclude FUSION_TOP src tests kits interface bfont ;
+SubInclude FUSION_TOP src tests kits interface bshelf ;
+SubInclude FUSION_TOP src tests kits interface flatten_picture ;
+SubInclude FUSION_TOP src tests kits interface layout ;
+SubInclude FUSION_TOP src tests kits interface look ;
+SubInclude FUSION_TOP src tests kits interface menu menuworld ;
+SubInclude FUSION_TOP src tests kits interface picture ;
+SubInclude FUSION_TOP src tests kits interface pictureprint ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs compat freebsd_wlan net80211 ;
+SubDir FUSION_TOP src libs compat freebsd_wlan net80211 ;
 
 UseHeaders [ FDirName $(SUBDIR) .. .. freebsd_network ] : true ;
 UseHeaders [ FDirName $(SUBDIR) .. .. freebsd_network compat ] : true ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons screen_savers nebula ;
+SubDir FUSION_TOP src add-ons screen_savers nebula ;
 
 SubDirC++Flags -Wno-error ;
 

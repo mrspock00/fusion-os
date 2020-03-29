@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src kits debugger demangler ;
+SubDir FUSION_TOP src kits debugger demangler ;
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel debugger demangle ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel debugger demangle ] ;
 
 
 MergeObject Debugger_demangler.o

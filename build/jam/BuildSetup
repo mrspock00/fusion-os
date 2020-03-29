@@ -67,7 +67,7 @@ HAIKU_CONTAINER_SYSTEM_DIR_TOKENS on $(HAIKU_MMC_BOOT_IMAGE_CONTAINER_NAME)
 
 # Haiku image/install defaults
 HAIKU_DEFAULT_IMAGE_NAME = haiku.image ;
-HAIKU_DEFAULT_IMAGE_DIR = $(HAIKU_OUTPUT_DIR) ;
+HAIKU_DEFAULT_IMAGE_DIR = $(FUSION_OUTPUT_DIR) ;
 HAIKU_DEFAULT_VMWARE_IMAGE_NAME = haiku.vmdk ;
 HAIKU_DEFAULT_INSTALL_DIR = /Fegeya ;
 HAIKU_DEFAULT_IMAGE_SIZE ?= 300 ; # 300 MB
@@ -75,17 +75,17 @@ HAIKU_DEFAULT_IMAGE_LABEL ?= Fegeya ;
 
 # Haiku CD defaults
 HAIKU_DEFAULT_CD_NAME = haiku-cd.iso ;
-HAIKU_DEFAULT_CD_DIR = $(HAIKU_OUTPUT_DIR) ;
+HAIKU_DEFAULT_CD_DIR = $(FUSION_OUTPUT_DIR) ;
 HAIKU_DEFAULT_CD_LABEL = Haiku ;
 
 # Haiku Anyboot defaults
 HAIKU_DEFAULT_ANYBOOT_NAME = haiku-anyboot.iso ;
-HAIKU_DEFAULT_ANYBOOT_DIR = $(HAIKU_OUTPUT_DIR) ;
+HAIKU_DEFAULT_ANYBOOT_DIR = $(FUSION_OUTPUT_DIR) ;
 HAIKU_DEFAULT_ANYBOOT_LABEL ?= Fegeya ;
 
 # Haiku MMC defaults
 HAIKU_DEFAULT_MMC_NAME = haiku-mmc.image ;
-HAIKU_DEFAULT_MMC_DIR = $(HAIKU_OUTPUT_DIR) ;
+HAIKU_DEFAULT_MMC_DIR = $(FUSION_OUTPUT_DIR) ;
 HAIKU_DEFAULT_MMC_LABEL ?= Fegeya ;
 
 # analyze and optionally replace jam's target parameters
@@ -96,8 +96,8 @@ ProcessCommandLineArguments ;
 HAIKU_DEBUG_LEVELS = 0 1 2 3 4 5 ;
 
 # configuration header directories
-HAIKU_CONFIG_HEADERS = [ FDirName $(HAIKU_TOP) build user_config_headers ]
-	[ FDirName $(HAIKU_TOP) build config_headers ] ;
+HAIKU_CONFIG_HEADERS = [ FDirName $(FUSION_TOP) build user_config_headers ]
+	[ FDirName $(FUSION_TOP) build config_headers ] ;
 
 
 # object directories common to all architectures
@@ -392,7 +392,7 @@ if $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
 	HOST_LIBRARY_NAME_MAP_input_server = /system/servers/input_server ;
 	HOST_DEFINES += __STDC_FORMAT_MACROS __STDC_LIMIT_MACROS ;
 
-	local compatibilityHeader = -include [ FDirName $(HAIKU_TOP) headers build
+	local compatibilityHeader = -include [ FDirName $(FUSION_TOP) headers build
 		HaikuBuildCompatibility.h ] ;
 	HOST_CCFLAGS += $(compatibilityHeader) ;
 	HOST_C++FLAGS += $(compatibilityHeader) ;
@@ -450,7 +450,7 @@ if $(HAIKU_HOST_USE_XATTR) = 1 {
 	# the normal "rm" is used and the attributes are leaked (likely there
 	# aren't any yet).
 	RM = $(HOST_ADD_BUILD_COMPATIBILITY_LIB_DIR)
-		[ FDirName $(HAIKU_TOP) build scripts rm_attrs ]
+		[ FDirName $(FUSION_TOP) build scripts rm_attrs ]
 		[ FDirName $(HAIKU_OBJECT_DIR) $(HOST_PLATFORM) $(HOST_ARCH) release
 			tools rm_attrs ] -f ;
 		# assumes that rm_attrs is built with debugging disabled
@@ -490,7 +490,7 @@ HOST_BE_API_C++FLAGS = ;
 
 # Add directory with system headers we need when building something for the host
 # platform, e.g. containing missing POSIX/GNU headers.
-HOST_HDRS += [ FDirName $(HAIKU_TOP) headers build host $(HOST_PLATFORM) ] ;
+HOST_HDRS += [ FDirName $(FUSION_TOP) headers build host $(HOST_PLATFORM) ] ;
 
 if $(HOST_PLATFORM) = freebsd {
 	# FreeBSD's gcc doesn't include /usr/local/* in its search paths,
@@ -500,7 +500,7 @@ if $(HOST_PLATFORM) = freebsd {
 }
 
 if $(HOST_PLATFORM) = darwin {
-	HOST_HDRS += [ FDirName $(HAIKU_TOP) src build libgnuregex ] ;
+	HOST_HDRS += [ FDirName $(FUSION_TOP) src build libgnuregex ] ;
 
 	# Mac OS X users may be using macports libraries, in which case the headers
 	# and the libs are located in /opt/local/.
@@ -514,20 +514,20 @@ if $(HOST_PLATFORM) = darwin {
 }
 
 HOST_BE_API_HEADERS =
-	[ FDirName $(HAIKU_TOP) headers build ]
-	[ FDirName $(HAIKU_TOP) headers build os ]
-	[ FDirName $(HAIKU_TOP) headers build os add-ons registrar ]
-	[ FDirName $(HAIKU_TOP) headers build os app ]
-	[ FDirName $(HAIKU_TOP) headers build os bluetooth ]
-	[ FDirName $(HAIKU_TOP) headers build os drivers ]
-	[ FDirName $(HAIKU_TOP) headers build os kernel ]
-	[ FDirName $(HAIKU_TOP) headers build os interface ]
-	[ FDirName $(HAIKU_TOP) headers build os locale ]
-	[ FDirName $(HAIKU_TOP) headers build os storage ]
-	[ FDirName $(HAIKU_TOP) headers build os support ]
-	[ FDirName $(HAIKU_TOP) headers build private ]
+	[ FDirName $(FUSION_TOP) headers build ]
+	[ FDirName $(FUSION_TOP) headers build os ]
+	[ FDirName $(FUSION_TOP) headers build os add-ons registrar ]
+	[ FDirName $(FUSION_TOP) headers build os app ]
+	[ FDirName $(FUSION_TOP) headers build os bluetooth ]
+	[ FDirName $(FUSION_TOP) headers build os drivers ]
+	[ FDirName $(FUSION_TOP) headers build os kernel ]
+	[ FDirName $(FUSION_TOP) headers build os interface ]
+	[ FDirName $(FUSION_TOP) headers build os locale ]
+	[ FDirName $(FUSION_TOP) headers build os storage ]
+	[ FDirName $(FUSION_TOP) headers build os support ]
+	[ FDirName $(FUSION_TOP) headers build private ]
 ;
-HOST_BE_API_CCFLAGS = -include [ FDirName $(HAIKU_TOP) headers build
+HOST_BE_API_CCFLAGS = -include [ FDirName $(FUSION_TOP) headers build
 	BeOSBuildCompatibility.h ] ;
 HOST_BE_API_C++FLAGS = $(HOST_BE_API_CCFLAGS) ;
 
@@ -747,16 +747,16 @@ SHELLMODE	= 755 ;
 
 # output directories
 # TODO: Review this.
-HAIKU_DOCUMENTATION_DIR ?= [ FDirName $(HAIKU_OUTPUT_DIR) documentation ] ;
+HAIKU_DOCUMENTATION_DIR ?= [ FDirName $(FUSION_OUTPUT_DIR) documentation ] ;
 HAIKU_DOCUMENTATION_OBJECT_DIR ?= [ FDirName $(HAIKU_COMMON_PLATFORM_OBJECT_DIR)
 	documentation ] ;
 
 # TODO: Rethink test stuff.
-HAIKU_TEST_DIR			?= [ FDirName $(HAIKU_OUTPUT_DIR) tests
+HAIKU_TEST_DIR			?= [ FDirName $(FUSION_OUTPUT_DIR) tests
 	$(TARGET_PLATFORM) $(HAIKU_ARCH) ] ;
 HAIKU_APP_TEST_DIR		?= [ FDirName $(HAIKU_TEST_DIR) apps ] ;
 HAIKU_APP_TEST_LIB_DIR 	?= [ FDirName $(HAIKU_APP_TEST_DIR) lib ] ;
-HAIKU_TMP_DIR			?= [ FDirName $(HAIKU_OUTPUT_DIR) tmp ] ;
+HAIKU_TMP_DIR			?= [ FDirName $(FUSION_OUTPUT_DIR) tmp ] ;
 
 local architecture ;
 for architecture in $(HAIKU_PACKAGING_ARCHS) {
@@ -770,7 +770,7 @@ for architecture in $(HAIKU_PACKAGING_ARCHS) {
 }
 
 
-HAIKU_PACKAGE_INFOS_DIR			= [ FDirName $(HAIKU_TOP) src data
+HAIKU_PACKAGE_INFOS_DIR			= [ FDirName $(FUSION_TOP) src data
 									package_infos ] ;
 
 TARGET_TEST_DIR				?= [ FDirName $(HAIKU_TEST_DIR)
@@ -809,18 +809,18 @@ for architecture in $(TARGET_PACKAGING_ARCHS) {
 
 
 # The following directories cannot currently be compiled with DEBUG=1
-SetConfigVar DEBUG : HAIKU_TOP src add-ons disk_systems bfs : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel drivers audio hda : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel drivers audio ac97 auich : 0 : local ; # fails with gcc4 only
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel drivers audio ac97 auvia : 0 : local ; # fails with gcc4 only
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel drivers audio ac97 sis7018 : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel file_systems btrfs : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel file_systems ntfs libntfs : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel file_systems udf : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel file_systems userlandfs server : 0 : local ; # fails with gcc2 only
-SetConfigVar DEBUG : HAIKU_TOP src add-ons kernel file_systems userlandfs server haiku : 0 : local ; # fails with gcc2 only
-SetConfigVar DEBUG : HAIKU_TOP src add-ons media media-add-ons dvb : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src add-ons print drivers gutenprint : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src servers input : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src servers media_addon : 0 : local ;
-SetConfigVar DEBUG : HAIKU_TOP src system boot loader file_systems bfs : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons disk_systems bfs : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel drivers audio hda : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel drivers audio ac97 auich : 0 : local ; # fails with gcc4 only
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel drivers audio ac97 auvia : 0 : local ; # fails with gcc4 only
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel drivers audio ac97 sis7018 : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel file_systems btrfs : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel file_systems ntfs libntfs : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel file_systems udf : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel file_systems userlandfs server : 0 : local ; # fails with gcc2 only
+SetConfigVar DEBUG : FUSION_TOP src add-ons kernel file_systems userlandfs server haiku : 0 : local ; # fails with gcc2 only
+SetConfigVar DEBUG : FUSION_TOP src add-ons media media-add-ons dvb : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src add-ons print drivers gutenprint : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src servers input : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src servers media_addon : 0 : local ;
+SetConfigVar DEBUG : FUSION_TOP src system boot loader file_systems bfs : 0 : local ;

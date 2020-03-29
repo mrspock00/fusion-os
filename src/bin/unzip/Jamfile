@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin unzip ;
+SubDir FUSION_TOP src bin unzip ;
 
 StaticLibrary libunzip.a : 
 	crc32.c

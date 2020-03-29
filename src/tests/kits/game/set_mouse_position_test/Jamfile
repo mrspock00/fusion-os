@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits game set_mouse_position_test ;
+SubDir FUSION_TOP src tests kits game set_mouse_position_test ;
 
 SimpleTest set_mouse_position_test
 	: test_mouse.cpp

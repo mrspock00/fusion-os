@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers graphics intel_extreme ;
+SubDir FUSION_TOP src add-ons kernel drivers graphics intel_extreme ;
 
 UsePrivateHeaders [ FDirName graphics intel_extreme ] ;
 UsePrivateHeaders [ FDirName graphics vesa ] ;
@@ -19,4 +19,4 @@ KernelAddon intel_extreme :
 
 SEARCH on [ FGristFiles
 		kernel_cpp.cpp 
-	] = [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	] = [ FDirName $(FUSION_TOP) src system kernel util ] ;

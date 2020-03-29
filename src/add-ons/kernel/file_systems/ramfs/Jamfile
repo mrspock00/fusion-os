@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems ramfs ;
+SubDir FUSION_TOP src add-ons kernel file_systems ramfs ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders file_systems ;
@@ -34,4 +34,4 @@ KernelAddon ramfs
 ;
 
 SEARCH on [ FGristFiles DebugSupport.cpp ]
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems shared ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems shared ] ;

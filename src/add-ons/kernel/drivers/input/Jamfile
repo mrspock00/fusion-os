@@ -1,5 +1,5 @@
-SubDir HAIKU_TOP src add-ons kernel drivers input ;
+SubDir FUSION_TOP src add-ons kernel drivers input ;
 
-SubInclude HAIKU_TOP src add-ons kernel drivers input ps2_hid ;
-SubInclude HAIKU_TOP src add-ons kernel drivers input usb_hid ;
-SubInclude HAIKU_TOP src add-ons kernel drivers input wacom ;
+SubInclude FUSION_TOP src add-ons kernel drivers input ps2_hid ;
+SubInclude FUSION_TOP src add-ons kernel drivers input usb_hid ;
+SubInclude FUSION_TOP src add-ons kernel drivers input wacom ;

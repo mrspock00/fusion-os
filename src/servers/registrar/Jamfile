@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers registrar ;
+SubDir FUSION_TOP src servers registrar ;
 
 UsePrivateHeaders app ;
 UsePrivateHeaders kernel ;

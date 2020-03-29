@@ -1,15 +1,15 @@
-SubDir HAIKU_TOP src tests servers launch ;
+SubDir FUSION_TOP src tests servers launch ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
 UsePrivateHeaders app kernel libroot shared storage support ;
 UsePrivateSystemHeaders ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src bin multiuser ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src bin multiuser ] ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src servers launch ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits app ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src servers launch ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits app ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin ] ;
 
 UnitTestLib liblaunch_daemontest.so :
 	LaunchDaemonTestAddon.cpp

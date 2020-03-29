@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers audio ac97 auvia ;
+SubDir FUSION_TOP src add-ons kernel drivers audio ac97 auvia ;
 
 UsePrivateHeaders audio ;
 UsePrivateSystemHeaders ;

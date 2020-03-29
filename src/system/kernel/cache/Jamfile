@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel cache ;
+SubDir FUSION_TOP src system kernel cache ;
 
 UseHeaders [ FDirName $(SUBDIR) $(DOTDOT) device_manager ] ;
 

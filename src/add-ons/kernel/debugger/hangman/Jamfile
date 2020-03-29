@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel debugger hangman ;
+SubDir FUSION_TOP src add-ons kernel debugger hangman ;
 
 # UsePrivateHeaders drivers ;
 UsePrivateKernelHeaders ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex DiagramView ;
+SubDir FUSION_TOP src apps cortex DiagramView ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 

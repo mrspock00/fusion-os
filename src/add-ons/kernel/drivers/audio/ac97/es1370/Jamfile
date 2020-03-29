@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers audio ac97 es1370 ;
+SubDir FUSION_TOP src add-ons kernel drivers audio ac97 es1370 ;
 
 UsePrivateHeaders libroot audio system ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;

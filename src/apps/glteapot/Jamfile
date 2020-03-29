@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps glteapot ;
+SubDir FUSION_TOP src apps glteapot ;
 UseBuildFeatureHeaders glu ;
 UseBuildFeatureHeaders mesa ;
 

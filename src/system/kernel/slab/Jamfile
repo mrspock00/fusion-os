@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel slab ;
+SubDir FUSION_TOP src system kernel slab ;
 
 
 KernelMergeObject kernel_slab.o :

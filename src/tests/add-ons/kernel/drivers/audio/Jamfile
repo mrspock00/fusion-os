@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests add-ons kernel drivers audio ;
+SubDir FUSION_TOP src tests add-ons kernel drivers audio ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src tests add-ons kernel file_systems fs_shell ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src tests add-ons kernel file_systems fs_shell ] ;
 UsePrivateHeaders [ FDirName audio ] ;
 
 SubDirCcFlags [ FDefines HAIKU_MULTI_AUDIO=1 ] ;
@@ -12,4 +12,4 @@ SimpleTest multi_audio_test :
 
 SEARCH on [ FGristFiles
 		argv.c
-	] = [ FDirName $(HAIKU_TOP) src tests add-ons kernel file_systems fs_shell ] ;
+	] = [ FDirName $(FUSION_TOP) src tests add-ons kernel file_systems fs_shell ] ;

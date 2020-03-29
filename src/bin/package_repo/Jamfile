@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src bin package_repo ;
+SubDir FUSION_TOP src bin package_repo ;
 
 UsePrivateHeaders kernel shared ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src bin package ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src bin package ] ;
 
 DEFINES += B_ENABLE_INCOMPLETE_POSIX_AT_SUPPORT ;
 	# TODO: Remove when it is complete!

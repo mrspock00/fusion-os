@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src add-ons kernel drivers disk nvme ;
+SubDir FUSION_TOP src add-ons kernel drivers disk nvme ;
 
 UsePrivateKernelHeaders ;
-SubDirHdrs $(HAIKU_TOP) src system kernel device_manager ;
-SubDirSysHdrs $(HAIKU_TOP) headers compatibility bsd ;
+SubDirHdrs $(FUSION_TOP) src system kernel device_manager ;
+SubDirSysHdrs $(FUSION_TOP) headers compatibility bsd ;
 
 UseHeaders [ FDirName $(SUBDIR) ] : true ;
 

@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src tests apps haikudepot ;
+SubDir FUSION_TOP src tests apps haikudepot ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src apps haikudepot ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src apps haikudepot server ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src apps haikudepot server dumpexportrepository ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src apps haikudepot ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src apps haikudepot server ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src apps haikudepot server dumpexportrepository ] ;
 
 UsePrivateHeaders shared ;
 
@@ -15,7 +15,7 @@ local sourceDirs =
 
 local sourceDir ;
 for sourceDir in $(sourceDirs) {
-	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps haikudepot $(sourceDir) ] ;
+	SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src apps haikudepot $(sourceDir) ] ;
 }
 SEARCH_SOURCE += [ FDirName $(HAIKUDEPOT_GENERATED_SOURCES_DIRECTORY)
 	dumpexportrepositorybulklistener ] ;

@@ -552,7 +552,7 @@ rule ArchitectureSetupWarnings architecture
 
 	if $(HAIKU_CC_IS_CLANG_$(architecture)) = 1 {
 		AppendToConfigVar CCFLAGS :
-			HAIKU_TOP src system libroot posix glibc :
+			FUSION_TOP src system libroot posix glibc :
 			-fgnu89-inline -fheinous-gnu-extensions : global ;
 	}
 
@@ -576,7 +576,7 @@ rule ArchitectureSetupWarnings architecture
 		# Clang gives way more warnings than GCC, so that code won't compile
 		# with -Werror when using Clang.
 		if $(HAIKU_CC_IS_CLANG_$(architecture)) != 1 {
-			SetConfigVar WARNINGS : HAIKU_TOP $(dirTokens) : treatAsErrors
+			SetConfigVar WARNINGS : FUSION_TOP $(dirTokens) : treatAsErrors
 				: $(scope) ;
 		}
 	}

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits game direct_window_test ;
+SubDir FUSION_TOP src tests kits game direct_window_test ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

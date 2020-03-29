@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons translators ;
+SubDir FUSION_TOP src tests add-ons translators ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -26,4 +26,4 @@ UnitTestLib libtranslatorstest.so
 	: $(libtranslation) be [ TargetLibstdc++ ]
 ;
 
-SubInclude HAIKU_TOP src tests add-ons translators exif ;
+SubInclude FUSION_TOP src tests add-ons translators exif ;

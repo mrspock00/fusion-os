@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps debuganalyzer gui chart ;
+SubDir FUSION_TOP src apps debuganalyzer gui chart ;
 
 UsePrivateHeaders shared ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps text_search ;
+SubDir FUSION_TOP src apps text_search ;
 
 UsePrivateHeaders shared ;
 UsePrivateHeaders storage ;

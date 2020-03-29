@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src add-ons network_settings ipv6 ;
+SubDir FUSION_TOP src add-ons network_settings ipv6 ;
 
 UsePublicHeaders [ FDirName add-ons network_settings ] ;
 UsePrivateHeaders shared ;
-UseHeaders [ FDirName $(HAIKU_TOP) src preferences network ] : false ;
+UseHeaders [ FDirName $(FUSION_TOP) src preferences network ] : false ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons network_settings ipv4 ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons network_settings ipv4 ] ;
 
 AddResources IPv6Interface : IPv6Interface.rdef ;
 

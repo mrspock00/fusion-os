@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences bluetooth ;
+SubDir FUSION_TOP src preferences bluetooth ;
 
 UsePrivateHeaders bluetooth ;
 UsePrivateHeaders shared ;

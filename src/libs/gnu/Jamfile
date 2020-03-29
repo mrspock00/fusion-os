@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src libs gnu ;
+SubDir FUSION_TOP src libs gnu ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility gnu ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility gnu ] : true ;
 UsePrivateHeaders shared ;
 
 SubDirCcFlags [ FDefines _GNU_SOURCE=1 ] ;

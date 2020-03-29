@@ -1,1 +1,1 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network wwan ;
+SubDir FUSION_TOP src add-ons kernel drivers network wwan ;

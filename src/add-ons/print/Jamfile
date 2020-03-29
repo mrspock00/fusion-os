@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons print ;
+SubDir FUSION_TOP src add-ons print ;
 
-SubInclude HAIKU_TOP src add-ons print drivers ;
-SubInclude HAIKU_TOP src add-ons print transports ;
+SubInclude FUSION_TOP src add-ons print drivers ;
+SubInclude FUSION_TOP src add-ons print transports ;

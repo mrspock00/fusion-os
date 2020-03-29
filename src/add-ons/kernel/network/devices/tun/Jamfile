@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network devices tun ;
+SubDir FUSION_TOP src add-ons kernel network devices tun ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;

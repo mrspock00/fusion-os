@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix ;
+SubDir FUSION_TOP src system libroot posix ;
 
 UsePrivateHeaders app shared [ FDirName syslog_daemon ] ;
 UsePrivateHeaders kernel ;
@@ -47,18 +47,18 @@ for arch in $(TARGET_ARCHS) {
 	HaikuSubInclude arch $(arch) ;
 }
 
-SubInclude HAIKU_TOP src system libroot posix crypt ;
-SubInclude HAIKU_TOP src system libroot posix locale ;
-SubInclude HAIKU_TOP src system libroot posix malloc_hoard2 ;
-SubInclude HAIKU_TOP src system libroot posix malloc_debug ;
-SubInclude HAIKU_TOP src system libroot posix pthread ;
-SubInclude HAIKU_TOP src system libroot posix signal ;
-SubInclude HAIKU_TOP src system libroot posix stdio ;
-SubInclude HAIKU_TOP src system libroot posix stdlib ;
-SubInclude HAIKU_TOP src system libroot posix string ;
-SubInclude HAIKU_TOP src system libroot posix sys ;
-SubInclude HAIKU_TOP src system libroot posix time ;
-SubInclude HAIKU_TOP src system libroot posix unistd ;
-SubInclude HAIKU_TOP src system libroot posix wchar ;
+SubInclude FUSION_TOP src system libroot posix crypt ;
+SubInclude FUSION_TOP src system libroot posix locale ;
+SubInclude FUSION_TOP src system libroot posix malloc_hoard2 ;
+SubInclude FUSION_TOP src system libroot posix malloc_debug ;
+SubInclude FUSION_TOP src system libroot posix pthread ;
+SubInclude FUSION_TOP src system libroot posix signal ;
+SubInclude FUSION_TOP src system libroot posix stdio ;
+SubInclude FUSION_TOP src system libroot posix stdlib ;
+SubInclude FUSION_TOP src system libroot posix string ;
+SubInclude FUSION_TOP src system libroot posix sys ;
+SubInclude FUSION_TOP src system libroot posix time ;
+SubInclude FUSION_TOP src system libroot posix unistd ;
+SubInclude FUSION_TOP src system libroot posix wchar ;
 
-SubInclude HAIKU_TOP src system libroot posix glibc ;
+SubInclude FUSION_TOP src system libroot posix glibc ;

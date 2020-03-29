@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers syslog_daemon ;
+SubDir FUSION_TOP src servers syslog_daemon ;
 
 UsePrivateHeaders app syslog_daemon ;
 UsePrivateSystemHeaders ;

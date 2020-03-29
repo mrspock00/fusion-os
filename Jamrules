@@ -12,15 +12,15 @@ if $(JAMBASEDATE) < 2018 {
 		"by updating Jam itself.)" ;
 }
 
-# Make sure HAIKU_TOP is a relative path (and prefer it to be the current or
+# Make sure FUSION_TOP is a relative path (and prefer it to be the current or
 # parent directory.)
 #
 # This is done so that invocations to the compiler and other tools, which
 # under some circumstances inject the source's path into the generated file,
 # are passed relative paths, making builds more reproducible.
-if $(HAIKU_TOP) != "." && $(HAIKU_TOP) != ".."
-		&& ! [ Match "\\.\\./(.*)" : $(HAIKU_TOP) ] {
-	Exit "The present path to the project root is '$(HAIKU_TOP)', but you"
+if $(FUSION_TOP) != "." && $(FUSION_TOP) != ".."
+		&& ! [ Match "\\.\\./(.*)" : $(FUSION_TOP) ] {
+	Exit "The present path to the project root is '$(FUSION_TOP)', but you"
 		"must be in the project root or a \"generated\" directory in order to"
 		"build Haiku."
 
@@ -29,23 +29,23 @@ if $(HAIKU_TOP) != "." && $(HAIKU_TOP) != ".."
 }
 
 # Main directories used by the build.
-HAIKU_OUTPUT_DIR					?= [ FDirName $(HAIKU_TOP) generated ] ;
-HAIKU_BUILD_OUTPUT_DIR				?= [ FDirName $(HAIKU_OUTPUT_DIR) build ] ;
-HAIKU_BUILD_DIR						?= [ FDirName $(HAIKU_TOP) build ] ;
+FUSION_OUTPUT_DIR_DIR					?= [ FDirName $(FUSION_TOP) generated ] ;
+HAIKU_BUILD_OUTPUT_DIR				?= [ FDirName $(FUSION_OUTPUT_DIR_DIR) build ] ;
+HAIKU_BUILD_DIR						?= [ FDirName $(FUSION_TOP) build ] ;
 HAIKU_BUILD_RULES_DIR				?= [ FDirName $(HAIKU_BUILD_DIR) jam ] ;
-HAIKU_OBJECT_DIR					?= [ FDirName $(HAIKU_OUTPUT_DIR)
+HAIKU_OBJECT_DIR					?= [ FDirName $(FUSION_OUTPUT_DIR_DIR)
 											objects ] ;
 HAIKU_CATALOGS_OBJECT_DIR			?= [ FDirName $(HAIKU_OBJECT_DIR)
 											catalogs ] ;
 HAIKU_COMMON_PLATFORM_OBJECT_DIR	?= [ FDirName $(HAIKU_OBJECT_DIR) common ] ;
-HAIKU_DOWNLOAD_DIR					?= [ FDirName $(HAIKU_OUTPUT_DIR)
+HAIKU_DOWNLOAD_DIR					?= [ FDirName $(FUSION_OUTPUT_DIR_DIR)
 											download ] ;
-HAIKU_OPTIONAL_BUILD_PACKAGES_DIR	?= [ FDirName $(HAIKU_OUTPUT_DIR)
+HAIKU_OPTIONAL_BUILD_PACKAGES_DIR	?= [ FDirName $(FUSION_OUTPUT_DIR_DIR)
 											build_packages ] ;
 
 # Absolutely rooted versions of some of the main directories
-HAIKU_ABSOLUTE_TOP					?= [ FDirName $(PWD) $(HAIKU_TOP) ] ;
-HAIKU_ABSOLUTE_OUTPUT_DIR			?= [ FDirName $(PWD) $(HAIKU_OUTPUT_DIR) ] ;
+HAIKU_ABSOLUTE_TOP					?= [ FDirName $(PWD) $(FUSION_TOP) ] ;
+HAIKU_ABSOLUTE_OUTPUT_DIR			?= [ FDirName $(PWD) $(FUSION_OUTPUT_DIR_DIR) ] ;
 
 # Cache files for header scanning and jamfile caching
 HCACHEFILE = header_cache ;
@@ -127,7 +127,7 @@ if ! $(HAIKU_IGNORE_USER_BUILD_CONFIG) {
 
 	# allow for a separate UserBuildConfig per output directory
 	local userBuildConfig
-		= [ GLOB $(HAIKU_OUTPUT_DIR) : UserBuildConfig ] ;
+		= [ GLOB $(FUSION_OUTPUT_DIR_DIR) : UserBuildConfig ] ;
 	if $(userBuildConfig) {
 		include $(userBuildConfig) ;
 	}

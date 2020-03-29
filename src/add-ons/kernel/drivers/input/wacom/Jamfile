@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel drivers input wacom ;
+SubDir FUSION_TOP src add-ons kernel drivers input wacom ;
 
-SubDirSysHdrs $(HAIKU_TOP) headers os drivers ;
+SubDirSysHdrs $(FUSION_TOP) headers os drivers ;
 
 KernelAddon wacom :
 	wacom.c

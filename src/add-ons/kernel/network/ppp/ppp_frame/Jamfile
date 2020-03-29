@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network ppp ppp_frame ;
+SubDir FUSION_TOP src add-ons kernel network ppp ppp_frame ;
 
 SubDirC++Flags -fno-rtti ;
 
@@ -6,7 +6,7 @@ UsePrivateKernelHeaders ;
 UsePrivateHeaders kernel net ;
 UsePrivateHeaders [ FDirName kernel util ] ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared
 	libkernelppp headers ] : true ;
 
 KernelAddon ppp_frame :

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons media media-add-ons ;
+SubDir FUSION_TOP src tests add-ons media media-add-ons ;
 
-SubInclude HAIKU_TOP src tests add-ons media media-add-ons mixer ;
+SubInclude FUSION_TOP src tests add-ons media media-add-ons mixer ;
 

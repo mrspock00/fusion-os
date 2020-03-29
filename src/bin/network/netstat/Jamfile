@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin network netstat ;
+SubDir FUSION_TOP src bin network netstat ;
 
 UsePrivateHeaders net ;
 UsePrivateSystemHeaders ;	# for syscalls.h

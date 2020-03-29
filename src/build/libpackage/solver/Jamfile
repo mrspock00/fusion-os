@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src build libpackage solver ;
+SubDir FUSION_TOP src build libpackage solver ;
 
 UseBuildFeatureHeaders libsolv ;
 
@@ -9,7 +9,7 @@ UsePrivateHeaders shared ;
 
 USES_BE_API on libpackage-add-on-libsolv_build.so = true ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package solver ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package solver ] ;
 
 
 MakeLocate libpackage-add-on-libsolv_build.so

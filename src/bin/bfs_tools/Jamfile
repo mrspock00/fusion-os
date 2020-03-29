@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src bin bfs_tools ;
+SubDir FUSION_TOP src bin bfs_tools ;
 
-SubDirHdrs $(HAIKU_TOP) src bin bfs_tools lib ;
+SubDirHdrs $(FUSION_TOP) src bin bfs_tools lib ;
 UsePrivateHeaders [ FDirName shared ] ;
 
 StdBinCommands
@@ -12,4 +12,4 @@ StdBinCommands
 	: libbfs_tools.a be shared [ TargetLibstdc++ ] : $(haiku-utils_rsrc)
 ;
 
-SubInclude HAIKU_TOP src bin bfs_tools lib ;
+SubInclude FUSION_TOP src bin bfs_tools lib ;

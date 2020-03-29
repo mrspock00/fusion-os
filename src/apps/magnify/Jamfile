@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps magnify ;
+SubDir FUSION_TOP src apps magnify ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

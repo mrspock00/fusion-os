@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src bin network tunconfig ;
+SubDir FUSION_TOP src bin network tunconfig ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared libppp
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared libppp
 	headers ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared
 	libkernelppp headers ] : true ;
 
 BinCommand tunconfig :

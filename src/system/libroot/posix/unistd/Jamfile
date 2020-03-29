@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix unistd ;
+SubDir FUSION_TOP src system libroot posix unistd ;
 
 UsePrivateHeaders libroot runtime_loader shared ;
 

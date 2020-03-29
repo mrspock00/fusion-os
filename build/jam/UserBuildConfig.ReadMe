@@ -28,17 +28,17 @@ Exit You must NOT copy UserBuildConfig.ReadMe directly but use parts of it! ;
 # Turn off warnings in directory src/system/kernel. As fourth (scope) parameter
 # "local" is specified, which means, that this setting applies only to the
 # given directory, but not any of its subdirectories.
-SetConfigVar WARNINGS : HAIKU_TOP src system kernel : 0 : local ;
+SetConfigVar WARNINGS : FUSION_TOP src system kernel : 0 : local ;
 
 # Set the debug level for directory src/system/boot/loader and recursively all
 # of its subdirectories (scope is "global") to 1. All affected generated files
 # will be put into another subtree of the "generated" directory, which allows
 # for fast switching between normal and debug builds.
-SetConfigVar DEBUG : HAIKU_TOP src system boot loader : 1 : global ;
+SetConfigVar DEBUG : FUSION_TOP src system boot loader : 1 : global ;
 
 # Add "RUN_WITHOUT_REGISTRAR" to the DEFINES for the directory src/kits and
 # all of its subdirectories.
-AppendToConfigVar DEFINES : HAIKU_TOP src kits : RUN_WITHOUT_REGISTRAR
+AppendToConfigVar DEFINES : FUSION_TOP src kits : RUN_WITHOUT_REGISTRAR
 	: global ;
 
 # Set the debug level for file src/bin/gdb/gdb/haiku-nat.c (note, that
@@ -133,7 +133,7 @@ AddSourceDirectoryToHaikuImage src tests servers debug : alwaysUpdate ;
 # can also take another optional parameter indicating whether the directory shall
 # also be copied in update mode.
 CopyDirectoryToHaikuImage home Desktop
-	: $(HAIKU_TOP)/../buildtools/jam
+	: $(FUSION_TOP)/../buildtools/jam
 	: "jam-src" : -x .git -X \\*/jam/./bin.\\* ;
 
 # Extracts the given archive onto the image under /boot/develop/tools.
@@ -154,8 +154,8 @@ SuppressHaikuImagePackages SQLite ;
 # directory. The "early" script is run before anything has been copied onto
 # the image/into the installation directory. The "late" script is run after
 # everything has been copied, but before the MIME database is installed.
-HAIKU_IMAGE_EARLY_USER_SCRIPTS	= $(HAIKU_TOP)/../early-image-script.sh ;
-HAIKU_IMAGE_LATE_USER_SCRIPTS	= $(HAIKU_TOP)/../late-image-script.sh ;
+HAIKU_IMAGE_EARLY_USER_SCRIPTS	= $(FUSION_TOP)/../early-image-script.sh ;
+HAIKU_IMAGE_LATE_USER_SCRIPTS	= $(FUSION_TOP)/../late-image-script.sh ;
 
 # Set name and real name of the root user. Defaults to "baron" and "Root User".
 HAIKU_ROOT_USER_NAME = bond ;
@@ -235,7 +235,7 @@ switch $(HAIKU_BUILD_PROFILE) {
 		HAIKU_DONT_CLEAR_IMAGE = 1 ;
 		AddOptionalHaikuImagePackages Development ;
 		AddHaikuImagePackages pe ;
-		CopyDirectoryToHaikuImage home Desktop : $(HAIKU_TOP)/../crash-tests ;
+		CopyDirectoryToHaikuImage home Desktop : $(FUSION_TOP)/../crash-tests ;
 	}
 }
 
@@ -274,12 +274,12 @@ switch $(HAIKU_BUILD_PROFILE) {
 
 # General setup for the shell script to generate. Name is test.inc, located
 # in the output directory.
-MakeLocate test.inc : $(HAIKU_OUTPUT_DIR) ;
+MakeLocate test.inc : $(FUSION_OUTPUT_DIR) ;
 Always test.inc ;
 
 # Define variable "outputDir" in the shell script, with the value of
-# HAIKU_OUTPUT_DIR.
-AddVariableToScript test.inc : outputDir : $(HAIKU_OUTPUT_DIR) ;
+# FUSION_OUTPUT_DIR.
+AddVariableToScript test.inc : outputDir : $(FUSION_OUTPUT_DIR) ;
 
 # Define variables "bfsShell" and "fsShellCommand" referring to the
 # generated bfs_shell and fs_shell_command respectively.
@@ -303,7 +303,7 @@ HAIKU_DONT_INCLUDE_SRC = 1 ;
 # Jamfile (directly using SubInclude here is not possible). Using this
 # feature together with HAIKU_DONT_INCLUDE_SRC allows developers working
 # only on a subproject to reduce Jamfile parsing times considerably.
-DeferredSubInclude HAIKU_TOP src tests add-ons kernel file_systems
+DeferredSubInclude FUSION_TOP src tests add-ons kernel file_systems
 	userlandfs ;
 
 # Schedule src/3rdparty/myproject/Jamfile.haiku for later inclusion. The "local"
@@ -311,7 +311,7 @@ DeferredSubInclude HAIKU_TOP src tests add-ons kernel file_systems
 # any subdirectory of the given directory (i.e. "Jamfile" will be used as
 # usual). Omitting this parameter or specifying "global" will cause the given
 # name to be used recursively.
-DeferredSubInclude HAIKU_TOP src 3rdparty myproject : Jamfile.haiku : local ;
+DeferredSubInclude FUSION_TOP src 3rdparty myproject : Jamfile.haiku : local ;
 
 # The following rules can be overriden to do things at different points of
 # the build system execution by jam (note: we're talking about execution of

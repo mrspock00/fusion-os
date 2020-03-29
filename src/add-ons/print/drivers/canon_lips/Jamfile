@@ -1,5 +1,5 @@
-SubDir HAIKU_TOP src add-ons print drivers canon_lips ;
+SubDir FUSION_TOP src add-ons print drivers canon_lips ;
 
-SubInclude HAIKU_TOP src add-ons print drivers canon_lips lips3 ;
-SubInclude HAIKU_TOP src add-ons print drivers canon_lips lips4 ;
+SubInclude FUSION_TOP src add-ons print drivers canon_lips lips3 ;
+SubInclude FUSION_TOP src add-ons print drivers canon_lips lips4 ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons accelerants s3 ;
+SubDir FUSION_TOP src add-ons accelerants s3 ;
 
 UsePrivateHeaders graphics ;
 UsePrivateHeaders [ FDirName graphics s3 ] ;

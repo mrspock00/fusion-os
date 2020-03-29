@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src add-ons print transports usb_port ;
+SubDir FUSION_TOP src add-ons print transports usb_port ;
 
 UsePrivateHeaders shared print ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits print ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits print ] ;
 
 Addon USB\ Port :
 	USBTransport.cpp

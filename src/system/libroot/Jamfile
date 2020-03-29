@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot ;
+SubDir FUSION_TOP src system libroot ;
 
 UsePrivateHeaders libroot runtime_loader ;
 
@@ -125,7 +125,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 	}
 }
 
-SubInclude HAIKU_TOP src system libroot add-ons ;
-SubInclude HAIKU_TOP src system libroot os ;
-SubInclude HAIKU_TOP src system libroot posix ;
-SubInclude HAIKU_TOP src system libroot stubbed ;
+SubInclude FUSION_TOP src system libroot add-ons ;
+SubInclude FUSION_TOP src system libroot os ;
+SubInclude FUSION_TOP src system libroot posix ;
+SubInclude FUSION_TOP src system libroot stubbed ;

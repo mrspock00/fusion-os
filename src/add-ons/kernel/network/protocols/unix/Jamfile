@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network protocols unix ;
+SubDir FUSION_TOP src add-ons kernel network protocols unix ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;
@@ -14,4 +14,4 @@ KernelAddon unix :
 ;
 
 SEARCH on [ FGristFiles Referenceable.cpp ]
-	= [ FDirName $(HAIKU_TOP) src kits support ] ;
+	= [ FDirName $(FUSION_TOP) src kits support ] ;

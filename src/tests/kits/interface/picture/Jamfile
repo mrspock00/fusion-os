@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits interface picture ;
+SubDir FUSION_TOP src tests kits interface picture ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -14,7 +14,7 @@ local iconSourceDirs =
 
 local iconSourceDir ;
 for iconSourceDir in $(iconSourceDirs) {
-	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src libs $(iconSourceDir) ] ;
+	SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src libs $(iconSourceDir) ] ;
 }
 
 # system headers

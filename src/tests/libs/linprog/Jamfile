@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests libs linprog ;
+SubDir FUSION_TOP src tests libs linprog ;
 
 
 UseLibraryHeaders lp_solve linprog ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network usb_ecm ;
+SubDir FUSION_TOP src add-ons kernel drivers network usb_ecm ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;

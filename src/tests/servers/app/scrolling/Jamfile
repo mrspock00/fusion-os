@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app scrolling ;
+SubDir FUSION_TOP src tests servers app scrolling ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

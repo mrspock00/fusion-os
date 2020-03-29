@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel debugger usb_keyboard ;
+SubDir FUSION_TOP src add-ons kernel debugger usb_keyboard ;
 
 UsePrivateHeaders kernel ;
 

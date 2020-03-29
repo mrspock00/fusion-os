@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits net cookie ;
+SubDir FUSION_TOP src tests kits net cookie ;
 
 Application cookie_test
 	: cookie_test.cpp

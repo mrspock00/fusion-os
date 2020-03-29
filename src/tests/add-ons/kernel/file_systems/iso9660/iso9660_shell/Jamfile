@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems iso9660 iso9660_shell ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems iso9660 iso9660_shell ;
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems iso9660 ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems iso9660 ] ;
 
 # prevent inclusion of HaikuBuildCompatibility.h
 DEFINES += HAIKU_BUILD_COMPATIBILITY_H ;
@@ -28,17 +28,17 @@ if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
 	fsShellCommandLibs = $(HOST_NETWORK_LIBS) ;
 }
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers build ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build ] : true ;
 
 if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os ] : true ;
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os support ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os support ] : true ;
 }
 
 UsePrivateHeaders shared storage ;
 UsePrivateHeaders fs_shell ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers private ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src tools fs_shell ] ;
+UseHeaders [ FDirName $(FUSION_TOP) headers private ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src tools fs_shell ] ;
 
 BuildPlatformMain <build>iso9660_shell
 	:

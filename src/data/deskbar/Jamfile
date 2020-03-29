@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src data deskbar ;
+SubDir FUSION_TOP src data deskbar ;
 
 local deskbarMenuEntries = <deskbar>menu_entries ;
 MakeLocateCommonPlatform $(deskbarMenuEntries) ;

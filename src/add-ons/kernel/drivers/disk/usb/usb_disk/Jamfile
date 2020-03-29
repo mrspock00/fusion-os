@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel drivers disk usb usb_disk ;
+SubDir FUSION_TOP src add-ons kernel drivers disk usb usb_disk ;
 
-SubDirSysHdrs $(HAIKU_TOP) src add-ons kernel bus_managers usb ;
+SubDirSysHdrs $(FUSION_TOP) src add-ons kernel bus_managers usb ;
 UsePrivateHeaders drivers ;
 UsePrivateKernelHeaders ;
 

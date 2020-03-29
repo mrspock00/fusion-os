@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media plugins dvd_streamer ;
+SubDir FUSION_TOP src add-ons media plugins dvd_streamer ;
 
 UsePrivateHeaders media shared ;
 UsePrivateHeaders [ FDirName media experimental ] ;

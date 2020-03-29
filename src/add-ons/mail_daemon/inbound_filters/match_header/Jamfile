@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons mail_daemon inbound_filters match_header ;
+SubDir FUSION_TOP src add-ons mail_daemon inbound_filters match_header ;
 
 UsePrivateHeaders mail shared ;
 UsePublicHeaders [ FDirName add-ons mail_daemon ] ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers os add-ons mail_daemon ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers os add-ons mail_daemon ] ;
 
 AddResources MatchHeader : MatchHeader.rdef ;
 

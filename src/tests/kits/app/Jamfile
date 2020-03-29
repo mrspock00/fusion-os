@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests kits app ;
+SubDir FUSION_TOP src tests kits app ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
 UsePrivateHeaders app ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers registrar mime ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers registrar mime ] ;
 
 # Let Jam know where to find some of our source files
 SEARCH_SOURCE += [ FDirName $(SUBDIR) bapplication ] ;
@@ -171,21 +171,21 @@ SimpleTest DanoMessageTest :
 
 SEARCH on [ FGristFiles
 		dano_message.cpp
-	] = [ FDirName $(HAIKU_TOP) src kits app ] ;
+	] = [ FDirName $(FUSION_TOP) src kits app ] ;
 
 SEARCH on [ FGristFiles
 		RegistrarThread.cpp
 		RegistrarThreadManager.cpp
-	] = [ FDirName $(HAIKU_TOP) src servers registrar mime ] ;
+	] = [ FDirName $(FUSION_TOP) src servers registrar mime ] ;
 
-SubInclude HAIKU_TOP src tests kits app bapplication ;
-SubInclude HAIKU_TOP src tests kits app bclipboard ;
-SubInclude HAIKU_TOP src tests kits app bcursor ;
-#SubInclude HAIKU_TOP src tests kits app bhandler ;
-#SubInclude HAIKU_TOP src tests kits app blooper ;
-#SubInclude HAIKU_TOP src tests kits app bmessage ;
-#SubInclude HAIKU_TOP src tests kits app bmessageQueue ;
-SubInclude HAIKU_TOP src tests kits app bmessenger ;
-SubInclude HAIKU_TOP src tests kits app broster ;
-SubInclude HAIKU_TOP src tests kits app common ;
-SubInclude HAIKU_TOP src tests kits app messaging ;
+SubInclude FUSION_TOP src tests kits app bapplication ;
+SubInclude FUSION_TOP src tests kits app bclipboard ;
+SubInclude FUSION_TOP src tests kits app bcursor ;
+#SubInclude FUSION_TOP src tests kits app bhandler ;
+#SubInclude FUSION_TOP src tests kits app blooper ;
+#SubInclude FUSION_TOP src tests kits app bmessage ;
+#SubInclude FUSION_TOP src tests kits app bmessageQueue ;
+SubInclude FUSION_TOP src tests kits app bmessenger ;
+SubInclude FUSION_TOP src tests kits app broster ;
+SubInclude FUSION_TOP src tests kits app common ;
+SubInclude FUSION_TOP src tests kits app messaging ;

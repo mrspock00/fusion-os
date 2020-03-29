@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits storage ;
+SubDir FUSION_TOP src kits storage ;
 
 SetSubDirSupportedPlatforms haiku libbe_test ;
 

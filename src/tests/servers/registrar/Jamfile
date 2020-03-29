@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers registrar ;
+SubDir FUSION_TOP src tests servers registrar ;
 
 UsePublicHeaders [ FDirName add-ons registrar ] ;
 UseArchHeaders $(TARGET_KERNEL_ARCH) ;
@@ -35,7 +35,7 @@ SimpleTest <test>shutdown
 	: shutdown.cpp
 	: be ;
 
-SEARCH on [ FGristFiles shutdown.cpp ] = [ FDirName $(HAIKU_TOP) src bin ] ;
+SEARCH on [ FGristFiles shutdown.cpp ] = [ FDirName $(FUSION_TOP) src bin ] ;
 
 # Two small test apps for testing the shutdown process.
 
@@ -63,9 +63,9 @@ UsePrivateHeaders storage ;
 UsePrivateHeaders tracker ;
 UsePrivateSystemHeaders ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src servers registrar ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src servers registrar mime ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits storage mime ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src servers registrar ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src servers registrar mime ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits storage mime ] ;
 
 Server test_registrar
  	:

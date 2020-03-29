@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons input_server methods t9 ;
+SubDir FUSION_TOP src add-ons input_server methods t9 ;
 
 UsePrivateHeaders interface ;
 

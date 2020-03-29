@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons screen_savers glife ;
+SubDir FUSION_TOP src add-ons screen_savers glife ;
 UseBuildFeatureHeaders glu ;
 UseBuildFeatureHeaders mesa ;
 

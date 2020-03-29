@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences mail ProviderInfo ;
+SubDir FUSION_TOP src preferences mail ProviderInfo ;
 
 HAIKU_PROVIDER_INFOS =
 	aol.com

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers audio ac97 ich ;
+SubDir FUSION_TOP src add-ons kernel drivers audio ac97 ich ;
 
 UsePrivateHeaders libroot audio ;
 

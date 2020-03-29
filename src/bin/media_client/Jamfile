@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin media_client ;
+SubDir FUSION_TOP src bin media_client ;
 
 UsePrivateHeaders media ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system kernel file_corruption fs ;
+SubDir FUSION_TOP src tests system kernel file_corruption fs ;
 
 
 UsePrivateKernelHeaders ;
@@ -6,7 +6,7 @@ UsePrivateHeaders libroot ;
 
 UseHeaders [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel file_systems ] ;
 	# We use packagefs's DebugSupport.h header, but we don't want to add that
 	# header to avoid clashes with other headers.
 
@@ -42,8 +42,8 @@ KernelAddon checksumfs :
 
 
 SEARCH on [ FGristFiles DebugSupport.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems packagefs ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems packagefs ] ;
 SEARCH on [ FGristFiles SHA256.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system libroot posix crypt ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot posix crypt ] ;
 
 HaikuSubInclude userland ;

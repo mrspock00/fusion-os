@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits device ;
+SubDir FUSION_TOP src tests kits device ;
 
-SubInclude HAIKU_TOP src tests kits device bserial ;
-SubInclude HAIKU_TOP src tests kits device stickit_BJoystick ;
+SubInclude FUSION_TOP src tests kits device bserial ;
+SubInclude FUSION_TOP src tests kits device stickit_BJoystick ;

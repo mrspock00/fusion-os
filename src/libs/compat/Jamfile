@@ -1,5 +1,5 @@
-SubDir HAIKU_TOP src libs compat ;
+SubDir FUSION_TOP src libs compat ;
 
-SubInclude HAIKU_TOP src libs compat freebsd_network ;
-SubInclude HAIKU_TOP src libs compat freebsd_iflib ;
-SubInclude HAIKU_TOP src libs compat freebsd_wlan ;
+SubInclude FUSION_TOP src libs compat freebsd_network ;
+SubInclude FUSION_TOP src libs compat freebsd_iflib ;
+SubInclude FUSION_TOP src libs compat freebsd_wlan ;

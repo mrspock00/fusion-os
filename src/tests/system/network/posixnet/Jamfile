@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system network posixnet ;
+SubDir FUSION_TOP src tests system network posixnet ;
 
 UsePrivateHeaders private shared ;
 

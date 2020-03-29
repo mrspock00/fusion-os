@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers graphics vesa ;
+SubDir FUSION_TOP src add-ons kernel drivers graphics vesa ;
 
 UsePrivateHeaders [ FDirName graphics common ] ;
 UsePrivateHeaders [ FDirName graphics vesa ] ;

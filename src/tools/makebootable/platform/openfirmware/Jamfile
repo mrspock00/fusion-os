@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools makebootable platform openfirmware ;
+SubDir FUSION_TOP src tools makebootable platform openfirmware ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin makebootable platform
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin makebootable platform
 	openfirmware ] ;
 
 #USES_BE_API on <build>makebootable = true ;

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons print transports hp_jetdirect ;
+SubDir FUSION_TOP src add-ons print transports hp_jetdirect ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src add-ons print transports shared ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src add-ons print transports shared ] ;
 
 Addon HP\ JetDirect :
 	print_transport.cpp

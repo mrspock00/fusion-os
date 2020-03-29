@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel power cpufreq intel_pstates ;
+SubDir FUSION_TOP src add-ons kernel power cpufreq intel_pstates ;
 
 UsePrivateKernelHeaders ;
 

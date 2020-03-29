@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system benchmarks ;
+SubDir FUSION_TOP src tests system benchmarks ;
 
 SimpleTest memspeedTest :
 	memspeed.c

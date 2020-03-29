@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src add-ons kernel drivers ports usb_serial ;
+SubDir FUSION_TOP src add-ons kernel drivers ports usb_serial ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders libroot ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers os drivers tty ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers os drivers tty ] : true ;
 
 SubDirC++Flags -fno-rtti ;
 

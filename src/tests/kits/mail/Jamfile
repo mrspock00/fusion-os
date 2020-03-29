@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits mail ;
+SubDir FUSION_TOP src tests kits mail ;
 
 UsePrivateHeaders mail shared ;
 

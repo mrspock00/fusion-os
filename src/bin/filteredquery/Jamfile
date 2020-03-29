@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin filteredquery ;
+SubDir FUSION_TOP src bin filteredquery ;
 
 BinCommand filteredquery :
 	query.cpp FilteredQuery.cpp

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system network sock ;
+SubDir FUSION_TOP src tests system network sock ;
 
 UseHeaders $(SUBDIR) : true ;
 

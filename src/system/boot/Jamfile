@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system boot ;
+SubDir FUSION_TOP src system boot ;
 
 DEFINES += _BOOT_MODE ;
 
@@ -301,7 +301,7 @@ for platform in [ MultiBootSubDirSetup ] {
 			# libroot functions needed by the stage2 boot loader
 			boot_libroot_$(platform:G=).o
 
-			: $(HAIKU_TOP)/src/system/ldscripts/$(TARGET_ARCH)/boot_loader_$(platform:G=).ld
+			: $(FUSION_TOP)/src/system/ldscripts/$(TARGET_ARCH)/boot_loader_$(platform:G=).ld
 			: $(ldflags)
 		;
 
@@ -340,7 +340,7 @@ for platform in [ MultiBootSubDirSetup ] {
 
 				AtariBootPrgLd haiku.prg :
 					boot_loader_$(TARGET_BOOT_PLATFORM)
-					: $(HAIKU_TOP)/src/system/ldscripts/$(TARGET_ARCH)/boot_prg_$(TARGET_BOOT_PLATFORM).ld
+					: $(FUSION_TOP)/src/system/ldscripts/$(TARGET_ARCH)/boot_prg_$(TARGET_BOOT_PLATFORM).ld
 					: -Bstatic
 				;
 
@@ -350,6 +350,6 @@ for platform in [ MultiBootSubDirSetup ] {
 	}
 }
 
-SubInclude HAIKU_TOP src system boot arch $(TARGET_KERNEL_ARCH) ;
-SubInclude HAIKU_TOP src system boot loader ;
-SubInclude HAIKU_TOP src system boot platform ;
+SubInclude FUSION_TOP src system boot arch $(TARGET_KERNEL_ARCH) ;
+SubInclude FUSION_TOP src system boot loader ;
+SubInclude FUSION_TOP src system boot platform ;

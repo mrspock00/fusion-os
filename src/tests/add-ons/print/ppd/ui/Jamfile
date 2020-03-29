@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src tests add-ons print ppd ui ;
+SubDir FUSION_TOP src tests add-ons print ppd ui ;
 
-SubDirHdrs $(HAIKU_TOP) src tests add-ons print ppd model ;
-SubDirHdrs $(HAIKU_TOP) src tests add-ons print ppd parser ;
+SubDirHdrs $(FUSION_TOP) src tests add-ons print ppd model ;
+SubDirHdrs $(FUSION_TOP) src tests add-ons print ppd parser ;
 
 StaticLibrary
 	libppdtest.a

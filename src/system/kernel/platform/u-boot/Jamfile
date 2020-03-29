@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src system kernel platform u-boot ;
+SubDir FUSION_TOP src system kernel platform u-boot ;
 
-SubDirHdrs $(HAIKU_TOP) headers private kernel platform $(TARGET_KERNEL_PLATFORM) ;
+SubDirHdrs $(FUSION_TOP) headers private kernel platform $(TARGET_KERNEL_PLATFORM) ;
 UseLibraryHeaders [ FDirName libfdt ] ;
 
 SubDirCcFlags $(TARGET_KERNEL_PIC_CCFLAGS) ;

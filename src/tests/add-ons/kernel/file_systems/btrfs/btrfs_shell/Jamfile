@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems btrfs btrfs_shell ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems btrfs btrfs_shell ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems btrfs ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel file_systems btrfs ] ;
 
 # prevent inclusion of HaikuBuildCompatibility.h
 DEFINES += HAIKU_BUILD_COMPATIBILITY_H ;
@@ -27,16 +27,16 @@ if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
 }
 
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers build ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os support ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os support ] : true ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders shared storage fs_shell ;
 UsePrivateHeaders file_systems ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers private ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src tools fs_shell ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src libs uuid ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers private ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src tools fs_shell ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs uuid ] : true ;
 
 
 local btrfsSources =
@@ -71,6 +71,6 @@ BuildPlatformMain <build>btrfs_shell
 ;
 
 SEARCH on [ FGristFiles $(utilitySources) ]
-	+= [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	+= [ FDirName $(FUSION_TOP) src system kernel util ] ;
 SEARCH on [ FGristFiles DebugSupport.cpp ]
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems shared ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems shared ] ;

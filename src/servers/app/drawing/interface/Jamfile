@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers app drawing interface ;
+SubDir FUSION_TOP src servers app drawing interface ;
 
-SubInclude HAIKU_TOP src servers app drawing interface local ;
-SubInclude HAIKU_TOP src servers app drawing interface remote ;
+SubInclude FUSION_TOP src servers app drawing interface local ;
+SubInclude FUSION_TOP src servers app drawing interface remote ;

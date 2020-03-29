@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel generic bios ;
+SubDir FUSION_TOP src add-ons kernel generic bios ;
 
 # Don't want to compile all of the debugging code even when doing a debug build,
 # it's unnecessary unless you're trying to debug x86emu itself.
@@ -24,4 +24,4 @@ KernelAddon bios :
 ;
 
 SEARCH on [ FGristFiles $(x86emuSources) ]
-	= [ FDirName $(HAIKU_TOP) src libs x86emu ] ;
+	= [ FDirName $(FUSION_TOP) src libs x86emu ] ;

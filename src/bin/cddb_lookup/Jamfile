@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin cddb_lookup ;
+SubDir FUSION_TOP src bin cddb_lookup ;
 
 UsePrivateHeaders drivers ;
 

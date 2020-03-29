@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits opengl direct_mode ;
+SubDir FUSION_TOP src tests kits opengl direct_mode ;
 UseBuildFeatureHeaders mesa ;
 UseBuildFeatureHeaders glu ;
 

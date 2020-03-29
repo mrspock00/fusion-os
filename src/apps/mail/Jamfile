@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps mail ;
+SubDir FUSION_TOP src apps mail ;
 
 UsePrivateHeaders interface ;
 UsePrivateHeaders mail ;
@@ -6,7 +6,7 @@ UsePrivateHeaders textencoding ;
 UsePrivateHeaders shared ;
 UsePrivateHeaders storage ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps webpositive autocompletion ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src apps webpositive autocompletion ] ;
 
 AddResources Mail : pictures.rdef  ;
 

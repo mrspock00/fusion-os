@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps mediaplayer ;
+SubDir FUSION_TOP src apps mediaplayer ;
 
 # for BRecentItems
 UsePublicHeaders [ FDirName be_apps Tracker ] ;
@@ -22,7 +22,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 
 		local sourceDir ;
 		for sourceDir in $(sourceDirs) {
-			SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps mediaplayer $(sourceDir) ] ;
+			SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src apps mediaplayer $(sourceDir) ] ;
 		}
 
 		Application [ MultiArchDefaultGristFiles MediaPlayer ] :

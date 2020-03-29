@@ -100,11 +100,11 @@ NotFile $(HAIKU_IMAGE_CONTAINER_NAME) ;
 # prepare the script that initializes the shell variables
 HAIKU_IMAGE_INIT_VARIABLES_SCRIPT = <HaikuImage>haiku.image-init-vars ;
 local script = $(HAIKU_IMAGE_INIT_VARIABLES_SCRIPT) ;
-MakeLocate $(script) : $(HAIKU_OUTPUT_DIR) ;
+MakeLocate $(script) : $(FUSION_OUTPUT_DIR) ;
 Always $(script) ;
 
-AddVariableToScript $(script) : sourceDir : $(HAIKU_TOP) ;
-AddVariableToScript $(script) : outputDir : $(HAIKU_OUTPUT_DIR) ;
+AddVariableToScript $(script) : sourceDir : $(FUSION_TOP) ;
+AddVariableToScript $(script) : outputDir : $(FUSION_OUTPUT_DIR) ;
 AddVariableToScript $(script) : tmpDir : $(HAIKU_TMP_DIR) ;
 AddVariableToScript $(script) : installDir : $(HAIKU_INSTALL_DIR) ;
 #AddVariableToScript $(script) : isImage : 1 ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin rc ;
+SubDir FUSION_TOP src bin rc ;
 
 GENERATE_C++ on [ FGristFiles lexer.l parser.y ] = true ;
 

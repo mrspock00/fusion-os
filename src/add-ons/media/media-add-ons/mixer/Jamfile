@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media media-add-ons mixer ;
+SubDir FUSION_TOP src add-ons media media-add-ons mixer ;
 
 AddResources mixer.media_addon : AudioMixer.rdef ;
 

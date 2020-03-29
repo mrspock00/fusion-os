@@ -1,18 +1,18 @@
-SubDir HAIKU_TOP src apps cortex ;
+SubDir FUSION_TOP src apps cortex ;
 
-SubInclude HAIKU_TOP src apps cortex RouteApp ;
-SubInclude HAIKU_TOP src apps cortex AddOnHost ;
+SubInclude FUSION_TOP src apps cortex RouteApp ;
+SubInclude FUSION_TOP src apps cortex AddOnHost ;
 
-SubInclude HAIKU_TOP src apps cortex DiagramView ;
-SubInclude HAIKU_TOP src apps cortex DormantNodeView ;
-SubInclude HAIKU_TOP src apps cortex InfoView ;
-SubInclude HAIKU_TOP src apps cortex MediaRoutingView ;
-SubInclude HAIKU_TOP src apps cortex NodeManager ;
-SubInclude HAIKU_TOP src apps cortex ParameterView ;
-SubInclude HAIKU_TOP src apps cortex Persistence ;
-SubInclude HAIKU_TOP src apps cortex TipManager ;
-SubInclude HAIKU_TOP src apps cortex TransportView ;
-SubInclude HAIKU_TOP src apps cortex ValControl ;
-SubInclude HAIKU_TOP src apps cortex support ;
+SubInclude FUSION_TOP src apps cortex DiagramView ;
+SubInclude FUSION_TOP src apps cortex DormantNodeView ;
+SubInclude FUSION_TOP src apps cortex InfoView ;
+SubInclude FUSION_TOP src apps cortex MediaRoutingView ;
+SubInclude FUSION_TOP src apps cortex NodeManager ;
+SubInclude FUSION_TOP src apps cortex ParameterView ;
+SubInclude FUSION_TOP src apps cortex Persistence ;
+SubInclude FUSION_TOP src apps cortex TipManager ;
+SubInclude FUSION_TOP src apps cortex TransportView ;
+SubInclude FUSION_TOP src apps cortex ValControl ;
+SubInclude FUSION_TOP src apps cortex support ;
 
-SubInclude HAIKU_TOP src apps cortex addons ;
+SubInclude FUSION_TOP src apps cortex addons ;

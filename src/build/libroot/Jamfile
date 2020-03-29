@@ -1,13 +1,13 @@
-SubDir HAIKU_TOP src build libroot ;
+SubDir FUSION_TOP src build libroot ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers build ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os app ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os drivers ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os kernel ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os interface ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os storage ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers build os support ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os app ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os drivers ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os kernel ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os interface ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os storage ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build os support ] : true ;
 
 UsePrivateBuildHeaders kernel libroot system ;
 
@@ -20,7 +20,7 @@ UsePrivateBuildHeaders kernel libroot system ;
 	SubDirC++Flags $(defines) ;
 
 	defines = [ FDefines
-		HAIKU_BUILD_GENERATED_DIRECTORY="\\\"$(HAIKU_OUTPUT_DIR)\\\""
+		HAIKU_BUILD_GENERATED_DIRECTORY="\\\"$(FUSION_OUTPUT_DIR)\\\""
 	] ;
 	ObjectC++Flags find_directory.cpp : $(defines) ;
 
@@ -97,10 +97,10 @@ BuildPlatformStaticLibraryPIC libroot_build_function_remapper.a :
 ;
 
 SEARCH on [ FGristFiles driver_settings.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system libroot os ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot os ] ;
 SEARCH on [ FGristFiles $(strlSources) strnlen.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system libroot posix string ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot posix string ] ;
 SEARCH on [ FGristFiles SHA256.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system libroot posix crypt ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot posix crypt ] ;
 SEARCH on [ FGristFiles KMessage.cpp ]
-    = [ FDirName $(HAIKU_TOP) src system kernel messaging ] ;
+    = [ FDirName $(FUSION_TOP) src system kernel messaging ] ;

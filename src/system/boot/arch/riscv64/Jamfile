@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system boot arch riscv64 ;
+SubDir FUSION_TOP src system boot arch riscv64 ;
 
 {
 	local defines = _BOOT_MODE ;
@@ -26,8 +26,8 @@ BootMergeObject boot_arch_$(TARGET_KERNEL_ARCH).o :
 ;
 
 SEARCH on [ FGristFiles arch_elf.cpp arch_uart_8250.cpp ]
-    = [ FDirName $(HAIKU_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;
+    = [ FDirName $(FUSION_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;
 
 SEARCH on [ FGristFiles debug_uart_8250.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system kernel arch generic ] ;
+	= [ FDirName $(FUSION_TOP) src system kernel arch generic ] ;
 

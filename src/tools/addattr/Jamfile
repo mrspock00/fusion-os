@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools addattr ;
+SubDir FUSION_TOP src tools addattr ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin addattr ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin addattr ] ;
 
 USES_BE_API on <build>addattr = true ;
 

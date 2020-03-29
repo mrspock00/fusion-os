@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin screen_blanker ;
+SubDir FUSION_TOP src bin screen_blanker ;
 
 UseHeaders [ FDirName headers os add-ons screen_saver ] ;
 	# we also need our headers when build for BeOS
@@ -21,7 +21,7 @@ BinCommand screen_blanker :
 
 SEARCH on [ FGristFiles
 		ScreenSaver.cpp
-	] = [ FDirName $(HAIKU_TOP) src kits screensaver ] ;
+	] = [ FDirName $(FUSION_TOP) src kits screensaver ] ;
 
 DoCatalogs screen_blanker :
 	x-vnd.Haiku.screenblanker

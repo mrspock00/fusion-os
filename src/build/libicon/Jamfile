@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src build libicon ;
+SubDir FUSION_TOP src build libicon ;
 
 # source directories
 local sourceDirs =
@@ -13,7 +13,7 @@ local sourceDirs =
 
 local sourceDir ;
 for sourceDir in $(sourceDirs) {
-	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src libs icon $(sourceDir) ] ;
+	SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src libs icon $(sourceDir) ] ;
 }
 
 # system headers

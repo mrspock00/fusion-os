@@ -198,7 +198,7 @@ rule RemotePackageRepository repository : architecture : repositoryUrl
 	# build the repository info file
 	local repositoryInfoTemplate = <repository-info-template>haikuports ;
 	SEARCH on $(repositoryInfoTemplate)
-		= $(HAIKU_TOP)/src/data/repository_infos ;
+		= $(FUSION_TOP)/src/data/repository_infos ;
 	PreprocessPackageOrRepositoryInfo $(repositoryInfo)
 		: $(repositoryInfoTemplate) : $(architecture) ;
 
@@ -772,7 +772,7 @@ rule HaikuRepository repository : repoInfoTemplate : packages
 
 	# call the build actions
 	local mainScript = build_haiku_repository ;
-	SEARCH on $(mainScript) = [ FDirName $(HAIKU_TOP) build scripts ] ;
+	SEARCH on $(mainScript) = [ FDirName $(FUSION_TOP) build scripts ] ;
 
 	Depends $(repository) : $(mainScript) $(initVariablesScript)
 		$(repositoryInfo) $(packages) ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tools translation pnginfo ;
+SubDir FUSION_TOP src tools translation pnginfo ;
 
 UseBuildFeatureHeaders zlib ;
 UseBuildFeatureHeaders libpng ;

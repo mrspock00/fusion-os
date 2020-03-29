@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex AddOnHost ;
+SubDir FUSION_TOP src apps cortex AddOnHost ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) support ] ;

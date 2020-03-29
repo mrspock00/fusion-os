@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel drivers bus firewire ;
+SubDir FUSION_TOP src add-ons kernel drivers bus firewire ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 UsePrivateHeaders firewire ;
 UsePrivateKernelHeaders ;
 

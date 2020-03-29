@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers isa arch arm ;
+SubDir FUSION_TOP src add-ons kernel bus_managers isa arch arm ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) $(DOTDOT) ] ;
 

@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src tests system kernel cache ;
+SubDir FUSION_TOP src tests system kernel cache ;
 
 UsePrivateSystemHeaders ;
 UsePrivateKernelHeaders ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src system kernel cache ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src system kernel util ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src system kernel cache ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src system kernel cache ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src system kernel util ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src system kernel cache ] ;
 
 StdBinCommands
 	cache_control.cpp

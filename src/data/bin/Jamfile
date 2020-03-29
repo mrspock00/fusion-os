@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src data bin ;
+SubDir FUSION_TOP src data bin ;
 
 rule PrepareScriptWithIcon file : iconFile
 {
 	local source = [ FGristFiles $(file) ] ;
 	local icon = [ FGristFiles $(iconFile) ] ;
-	SEARCH on $(icon) = [ FDirName $(HAIKU_TOP) src data bin ] ;
+	SEARCH on $(icon) = [ FDirName $(FUSION_TOP) src data bin ] ;
 	local target = $(source:G=) ;
 	MakeLocateCommonPlatform $(target) ;
 	File $(target) : $(source) ;

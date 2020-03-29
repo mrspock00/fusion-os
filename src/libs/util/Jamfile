@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src libs util ;
+SubDir FUSION_TOP src libs util ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 local defines = [ FDefines SCCSID=0 ] ;
 SubDirCcFlags $(defines) ;

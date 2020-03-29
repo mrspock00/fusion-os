@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app bitmap_bounds ;
+SubDir FUSION_TOP src tests servers app bitmap_bounds ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

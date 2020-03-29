@@ -1,12 +1,12 @@
-SubDir HAIKU_TOP src tools makebootable platform bios_ia32 ;
+SubDir FUSION_TOP src tools makebootable platform bios_ia32 ;
 
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel file_systems bfs ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel file_systems bfs ;
 
 UsePrivateHeaders storage shared ;
 UsePrivateSystemHeaders ;
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src bin makebootable platform bios_ia32 ] ;
+	+= [ FDirName $(FUSION_TOP) src bin makebootable platform bios_ia32 ] ;
 
 USES_BE_API on <build>makebootable = true ;
 
@@ -17,9 +17,9 @@ if $(HOST_PLATFORM) = linux || $(HOST_PLATFORM) = freebsd || $(HOST_PLATFORM) = 
 	hostPlatformSources = PartitionMap.cpp PartitionMapParser.cpp
 		PartitionMapWriter.cpp crc32.cpp Header.cpp utility.cpp ;
 
-	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel
+	SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel
 		partitioning_systems intel ] ;
-	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel
+	SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel
 		partitioning_systems gpt ] ;
 
 	DEFINES += _USER_MODE ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits net libnetapi ;
+SubDir FUSION_TOP src tests kits net libnetapi ;
 
 UnitTestLib libnetapitest.so :
 	NetAPITestAddon.cpp

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits bluetooth l2capClient ;
+SubDir FUSION_TOP src tests kits bluetooth l2capClient ;
 
 UseLibraryHeaders bluetooth ;
 

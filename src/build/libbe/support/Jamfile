@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src build libbe support ;
+SubDir FUSION_TOP src build libbe support ;
 
 UsePrivateBuildHeaders app interface shared support ;
 UsePrivateObjectHeaders Url.cpp : locale ;
 
 USES_BE_API on <libbe_build>support_kit.o = true ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits support ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits support ] ;
 
 BuildPlatformMergeObjectPIC <libbe_build>support_kit.o :
 	Archivable.cpp

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network usb_davicom ;
+SubDir FUSION_TOP src add-ons kernel drivers network usb_davicom ;
 
 UsePrivateHeaders kernel net ;
 UsePrivateKernelHeaders ;

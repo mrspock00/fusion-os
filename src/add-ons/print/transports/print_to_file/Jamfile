@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons print transports print_to_file ;
+SubDir FUSION_TOP src add-ons print transports print_to_file ;
 
 # In case of changing the name of this transport add-on
 # the method NeedsLocking() in src/servers/print/ResourceManager.cpp

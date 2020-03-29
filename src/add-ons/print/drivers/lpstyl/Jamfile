@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons print drivers lpstyl ;
+SubDir FUSION_TOP src add-ons print drivers lpstyl ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers libs print libprint ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers libs print libprint ] ;
 
 AddResources Lpstyl : Lpstyl.rdef ;
 

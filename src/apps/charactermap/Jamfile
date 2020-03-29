@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps charactermap ;
+SubDir FUSION_TOP src apps charactermap ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

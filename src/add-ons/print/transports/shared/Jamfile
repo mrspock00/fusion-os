@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons print transports shared ;
+SubDir FUSION_TOP src add-ons print transports shared ;
 
 Objects
 	DbgMsg.cpp

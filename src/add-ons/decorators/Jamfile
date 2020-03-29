@@ -1,5 +1,5 @@
-SubDir HAIKU_TOP src add-ons decorators ;
+SubDir FUSION_TOP src add-ons decorators ;
 
-SubInclude HAIKU_TOP src add-ons decorators BeDecorator ;
-SubInclude HAIKU_TOP src add-ons decorators MacDecorator ;
-SubInclude HAIKU_TOP src add-ons decorators WinDecorator ;
+SubInclude FUSION_TOP src add-ons decorators BeDecorator ;
+SubInclude FUSION_TOP src add-ons decorators MacDecorator ;
+SubInclude FUSION_TOP src add-ons decorators WinDecorator ;

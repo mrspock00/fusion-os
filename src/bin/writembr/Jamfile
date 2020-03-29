@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin writembr ;
+SubDir FUSION_TOP src bin writembr ;
 
 UsePrivateHeaders shared storage ;
 

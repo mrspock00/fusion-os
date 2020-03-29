@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons index_server audiotags ;
+SubDir FUSION_TOP src add-ons index_server audiotags ;
 
 UsePrivateHeaders index_server shared ;
 

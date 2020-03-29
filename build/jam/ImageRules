@@ -142,7 +142,7 @@ rule AddDirectoryToContainer container : directoryTokens : attributeFiles
 
 	if $(attributeFiles) {
 		SEARCH on $(attributeFiles)
-			+= [ FDirName $(HAIKU_TOP) src data directory_attrs ] ;
+			+= [ FDirName $(FUSION_TOP) src data directory_attrs ] ;
 		ATTRIBUTE_FILES on $(directory) += $(attributeFiles) ;
 	}
 
@@ -402,7 +402,7 @@ rule AddHeaderDirectoryToContainer container : dirTokens : dirName
 		= [ on $(container) return $(HAIKU_CONTAINER_SYSTEM_DIR_TOKENS) ] ;
 
 	CopyDirectoryToContainer $(container) : $(systemDirTokens) develop headers
-		: [ FDirName $(HAIKU_TOP) headers $(dirTokens) ]
+		: [ FDirName $(FUSION_TOP) headers $(dirTokens) ]
 		: $(dirName) : -x *~ : $(flags) ;
 }
 
@@ -414,7 +414,7 @@ rule AddWifiFirmwareToContainer container : driver : package : archive : extract
 
 	# complete location to wifi firmware archive
 	local firmwareArchive = [ FDirName
-		$(HAIKU_TOP) data system data firmware $(driver) $(archive) ] ;
+		$(FUSION_TOP) data system data firmware $(driver) $(archive) ] ;
 
 	local systemDirTokens
 		= [ on $(container) return $(HAIKU_CONTAINER_SYSTEM_DIR_TOKENS) ] ;
@@ -595,7 +595,7 @@ rule AddLibrariesToContainer container : directory : libs
 
 rule CreateContainerMakeDirectoriesScript container : script
 {
-	MakeLocate $(script) : $(HAIKU_OUTPUT_DIR) ;
+	MakeLocate $(script) : $(FUSION_OUTPUT_DIR) ;
 	Always $(script) ;
 
 	local initScript = [ InitScript $(script) ] ;
@@ -675,7 +675,7 @@ actions AppendToContainerMakeDirectoriesScriptAttributes
 
 rule CreateContainerCopyFilesScript container : script
 {
-	MakeLocate $(script) : $(HAIKU_OUTPUT_DIR) ;
+	MakeLocate $(script) : $(FUSION_OUTPUT_DIR) ;
 	Always $(script) ;
 
 	local initScript = [ InitScript $(script) ] ;
@@ -809,7 +809,7 @@ actions AddDirectoryToContainerCopyFilesScript bind SOURCE_DIRECTORY
 
 rule CreateContainerExtractFilesScript container : script
 {
-	MakeLocate $(script) : $(HAIKU_OUTPUT_DIR) ;
+	MakeLocate $(script) : $(FUSION_OUTPUT_DIR) ;
 	Always $(script) ;
 
 	local initScript = [ InitScript $(script) ] ;
@@ -972,7 +972,7 @@ rule AddSourceDirectoryToHaikuImage dirTokens : flags
 	# AddSourceDirectoryToHaikuImage <dirTokens> : <flags> ;
 
 	CopyDirectoryToHaikuImage home HaikuSources
-		: [ FDirName $(HAIKU_TOP) $(dirTokens) ]
+		: [ FDirName $(FUSION_TOP) $(dirTokens) ]
 		: : : $(flags) ;
 }
 
@@ -1271,7 +1271,7 @@ rule BuildHaikuImage haikuImage : scripts : isImage : isVMwareImage
 	}
 
 	local mainScript = build_haiku_image ;
-	SEARCH on $(mainScript) = [ FDirName $(HAIKU_TOP) build scripts ] ;
+	SEARCH on $(mainScript) = [ FDirName $(FUSION_TOP) build scripts ] ;
 
 	Depends $(haikuImage) : $(mainScript) $(scripts) ;
 	BuildHaikuImage1 $(haikuImage) : $(mainScript)
@@ -1381,7 +1381,7 @@ rule BuildNetBootArchive archive : scripts
 	# BuildNetBootArchive <archive> : <scripts> ;
 
 	local mainScript = build_archive ;
-	SEARCH on $(mainScript) = [ FDirName $(HAIKU_TOP) build scripts ] ;
+	SEARCH on $(mainScript) = [ FDirName $(FUSION_TOP) build scripts ] ;
 
 	Depends $(archive) : $(mainScript) $(scripts) ;
 	BuildNetBootArchive1 $(archive) : $(mainScript)
@@ -1473,7 +1473,7 @@ rule BuildFloppyBootArchive archive : scripts
 	# BuildHFloppyBootArchive <archive> : <scripts> ;
 
 	local mainScript = build_archive ;
-	SEARCH on $(mainScript) = [ FDirName $(HAIKU_TOP) build scripts ] ;
+	SEARCH on $(mainScript) = [ FDirName $(FUSION_TOP) build scripts ] ;
 
 	Depends $(archive) : $(mainScript) $(scripts) ;
 	BuildFloppyBootArchive1 $(archive) : $(mainScript)
@@ -1607,22 +1607,22 @@ rule BuildCDBootPPCImage image : hfsmaps : elfloader : coffloader : chrpscript
 actions BuildCDBootPPCImage1 bind MAPS
 {
 	$(RM) $(<)
-	mkdir -p $(HAIKU_OUTPUT_DIR)/cd/ppc
-	mkdir -p $(HAIKU_OUTPUT_DIR)/cd/boot
+	mkdir -p $(FUSION_OUTPUT_DIR)/cd/ppc
+	mkdir -p $(FUSION_OUTPUT_DIR)/cd/boot
 	# CHRP Boot script
-	cp $(>[3]) $(HAIKU_OUTPUT_DIR)/cd/ppc/bootinfo.txt
-	cp $(>[3]) $(HAIKU_OUTPUT_DIR)/cd/boot/boot.chrp
+	cp $(>[3]) $(FUSION_OUTPUT_DIR)/cd/ppc/bootinfo.txt
+	cp $(>[3]) $(FUSION_OUTPUT_DIR)/cd/boot/boot.chrp
 	# Haiku Bootloaders
-	cp $(>[2]) $(HAIKU_OUTPUT_DIR)/cd/boot/haikuloader.xcf
-	cp $(>[1]) $(HAIKU_OUTPUT_DIR)/cd/boot/haikuloader.elf
+	cp $(>[2]) $(FUSION_OUTPUT_DIR)/cd/boot/haikuloader.xcf
+	cp $(>[1]) $(FUSION_OUTPUT_DIR)/cd/boot/haikuloader.elf
 	# Extras (readme files, etc)
-	cp $(>[4]) $(HAIKU_OUTPUT_DIR)/cd/
+	cp $(>[4]) $(FUSION_OUTPUT_DIR)/cd/
 
 	xorriso -as mkisofs -v -hfsplus \
-		-hfs-bless $(HAIKU_OUTPUT_DIR)/cd/boot \
-		-prep-boot-part $(HAIKU_OUTPUT_DIR)/cd/boot/haikuloader.xcf \
-		-r -J -o $(<) $(HAIKU_OUTPUT_DIR)/cd
-	$(RM) -r $(HAIKU_OUTPUT_DIR)/cd
+		-hfs-bless $(FUSION_OUTPUT_DIR)/cd/boot \
+		-prep-boot-part $(FUSION_OUTPUT_DIR)/cd/boot/haikuloader.xcf \
+		-r -J -o $(<) $(FUSION_OUTPUT_DIR)/cd
+	$(RM) -r $(FUSION_OUTPUT_DIR)/cd
 }
 
 #pragma mark - EFI System Partition rules

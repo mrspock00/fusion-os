@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps soundrecorder ;
+SubDir FUSION_TOP src apps soundrecorder ;
 
 UsePrivateHeaders shared media ;
 

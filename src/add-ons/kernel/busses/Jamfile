@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons kernel busses ;
+SubDir FUSION_TOP src add-ons kernel busses ;
 
-SubInclude HAIKU_TOP src add-ons kernel busses ata ;
-SubInclude HAIKU_TOP src add-ons kernel busses agp_gart ;
-SubInclude HAIKU_TOP src add-ons kernel busses mmc ;
-SubInclude HAIKU_TOP src add-ons kernel busses random ;
-SubInclude HAIKU_TOP src add-ons kernel busses scsi ;
-SubInclude HAIKU_TOP src add-ons kernel busses usb ;
-SubInclude HAIKU_TOP src add-ons kernel busses virtio ;
+SubInclude FUSION_TOP src add-ons kernel busses ata ;
+SubInclude FUSION_TOP src add-ons kernel busses agp_gart ;
+SubInclude FUSION_TOP src add-ons kernel busses mmc ;
+SubInclude FUSION_TOP src add-ons kernel busses random ;
+SubInclude FUSION_TOP src add-ons kernel busses scsi ;
+SubInclude FUSION_TOP src add-ons kernel busses usb ;
+SubInclude FUSION_TOP src add-ons kernel busses virtio ;

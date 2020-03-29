@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network vt612x ;
+SubDir FUSION_TOP src add-ons kernel drivers network vt612x ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_network compat ]
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_network compat ]
 	: true ;
 UsePrivateHeaders net system ;
 UsePrivateKernelHeaders ;

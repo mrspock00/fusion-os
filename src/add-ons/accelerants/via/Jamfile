@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons accelerants via ;
+SubDir FUSION_TOP src add-ons accelerants via ;
 
 UsePrivateHeaders graphics ;
 UsePrivateHeaders [ FDirName graphics via ] ;
@@ -21,4 +21,4 @@ Addon via.accelerant :
 
 Depends via.accelerant : via ;
 
-SubInclude HAIKU_TOP src add-ons accelerants via engine ;
+SubInclude FUSION_TOP src add-ons accelerants via engine ;

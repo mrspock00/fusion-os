@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex InfoView ;
+SubDir FUSION_TOP src apps cortex InfoView ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) NodeManager ] ;

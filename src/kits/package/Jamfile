@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits package ;
+SubDir FUSION_TOP src kits package ;
 
 UsePrivateHeaders
 	app
@@ -64,10 +64,10 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		if [ FIsBuildFeatureEnabled zstd ] {
 			SubDirC++Flags -DZSTD_ENABLED ;
 		}
-		SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package hpkg ] ;
-		SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package hpkg v1 ] ;
-		SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package manager ] ;
-		SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package solver ] ;
+		SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package hpkg ] ;
+		SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package hpkg v1 ] ;
+		SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package manager ] ;
+		SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package solver ] ;
 
 		AddResources $(libsolv) :
 			LibsolvSolver.rdef
@@ -138,7 +138,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 }
 
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package manager ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package manager ] ;
 
 DoCatalogs libpackage.so :
 	x-vnd.Haiku-libpackage

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons accelerants matrox ;
+SubDir FUSION_TOP src add-ons accelerants matrox ;
 
 UsePrivateHeaders graphics ;
 UsePrivateHeaders [ FDirName graphics matrox ] ;
@@ -20,4 +20,4 @@ Addon matrox.accelerant :
 
 Depends matrox.accelerant : matrox ;
 
-SubInclude HAIKU_TOP src add-ons accelerants matrox engine ;
+SubInclude FUSION_TOP src add-ons accelerants matrox engine ;

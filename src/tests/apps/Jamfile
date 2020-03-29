@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src tests apps ;
+SubDir FUSION_TOP src tests apps ;
 
-SubInclude HAIKU_TOP src tests apps delay_shutdown ;
-SubInclude HAIKU_TOP src tests apps fake_app_server ;
-SubInclude HAIKU_TOP src tests apps haikudepot ;
-SubInclude HAIKU_TOP src tests apps installer ;
-SubInclude HAIKU_TOP src tests apps miniterminal ;
-SubInclude HAIKU_TOP src tests apps partitioner ;
-SubInclude HAIKU_TOP src tests apps terminal_replicant ;
+SubInclude FUSION_TOP src tests apps delay_shutdown ;
+SubInclude FUSION_TOP src tests apps fake_app_server ;
+SubInclude FUSION_TOP src tests apps haikudepot ;
+SubInclude FUSION_TOP src tests apps installer ;
+SubInclude FUSION_TOP src tests apps miniterminal ;
+SubInclude FUSION_TOP src tests apps partitioner ;
+SubInclude FUSION_TOP src tests apps terminal_replicant ;
 

@@ -1,12 +1,12 @@
-SubDir HAIKU_TOP src tests bin makeudfimage ;
+SubDir FUSION_TOP src tests bin makeudfimage ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
 UsePublicHeaders add-ons/file_system ;			# For fsproto.h
 UsePrivateHeaders [ FDirName kernel util ] ;	# For kernel_cpp.h
 UsePrivateHeaders private shared ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems udf ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src bin makeudfimage ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src add-ons kernel file_systems udf ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src bin makeudfimage ] ;
 
 UnitTestLib libmakeudfimagetest.so
 	: MakeudfimageTestAddon.cpp
@@ -27,6 +27,6 @@ UnitTestLib libmakeudfimagetest.so
 ;
 
 SEARCH on [ FGristFiles Allocator.cpp PhysicalPartitionAllocator.cpp ]
-	= [ FDirName $(HAIKU_TOP) src bin makeudfimage ] ;
+	= [ FDirName $(FUSION_TOP) src bin makeudfimage ] ;
 SEARCH on [ FGristFiles UdfDebug.cpp UdfString.cpp UdfStructures.cpp Utils.cpp ] #DString.cpp UdfDebug.cpp UdfString.cpp UdfStructures.cpp Utils.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems udf ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems udf ] ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems nfs4 ;
+SubDir FUSION_TOP src add-ons kernel file_systems nfs4 ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders shared ;
@@ -40,5 +40,5 @@ KernelAddon nfs4 :
 	XDR.cpp
 ;
 
-SubInclude HAIKU_TOP src add-ons kernel file_systems nfs4 idmapper ;
+SubInclude FUSION_TOP src add-ons kernel file_systems nfs4 idmapper ;
 

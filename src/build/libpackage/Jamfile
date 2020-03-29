@@ -1,14 +1,14 @@
-SubDir HAIKU_TOP src build libpackage ;
+SubDir FUSION_TOP src build libpackage ;
 
 UsePrivateBuildHeaders kernel package shared libroot storage support ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers os net ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers os net ] : true ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package hpkg ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package hpkg v1 ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package manager ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits package solver ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package hpkg ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package hpkg v1 ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package manager ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits package solver ] ;
 
 USES_BE_API on libpackage_build.so = true ;
 LINKFLAGS on libpackage_build.so += $(HOST_PTHREAD_LINKFLAGS) ;
@@ -16,7 +16,7 @@ LINKFLAGS on libpackage_build.so += $(HOST_PTHREAD_LINKFLAGS) ;
 
 {
 	# The package writer needs to know where the license files are located.
-	local dataDir = [ FDirName $(HAIKU_TOP) data system data ] ;
+	local dataDir = [ FDirName $(FUSION_TOP) data system data ] ;
 	# The directory path we compile in must be absolute. If it isn't prepend
 	# pwd.
 	local defines ;

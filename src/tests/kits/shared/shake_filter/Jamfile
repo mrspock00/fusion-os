@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits shared shake_filter ;
+SubDir FUSION_TOP src tests kits shared shake_filter ;
 
 UsePrivateHeaders shared ;
 

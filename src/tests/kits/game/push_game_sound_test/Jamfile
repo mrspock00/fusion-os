@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits game push_game_sound_test ;
+SubDir FUSION_TOP src tests kits game push_game_sound_test ;
 
 SimpleTest push_game_sound_test
 	: push_game_sound_test.cpp

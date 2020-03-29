@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests kits app broster testapps ;
+SubDir FUSION_TOP src tests kits app broster testapps ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
-#SubDirHdrs [ FDirName $(HAIKU_TOP) src tests kits app common ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src tests kits app broster ] ;
+#SubDirHdrs [ FDirName $(FUSION_TOP) src tests kits app common ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src tests kits app broster ] ;
 
 UsePrivateHeaders app ;
 

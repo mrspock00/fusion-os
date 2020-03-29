@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits opengl demos gears ;
+SubDir FUSION_TOP src tests kits opengl demos gears ;
 UseBuildFeatureHeaders mesa ;
 UseBuildFeatureHeaders glu ;
 UseLibraryHeaders glut ;

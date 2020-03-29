@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences joysticks ;
+SubDir FUSION_TOP src preferences joysticks ;
 
 Preference Joysticks :
 	CalibWin.cpp

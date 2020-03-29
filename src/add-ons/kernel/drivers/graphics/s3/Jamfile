@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers graphics s3 ;
+SubDir FUSION_TOP src add-ons kernel drivers graphics s3 ;
 
 UsePrivateHeaders [ FDirName graphics s3 ] ;
 UsePrivateHeaders [ FDirName graphics common ] ;

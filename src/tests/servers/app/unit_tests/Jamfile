@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tests servers app unit_tests ;
+SubDir FUSION_TOP src tests servers app unit_tests ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app ] : true ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src servers app ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src servers app ] ;
 
 UnitTestLib app_server_unit_tests.so :
 	AppServerUnitTestAddOn.cpp

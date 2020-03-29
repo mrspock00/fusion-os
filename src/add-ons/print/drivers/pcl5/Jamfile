@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons print drivers pcl5 ;
+SubDir FUSION_TOP src add-ons print drivers pcl5 ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers libs print libprint ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers libs print libprint ] ;
 
 AddResources PCL5\ Compatible : PCL5.rdef ;
 

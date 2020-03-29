@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs libunwind x86_64 ;
+SubDir FUSION_TOP src libs libunwind x86_64 ;
 
 UseLibraryHeaders libunwind ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;

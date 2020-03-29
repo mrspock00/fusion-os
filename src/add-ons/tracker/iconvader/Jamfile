@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons tracker iconvader ;
+SubDir FUSION_TOP src add-ons tracker iconvader ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src kits tracker ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src kits tracker ] : true ;
 UsePrivateHeaders tracker ;
 UsePrivateHeaders shared ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex TransportView ;
+SubDir FUSION_TOP src apps cortex TransportView ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) NodeManager ] ;

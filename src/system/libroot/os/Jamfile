@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot os ;
+SubDir FUSION_TOP src system libroot os ;
 
 UsePrivateHeaders kernel ;
 	# for util/KMessage.h
@@ -52,7 +52,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 			;
 
 		SEARCH on [ FGristFiles KMessage.cpp ]
-			= [ FDirName $(HAIKU_TOP) src system kernel messaging ] ;
+			= [ FDirName $(FUSION_TOP) src system kernel messaging ] ;
 
 		# We need to specify the dependency on the generated syscalls file
 		# explicitly.

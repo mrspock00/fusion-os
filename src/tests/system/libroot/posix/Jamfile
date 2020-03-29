@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system libroot posix ;
+SubDir FUSION_TOP src tests system libroot posix ;
 
 UsePrivateHeaders libroot system ;
 
@@ -90,5 +90,5 @@ UnitTestLib librootposixtest.so :
 	: be [ TargetLibstdc++ ] [ TargetLibsupc++ ]
 ;
 
-SubInclude HAIKU_TOP src tests system libroot posix math ;
-SubInclude HAIKU_TOP src tests system libroot posix string ;
+SubInclude FUSION_TOP src tests system libroot posix math ;
+SubInclude FUSION_TOP src tests system libroot posix string ;

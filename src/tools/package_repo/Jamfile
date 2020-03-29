@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tools package_repo ;
+SubDir FUSION_TOP src tools package_repo ;
 
 SEARCH_SOURCE +=
-	[ FDirName $(HAIKU_TOP) src bin package_repo ]
-	[ FDirName $(HAIKU_TOP) src bin package ]
+	[ FDirName $(FUSION_TOP) src bin package_repo ]
+	[ FDirName $(FUSION_TOP) src bin package ]
 	;
 
 UsePrivateHeaders kernel shared ;

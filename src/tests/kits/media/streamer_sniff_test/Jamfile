@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits media streamer_sniff_test ;
+SubDir FUSION_TOP src tests kits media streamer_sniff_test ;
 
 UsePrivateHeaders media ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix signal ;
+SubDir FUSION_TOP src system libroot posix signal ;
 
 UsePrivateHeaders libroot shared ;
 

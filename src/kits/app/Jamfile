@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits app ;
+SubDir FUSION_TOP src kits app ;
 
 # If defined allows to run applications without the registrar
 # -- for development only, of course.

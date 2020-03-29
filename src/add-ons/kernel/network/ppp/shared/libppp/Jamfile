@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src add-ons kernel network ppp shared libppp ;
+SubDir FUSION_TOP src add-ons kernel network ppp shared libppp ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared libppp
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared libppp
 	headers ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared
 	libkernelppp headers ] : true ;
 
 StaticLibrary libppp.a :
@@ -20,11 +20,11 @@ StaticLibrary libppp.a :
 	: libnetwork.so libbnetapi.so
 ;
 
-SEARCH on [ FGristFiles strlcat.c ] = [ FDirName $(HAIKU_TOP) src system
+SEARCH on [ FGristFiles strlcat.c ] = [ FDirName $(FUSION_TOP) src system
 	libroot posix string ] ;
-SEARCH on [ FGristFiles driver_settings.cpp ] = [ FDirName $(HAIKU_TOP) src
+SEARCH on [ FGristFiles driver_settings.cpp ] = [ FDirName $(FUSION_TOP) src
 	system libroot os ] ;
-SEARCH on [ FGristFiles settings_tools.cpp ] = [ FDirName $(HAIKU_TOP) src
+SEARCH on [ FGristFiles settings_tools.cpp ] = [ FDirName $(FUSION_TOP) src
 	add-ons kernel network ppp shared libkernelppp ] ;
-SEARCH on [ FGristFiles KPPPUtils.cpp ] = [ FDirName $(HAIKU_TOP) src add-ons
+SEARCH on [ FGristFiles KPPPUtils.cpp ] = [ FDirName $(FUSION_TOP) src add-ons
 	kernel network ppp shared libkernelppp ] ;

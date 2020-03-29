@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src apps cortex addons Flanger ;
+SubDir FUSION_TOP src apps cortex addons Flanger ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src apps cortex addons common ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src apps cortex addons common ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src apps cortex addons common ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src apps cortex addons common ] ;
 
 AddResources cortex_flanger.media_addon : Resource.rdef ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers display ;
+SubDir FUSION_TOP src add-ons kernel drivers display ;
 
 UsePrivateHeaders kernel ;
 SubDirCcFlags -D_KERNEL_MODE ;

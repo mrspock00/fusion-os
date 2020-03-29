@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers fdt ;
+SubDir FUSION_TOP src add-ons kernel bus_managers fdt ;
 
 UsePrivateKernelHeaders ;
 UseLibraryHeaders [ FDirName libfdt ] ;
@@ -34,5 +34,5 @@ KernelStaticLibrary kernel_fdt :
 	;
 
 SEARCH on [ FGristFiles $(libFDTSources) ]
-	= [ FDirName $(HAIKU_TOP) src libs libfdt ] ;
+	= [ FDirName $(FUSION_TOP) src libs libfdt ] ;
 

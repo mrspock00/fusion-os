@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems userlandfs server beos ;
+SubDir FUSION_TOP src add-ons kernel file_systems userlandfs server beos ;
 
-local userlandFSTop = [ FDirName $(HAIKU_TOP) src add-ons kernel
+local userlandFSTop = [ FDirName $(FUSION_TOP) src add-ons kernel
 	file_systems userlandfs ] ;
 local userlandFSIncludes = [ PrivateHeaders userlandfs ] ;
 
@@ -12,7 +12,7 @@ SubDirSysHdrs [ FDirName $(userlandFSIncludes) ] ;
 SubDirHdrs [ FDirName $(userlandFSIncludes) private ] ;
 SubDirHdrs [ FDirName $(userlandFSIncludes) shared ] ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 SEARCH_SOURCE += [ FDirName $(userlandFSTop) private ] ;
 SEARCH_SOURCE += [ FDirName $(userlandFSTop) shared ] ;

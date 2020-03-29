@@ -14,19 +14,19 @@
 
 
 # Enable debugging for directory src/system/boot/loader recursively.
-#SetConfigVar DEBUG : HAIKU_TOP src system boot loader : 1 : global ;
+#SetConfigVar DEBUG : FUSION_TOP src system boot loader : 1 : global ;
 
 
 # Add default Locale settings skipping FirstBootPrompt
 #AddFilesToHaikuImage home config settings
-#	: $(HAIKU_TOP)/data/settings/first_boot/Locale\ settings ;
+#	: $(FUSION_TOP)/data/settings/first_boot/Locale\ settings ;
 
 # Add symlink/file (keymap settings) to the image.
 #AddFilesToHaikuImage home config settings : <keymap>US-International
 #	: Key_map ;
 
 # Copy artwork to the image.
-#CopyDirectoryToHaikuImage home Desktop : $(HAIKU_TOP)/data/artwork : : -x .svn ;
+#CopyDirectoryToHaikuImage home Desktop : $(FUSION_TOP)/data/artwork : : -x .svn ;
 
 
 # Add the optional package WonderBrush to the image.

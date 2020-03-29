@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex Persistence ;
+SubDir FUSION_TOP src apps cortex Persistence ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) support ] ;
@@ -18,4 +18,4 @@ StaticLibrary cortex_persistence.a :
 Includes [ FGristFiles ImportContext.cpp Importer.cpp XML.cpp ]
 	: [ BuildFeatureAttribute expat : headers ] ;
 
-SubInclude HAIKU_TOP src apps cortex Persistence Wrappers ;
+SubInclude FUSION_TOP src apps cortex Persistence Wrappers ;

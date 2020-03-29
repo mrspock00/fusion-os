@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system boot loader file_systems fat ;
+SubDir FUSION_TOP src system boot loader file_systems fat ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders shared storage ;

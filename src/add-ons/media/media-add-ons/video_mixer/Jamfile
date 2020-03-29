@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media media-add-ons video_mixer ;
+SubDir FUSION_TOP src add-ons media media-add-ons video_mixer ;
 
 UsePrivateHeaders media shared ;
 

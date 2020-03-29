@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media media-add-ons vst_host ;
+SubDir FUSION_TOP src add-ons media media-add-ons vst_host ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup ] {

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix rpmalloc ;
+SubDir FUSION_TOP src system libroot posix rpmalloc ;
 
 UsePrivateHeaders libroot shared ;
 

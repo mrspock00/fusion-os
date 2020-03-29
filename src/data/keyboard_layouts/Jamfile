@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src data keyboard_layouts ;
+SubDir FUSION_TOP src data keyboard_layouts ;
 
 
 rule GenerateKeyboardLayoutLocalizationHeader
@@ -33,7 +33,7 @@ actions GenerateKeyboardLayoutLocalizationHeader1
 
 # Add keyboard layout files to the image.
 local keyboardLayoutsDir
-	= [ FDirName $(HAIKU_TOP) data system data KeyboardLayouts ] ;
+	= [ FDirName $(FUSION_TOP) data system data KeyboardLayouts ] ;
 HAIKU_KEYBOARD_LAYOUT_FILES =
 	"Generic 104-key"
 	"Generic 105-key International"
@@ -47,7 +47,7 @@ SEARCH on $(HAIKU_KEYBOARD_LAYOUT_FILES) = $(keyboardLayoutsDir) ;
 # subdirectory. The subdirectory is turned into a submenu in the Layout menu
 # of the Keymap preference app.
 local appleAluminumDir
-	= [ FDirName $(HAIKU_TOP) data system data KeyboardLayouts
+	= [ FDirName $(FUSION_TOP) data system data KeyboardLayouts
 		Apple\ Aluminum ] ;
 HAIKU_APPLE_ALUMINUM_KEYBOARD_LAYOUT_FILES =
 	"Apple Aluminium Extended International"
@@ -62,7 +62,7 @@ SEARCH on $(HAIKU_APPLE_ALUMINUM_KEYBOARD_LAYOUT_FILES) = $(appleAluminumDir) ;
 # subdirectory. The subdirectory is turned into a submenu in the Layout menu
 # of the Keymap preference app.
 local thinkpadDir
-	= [ FDirName $(HAIKU_TOP) data system data KeyboardLayouts ThinkPad ] ;
+	= [ FDirName $(FUSION_TOP) data system data KeyboardLayouts ThinkPad ] ;
 HAIKU_THINKPAD_KEYBOARD_LAYOUT_FILES =
 	"ThinkPad (US)"
 	"ThinkPad International"

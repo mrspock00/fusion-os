@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network datalink_protocols ethernet_frame ;
+SubDir FUSION_TOP src add-ons kernel network datalink_protocols ethernet_frame ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;

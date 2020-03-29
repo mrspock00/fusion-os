@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src libs print libprint ;
+SubDir FUSION_TOP src libs print libprint ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers libs print libprint ] ; 
+SubDirHdrs [ FDirName $(FUSION_TOP) headers libs print libprint ] ; 
 
 StaticLibrary libprint.a :
 	AboutBox.cpp

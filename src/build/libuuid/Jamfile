@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src build libuuid ;
+SubDir FUSION_TOP src build libuuid ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src libs uuid ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src libs uuid ] ;
 SubDirCcFlags [ FDefines _KERNEL_MODE ] ;
 
 MakeLocate libuuid_build.a : $(HOST_BUILD_COMPATIBILITY_LIB_DIR) ;

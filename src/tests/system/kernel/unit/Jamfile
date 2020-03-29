@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system kernel unit ;
+SubDir FUSION_TOP src tests system kernel unit ;
 
 UsePrivateKernelHeaders ;
 

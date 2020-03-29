@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps deskcalc ;
+SubDir FUSION_TOP src apps deskcalc ;
 
 UsePrivateHeaders interface shared ;
 

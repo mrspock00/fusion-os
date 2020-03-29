@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src system libnetwork ;
+SubDir FUSION_TOP src system libnetwork ;
 
 UsePrivateHeaders libroot net shared ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 local services = [ FGristFiles services ] ;
 SEARCH on $(services) = [ FDirName $(SUBDIR) netresolv defaults ] ;
@@ -31,4 +31,4 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 	}
 }
 
-SubInclude HAIKU_TOP src system libnetwork netresolv ;
+SubInclude FUSION_TOP src system libnetwork netresolv ;

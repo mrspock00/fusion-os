@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system boot arch ppc ;
+SubDir FUSION_TOP src system boot arch ppc ;
 
 local kernelLibArchObjects =
 	<src!system!kernel!lib!arch!$(TARGET_ARCH)>byteorder.o
@@ -22,9 +22,9 @@ for platform in [ MultiBootSubDirSetup openfirmware ] {
 		;
 
 		SEARCH on [ FGristFiles arch_elf.cpp arch_uart_8250.cpp ]
-		    = [ FDirName $(HAIKU_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;
+		    = [ FDirName $(FUSION_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;
 
 		SEARCH on [ FGristFiles debug_uart_8250.cpp ]
-			= [ FDirName $(HAIKU_TOP) src system kernel arch generic ] ;
+			= [ FDirName $(FUSION_TOP) src system kernel arch generic ] ;
 	}
 }

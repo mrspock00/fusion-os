@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons locale catalogs ;
+SubDir FUSION_TOP src add-ons locale catalogs ;
 
 # Pseudo target to build all collator addons
 NotFile LocaleKitCatalogAddons ;
@@ -7,4 +7,4 @@ Depends LocaleKitCatalogAddons
 	<catalog-addon>plaintext
 	;
 
-SubInclude HAIKU_TOP src add-ons locale catalogs plaintext ;
+SubInclude FUSION_TOP src add-ons locale catalogs plaintext ;

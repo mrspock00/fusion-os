@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src system boot loader file_systems bfs ;
+SubDir FUSION_TOP src system boot loader file_systems bfs ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders file_systems shared storage ;
 
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel file_systems bfs ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel file_systems bfs ;
 
 local defines = [ FDefines _BOOT_MODE ] ;
 
@@ -24,9 +24,9 @@ for platform in [ MultiBootSubDirSetup ] {
 		;
 
 		SEARCH on [ FGristFiles BPlusTree.cpp ]
-			= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems bfs ] ;
+			= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems bfs ] ;
 
 		SEARCH on [ FGristFiles QueryParserUtils.cpp ]
-			+= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems shared ] ;
+			+= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems shared ] ;
 	}
 }

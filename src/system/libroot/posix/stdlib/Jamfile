@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix stdlib ;
+SubDir FUSION_TOP src system libroot posix stdlib ;
 
 UsePrivateHeaders drivers libroot runtime_loader shared ;
 UsePrivateHeaders kernel ;	# for <util/*>

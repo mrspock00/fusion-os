@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media plugins ape_reader ;
+SubDir FUSION_TOP src add-ons media plugins ape_reader ;
 
 UsePrivateHeaders media ;
 UsePrivateHeaders [ FDirName media experimental ] ;
@@ -19,5 +19,5 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 	}
 }
 
-SubInclude HAIKU_TOP src add-ons media plugins ape_reader LibMonkeysAudio ;
-SubInclude HAIKU_TOP src add-ons media plugins ape_reader MAClib ;
+SubInclude FUSION_TOP src add-ons media plugins ape_reader LibMonkeysAudio ;
+SubInclude FUSION_TOP src add-ons media plugins ape_reader MAClib ;

@@ -1,15 +1,15 @@
 local haikuSourcePackage = haiku_source.hpkg ;
 HaikuPackage $(haikuSourcePackage) ;
 
-CopyDirectoryToPackage develop sources haiku : [ FDirName $(HAIKU_TOP) src ]
+CopyDirectoryToPackage develop sources haiku : [ FDirName $(FUSION_TOP) src ]
 	: src ;
-CopyDirectoryToPackage develop sources haiku : [ FDirName $(HAIKU_TOP) headers ]
+CopyDirectoryToPackage develop sources haiku : [ FDirName $(FUSION_TOP) headers ]
 	: headers ;
-CopyDirectoryToPackage develop sources haiku : [ FDirName $(HAIKU_TOP) build ]
+CopyDirectoryToPackage develop sources haiku : [ FDirName $(FUSION_TOP) build ]
 	: build ;
-SEARCH on configure = [ FDirName $(HAIKU_TOP) ] ;
-SEARCH on Jamfile = [ FDirName $(HAIKU_TOP) ] ;
-SEARCH on Jamrules = [ FDirName $(HAIKU_TOP) ] ;
+SEARCH on configure = [ FDirName $(FUSION_TOP) ] ;
+SEARCH on Jamfile = [ FDirName $(FUSION_TOP) ] ;
+SEARCH on Jamrules = [ FDirName $(FUSION_TOP) ] ;
 AddFilesToPackage develop sources haiku : configure Jamfile Jamrules ;
 
 BuildHaikuPackage $(haikuSourcePackage) : haiku_source ;

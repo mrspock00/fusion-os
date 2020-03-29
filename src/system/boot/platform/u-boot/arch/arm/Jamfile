@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src system boot platform u-boot arch arm ;
+SubDir FUSION_TOP src system boot platform u-boot arch arm ;
 
-SubDirHdrs $(HAIKU_TOP) src system boot platform $(TARGET_BOOT_PLATFORM) ;
-SubDirHdrs $(HAIKU_TOP) src system boot arch $(TARGET_KERNEL_ARCH) ;
+SubDirHdrs $(FUSION_TOP) src system boot platform $(TARGET_BOOT_PLATFORM) ;
+SubDirHdrs $(FUSION_TOP) src system boot arch $(TARGET_KERNEL_ARCH) ;
 
 UsePrivateSystemHeaders ;
 UsePrivateHeaders kernel [ FDirName kernel platform u-boot ] ;
@@ -16,4 +16,4 @@ BootMergeObject boot_platform_u-boot_arm.o :
 ;
 
 #SEARCH on [ FGristFiles arch_cpu_asm.S ]
-#    = [ FDirName $(HAIKU_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;
+#    = [ FDirName $(FUSION_TOP) src system kernel arch $(TARGET_KERNEL_ARCH) ] ;

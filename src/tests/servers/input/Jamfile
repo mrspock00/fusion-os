@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests servers input ;
+SubDir FUSION_TOP src tests servers input ;
 
-SubInclude HAIKU_TOP src tests servers input comm ;
-SubInclude HAIKU_TOP src tests servers input inputdevice ;
-SubInclude HAIKU_TOP src tests servers input msgspy ;
-SubInclude HAIKU_TOP src tests servers input portspy ;
-SubInclude HAIKU_TOP src tests servers input prefs ;
-SubInclude HAIKU_TOP src tests servers input replicant ;
-SubInclude HAIKU_TOP src tests servers input view_input_device ;
+SubInclude FUSION_TOP src tests servers input comm ;
+SubInclude FUSION_TOP src tests servers input inputdevice ;
+SubInclude FUSION_TOP src tests servers input msgspy ;
+SubInclude FUSION_TOP src tests servers input portspy ;
+SubInclude FUSION_TOP src tests servers input prefs ;
+SubInclude FUSION_TOP src tests servers input replicant ;
+SubInclude FUSION_TOP src tests servers input view_input_device ;

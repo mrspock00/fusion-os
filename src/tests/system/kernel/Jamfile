@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system kernel ;
+SubDir FUSION_TOP src tests system kernel ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders shared ;
@@ -84,14 +84,14 @@ SimpleTest set_area_protection_test1 : set_area_protection_test1.cpp ;
 
 SimpleTest sigsuspend_test : sigsuspend_test.cpp ;
 
-SubInclude HAIKU_TOP src tests system kernel cache ;
-SubInclude HAIKU_TOP src tests system kernel fs ;
-#SubInclude HAIKU_TOP src tests system kernel disk_device_manager ;
-SubInclude HAIKU_TOP src tests system kernel device_manager ;
-SubInclude HAIKU_TOP src tests system kernel file_corruption ;
-SubInclude HAIKU_TOP src tests system kernel scheduler ;
-SubInclude HAIKU_TOP src tests system kernel slab ;
-SubInclude HAIKU_TOP src tests system kernel swap ;
-SubInclude HAIKU_TOP src tests system kernel unit ;
-SubInclude HAIKU_TOP src tests system kernel util ;
-SubInclude HAIKU_TOP src tests system kernel vm ;
+SubInclude FUSION_TOP src tests system kernel cache ;
+SubInclude FUSION_TOP src tests system kernel fs ;
+#SubInclude FUSION_TOP src tests system kernel disk_device_manager ;
+SubInclude FUSION_TOP src tests system kernel device_manager ;
+SubInclude FUSION_TOP src tests system kernel file_corruption ;
+SubInclude FUSION_TOP src tests system kernel scheduler ;
+SubInclude FUSION_TOP src tests system kernel slab ;
+SubInclude FUSION_TOP src tests system kernel swap ;
+SubInclude FUSION_TOP src tests system kernel unit ;
+SubInclude FUSION_TOP src tests system kernel util ;
+SubInclude FUSION_TOP src tests system kernel vm ;

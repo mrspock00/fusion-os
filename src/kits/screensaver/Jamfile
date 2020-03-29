@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src kits screensaver ;
+SubDir FUSION_TOP src kits screensaver ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers os add-ons screen_saver ] ;
+UseHeaders [ FDirName $(FUSION_TOP) headers os add-ons screen_saver ] ;
 	# we also need our headers when build for BeOS
 
 UsePrivateHeaders screen_saver ;

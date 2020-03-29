@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers firewire ;
+SubDir FUSION_TOP src add-ons kernel bus_managers firewire ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 UsePrivateHeaders firewire ;
 UsePrivateKernelHeaders ;
 
@@ -22,4 +22,4 @@ KernelAddon firewire :
 
 SEARCH on [ FGristFiles
 		fwcrom.c
-	] = [ FDirName $(HAIKU_TOP) src bin fwcontrol ] ;
+	] = [ FDirName $(FUSION_TOP) src bin fwcontrol ] ;

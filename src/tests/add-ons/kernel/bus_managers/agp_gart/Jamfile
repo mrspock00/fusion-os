@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons kernel bus_managers agp_gart ;
+SubDir FUSION_TOP src tests add-ons kernel bus_managers agp_gart ;
 
 UsePrivateHeaders [ FDirName graphics intel_extreme ] ;
 UseHeaders $(HAIKU_PRIVATE_KERNEL_HEADERS) : true ;
@@ -15,4 +15,4 @@ SimpleTest gart_tester :
 
 SEARCH on [ FGristFiles 
 		agp_gart.cpp
-	] = [ FDirName $(HAIKU_TOP) src add-ons kernel bus_managers agp_gart ] ;
+	] = [ FDirName $(FUSION_TOP) src add-ons kernel bus_managers agp_gart ] ;

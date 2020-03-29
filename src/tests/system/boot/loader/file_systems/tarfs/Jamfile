@@ -1,12 +1,12 @@
-SubDir HAIKU_TOP src tests system boot loader file_systems tarfs ;
+SubDir FUSION_TOP src tests system boot loader file_systems tarfs ;
 
 UsePrivateKernelHeaders ;
 UsePrivateSystemHeaders ;
 UsePrivateHeaders [ FDirName kernel disk_device_manager ] ;
 UsePrivateHeaders shared storage ;
-SubDirSysHdrs $(HAIKU_TOP) src tests system boot loader ;
-SubDirSysHdrs $(HAIKU_TOP) headers libs zlib ;
-SubDirHdrs $(HAIKU_TOP) src system boot loader file_systems tarfs ;
+SubDirSysHdrs $(FUSION_TOP) src tests system boot loader ;
+SubDirSysHdrs $(FUSION_TOP) headers libs zlib ;
+SubDirHdrs $(FUSION_TOP) src system boot loader file_systems tarfs ;
 
 ObjectDefines
 	tarfs.cpp
@@ -16,7 +16,7 @@ ObjectDefines
 
 #SubDirCcFlags -DGUNZIP=1 ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src libs zlib ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src libs zlib ] ;
 
 KernelStaticLibrary boottest_tarfs :
 	tarfs.cpp
@@ -28,4 +28,4 @@ KernelStaticLibrary boottest_tarfs :
 
 SEARCH on [ FGristFiles
 		tarfs.cpp
-	] = [ FDirName $(HAIKU_TOP) src system boot loader file_systems tarfs ] ;
+	] = [ FDirName $(FUSION_TOP) src system boot loader file_systems tarfs ] ;

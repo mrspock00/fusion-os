@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app view_state ;
+SubDir FUSION_TOP src tests servers app view_state ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers disk floppy pc_floppy ;
+SubDir FUSION_TOP src add-ons kernel drivers disk floppy pc_floppy ;
 
 UsePrivateHeaders drivers ;
 UsePrivateKernelHeaders ;

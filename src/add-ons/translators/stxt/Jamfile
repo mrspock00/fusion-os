@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src add-ons translators stxt ;
+SubDir FUSION_TOP src add-ons translators stxt ;
 
 UsePrivateHeaders textencoding ;
-UseHeaders [ FDirName $(HAIKU_TOP) src kits storage mime ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src kits storage mime ] ;
 	# for the text identification
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) shared ] ;

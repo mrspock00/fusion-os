@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src libs bsd ;
+SubDir FUSION_TOP src libs bsd ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup ] {

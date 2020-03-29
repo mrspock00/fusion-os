@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers tty ;
+SubDir FUSION_TOP src add-ons kernel bus_managers tty ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders drivers ;
@@ -13,5 +13,5 @@ KernelAddon <bus_manager>tty :
 
 SEARCH on [ FGristFiles
 		kernel_cpp.cpp 
-	] = [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	] = [ FDirName $(FUSION_TOP) src system kernel util ] ;
 

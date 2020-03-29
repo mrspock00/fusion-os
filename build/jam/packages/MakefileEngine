@@ -6,11 +6,11 @@ local makefileEngineFiles =
 	<makefile-engine>Makefile
 	<makefile-engine>makefile-engine
 ;
-SEARCH on $(makefileEngineFiles) = [ FDirName $(HAIKU_TOP) data develop ] ;
+SEARCH on $(makefileEngineFiles) = [ FDirName $(FUSION_TOP) data develop ] ;
 AddFilesToPackage develop etc : $(makefileEngineFiles) ;
 
 # docs
 AddFilesToPackage develop documentation :
-	[ FDirName $(HAIKU_TOP) docs misc makefile-engine.html ] : makefile-engine.html ;
+	[ FDirName $(FUSION_TOP) docs misc makefile-engine.html ] : makefile-engine.html ;
 
 BuildHaikuPackage $(makefileEnginePackage) : makefile_engine ;

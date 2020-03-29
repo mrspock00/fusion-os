@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons input_server filters switch_workspace ;
+SubDir FUSION_TOP src add-ons input_server filters switch_workspace ;
 
 UsePrivateHeaders app ;
 

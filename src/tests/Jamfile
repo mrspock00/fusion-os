@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests ;
+SubDir FUSION_TOP src tests ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -23,11 +23,11 @@ if $(TARGET_PLATFORM) = libbe_test {
 		: tests!unittests ;
 }
 
-SubInclude HAIKU_TOP src tests add-ons ;
-SubInclude HAIKU_TOP src tests apps ;
-SubInclude HAIKU_TOP src tests bin ;
-SubInclude HAIKU_TOP src tests system ;
-SubInclude HAIKU_TOP src tests kits ;
-SubInclude HAIKU_TOP src tests libs ;
-SubInclude HAIKU_TOP src tests misc ;
-SubInclude HAIKU_TOP src tests servers ;
+SubInclude FUSION_TOP src tests add-ons ;
+SubInclude FUSION_TOP src tests apps ;
+SubInclude FUSION_TOP src tests bin ;
+SubInclude FUSION_TOP src tests system ;
+SubInclude FUSION_TOP src tests kits ;
+SubInclude FUSION_TOP src tests libs ;
+SubInclude FUSION_TOP src tests misc ;
+SubInclude FUSION_TOP src tests servers ;

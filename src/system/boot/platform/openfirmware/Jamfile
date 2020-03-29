@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system boot platform openfirmware ;
+SubDir FUSION_TOP src system boot platform openfirmware ;
 
 SubDirC++Flags -D_BOOT_MODE -fno-rtti ;
 
@@ -52,13 +52,13 @@ for platform in [ MultiBootSubDirSetup openfirmware ] {
 		;
 
 #		SEARCH on [ FGristFiles $(genericPlatformSources) ]
-#			= [ FDirName $(HAIKU_TOP) src system boot platform generic ] ;
+#			= [ FDirName $(FUSION_TOP) src system boot platform generic ] ;
 		SEARCH on [ FGristFiles $(kernel_src) ]
-			= [ FDirName $(HAIKU_TOP) src system kernel platform openfirmware ] ;
+			= [ FDirName $(FUSION_TOP) src system kernel platform openfirmware ] ;
 		SEARCH on [ FGristFiles $(vesa_src) ]
-			= [ FDirName $(HAIKU_TOP) src add-ons accelerants common ] ;
+			= [ FDirName $(FUSION_TOP) src add-ons accelerants common ] ;
 
 	}
 }
 
-SubInclude HAIKU_TOP src system boot platform openfirmware arch ;
+SubInclude FUSION_TOP src system boot platform openfirmware arch ;

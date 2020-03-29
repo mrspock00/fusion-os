@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits shared ;
+SubDir FUSION_TOP src kits shared ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -19,7 +19,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 			servers input ] ;
 			# For the generated SystemKeymap.h. We're fine with the one for the
 			# primary architecture.
-		UseHeaders [ FDirName $(HAIKU_TOP) src kits ] ;
+		UseHeaders [ FDirName $(FUSION_TOP) src kits ] ;
 
 		# for RWLockManager only
 		UsePrivateSystemHeaders ;

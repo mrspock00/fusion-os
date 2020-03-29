@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src system boot platform u-boot ;
+SubDir FUSION_TOP src system boot platform u-boot ;
 
-SubDirHdrs $(HAIKU_TOP) headers private kernel boot platform $(TARGET_BOOT_PLATFORM) ;
-SubDirHdrs $(HAIKU_TOP) headers private kernel platform $(TARGET_BOOT_PLATFORM) ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel bus_managers fdt ;
+SubDirHdrs $(FUSION_TOP) headers private kernel boot platform $(TARGET_BOOT_PLATFORM) ;
+SubDirHdrs $(FUSION_TOP) headers private kernel platform $(TARGET_BOOT_PLATFORM) ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel bus_managers fdt ;
 
-SubDirHdrs $(HAIKU_TOP) src system boot arch $(TARGET_KERNEL_ARCH) ;
+SubDirHdrs $(FUSION_TOP) src system boot arch $(TARGET_KERNEL_ARCH) ;
 
 UseLibraryHeaders [ FDirName libfdt ] ;
 
@@ -22,10 +22,10 @@ UsePrivateHeaders [ FDirName kernel arch generic ] ;
     SubDirC++Flags $(defines) -fno-rtti -g3 -O0 ;
 }
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons accelerants common ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons accelerants common ] ;
 
 SEARCH on [ FGristFiles $(genericPlatformSources) ]
-    = [ FDirName $(HAIKU_TOP) src system boot platform generic ] ;
+    = [ FDirName $(FUSION_TOP) src system boot platform generic ] ;
 
 local platform ;
 for platform in [ MultiBootSubDirSetup u-boot ] {
@@ -64,4 +64,4 @@ for platform in [ MultiBootSubDirSetup u-boot ] {
 # elsewhere.
 SEARCH on stage1.bin = $(SUBDIR) ;
 
-SubInclude HAIKU_TOP src system boot platform u-boot arch ;
+SubInclude FUSION_TOP src system boot platform u-boot arch ;

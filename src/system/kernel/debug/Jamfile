@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel debug ;
+SubDir FUSION_TOP src system kernel debug ;
 
 UsePrivateHeaders [ FDirName kernel debug ] syslog_daemon ;
 UsePrivateHeaders [ FDirName graphics common ] ;

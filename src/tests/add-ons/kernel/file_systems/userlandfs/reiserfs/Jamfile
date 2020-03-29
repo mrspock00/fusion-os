@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems userlandfs reiserfs ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems userlandfs reiserfs ;
 
-local userlandFSTop = [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems
+local userlandFSTop = [ FDirName $(FUSION_TOP) src add-ons kernel file_systems
 	userlandfs ] ;
 local userlandFSIncludes = [ PrivateHeaders userlandfs ] ;
-local reiserFSTop = [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems
+local reiserFSTop = [ FDirName $(FUSION_TOP) src add-ons kernel file_systems
 	reiserfs ] ;
 
 DEFINES += USER=1 ;

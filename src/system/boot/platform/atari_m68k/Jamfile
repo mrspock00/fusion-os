@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src system boot platform atari_m68k ;
+SubDir FUSION_TOP src system boot platform atari_m68k ;
 
-SubDirHdrs $(HAIKU_TOP) headers private kernel boot platform atari_m68k ;
+SubDirHdrs $(FUSION_TOP) headers private kernel boot platform atari_m68k ;
 
 UsePrivateHeaders [ FDirName kernel boot platform $(TARGET_BOOT_PLATFORM) ] ;
 UsePrivateHeaders [ FDirName kernel platform $(TARGET_BOOT_PLATFORM) ] ;
@@ -20,7 +20,7 @@ UsePrivateHeaders [ FDirName storage ] ;
 local platform ;
 for platform in [ MultiBootSubDirSetup atari_m68k ] {
 	on $(platform) {
-		#SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons accelerants common ] ;
+		#SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons accelerants common ] ;
 
 		BootMergeObject boot_platform_atari_m68k_shell.o :
 			shell.S
@@ -73,7 +73,7 @@ for platform in [ MultiBootSubDirSetup atari_m68k ] {
 }
 
 SEARCH on [ FGristFiles $(genericPlatformSources) ]
-	= [ FDirName $(HAIKU_TOP) src system boot platform generic ] ;
+	= [ FDirName $(FUSION_TOP) src system boot platform generic ] ;
 
 # Tell the build system to where stage1.bin can be found, so it can be used
 # elsewhere.

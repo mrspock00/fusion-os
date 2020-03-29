@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps midiplayer ;
+SubDir FUSION_TOP src apps midiplayer ;
 
 UsePrivateHeaders interface ;
 

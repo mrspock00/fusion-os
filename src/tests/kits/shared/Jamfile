@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits shared ;
+SubDir FUSION_TOP src tests kits shared ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -20,4 +20,4 @@ UnitTestLib libsharedtest.so :
 	: be shared bnetapi [ TargetLibstdc++ ] [ TargetLibsupc++ ]
 ;
 
-SubInclude HAIKU_TOP src tests kits shared shake_filter ;
+SubInclude FUSION_TOP src tests kits shared shake_filter ;

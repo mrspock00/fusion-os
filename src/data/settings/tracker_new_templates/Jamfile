@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src data settings tracker_new_templates ;
+SubDir FUSION_TOP src data settings tracker_new_templates ;
 
 
 rule PrepareTrackerNewTemplates source : mimeType

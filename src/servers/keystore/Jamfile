@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers keystore ;
+SubDir FUSION_TOP src servers keystore ;
 
 UsePrivateHeaders app ;
 UsePrivateHeaders shared ;

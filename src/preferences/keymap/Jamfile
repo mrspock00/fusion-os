@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences keymap ;
+SubDir FUSION_TOP src preferences keymap ;
 
 UseHeaders [ FDirName $(HAIKU_COMMON_PLATFORM_OBJECT_DIR) data keymaps ] ;
 UseHeaders [ FDirName $(HAIKU_COMMON_PLATFORM_OBJECT_DIR) data

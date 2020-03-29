@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src apps remotedesktop ;
+SubDir FUSION_TOP src apps remotedesktop ;
 
 local defines = [ FDefines CLIENT_COMPILE ] ;
-local serverDir = [ FDirName $(HAIKU_TOP) src servers app drawing interface
+local serverDir = [ FDirName $(FUSION_TOP) src servers app drawing interface
 	remote ] ;
 
 SubDirC++Flags $(defines) ;

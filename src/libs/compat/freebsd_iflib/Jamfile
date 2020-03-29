@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs compat freebsd_iflib ;
+SubDir FUSION_TOP src libs compat freebsd_iflib ;
 
 UseHeaders [ FDirName $(SUBDIR) compat ] : true ;
 UseHeaders [ FDirName $(SUBDIR) .. freebsd_network compat ] : true ;

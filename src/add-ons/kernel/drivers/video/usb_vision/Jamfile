@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers video usb_vision ;
+SubDir FUSION_TOP src add-ons kernel drivers video usb_vision ;
 
 UsePrivateHeaders libroot usb_vision ;
 

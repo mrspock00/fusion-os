@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons kernel busses ;
+SubDir FUSION_TOP src tests add-ons kernel busses ;
 
-SubInclude HAIKU_TOP src tests add-ons kernel busses scsi ;
-SubInclude HAIKU_TOP src tests add-ons kernel busses usb ;
+SubInclude FUSION_TOP src tests add-ons kernel busses scsi ;
+SubInclude FUSION_TOP src tests add-ons kernel busses usb ;

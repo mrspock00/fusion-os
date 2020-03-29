@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers scsi ;
+SubDir FUSION_TOP src add-ons kernel bus_managers scsi ;
 
 UsePrivateHeaders drivers ;
 UsePrivateKernelHeaders ;

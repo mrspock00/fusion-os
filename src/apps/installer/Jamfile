@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src apps installer ;
+SubDir FUSION_TOP src apps installer ;
 
 UsePrivateHeaders shared storage tracker ;
 UsePrivateSystemHeaders ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src kits tracker ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src servers launch ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src kits tracker ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src servers launch ] ;
 
 Application Installer :
 	CopyEngine.cpp
@@ -27,7 +27,7 @@ Application Installer :
 ;
 
 SEARCH on <src!apps!installer>Utility.cpp = [
-	FDirName $(HAIKU_TOP) src servers launch ] ;
+	FDirName $(FUSION_TOP) src servers launch ] ;
 
 DoCatalogs Installer :
 	x-vnd.Haiku-Installer

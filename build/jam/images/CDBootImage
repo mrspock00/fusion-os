@@ -2,11 +2,11 @@
 # rules building the image.
 
 #HAIKU_BOOT_FLOPPY = haiku-boot-floppy.image ;
-#MakeLocate $(HAIKU_BOOT_FLOPPY) : $(HAIKU_OUTPUT_DIR) ;
+#MakeLocate $(HAIKU_BOOT_FLOPPY) : $(FUSION_OUTPUT_DIR) ;
 
 # CD image target
 HAIKU_CD_BOOT_IMAGE = haiku-boot-cd.iso ;
-MakeLocate $(HAIKU_CD_BOOT_IMAGE) : $(HAIKU_OUTPUT_DIR) ;
+MakeLocate $(HAIKU_CD_BOOT_IMAGE) : $(FUSION_OUTPUT_DIR) ;
 
 # the pseudo target all archive contents is attached to
 NotFile $(HAIKU_CD_BOOT_IMAGE_CONTAINER_NAME) ;
@@ -24,23 +24,23 @@ if $(TARGET_ARCH) = ppc {
 	# HFS creator and application type mapping for mkisofs
 	local hfsmaps = hfs.map ;
 
-	SEARCH on $(chrpscript) $(hfsmaps) $(extras) = [ FDirName $(HAIKU_TOP) data boot_cd ] ;
+	SEARCH on $(chrpscript) $(hfsmaps) $(extras) = [ FDirName $(FUSION_TOP) data boot_cd ] ;
 
 	BuildCDBootPPCImage $(HAIKU_CD_BOOT_IMAGE) : $(hfsmaps) : $(elfloader) : $(coffloader) : $(chrpscript) : $(extras) ;
 } else if $(HAIKU_ANYBOOT_LEGACY) = 1 {
 	BuildCDBootImage $(HAIKU_CD_BOOT_IMAGE) : $(HAIKU_BOOT_FLOPPY) : : $(extras) ;
 
-	SEARCH on $(extras) = [ FDirName $(HAIKU_TOP) data boot_cd ] ;
+	SEARCH on $(extras) = [ FDirName $(FUSION_TOP) data boot_cd ] ;
 } else {
 	local efiLoader = haiku_loader.efi ;
 	local efiPartition = esp.image ;
-	MakeLocate $(efiPartition) : $(HAIKU_OUTPUT_DIR) ;
+	MakeLocate $(efiPartition) : $(FUSION_OUTPUT_DIR) ;
 	BuildEfiSystemPartition $(efiPartition) : $(efiLoader) ;
 
 	BuildCDBootImage $(HAIKU_CD_BOOT_IMAGE) : $(HAIKU_BOOT_FLOPPY)
 		: $(efiPartition) : $(extras) ;
 
-	SEARCH on $(extras) = [ FDirName $(HAIKU_TOP) data boot_cd ] ;
+	SEARCH on $(extras) = [ FDirName $(FUSION_TOP) data boot_cd ] ;
 }
 
 NotFile haiku-boot-cd ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network protocols ipv4 ;
+SubDir FUSION_TOP src add-ons kernel network protocols ipv4 ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;

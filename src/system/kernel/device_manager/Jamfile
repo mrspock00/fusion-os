@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel device_manager ;
+SubDir FUSION_TOP src system kernel device_manager ;
 
 UsePrivateHeaders [ FDirName kernel util ] shared ;
 

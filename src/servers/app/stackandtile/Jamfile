@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers app stackandtile ;
+SubDir FUSION_TOP src servers app stackandtile ;
 
 UseLibraryHeaders agg lp_solve linprog ;
 UsePrivateHeaders app graphics interface shared kernel ;
@@ -6,11 +6,11 @@ UseBuildFeatureHeaders freetype ;
 
 SetSubDirSupportedPlatforms haiku libbe_test ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app decorator ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app font ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing Painter ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app decorator ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app font ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing Painter ] ;
 
 local sources =
 	SATDecorator.cpp

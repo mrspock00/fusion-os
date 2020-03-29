@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src tools locale ;
+SubDir FUSION_TOP src tools locale ;
 
 UsePublicHeaders locale ;
 UsePrivateHeaders locale ;
 UsePrivateHeaders shared ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits locale ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits tracker ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits locale ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits tracker ] ;
 
 local localetools =
 	<build>linkcatkeys

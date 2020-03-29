@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems ntfs ;
+SubDir FUSION_TOP src add-ons kernel file_systems ntfs ;
 
 SubDirHdrs [ FDirName $(SUBDIR) libntfs ] ;
 SubDirHdrs [ FDirName $(SUBDIR) utils ] ;
@@ -28,6 +28,6 @@ KernelAddon ntfs :
 	;
 
 SEARCH on [ FGristFiles mime_ext_table.c ]
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems shared ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel file_systems shared ] ;
 
-SubInclude HAIKU_TOP src add-ons kernel file_systems ntfs libntfs ;
+SubInclude FUSION_TOP src add-ons kernel file_systems ntfs libntfs ;

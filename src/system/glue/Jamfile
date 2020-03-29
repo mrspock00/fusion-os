@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system glue ;
+SubDir FUSION_TOP src system glue ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup ] {
@@ -30,5 +30,5 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 
 local arch ;
 for arch in $(TARGET_ARCHS) {
-	SubInclude HAIKU_TOP src system glue arch $(arch) ;
+	SubInclude FUSION_TOP src system glue arch $(arch) ;
 }

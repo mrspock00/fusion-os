@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src bin network ping6 ;
+SubDir FUSION_TOP src bin network ping6 ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 BinCommand ping6 :
 	ping6.c

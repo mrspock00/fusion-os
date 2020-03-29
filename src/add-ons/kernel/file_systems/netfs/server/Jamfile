@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems netfs server ;
+SubDir FUSION_TOP src add-ons kernel file_systems netfs server ;
 
-local userlandFSIncludes = [ FDirName $(HAIKU_TOP) headers private
+local userlandFSIncludes = [ FDirName $(FUSION_TOP) headers private
 	userlandfs ] ;
 
 UsePrivateHeaders shared ;
@@ -12,7 +12,7 @@ SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) headers server ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) headers shared ] ;
 
 SEARCH_SOURCE += [ FDirName $(SUBDIR) $(DOTDOT) shared ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel file_systems
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel file_systems
 	userlandfs shared ] ;
 
 DEFINES += USER=1 ;

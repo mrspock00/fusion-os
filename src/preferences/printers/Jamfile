@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences printers ;
+SubDir FUSION_TOP src preferences printers ;
 
 UsePrivateHeaders shared print ;
 

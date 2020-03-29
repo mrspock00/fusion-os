@@ -1,15 +1,15 @@
-SubDir HAIKU_TOP src servers app drawing ;
+SubDir FUSION_TOP src servers app drawing ;
 
 UseLibraryHeaders agg ;
 UsePrivateHeaders app graphics interface kernel shared ;
 UsePrivateHeaders [ FDirName graphics common ] ;
 UsePrivateSystemHeaders ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app font ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing Painter ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing Painter drawing_modes ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing Painter font_support ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app font ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing Painter ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing Painter drawing_modes ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing Painter font_support ] ;
 UseBuildFeatureHeaders freetype ;
 
 Includes [ FGristFiles AlphaMask.cpp AlphaMaskCache.cpp DrawingEngine.cpp ]
@@ -32,5 +32,5 @@ StaticLibrary libasdrawing.a :
 	HWInterface.cpp
 ;
 
-SubInclude HAIKU_TOP src servers app drawing Painter ;
-SubInclude HAIKU_TOP src servers app drawing interface ;
+SubInclude FUSION_TOP src servers app drawing Painter ;
+SubInclude FUSION_TOP src servers app drawing interface ;

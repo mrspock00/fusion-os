@@ -1,12 +1,12 @@
-SubDir HAIKU_TOP src tools fs_shell ;
+SubDir FUSION_TOP src tools fs_shell ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers build ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build ] : true ;
 
 if ! $(HOST_PLATFORM_HAIKU_COMPATIBLE) {
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os ] : true ;
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os kernel ] : true ;
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os storage ] : true ;
-	UseHeaders [ FDirName $(HAIKU_TOP) headers build os support ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os kernel ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os storage ] : true ;
+	UseHeaders [ FDirName $(FUSION_TOP) headers build os support ] : true ;
 }
 
 UsePrivateHeaders fs_shell ;
@@ -84,9 +84,9 @@ BuildPlatformStaticLibrary <build>fs_shell.a :
 ;
 
 SEARCH on [ FGristFiles rootfs.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system kernel fs ] ;
+	= [ FDirName $(FUSION_TOP) src system kernel fs ] ;
 SEARCH on [ FGristFiles file_map.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system kernel cache ] ;
+	= [ FDirName $(FUSION_TOP) src system kernel cache ] ;
 
 BuildPlatformMain <build>fs_shell_command
 	: fs_shell_command.cpp $(fsShellCommandSources)

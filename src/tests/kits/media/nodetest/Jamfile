@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits media nodetest ;
+SubDir FUSION_TOP src tests kits media nodetest ;
 
 SimpleTest NodeTest
 	:

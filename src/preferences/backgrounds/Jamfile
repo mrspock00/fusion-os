@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences backgrounds ;
+SubDir FUSION_TOP src preferences backgrounds ;
 
 UsePrivateHeaders preferences shared ;
 

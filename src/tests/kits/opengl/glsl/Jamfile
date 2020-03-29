@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits opengl glsl ;
+SubDir FUSION_TOP src tests kits opengl glsl ;
 UseBuildFeatureHeaders mesa ;
 UseBuildFeatureHeaders glu ;
 UseLibraryHeaders glut ;

@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src apps stylededit ;
+SubDir FUSION_TOP src apps stylededit ;
 
 UsePrivateHeaders textencoding ;
 UsePrivateSystemHeaders ;
 UsePrivateHeaders tracker shared ;
 UsePublicHeaders [ FDirName be_apps Tracker ] ;
-SubDirHdrs $(HAIKU_TOP) src kits tracker ;
-UseHeaders [ FDirName $(HAIKU_TOP) src kits tracker ] : false ;
+SubDirHdrs $(FUSION_TOP) src kits tracker ;
+UseHeaders [ FDirName $(FUSION_TOP) src kits tracker ] : false ;
 
 local styled_edit_rsrc =
 	[ FGristFiles StyledEdit.rsrc ]

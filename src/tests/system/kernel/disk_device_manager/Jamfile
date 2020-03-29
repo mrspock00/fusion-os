@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests system kernel disk_device_manager ;
+SubDir FUSION_TOP src tests system kernel disk_device_manager ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src system kernel disk_device_manager jobs ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src system kernel disk_device_manager ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src system kernel fs ] ;
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits storage ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src system kernel disk_device_manager jobs ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src system kernel disk_device_manager ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src system kernel fs ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits storage ] ;
 	# DiskDeviceTypes.cpp
 
 #UsePrivateHeaders $(DOT) ;
@@ -16,7 +16,7 @@ UsePrivateHeaders [ FDirName kernel ] ;
 UsePrivateHeaders [ FDirName kernel util ] ;
 UsePrivateHeaders storage ;
 UsePrivateHeaders kernel ;
-UseHeaders [ FDirName $(HAIKU_TOP) src system kernel disk_device_manager ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src system kernel disk_device_manager ] ;
 
 # As long as we compile for R5 userland, we define the following macros.
 SubDirCcFlags	[ FDefines USER R5_MEMORY_LAYOUT ] ;
@@ -96,4 +96,4 @@ Depends userland_disk_system_modules :
 # KFileDiskDevice.cpp needs the virtualdrive.h Header. Add it here to not
 # contaminate the include paths for the other files.
 ObjectHdrs [ FGristFiles KFileDiskDevice$(SUFOBJ) ]
-	: [ FDirName $(HAIKU_TOP) src tests kits storage virtualdrive ] ;
+	: [ FDirName $(FUSION_TOP) src tests kits storage virtualdrive ] ;

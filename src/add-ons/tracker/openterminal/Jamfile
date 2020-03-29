@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons tracker openterminal ;
+SubDir FUSION_TOP src add-ons tracker openterminal ;
 
 AddResources Open\ Terminal : OpenTerminal.rdef ;
 

@@ -1,12 +1,12 @@
-SubDir HAIKU_TOP src add-ons kernel drivers audio ;
+SubDir FUSION_TOP src add-ons kernel drivers audio ;
 
-SubInclude HAIKU_TOP src add-ons kernel drivers audio ac97 ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio cmedia ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio echo ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio emuxki ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio hda ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio ice1712 ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio null ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio sb16 ;
-SubInclude HAIKU_TOP src add-ons kernel drivers audio usb ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio ac97 ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio cmedia ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio echo ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio emuxki ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio hda ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio ice1712 ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio null ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio sb16 ;
+SubInclude FUSION_TOP src add-ons kernel drivers audio usb ;
 

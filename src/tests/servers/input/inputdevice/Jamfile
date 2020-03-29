@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers input inputdevice ;
+SubDir FUSION_TOP src tests servers input inputdevice ;
 
 UsePrivateHeaders input ;
 
@@ -11,4 +11,4 @@ SimpleTest input_device_test :
 
 
 SEARCH on [ FGristFiles Input.cpp ]
-	= [ FDirName $(HAIKU_TOP) src kits interface ] ;
+	= [ FDirName $(FUSION_TOP) src kits interface ] ;

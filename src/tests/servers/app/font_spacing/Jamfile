@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app font_spacing ;
+SubDir FUSION_TOP src tests servers app font_spacing ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

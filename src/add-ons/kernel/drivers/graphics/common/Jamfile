@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers graphics common ;
+SubDir FUSION_TOP src add-ons kernel drivers graphics common ;
 
 SubDirCcFlags -DENABLE_LOGGING -DLOG_INCLUDE_STARTUP ;
 

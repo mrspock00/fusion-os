@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel lib ;
+SubDir FUSION_TOP src system kernel lib ;
 
 UsePrivateHeaders shared ;
 UsePrivateHeaders [ FDirName libroot locale ] ;
@@ -9,7 +9,7 @@ CCFLAGS += -include $(kernelLibHeader) ;
 C++FLAGS += -include $(kernelLibHeader) ;
 
 
-local librootSources = [ FDirName $(HAIKU_TOP) src system libroot ] ;
+local librootSources = [ FDirName $(FUSION_TOP) src system libroot ] ;
 local librootOSSources = [ FDirName $(librootSources) os ] ;
 local posixSources = [ FDirName $(librootSources) posix ] ;
 
@@ -31,7 +31,7 @@ KernelMergeObject kernel_os_main.o : $(sources)
 ;
 
 SEARCH on [ FGristFiles $(sources) ]
-	= [ FDirName $(HAIKU_TOP) src system libroot os ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot os ] ;
 
 # kernel libroot posix files
 
@@ -130,7 +130,7 @@ KernelMergeObject kernel_lib_posix.o :
 
 # misc
 
-SEARCH_SOURCE = [ FDirName $(HAIKU_TOP) src kits support ] ;
+SEARCH_SOURCE = [ FDirName $(FUSION_TOP) src kits support ] ;
 
 KernelMergeObject kernel_misc.o :
 	DataIO.cpp

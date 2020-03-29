@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers graphics 3dfx ;
+SubDir FUSION_TOP src add-ons kernel drivers graphics 3dfx ;
 
 UsePrivateHeaders [ FDirName graphics 3dfx ] ;
 UsePrivateHeaders [ FDirName graphics common ] ;

@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tests kits app messaging ;
+SubDir FUSION_TOP src tests kits app messaging ;
 
 UsePrivateHeaders app ;
 UsePrivateHeaders interface ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src kits app ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src kits app ] ;
 
 SimpleTest PortLinkTest :
 	PortLinkTest.cpp
@@ -19,10 +19,10 @@ SimpleTest PortLinkTest :
 	;
 
 SEARCH on [ FGristFiles PortLink.cpp LinkReceiver.cpp LinkSender.cpp ]
-	= [ FDirName $(HAIKU_TOP) src kits app ] ;
+	= [ FDirName $(FUSION_TOP) src kits app ] ;
 
 SEARCH on [ FGristFiles Shape.cpp Region.cpp RegionSupport.cpp ]
-	= [ FDirName $(HAIKU_TOP) src kits interface ] ;
+	= [ FDirName $(FUSION_TOP) src kits interface ] ;
 
 SimpleTest HandlerLooperMessageTest :
 	HandlerLooperMessageTest.cpp

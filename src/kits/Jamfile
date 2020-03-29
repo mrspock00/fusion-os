@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits ;
+SubDir FUSION_TOP src kits ;
 
 # If defined allows to run applications without the registrar
 # -- for development only, of course.
@@ -99,31 +99,31 @@ DoCatalogs libbe.so
 	;
 
 #SEARCH on [ FGristFiles KMessage.cpp ]
-#	= [ FDirName $(HAIKU_TOP) src system kernel messaging ] ;
+#	= [ FDirName $(FUSION_TOP) src system kernel messaging ] ;
 #
 #SEARCH on [ FGristFiles syslog.cpp ]
-#	= [ FDirName $(HAIKU_TOP) src system libroot posix ] ;
+#	= [ FDirName $(FUSION_TOP) src system libroot posix ] ;
 
 
-SubInclude HAIKU_TOP src kits app ;
-SubInclude HAIKU_TOP src kits bluetooth ;
-SubInclude HAIKU_TOP src kits debug ;
-SubInclude HAIKU_TOP src kits debugger ;
-SubInclude HAIKU_TOP src kits device ;
-SubInclude HAIKU_TOP src kits game ;
-SubInclude HAIKU_TOP src kits interface ;
-SubInclude HAIKU_TOP src kits locale ;
-SubInclude HAIKU_TOP src kits mail ;
-SubInclude HAIKU_TOP src kits media ;
-SubInclude HAIKU_TOP src kits midi ;
-SubInclude HAIKU_TOP src kits midi2 ;
-SubInclude HAIKU_TOP src kits network ;
-SubInclude HAIKU_TOP src kits package ;
-SubInclude HAIKU_TOP src kits print ;
-SubInclude HAIKU_TOP src kits screensaver ;
-SubInclude HAIKU_TOP src kits shared ;
-SubInclude HAIKU_TOP src kits storage ;
-SubInclude HAIKU_TOP src kits support ;
-SubInclude HAIKU_TOP src kits textencoding ;
-SubInclude HAIKU_TOP src kits tracker ;
-SubInclude HAIKU_TOP src kits translation ;
+SubInclude FUSION_TOP src kits app ;
+SubInclude FUSION_TOP src kits bluetooth ;
+SubInclude FUSION_TOP src kits debug ;
+SubInclude FUSION_TOP src kits debugger ;
+SubInclude FUSION_TOP src kits device ;
+SubInclude FUSION_TOP src kits game ;
+SubInclude FUSION_TOP src kits interface ;
+SubInclude FUSION_TOP src kits locale ;
+SubInclude FUSION_TOP src kits mail ;
+SubInclude FUSION_TOP src kits media ;
+SubInclude FUSION_TOP src kits midi ;
+SubInclude FUSION_TOP src kits midi2 ;
+SubInclude FUSION_TOP src kits network ;
+SubInclude FUSION_TOP src kits package ;
+SubInclude FUSION_TOP src kits print ;
+SubInclude FUSION_TOP src kits screensaver ;
+SubInclude FUSION_TOP src kits shared ;
+SubInclude FUSION_TOP src kits storage ;
+SubInclude FUSION_TOP src kits support ;
+SubInclude FUSION_TOP src kits textencoding ;
+SubInclude FUSION_TOP src kits tracker ;
+SubInclude FUSION_TOP src kits translation ;

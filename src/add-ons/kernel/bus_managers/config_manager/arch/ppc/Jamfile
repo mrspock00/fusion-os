@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bus_managers config_manager arch ppc ;
+SubDir FUSION_TOP src add-ons kernel bus_managers config_manager arch ppc ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) $(DOTDOT) ] ;
 

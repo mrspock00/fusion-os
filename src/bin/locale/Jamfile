@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src bin locale ;
+SubDir FUSION_TOP src bin locale ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits tracker ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits tracker ] ;
 
 UsePublicHeaders locale ;
 UsePrivateHeaders locale shared ;

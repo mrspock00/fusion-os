@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin dos-cmd ;
+SubDir FUSION_TOP src bin dos-cmd ;
 
 BinCommand dos-cmd : 
 	notepad.cpp

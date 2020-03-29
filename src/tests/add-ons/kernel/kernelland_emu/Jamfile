@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons kernel kernelland_emu ;
+SubDir FUSION_TOP src tests add-ons kernel kernelland_emu ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders shared ;
@@ -26,4 +26,4 @@ AbsSymLink <boot!home!config!lib>libkernelland_emu.so : libkernelland_emu.so
 
 SEARCH on [ FGristFiles
 		list.cpp
-	] = [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	] = [ FDirName $(FUSION_TOP) src system kernel util ] ;

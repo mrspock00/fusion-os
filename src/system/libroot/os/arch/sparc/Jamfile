@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot os arch sparc ;
+SubDir FUSION_TOP src system libroot os arch sparc ;
 
 SubDirC++Flags -std=gnu++11 ;
 

@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src add-ons mail_daemon inbound_filters spam_filter ;
+SubDir FUSION_TOP src add-ons mail_daemon inbound_filters spam_filter ;
 
 
 UsePrivateHeaders mail shared ;
 UsePublicHeaders [ FDirName add-ons mail_daemon ] ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers os add-ons mail_daemon ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers os add-ons mail_daemon ] ;
 
 AddResources SpamFilter : SpamFilter.rdef ;
 

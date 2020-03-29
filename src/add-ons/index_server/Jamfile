@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons index_server ;
+SubDir FUSION_TOP src add-ons index_server ;
 
-SubInclude HAIKU_TOP src add-ons index_server fulltext ;
-SubInclude HAIKU_TOP src add-ons index_server audiotags ;
+SubInclude FUSION_TOP src add-ons index_server fulltext ;
+SubInclude FUSION_TOP src add-ons index_server audiotags ;

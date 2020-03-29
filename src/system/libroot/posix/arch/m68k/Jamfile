@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix arch m68k ;
+SubDir FUSION_TOP src system libroot posix arch m68k ;
 
 local architecture = $(TARGET_ARCH) ;
 

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons kernel network protocols icmp ;
+SubDir FUSION_TOP src add-ons kernel network protocols icmp ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network protocols ipv4 ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network protocols ipv4 ] ;
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;
 

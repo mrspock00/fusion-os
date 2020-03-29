@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media media-add-ons multi_audio ;
+SubDir FUSION_TOP src add-ons media media-add-ons multi_audio ;
 
 UsePrivateHeaders audio shared ;
 

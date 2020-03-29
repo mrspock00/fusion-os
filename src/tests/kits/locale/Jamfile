@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits locale ;
+SubDir FUSION_TOP src tests kits locale ;
 
 UsePublicHeaders locale ;
 UsePrivateHeaders locale shared ;
@@ -57,4 +57,4 @@ UnitTestLib localekittest.so :
 	: be [ TargetLibstdc++ ]
 	;
 
-# SubInclude HAIKU_TOP src tests kits locale number_format ;
+# SubInclude FUSION_TOP src tests kits locale number_format ;

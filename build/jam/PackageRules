@@ -179,8 +179,8 @@ rule BuildHaikuPackage package : packageInfo
 	Always $(initVariablesScript) ;
 
 	local script = $(initVariablesScript) ;
-	AddVariableToScript $(script) : sourceDir : $(HAIKU_TOP) ;
-	AddVariableToScript $(script) : outputDir : $(HAIKU_OUTPUT_DIR) ;
+	AddVariableToScript $(script) : sourceDir : $(FUSION_TOP) ;
+	AddVariableToScript $(script) : outputDir : $(FUSION_OUTPUT_DIR) ;
 	AddVariableToScript $(script) : tmpDir : $(tempDir) ;
 	AddVariableToScript $(script) : addBuildCompatibilityLibDir
 		: "export $(HOST_ADD_BUILD_COMPATIBILITY_LIB_DIR)" ;
@@ -221,7 +221,7 @@ rule BuildHaikuPackage package : packageInfo
 
 	# call the build actions
 	local mainScript = build_haiku_package ;
-	SEARCH on $(mainScript) = [ FDirName $(HAIKU_TOP) build scripts ] ;
+	SEARCH on $(mainScript) = [ FDirName $(FUSION_TOP) build scripts ] ;
 
 	Depends $(package) : $(mainScript) $(scripts) ;
 	BuildHaikuPackage1 $(package) : $(mainScript) $(packageInfo) $(scripts) ;

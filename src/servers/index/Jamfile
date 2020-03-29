@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers index ;
+SubDir FUSION_TOP src servers index ;
 
 AddResources index_server : index_server.rdef ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin mkdos ;
+SubDir FUSION_TOP src bin mkdos ;
 
 BinCommand mkdos :
 	mkdos.cpp

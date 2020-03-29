@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps tv ;
+SubDir FUSION_TOP src apps tv ;
 
 Application TV :
 	Controller.cpp

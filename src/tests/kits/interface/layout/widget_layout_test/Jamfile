@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits interface layout widget_layout_test ;
+SubDir FUSION_TOP src tests kits interface layout widget_layout_test ;
 
 SetSubDirSupportedPlatforms haiku libbe_test ;
 

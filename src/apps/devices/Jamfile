@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps devices ;
+SubDir FUSION_TOP src apps devices ;
 
 UsePrivateHeaders shared ;
 UsePrivateHeaders interface ;
@@ -41,7 +41,7 @@ actions PCIHeaderGen1
 }
 
 local pciidsFile = pci.ids ;
-SEARCH on $(pciidsFile) = [ FDirName $(HAIKU_TOP) src data ids ] ;
+SEARCH on $(pciidsFile) = [ FDirName $(FUSION_TOP) src data ids ] ;
 
 PCIHeaderGen [ FGristFiles pcihdr.h ] : $(pciidsFile) : pci-header.awk ;
 
@@ -61,7 +61,7 @@ actions USBHeaderGen1
 }
 
 local usbidsFile = usb.ids ;
-SEARCH on $(usbidsFile) = [ FDirName $(HAIKU_TOP) src data ids ] ;
+SEARCH on $(usbidsFile) = [ FDirName $(FUSION_TOP) src data ids ] ;
 
 USBHeaderGen [ FGristFiles usbhdr.h ] : $(usbidsFile) : usb-header.awk ;
 

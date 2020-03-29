@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src build libsolv ;
+SubDir FUSION_TOP src build libsolv ;
 
 local libsolvSourceBaseDirectory
 	= [ BuildFeatureAttribute libsolv : sources : path ] ;

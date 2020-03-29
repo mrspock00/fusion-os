@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin keymap ;
+SubDir FUSION_TOP src bin keymap ;
 
 UsePrivateHeaders shared storage ;
 

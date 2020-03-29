@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers input view_input_device ;
+SubDir FUSION_TOP src tests servers input view_input_device ;
 
 SetSubDirSupportedPlatforms libbe_test ;
 

@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tools keymap ;
+SubDir FUSION_TOP src tools keymap ;
 
 UsePrivateBuildHeaders shared storage ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin keymap ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin keymap ] ;
 
 USES_BE_API on <build>keymap = true ;
 
@@ -27,4 +27,4 @@ BuildPlatformMain <build>keymap :
 LinkAgainst <build>keymap : $(HOST_LIBBE) ;
 
 SEARCH on [ FGristFiles $(regexSources) ]
-	= [ FDirName $(HAIKU_TOP) src system libroot posix glibc regex ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot posix glibc regex ] ;

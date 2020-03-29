@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits debugger dwarf ;
+SubDir FUSION_TOP src kits debugger dwarf ;
 
 UsePrivateHeaders [ FDirName debugger ] ;
 UsePrivateHeaders [ FDirName debugger elf ] ;

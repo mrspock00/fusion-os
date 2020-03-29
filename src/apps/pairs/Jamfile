@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps pairs ;
+SubDir FUSION_TOP src apps pairs ;
 
 Application Pairs :
 	Pairs.cpp

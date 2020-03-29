@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src tests servers app transformation ;
+SubDir FUSION_TOP src tests servers app transformation ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
 UseHeaders [ FDirName os app ] ;
 UseHeaders [ FDirName os interface ] ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src tests servers app harness ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src tests servers app harness ] ;
 
 SimpleTest Transformation :
 	harness.cpp

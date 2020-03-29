@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src system boot loader file_systems amiga_ffs ;
+SubDir FUSION_TOP src system boot loader file_systems amiga_ffs ;
 
 UsePrivateHeaders [ FDirName kernel disk_device_manager ] ;
 UsePrivateHeaders kernel storage ;
 
-#SubDirHdrs $(HAIKU_TOP) src add-ons kernel file_systems amiga_ffs ;
+#SubDirHdrs $(FUSION_TOP) src add-ons kernel file_systems amiga_ffs ;
 
 SubDirC++Flags -fno-rtti ;
 

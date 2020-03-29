@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers input prefs ;
+SubDir FUSION_TOP src tests servers input prefs ;
 
 UsePrivateHeaders interface ;
 UsePrivateHeaders app ;
@@ -25,7 +25,7 @@ SEARCH on [ FGristFiles
 	Keymap.cpp
 	KeymapTextView.cpp
 	Keymap.rdef ]
-	= [ FDirName $(HAIKU_TOP) src preferences keymap ] ;
+	= [ FDirName $(FUSION_TOP) src preferences keymap ] ;
 
 AddResources KeyboardTest : Keyboard.rdef ;
 
@@ -45,7 +45,7 @@ SEARCH on [ FGristFiles
 	KeyboardView.cpp
 	KeyboardWindow.cpp
 	Keyboard.rdef ]
-	= [ FDirName $(HAIKU_TOP) src preferences keyboard ] ;
+	= [ FDirName $(FUSION_TOP) src preferences keyboard ] ;
 
 AddResources MouseTest : Mouse.rdef ;
 
@@ -69,7 +69,7 @@ SEARCH on [ FGristFiles
 	SettingsView.cpp
 	Mouse.rdef
 	]
-	= [ FDirName $(HAIKU_TOP) src preferences mouse ] ;
+	= [ FDirName $(FUSION_TOP) src preferences mouse ] ;
 
 SimpleTest keymapTest :
 	main.cpp
@@ -83,8 +83,8 @@ SEARCH on [ FGristFiles
 	main.cpp
 	Keymap.cpp
 	]
-	= [ FDirName $(HAIKU_TOP) src bin keymap ] ;
+	= [ FDirName $(FUSION_TOP) src bin keymap ] ;
 
 SEARCH on [ FGristFiles InterfaceDefs.cpp Input.cpp ]
-	= [ FDirName $(HAIKU_TOP) src kits interface ] ;
+	= [ FDirName $(FUSION_TOP) src kits interface ] ;
 

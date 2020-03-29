@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences mouse ;
+SubDir FUSION_TOP src preferences mouse ;
 
 UsePrivateHeaders input ;
 

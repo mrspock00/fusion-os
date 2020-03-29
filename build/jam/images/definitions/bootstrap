@@ -17,5 +17,5 @@ AddFilesToHaikuImage home haikuports : $(formatVersionsFile) ;
 
 # bootstrap daemon
 local bootstrapDaemon = <haiku-image>bootstrap_daemon.py ;
-SEARCH on $(bootstrapDaemon) = [ FDirName $(HAIKU_TOP) build scripts ] ;
+SEARCH on $(bootstrapDaemon) = [ FDirName $(FUSION_TOP) build scripts ] ;
 AddFilesToHaikuImage home config settings boot launch : $(bootstrapDaemon) ;

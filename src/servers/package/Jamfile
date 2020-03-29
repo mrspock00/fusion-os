@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src servers package ;
+SubDir FUSION_TOP src servers package ;
 
 UsePrivateSystemHeaders ;
 UsePrivateHeaders app interface kernel shared storage ;

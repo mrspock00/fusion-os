@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network protocols udp ;
+SubDir FUSION_TOP src add-ons kernel network protocols udp ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;

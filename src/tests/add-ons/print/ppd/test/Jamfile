@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tests add-ons print ppd test ;
+SubDir FUSION_TOP src tests add-ons print ppd test ;
 
-SubDirHdrs $(HAIKU_TOP) src tests add-ons print ppd model ;
-SubDirHdrs $(HAIKU_TOP) src tests add-ons print ppd parser ;
-SubDirHdrs $(HAIKU_TOP) src tests add-ons print ppd ui ;
+SubDirHdrs $(FUSION_TOP) src tests add-ons print ppd model ;
+SubDirHdrs $(FUSION_TOP) src tests add-ons print ppd parser ;
+SubDirHdrs $(FUSION_TOP) src tests add-ons print ppd ui ;
 
 AddResources PPDConfig : PPDConfigApplication.rdef ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app event_mask ;
+SubDir FUSION_TOP src tests servers app event_mask ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin multiuser ;
+SubDir FUSION_TOP src bin multiuser ;
 
 UsePrivateSystemHeaders ;
 UsePrivateHeaders app ;
@@ -6,7 +6,7 @@ UsePrivateHeaders kernel ;
 	# for <util/KMessage.h>
 UsePrivateHeaders libroot ;
 UsePrivateHeaders shared ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 StaticLibrary libmultiuser_utils.a : multiuser_utils.cpp ;
 

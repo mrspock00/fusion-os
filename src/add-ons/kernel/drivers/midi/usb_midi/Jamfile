@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers midi usb_midi ;
+SubDir FUSION_TOP src add-ons kernel drivers midi usb_midi ;
 
 UsePrivateHeaders [ FDirName kernel util ] ;
 

@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src kits network libnetapi ;
+SubDir FUSION_TOP src kits network libnetapi ;
 
 UsePrivateHeaders app net shared storage support ;
 UsePrivateHeaders locale shared ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_network ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_wlan ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers os add-ons network_settings ]
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_network ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_wlan ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers os add-ons network_settings ]
 	: true ;
 
 local architectureObject ;

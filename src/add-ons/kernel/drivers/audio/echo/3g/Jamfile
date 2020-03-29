@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons kernel drivers audio echo 3g ;
+SubDir FUSION_TOP src add-ons kernel drivers audio echo 3g ;
 
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel drivers audio echo ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel drivers audio echo generic ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel drivers audio echo generic DSP ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel drivers audio echo generic ASIC ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel drivers audio echo ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel drivers audio echo generic ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel drivers audio echo generic DSP ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel drivers audio echo generic ASIC ;
 
 UsePrivateSystemHeaders ;
 UsePrivateHeaders kernel 			# For kernel_cpp.cpp
@@ -53,11 +53,11 @@ ObjectC++Flags echo.cpp : -w ;
 SEARCH on [ FGristFiles
 	$(echo_files)
 	OsSupportBeOS.cpp
-	] = [ FDirName $(HAIKU_TOP) src add-ons kernel drivers audio echo generic ] ;
+	] = [ FDirName $(FUSION_TOP) src add-ons kernel drivers audio echo generic ] ;
 
 SEARCH on [ FGristFiles
 		kernel_cpp.cpp
-	] = [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	] = [ FDirName $(FUSION_TOP) src system kernel util ] ;
 
 SEARCH on [ FGristFiles
 		debug.c
@@ -65,4 +65,4 @@ SEARCH on [ FGristFiles
 		midi.cpp
 		multi.cpp
 		util.c
-	] = [ FDirName $(HAIKU_TOP) src add-ons kernel drivers audio echo ] ;
+	] = [ FDirName $(FUSION_TOP) src add-ons kernel drivers audio echo ] ;

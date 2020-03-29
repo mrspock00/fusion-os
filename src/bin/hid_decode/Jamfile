@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src bin hid_decode ;
+SubDir FUSION_TOP src bin hid_decode ;
 
 local defines = [ FDefines USERLAND_HID ] ;
-local driverDir = [ FDirName $(HAIKU_TOP) src add-ons kernel drivers input
+local driverDir = [ FDirName $(FUSION_TOP) src add-ons kernel drivers input
 	usb_hid ] ;
 
 SubDirC++Flags $(defines) ;

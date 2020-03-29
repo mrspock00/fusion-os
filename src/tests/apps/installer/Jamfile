@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests apps installer ;
+SubDir FUSION_TOP src tests apps installer ;
 
 UsePrivateHeaders shared ;
 UsePrivateHeaders storage ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src kits tracker ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src apps installer ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src kits tracker ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src apps installer ] ;
 
 Application TestInstaller : 
 	CopyEngine.cpp
@@ -22,4 +22,4 @@ SEARCH on [ FGristFiles
         PackageViews.cpp
         PartitionMenuItem.cpp
 	Installer.rdef
-        ] = [ FDirName $(HAIKU_TOP) src apps installer ] ;
+        ] = [ FDirName $(FUSION_TOP) src apps installer ] ;

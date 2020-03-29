@@ -108,7 +108,7 @@ AddFilesToPackage apps			: $(SYSTEM_APPS) ;
 AddFilesToPackage preferences	: $(SYSTEM_PREFERENCES) ;
 AddFilesToPackage demos			: $(SYSTEM_DEMOS) ;
 
-SEARCH on install-wifi-firmwares.sh = [ FDirName $(HAIKU_TOP) data bin ] ;
+SEARCH on install-wifi-firmwares.sh = [ FDirName $(FUSION_TOP) data bin ] ;
 AddFilesToPackage bin : install-wifi-firmwares.sh ;
 
 AddSymlinkToPackage bin : trash : untrash ;
@@ -117,30 +117,30 @@ AddSymlinkToPackage bin : less : more ;
 # scripts and data files
 local bootScripts = PostInstallScript SetupEnvironment
 	InstallerInitScript InstallerFinishScript ;
-SEARCH on $(bootScripts) = [ FDirName $(HAIKU_TOP) data system boot ] ;
+SEARCH on $(bootScripts) = [ FDirName $(FUSION_TOP) data system boot ] ;
 AddFilesToPackage boot : $(bootScripts) ;
 
 local launchScripts = <data!launch>system ;
-SEARCH on $(launchScripts) = [ FDirName $(HAIKU_TOP) data launch ] ;
+SEARCH on $(launchScripts) = [ FDirName $(FUSION_TOP) data launch ] ;
 AddFilesToPackage data launch : $(launchScripts) ;
 
 local userLaunchScripts = <data!launch>user <data!launch>bootstrap ;
-SEARCH on $(userLaunchScripts) = [ FDirName $(HAIKU_TOP) data launch ] ;
+SEARCH on $(userLaunchScripts) = [ FDirName $(FUSION_TOP) data launch ] ;
 AddFilesToPackage data user_launch : $(userLaunchScripts) ;
 
 # first login scripts
 local firstLoginFiles = default_deskbar_items.sh ;
 firstLoginFiles = $(firstLoginFiles:G=first-login) ;
 SEARCH on $(firstLoginFiles)
-	= [ FDirName $(HAIKU_TOP) data system boot first_login ] ;
+	= [ FDirName $(FUSION_TOP) data system boot first_login ] ;
 AddFilesToPackage boot first_login : $(firstLoginFiles) ;
 
-local fortuneFiles = [ Glob $(HAIKU_TOP)/data/system/data/fortunes
+local fortuneFiles = [ Glob $(FUSION_TOP)/data/system/data/fortunes
 	: [a-zA-Z0-9]* ] ;
 fortuneFiles = $(fortuneFiles:G=data!fortunes) ;
 AddFilesToPackage data fortunes : $(fortuneFiles) ;
 
-local fontDir = [ FDirName $(HAIKU_TOP) data system data fonts ] ;
+local fontDir = [ FDirName $(FUSION_TOP) data system data fonts ] ;
 local psFonts = [ Glob $(fontDir)/psfonts : *.afm *.pfb ] ;
 AddFilesToPackage data fonts psfonts : $(psFonts) ;
 
@@ -251,17 +251,17 @@ AddFilesToPackage data deskbar : <deskbar>menu_entries ;
 
 # licenses
 CopyDirectoryToPackage data
-	: [ FDirName $(HAIKU_TOP) data system data licenses ]
+	: [ FDirName $(FUSION_TOP) data system data licenses ]
 	: licenses ;
 
 # netresolv support files
 CopyDirectoryToPackage data
-	: [ FDirName $(HAIKU_TOP) data system data network ]
+	: [ FDirName $(FUSION_TOP) data system data network ]
 	: network ;
 
 # Copy documentation as per DiskUsage's license requirement.
 CopyDirectoryToPackage documentation
-	: [ FDirName $(HAIKU_TOP) docs apps diskusage ]
+	: [ FDirName $(FUSION_TOP) docs apps diskusage ]
 	: diskusage ;
 
 

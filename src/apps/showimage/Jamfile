@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src apps showimage ;
+SubDir FUSION_TOP src apps showimage ;
 
 UseLibraryHeaders icon ;
 UsePrivateSystemHeaders ;
 UsePrivateHeaders tracker shared ;
 UsePublicHeaders [ FDirName be_apps Tracker ] ;
-SubDirHdrs $(HAIKU_TOP) src kits tracker ;
-UseHeaders [ FDirName $(HAIKU_TOP) src kits tracker ] : false ;
+SubDirHdrs $(FUSION_TOP) src kits tracker ;
+UseHeaders [ FDirName $(FUSION_TOP) src kits tracker ] : false ;
 
 Application ShowImage :
 	Filter.cpp

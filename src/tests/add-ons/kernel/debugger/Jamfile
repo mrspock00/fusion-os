@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tests add-ons kernel debugger ;
+SubDir FUSION_TOP src tests add-ons kernel debugger ;
 
-SubDirHdrs $(HAIKU_TOP) src kits debugger demangler ;
+SubDirHdrs $(FUSION_TOP) src kits debugger demangler ;
 
 UnitTestLib libkerneldebuggertest.so :
 	KernelDebuggerTest.cpp

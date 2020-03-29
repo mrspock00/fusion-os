@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel arch sparc ;
+SubDir FUSION_TOP src system kernel arch sparc ;
 
 KernelMergeObject kernel_arch_sparc.o :
 	arch_asm.S

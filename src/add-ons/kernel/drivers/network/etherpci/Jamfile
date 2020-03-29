@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network etherpci ;
+SubDir FUSION_TOP src add-ons kernel drivers network etherpci ;
 
 # For ether_driver.h
 UsePrivateHeaders net ;

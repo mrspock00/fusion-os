@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers disk scsi ;
+SubDir FUSION_TOP src add-ons kernel drivers disk scsi ;
 
-SubInclude HAIKU_TOP src add-ons kernel drivers disk scsi scsi_cd ;
-SubInclude HAIKU_TOP src add-ons kernel drivers disk scsi scsi_disk ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk scsi scsi_cd ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk scsi scsi_disk ;

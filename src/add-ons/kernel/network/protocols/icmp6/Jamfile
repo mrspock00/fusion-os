@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons kernel network protocols icmp6 ;
+SubDir FUSION_TOP src add-ons kernel network protocols icmp6 ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network protocols ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network datalink_protocols ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network protocols ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network datalink_protocols ] : true ;
 
 KernelAddon icmp6 :
 	icmp6.cpp

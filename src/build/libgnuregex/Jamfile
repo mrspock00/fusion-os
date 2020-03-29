@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src build libgnuregex ;
+SubDir FUSION_TOP src build libgnuregex ;
 
 BuildPlatformSharedLibrary libgnuregex_build.so :
 	regex.c

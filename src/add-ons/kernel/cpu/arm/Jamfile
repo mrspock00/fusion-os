@@ -1,2 +1,2 @@
-SubDir HAIKU_TOP src add-ons kernel cpu arm ;
+SubDir FUSION_TOP src add-ons kernel cpu arm ;
 

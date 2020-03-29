@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers graphics radeon_hd ;
+SubDir FUSION_TOP src add-ons kernel drivers graphics radeon_hd ;
 
 UsePrivateHeaders [ FDirName graphics radeon_hd ] ;
 UsePrivateHeaders [ FDirName graphics common ] ;
@@ -16,4 +16,4 @@ KernelAddon radeon_hd :
 
 SEARCH on [ FGristFiles
 		kernel_cpp.cpp 
-	] = [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	] = [ FDirName $(FUSION_TOP) src system kernel util ] ;

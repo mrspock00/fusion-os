@@ -1,10 +1,10 @@
 local haikuWelcomePackage = haiku_welcome.hpkg ;
 HaikuPackage $(haikuWelcomePackage) ;
 
-CopyDirectoryToPackage documentation : [ FDirName $(HAIKU_TOP) docs welcome ]
+CopyDirectoryToPackage documentation : [ FDirName $(FUSION_TOP) docs welcome ]
 	: welcome ;
 
-SEARCH on welcome = [ FDirName $(HAIKU_TOP) data bin ] ;
+SEARCH on welcome = [ FDirName $(FUSION_TOP) data bin ] ;
 
 AddFilesToPackage bin : quicktour welcome ;
 

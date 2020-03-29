@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app ;
+SubDir FUSION_TOP src tests servers app ;
 
 UsePrivateHeaders app graphics input interface shared storage ;
 
@@ -18,10 +18,10 @@ UsePrivateHeaders [ FDirName graphics common ] ;
 
 # headers/build/private/kernel is needed for safemode.h and syscalls.h.
 # headers/private/kernel for the util/* stuff.
-UseHeaders [ FDirName $(HAIKU_TOP) headers build private kernel ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers build private kernel ] : true ;
 UsePrivateHeaders kernel support ;
 
-local appServerDir = [ FDirName $(HAIKU_TOP) src servers app ] ;
+local appServerDir = [ FDirName $(FUSION_TOP) src servers app ] ;
 
 UseHeaders [ FDirName $(appServerDir) decorator ] ;
 UseHeaders [ FDirName $(appServerDir) drawing ] ;
@@ -230,53 +230,53 @@ HaikuInstall install-test-apps : $(HAIKU_APP_TEST_DIR) : run.sh
 
 } # if $(TARGET_PLATFORM) = libbe_test
 
-SubInclude HAIKU_TOP src tests servers app archived_view ;
-SubInclude HAIKU_TOP src tests servers app async_drawing ;
-SubInclude HAIKU_TOP src tests servers app avoid_focus ;
-SubInclude HAIKU_TOP src tests servers app benchmark ;
-SubInclude HAIKU_TOP src tests servers app bitmap_bounds ;
-SubInclude HAIKU_TOP src tests servers app bitmap_drawing ;
-SubInclude HAIKU_TOP src tests servers app code_to_name ;
-SubInclude HAIKU_TOP src tests servers app clip_to_picture ;
-SubInclude HAIKU_TOP src tests servers app constrain_clipping_region ;
-SubInclude HAIKU_TOP src tests servers app copy_bits ;
-SubInclude HAIKU_TOP src tests servers app cursor_test ;
-SubInclude HAIKU_TOP src tests servers app desktop_window ;
-SubInclude HAIKU_TOP src tests servers app draw_after_children ;
-SubInclude HAIKU_TOP src tests servers app draw_string_offsets ;
-SubInclude HAIKU_TOP src tests servers app drawing_debugger ;
-SubInclude HAIKU_TOP src tests servers app drawing_modes ;
-SubInclude HAIKU_TOP src tests servers app event_mask ;
-SubInclude HAIKU_TOP src tests servers app find_view ;
-SubInclude HAIKU_TOP src tests servers app following ;
-SubInclude HAIKU_TOP src tests servers app font_spacing ;
-SubInclude HAIKU_TOP src tests servers app gradients ;
-SubInclude HAIKU_TOP src tests servers app hide_and_show ;
-SubInclude HAIKU_TOP src tests servers app idle_test ;
-SubInclude HAIKU_TOP src tests servers app lagging_get_mouse ;
-SubInclude HAIKU_TOP src tests servers app lock_focus ;
-SubInclude HAIKU_TOP src tests servers app look_and_feel ;
-SubInclude HAIKU_TOP src tests servers app menu_crash ;
-SubInclude HAIKU_TOP src tests servers app no_pointer_history ;
-SubInclude HAIKU_TOP src tests servers app painter ;
-SubInclude HAIKU_TOP src tests servers app playground ;
-SubInclude HAIKU_TOP src tests servers app pulsed_drawing ;
-SubInclude HAIKU_TOP src tests servers app regularapps ;
-SubInclude HAIKU_TOP src tests servers app resize_limits ;
-SubInclude HAIKU_TOP src tests servers app scrollbar ;
-SubInclude HAIKU_TOP src tests servers app scrolling ;
-SubInclude HAIKU_TOP src tests servers app shape_test ;
-SubInclude HAIKU_TOP src tests servers app stacktile ;
-SubInclude HAIKU_TOP src tests servers app statusbar ;
-SubInclude HAIKU_TOP src tests servers app stress_test ;
-SubInclude HAIKU_TOP src tests servers app text_rendering ;
-SubInclude HAIKU_TOP src tests servers app textview ;
-SubInclude HAIKU_TOP src tests servers app tiled_bitmap_test ;
-SubInclude HAIKU_TOP src tests servers app transformation ;
-SubInclude HAIKU_TOP src tests servers app unit_tests ;
-SubInclude HAIKU_TOP src tests servers app view_state ;
-SubInclude HAIKU_TOP src tests servers app view_transit ;
-SubInclude HAIKU_TOP src tests servers app window_creation ;
-SubInclude HAIKU_TOP src tests servers app window_invalidation ;
-SubInclude HAIKU_TOP src tests servers app workspace_activated ;
-SubInclude HAIKU_TOP src tests servers app workspace_switcher ;
+SubInclude FUSION_TOP src tests servers app archived_view ;
+SubInclude FUSION_TOP src tests servers app async_drawing ;
+SubInclude FUSION_TOP src tests servers app avoid_focus ;
+SubInclude FUSION_TOP src tests servers app benchmark ;
+SubInclude FUSION_TOP src tests servers app bitmap_bounds ;
+SubInclude FUSION_TOP src tests servers app bitmap_drawing ;
+SubInclude FUSION_TOP src tests servers app code_to_name ;
+SubInclude FUSION_TOP src tests servers app clip_to_picture ;
+SubInclude FUSION_TOP src tests servers app constrain_clipping_region ;
+SubInclude FUSION_TOP src tests servers app copy_bits ;
+SubInclude FUSION_TOP src tests servers app cursor_test ;
+SubInclude FUSION_TOP src tests servers app desktop_window ;
+SubInclude FUSION_TOP src tests servers app draw_after_children ;
+SubInclude FUSION_TOP src tests servers app draw_string_offsets ;
+SubInclude FUSION_TOP src tests servers app drawing_debugger ;
+SubInclude FUSION_TOP src tests servers app drawing_modes ;
+SubInclude FUSION_TOP src tests servers app event_mask ;
+SubInclude FUSION_TOP src tests servers app find_view ;
+SubInclude FUSION_TOP src tests servers app following ;
+SubInclude FUSION_TOP src tests servers app font_spacing ;
+SubInclude FUSION_TOP src tests servers app gradients ;
+SubInclude FUSION_TOP src tests servers app hide_and_show ;
+SubInclude FUSION_TOP src tests servers app idle_test ;
+SubInclude FUSION_TOP src tests servers app lagging_get_mouse ;
+SubInclude FUSION_TOP src tests servers app lock_focus ;
+SubInclude FUSION_TOP src tests servers app look_and_feel ;
+SubInclude FUSION_TOP src tests servers app menu_crash ;
+SubInclude FUSION_TOP src tests servers app no_pointer_history ;
+SubInclude FUSION_TOP src tests servers app painter ;
+SubInclude FUSION_TOP src tests servers app playground ;
+SubInclude FUSION_TOP src tests servers app pulsed_drawing ;
+SubInclude FUSION_TOP src tests servers app regularapps ;
+SubInclude FUSION_TOP src tests servers app resize_limits ;
+SubInclude FUSION_TOP src tests servers app scrollbar ;
+SubInclude FUSION_TOP src tests servers app scrolling ;
+SubInclude FUSION_TOP src tests servers app shape_test ;
+SubInclude FUSION_TOP src tests servers app stacktile ;
+SubInclude FUSION_TOP src tests servers app statusbar ;
+SubInclude FUSION_TOP src tests servers app stress_test ;
+SubInclude FUSION_TOP src tests servers app text_rendering ;
+SubInclude FUSION_TOP src tests servers app textview ;
+SubInclude FUSION_TOP src tests servers app tiled_bitmap_test ;
+SubInclude FUSION_TOP src tests servers app transformation ;
+SubInclude FUSION_TOP src tests servers app unit_tests ;
+SubInclude FUSION_TOP src tests servers app view_state ;
+SubInclude FUSION_TOP src tests servers app view_transit ;
+SubInclude FUSION_TOP src tests servers app window_creation ;
+SubInclude FUSION_TOP src tests servers app window_invalidation ;
+SubInclude FUSION_TOP src tests servers app workspace_activated ;
+SubInclude FUSION_TOP src tests servers app workspace_switcher ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media media-add-ons esound_sink ;
+SubDir FUSION_TOP src add-ons media media-add-ons esound_sink ;
 
 if ! $(TARGET_PLATFORM_HAIKU_COMPATIBLE) {
 	SubDirC++Flags -fmultiple-symbol-spaces ;

@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src tools makebootable platform u-boot ;
+SubDir FUSION_TOP src tools makebootable platform u-boot ;
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src bin makebootable platform u-boot ] ;
+	+= [ FDirName $(FUSION_TOP) src bin makebootable platform u-boot ] ;
 
 BuildPlatformMain <build>makebootable :
 	makebootable.cpp

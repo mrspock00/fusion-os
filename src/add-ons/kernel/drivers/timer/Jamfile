@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers timer ;
+SubDir FUSION_TOP src add-ons kernel drivers timer ;
 
 UsePrivateHeaders drivers ;
 

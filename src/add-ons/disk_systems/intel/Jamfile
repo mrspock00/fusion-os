@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src add-ons disk_systems intel ;
+SubDir FUSION_TOP src add-ons disk_systems intel ;
 
 UsePrivateHeaders shared storage ;
 UsePrivateSystemHeaders ;
 
 SEARCH_SOURCE
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems intel ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems intel ] ;
 
 {
 	local defines = [ FDefines _USER_MODE ] ;

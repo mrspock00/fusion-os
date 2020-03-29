@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel busses agp_gart ;
+SubDir FUSION_TOP src add-ons kernel busses agp_gart ;
 
 SubDirC++Flags -fno-rtti ;
 
@@ -16,5 +16,5 @@ KernelAddon <agp_gart>intel :
 
 SEARCH on [ FGristFiles
 		kernel_cpp.cpp 
-	] = [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	] = [ FDirName $(FUSION_TOP) src system kernel util ] ;
 

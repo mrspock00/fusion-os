@@ -1,14 +1,14 @@
-SubDir HAIKU_TOP src system libroot posix glibc arch x86_64 ;
+SubDir FUSION_TOP src system libroot posix glibc arch x86_64 ;
 
-SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch x86_64 ;
-SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch generic ;
-SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include ;
-SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc libio ;
-SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc stdlib ;
-SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc math ;
-SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc ;
+SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch x86_64 ;
+SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch generic ;
+SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include ;
+SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc libio ;
+SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc stdlib ;
+SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc math ;
+SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc ;
 
-SubDirHdrs $(HAIKU_TOP) src system libroot posix glibc arch generic ;
+SubDirHdrs $(FUSION_TOP) src system libroot posix glibc arch generic ;
 
 UsePrivateHeaders libroot ;
 
@@ -139,9 +139,9 @@ for architectureObject in [ MultiArchSubDirSetup x86_64 ] {
 			;
 
 		SEARCH on [ FGristFiles $(genericSources) ]
-			= [ FDirName $(HAIKU_TOP) src system libroot posix glibc arch
+			= [ FDirName $(FUSION_TOP) src system libroot posix glibc arch
 				generic ]
-			  [ FDirName $(HAIKU_TOP) src system libroot posix glibc arch
+			  [ FDirName $(FUSION_TOP) src system libroot posix glibc arch
 				generic longdouble 80bit ] ;
 	}
 }

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel drivers bus usb ;
+SubDir FUSION_TOP src add-ons kernel drivers bus usb ;
 
 UsePrivateKernelHeaders ;
 

@@ -12,16 +12,16 @@ AddFilesToPackage servers : authentication_server ;
 AddFilesToPackage bin : netfs_config ;
 AddFilesToPackage bin : netfs_server_prefs ;
 AddFilesToPackage bin
-	: [ FDirName $(HAIKU_TOP) data bin netfs_mount ] ;
+	: [ FDirName $(FUSION_TOP) data bin netfs_mount ] ;
 
 # interface definition
 AddFilesToPackage data userlandfs file_systems
-	: [ FDirName $(HAIKU_TOP) data userlandfs file_systems netfs ]
+	: [ FDirName $(FUSION_TOP) data userlandfs file_systems netfs ]
 	: netfs ;
 
 # docs
 AddFilesToPackage documentation add-ons :
-	[ FDirName $(HAIKU_TOP) docs add-ons NetFS.html ] : NetFS.html ;
+	[ FDirName $(FUSION_TOP) docs add-ons NetFS.html ] : NetFS.html ;
 
 BuildHaikuPackage $(netfsPackage) : netfs ;
 

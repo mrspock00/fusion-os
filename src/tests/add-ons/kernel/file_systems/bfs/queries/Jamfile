@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests add-ons kernel file_systems bfs queries ;
+SubDir FUSION_TOP src tests add-ons kernel file_systems bfs queries ;
 
 SimpleTest bfsQueryTest
 	: test.cpp

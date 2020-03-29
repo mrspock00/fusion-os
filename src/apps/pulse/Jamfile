@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps pulse ;
+SubDir FUSION_TOP src apps pulse ;
 
 UsePrivateSystemHeaders ;
 UsePrivateHeaders shared interface app ;

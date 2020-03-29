@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits translation ;
+SubDir FUSION_TOP src tests kits translation ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

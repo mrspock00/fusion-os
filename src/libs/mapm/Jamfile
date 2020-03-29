@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs mapm ;
+SubDir FUSION_TOP src libs mapm ;
 
 UseHeaders [ LibraryHeaders mapm ] ;
 

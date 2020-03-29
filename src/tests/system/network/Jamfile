@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system network ;
+SubDir FUSION_TOP src tests system network ;
 
 SimpleTest firefox_crash : firefox_crash.cpp : $(TARGET_NETWORK_LIBS) ;
 
@@ -20,10 +20,10 @@ SimpleTest if_nameindex : if_nameindex.c : $(TARGET_NETWORK_LIBS) ;
 SimpleTest tcp_connection_test : tcp_connection_test.cpp
 	: $(TARGET_NETWORK_LIBS) ;
 
-SubInclude HAIKU_TOP src tests system network icmp ;
-SubInclude HAIKU_TOP src tests system network ipv6 ;
-SubInclude HAIKU_TOP src tests system network multicast ;
-SubInclude HAIKU_TOP src tests system network posixnet ;
-SubInclude HAIKU_TOP src tests system network sock ;
-SubInclude HAIKU_TOP src tests system network tcp_shell ;
-SubInclude HAIKU_TOP src tests system network tcptester ;
+SubInclude FUSION_TOP src tests system network icmp ;
+SubInclude FUSION_TOP src tests system network ipv6 ;
+SubInclude FUSION_TOP src tests system network multicast ;
+SubInclude FUSION_TOP src tests system network posixnet ;
+SubInclude FUSION_TOP src tests system network sock ;
+SubInclude FUSION_TOP src tests system network tcp_shell ;
+SubInclude FUSION_TOP src tests system network tcptester ;

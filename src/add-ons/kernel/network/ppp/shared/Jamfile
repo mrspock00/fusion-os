@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network ppp shared ;
+SubDir FUSION_TOP src add-ons kernel network ppp shared ;
 
-SubInclude HAIKU_TOP src add-ons kernel network ppp shared libkernelppp ;
-SubInclude HAIKU_TOP src add-ons kernel network ppp shared libppp ;
+SubInclude FUSION_TOP src add-ons kernel network ppp shared libkernelppp ;
+SubInclude FUSION_TOP src add-ons kernel network ppp shared libppp ;

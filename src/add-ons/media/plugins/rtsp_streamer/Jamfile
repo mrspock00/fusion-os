@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media plugins rtsp_streamer ;
+SubDir FUSION_TOP src add-ons media plugins rtsp_streamer ;
 
 UsePrivateHeaders media shared ;
 UsePrivateHeaders [ FDirName media experimental ] ;

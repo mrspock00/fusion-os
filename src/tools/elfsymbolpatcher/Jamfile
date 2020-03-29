@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tools elfsymbolpatcher ;
+SubDir FUSION_TOP src tools elfsymbolpatcher ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers tools elfsymbolpatcher ] ;
+UseHeaders [ FDirName $(FUSION_TOP) headers tools elfsymbolpatcher ] ;
 
 StaticLibrary libelfsymbolpatcher.a
 	: ElfFile.cpp

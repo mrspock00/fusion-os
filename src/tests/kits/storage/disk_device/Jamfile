@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits storage disk_device ;
+SubDir FUSION_TOP src tests kits storage disk_device ;
 
 #UsePrivateHeaders $(DOT) ;
 #UsePrivateHeaders app ;

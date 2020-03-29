@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel network ppp ipcp ;
+SubDir FUSION_TOP src add-ons kernel network ppp ipcp ;
 
 SubDirC++Flags -fno-rtti ;
 
@@ -8,9 +8,9 @@ UsePrivateHeaders net ;
 UsePrivateHeaders libroot net ;
 UsePrivateHeaders [ FDirName kernel ] ;
 UsePrivateHeaders [ FDirName kernel util ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared
 	libkernelppp headers ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp pppoe
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp pppoe
 	] : true ;
 
 KernelAddon ipcp :
@@ -25,10 +25,10 @@ KernelAddon ipcp :
 
 
 SEARCH on [ FGristFiles inet_addr.c ]
-	= [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	= [ FDirName $(FUSION_TOP) src system kernel util ] ;
 
 SEARCH on [ FGristFiles kernel_cpp.cpp ]
-        = [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+        = [ FDirName $(FUSION_TOP) src system kernel util ] ;
 
 LinkAgainst ipcp : libkernelppp.a ;
 

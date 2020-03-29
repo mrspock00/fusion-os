@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src apps login ;
+SubDir FUSION_TOP src apps login ;
 
 UsePrivateHeaders app interface ;
-UseHeaders [ FDirName $(HAIKU_TOP) src bin multiuser ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src bin multiuser ] ;
 
 Application Login :
 	DesktopWindow.cpp

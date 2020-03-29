@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits media playsound ;
+SubDir FUSION_TOP src tests kits media playsound ;
 
 BinCommand playfile :
 	playfile.cpp

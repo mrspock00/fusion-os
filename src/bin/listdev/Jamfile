@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin listdev ;
+SubDir FUSION_TOP src bin listdev ;
 
 UsePrivateHeaders shared ;
 UsePrivateKernelHeaders ;

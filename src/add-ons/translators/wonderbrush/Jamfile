@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons translators wonderbrush ;
+SubDir FUSION_TOP src add-ons translators wonderbrush ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) shared ] ;
 
@@ -9,7 +9,7 @@ local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup ] {
 	on $(architectureObject) {
 		# Include support sub folder
-		SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons translators wonderbrush support ] ;
+		SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons translators wonderbrush support ] ;
 
 		UseBuildFeatureHeaders zlib ;
 

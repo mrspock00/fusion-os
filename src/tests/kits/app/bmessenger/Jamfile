@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits app bmessenger ;
+SubDir FUSION_TOP src tests kits app bmessenger ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -13,4 +13,4 @@ SimpleTest ForwardMessageTest :
         : be
         ;
 
-SubInclude HAIKU_TOP src tests kits app bmessenger testapps ;
+SubInclude FUSION_TOP src tests kits app bmessenger testapps ;

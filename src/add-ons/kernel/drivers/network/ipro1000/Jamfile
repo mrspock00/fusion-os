@@ -1,7 +1,7 @@
-SubDir HAIKU_TOP src add-ons kernel drivers network ipro1000 ;
+SubDir FUSION_TOP src add-ons kernel drivers network ipro1000 ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_iflib compat ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_network compat ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_iflib compat ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_network compat ] : true ;
 UsePrivateHeaders net system ;
 UsePrivateKernelHeaders ;
 

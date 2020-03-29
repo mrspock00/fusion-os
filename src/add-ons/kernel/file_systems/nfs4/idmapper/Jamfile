@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems nfs4 idmapper ;
+SubDir FUSION_TOP src add-ons kernel file_systems nfs4 idmapper ;
 
 Application nfs4_idmapper_server
 	:

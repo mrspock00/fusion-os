@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools zip ;
+SubDir FUSION_TOP src tools zip ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin zip ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin zip ] ;
 
 USES_BE_API on <build>zip = true ;
 

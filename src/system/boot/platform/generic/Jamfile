@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system boot platform generic ;
+SubDir FUSION_TOP src system boot platform generic ;
 
 UseBuildFeatureHeaders zlib ;
 UsePrivateKernelHeaders ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix glibc ctype ;
+SubDir FUSION_TOP src system libroot posix glibc ctype ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup ] {
@@ -6,13 +6,13 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		local architecture = $(TARGET_PACKAGING_ARCH) ;
 
 		SubDirSysHdrs $(SUBDIR) ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch
 			$(TARGET_ARCH) ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include arch
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include arch
 			generic ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc include ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc locale ;
-		SubDirSysHdrs $(HAIKU_TOP) src system libroot posix glibc ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc include ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc locale ;
+		SubDirSysHdrs $(FUSION_TOP) src system libroot posix glibc ;
 
 		MergeObject <$(architecture)>posix_gnu_ctype.o :
 			ctype-info.c

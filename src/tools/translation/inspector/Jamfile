@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tools translation inspector ;
+SubDir FUSION_TOP src tools translation inspector ;
 
 AddResources Inspector : Inspector.rsrc ;
 

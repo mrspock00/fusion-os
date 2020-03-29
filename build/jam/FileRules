@@ -380,8 +380,8 @@ rule DetermineHaikuRevision
 		LocalClean clean : $(revisionFile) ;
 		if $(HAIKU_REVISION) {
 			DetermineHaikuRevision2 $(revisionFile) ;
-		} else if [ Glob [ FDirName $(HAIKU_TOP) .git ] : index ] {
-			SEARCH on $(gitIndex) = [ FDirName $(HAIKU_TOP) .git ] ;
+		} else if [ Glob [ FDirName $(FUSION_TOP) .git ] : index ] {
+			SEARCH on $(gitIndex) = [ FDirName $(FUSION_TOP) .git ] ;
 			Depends $(revisionFile) : $(gitIndex) ;
 			DetermineHaikuRevision1 $(revisionFile) : $(gitIndex) ;
 		} else {
@@ -395,7 +395,7 @@ rule DetermineHaikuRevision
 
 actions DetermineHaikuRevision1
 {
-	$(HAIKU_TOP)/build/scripts/determine_haiku_revision $(HAIKU_TOP) $(1)
+	$(FUSION_TOP)/build/scripts/determine_haiku_revision $(FUSION_TOP) $(1)
 }
 
 

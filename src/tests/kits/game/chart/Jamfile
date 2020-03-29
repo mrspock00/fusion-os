@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits game chart ;
+SubDir FUSION_TOP src tests kits game chart ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

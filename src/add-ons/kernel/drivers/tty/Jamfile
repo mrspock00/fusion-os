@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons kernel drivers tty ;
+SubDir FUSION_TOP src add-ons kernel drivers tty ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders drivers ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel generic tty ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel generic tty ] ;
 
 KernelAddon <driver>tty :
 	driver.cpp
@@ -14,5 +14,5 @@ KernelAddon <driver>tty :
 ;
 
 SEARCH on [ FGristFiles line_buffer.cpp ]
-	+= [ FDirName $(HAIKU_TOP) src add-ons kernel generic tty ] ;
+	+= [ FDirName $(FUSION_TOP) src add-ons kernel generic tty ] ;
 

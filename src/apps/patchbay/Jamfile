@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps patchbay ;
+SubDir FUSION_TOP src apps patchbay ;
 
 Application PatchBay
 	:

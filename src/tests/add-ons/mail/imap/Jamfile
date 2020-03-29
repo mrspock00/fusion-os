@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src tests add-ons mail imap ;
+SubDir FUSION_TOP src tests add-ons mail imap ;
 
 UsePrivateHeaders mail shared ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src tests add-ons kernel file_systems
+SubDirHdrs [ FDirName $(FUSION_TOP) src tests add-ons kernel file_systems
 	fs_shell ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src add-ons mail_daemon inbound_protocols
+SubDirHdrs [ FDirName $(FUSION_TOP) src add-ons mail_daemon inbound_protocols
 	imap imap_lib ] ;
 
 local libSources = Commands.cpp Protocol.cpp Response.cpp ;
@@ -39,8 +39,8 @@ SimpleTest rfc3501_encoding_test :
 ;
 
 SEARCH on [ FGristFiles $(libSources) ]
-	= [ FDirName $(HAIKU_TOP) src add-ons mail_daemon inbound_protocols imap
+	= [ FDirName $(FUSION_TOP) src add-ons mail_daemon inbound_protocols imap
 		imap_lib ] ;
 
-SEARCH on [ FGristFiles argv.c ] = [ FDirName $(HAIKU_TOP) src tests add-ons
+SEARCH on [ FGristFiles argv.c ] = [ FDirName $(FUSION_TOP) src tests add-ons
 	kernel file_systems fs_shell ] ;

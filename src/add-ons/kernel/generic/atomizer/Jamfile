@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel generic atomizer ;
+SubDir FUSION_TOP src add-ons kernel generic atomizer ;
 
 KernelAddon atomizer :
 	atomizer.c

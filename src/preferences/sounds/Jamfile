@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences sounds ;
+SubDir FUSION_TOP src preferences sounds ;
 
 UsePrivateHeaders interface ;
 

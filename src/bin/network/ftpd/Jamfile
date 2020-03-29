@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src bin network ftpd ;
+SubDir FUSION_TOP src bin network ftpd ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 UseHeaders $(SUBDIR) : true ;
 
 BinCommand ftpd :

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel busses ata legacy_sata ;
+SubDir FUSION_TOP src add-ons kernel busses ata legacy_sata ;
 
 UsePrivateHeaders drivers kernel ;
 

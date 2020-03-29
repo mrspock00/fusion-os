@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs uuid ;
+SubDir FUSION_TOP src libs uuid ;
 
 SubDirCcFlags [ FDefines _KERNEL_MODE ] ;
 

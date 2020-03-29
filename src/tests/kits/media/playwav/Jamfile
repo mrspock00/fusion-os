@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits media playwav ;
+SubDir FUSION_TOP src tests kits media playwav ;
 
 UsePrivateHeaders media ;
 

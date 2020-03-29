@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools makebootable platform atari_m68k ;
+SubDir FUSION_TOP src tools makebootable platform atari_m68k ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin makebootable platform
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin makebootable platform
 	atari_m68k ] ;
 
 #USES_BE_API on <build>makebootable = true ;

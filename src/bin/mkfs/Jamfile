@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin mkfs ;
+SubDir FUSION_TOP src bin mkfs ;
 
 UsePrivateHeaders shared ;
 UsePrivateHeaders storage ;

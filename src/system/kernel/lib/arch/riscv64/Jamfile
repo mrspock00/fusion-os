@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src system kernel lib arch riscv64 ;
+SubDir FUSION_TOP src system kernel lib arch riscv64 ;
 
 SEARCH_SOURCE += [ FDirName $(SUBDIR) $(DOTDOT) generic ] ;
 
-local librootSources = [ FDirName $(HAIKU_TOP) src system libroot ] ;
+local librootSources = [ FDirName $(FUSION_TOP) src system libroot ] ;
 local posixSources = [ FDirName $(librootSources) posix ] ;
 
 SEARCH_SOURCE += [ FDirName $(librootSources) os arch $(TARGET_ARCH) ] ;

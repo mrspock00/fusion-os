@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits support ;
+SubDir FUSION_TOP src tests kits support ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -88,7 +88,7 @@ UsePrivateHeaders support ;
 SimpleTest compression_test : compression_test.cpp : be [ TargetLibsupc++ ] ;
 SimpleTest string_utf8_tests : string_utf8_tests.cpp : be ;
 
-SubInclude HAIKU_TOP src tests kits support barchivable ;
-#SubInclude HAIKU_TOP src tests kits support bautolock ;
-#SubInclude HAIKU_TOP src tests kits support blocker ;
+SubInclude FUSION_TOP src tests kits support barchivable ;
+#SubInclude FUSION_TOP src tests kits support bautolock ;
+#SubInclude FUSION_TOP src tests kits support blocker ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app pulsed_drawing ;
+SubDir FUSION_TOP src tests servers app pulsed_drawing ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

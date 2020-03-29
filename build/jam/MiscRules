@@ -185,7 +185,7 @@ rule HaikuSubInclude tokens
 	#            (relative to the current subdir)
 
 	if $(tokens) {
-		SubInclude HAIKU_TOP $(SUBDIR_TOKENS) $(tokens) ;
+		SubInclude FUSION_TOP $(SUBDIR_TOKENS) $(tokens) ;
 	}
 }
 

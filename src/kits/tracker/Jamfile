@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src kits tracker ;
+SubDir FUSION_TOP src kits tracker ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons input_server filters shortcut_catcher ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons input_server filters shortcut_catcher ] ;
 UsePrivateHeaders interface mount shared storage support tracker ;
 UsePrivateSystemHeaders ;
 
@@ -19,9 +19,9 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		local libtracker = [ MultiArchDefaultGristFiles libtracker.so ] ;
 		AddResources $(libtracker) : TrackerIcons.rdef libtracker.rdef ;
 
-		SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons input_server
+		SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons input_server
 			filters shortcut_catcher ] ;
-		SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits tracker infowindow ] ;
+		SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits tracker infowindow ] ;
 
 		SharedLibrary $(libtracker) :
 			AttributeStream.cpp
@@ -105,7 +105,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 	}
 }
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src kits tracker infowindow ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src kits tracker infowindow ] ;
 
 DoCatalogs libtracker.so :
 	x-vnd.Haiku-libtracker

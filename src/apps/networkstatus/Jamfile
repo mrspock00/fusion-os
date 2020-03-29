@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps networkstatus ;
+SubDir FUSION_TOP src apps networkstatus ;
 
 UsePrivateHeaders interface net ;
 UseLibraryHeaders agg ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel fs ;
+SubDir FUSION_TOP src system kernel fs ;
 
 UsePrivateHeaders [ FDirName kernel disk_device_manager ] ;
 UsePrivateHeaders [ FDirName kernel fs ] ;

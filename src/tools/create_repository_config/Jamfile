@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools create_repository_config ;
+SubDir FUSION_TOP src tools create_repository_config ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin pkgman ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin pkgman ] ;
 
 USES_BE_API on <build>create_repository_config = true ;
 

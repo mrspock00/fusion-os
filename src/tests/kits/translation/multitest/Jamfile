@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits translation multitest ;
+SubDir FUSION_TOP src tests kits translation multitest ;
 
 SimpleTest MultiTest
 	: MainControlWindow.cpp

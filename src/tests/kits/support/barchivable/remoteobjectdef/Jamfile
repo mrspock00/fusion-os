@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits support barchivable remoteobjectdef ;
+SubDir FUSION_TOP src tests kits support barchivable remoteobjectdef ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

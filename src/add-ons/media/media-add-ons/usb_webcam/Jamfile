@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media media-add-ons usb_webcam ;
+SubDir FUSION_TOP src add-ons media media-add-ons usb_webcam ;
 
 usbKitLibraryName = libdevice.so ;
 
@@ -15,7 +15,7 @@ local sourceDirs =
 
 local sourceDir ;
 for sourceDir in $(sourceDirs) {
-	SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons media media-add-ons
+	SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons media media-add-ons
 		usb_webcam $(sourceDir) ] ;
 }
 
@@ -80,7 +80,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 			: B_WEBCAM_DECLARE_CSTRANSFORM : $(csTransformsSources) ;
 
 		for sourceDir in $(sourceDirs) {
-			SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons media
+			SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons media
 				media-add-ons usb_webcam $(sourceDir) ] ;
 		}
 

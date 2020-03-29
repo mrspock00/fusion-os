@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex RouteApp ;
+SubDir FUSION_TOP src apps cortex RouteApp ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) DiagramView ] ;

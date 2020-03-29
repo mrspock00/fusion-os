@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src preferences filetypes ;
+SubDir FUSION_TOP src preferences filetypes ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
 UseLibraryHeaders icon ;
 UsePrivateHeaders shared tracker ;
-SubDirSysHdrs $(HAIKU_TOP) src kits tracker ;
+SubDirSysHdrs $(FUSION_TOP) src kits tracker ;
 
 Preference FileTypes :
 	FileTypes.cpp

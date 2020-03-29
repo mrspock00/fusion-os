@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits interface look ;
+SubDir FUSION_TOP src tests kits interface look ;
 
 UsePrivateHeaders interface ;
 

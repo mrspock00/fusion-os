@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex TipManager ;
+SubDir FUSION_TOP src apps cortex TipManager ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) support ] ;

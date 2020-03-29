@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system kernel posix ;
+SubDir FUSION_TOP src system kernel posix ;
 
 UsePrivateHeaders shared ;
 

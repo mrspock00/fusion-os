@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tools opd_to_package_info ;
+SubDir FUSION_TOP src tools opd_to_package_info ;
 
 USES_BE_API on <build>opd_to_package_info = true ;
 

@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tools resattr ;
+SubDir FUSION_TOP src tools resattr ;
 
 USES_BE_API on <build>resattr = true ;
 
 BuildPlatformMain <build>resattr : resattr.cpp
 	: $(HOST_LIBBE) $(HOST_LIBSUPC++) ;
 
-SEARCH on [ FGristFiles resattr.cpp ] = [ FDirName $(HAIKU_TOP) src bin ] ;
+SEARCH on [ FGristFiles resattr.cpp ] = [ FDirName $(FUSION_TOP) src bin ] ;

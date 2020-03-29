@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs termcap ;
+SubDir FUSION_TOP src libs termcap ;
 
 # Build the /etc/termcap file. It's already ready to use, but we filter out the
 # comments.

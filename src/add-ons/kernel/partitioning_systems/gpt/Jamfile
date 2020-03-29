@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons kernel partitioning_systems gpt ;
+SubDir FUSION_TOP src add-ons kernel partitioning_systems gpt ;
 
 UsePrivateHeaders interface kernel storage ;
 UsePrivateSystemHeaders ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src libs uuid ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs uuid ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) intel ] ;
 
 SEARCH_SOURCE += [ FDirName $(SUBDIR) $(DOTDOT) intel ] ;

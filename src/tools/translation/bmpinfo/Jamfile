@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tools translation bmpinfo ;
+SubDir FUSION_TOP src tools translation bmpinfo ;
 
 BinCommand bmpinfo : bmpinfo.cpp : be libbe.so localestub translation [ TargetLibstdc++ ] [ TargetLibsupc++ ] ;
 

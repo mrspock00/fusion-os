@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix stdio ;
+SubDir FUSION_TOP src system libroot posix stdio ;
 
 UsePrivateHeaders libroot shared ;
 

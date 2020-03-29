@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs udis86 ;
+SubDir FUSION_TOP src libs udis86 ;
 
 DEFINES += __UD_STANDALONE__ ;
 

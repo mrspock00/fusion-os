@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs icon ;
+SubDir FUSION_TOP src libs icon ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
@@ -23,7 +23,7 @@ for architectureObject in [ MultiArchSubDirSetup ] {
 		local sourceDir ;
 		for sourceDir in $(sourceDirs) {
 			SEARCH_SOURCE
-				+= [ FDirName $(HAIKU_TOP) src libs icon $(sourceDir) ] ;
+				+= [ FDirName $(FUSION_TOP) src libs icon $(sourceDir) ] ;
 		}
 
 		StaticLibrary [ MultiArchDefaultGristFiles libicon.a ] :

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src preferences appearance ;
+SubDir FUSION_TOP src preferences appearance ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

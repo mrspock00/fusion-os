@@ -1,12 +1,12 @@
-SubDir HAIKU_TOP src add-ons decorators MacDecorator ;
+SubDir FUSION_TOP src add-ons decorators MacDecorator ;
 
 UseBuildFeatureHeaders freetype ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app stackandtile ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app decorator ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app drawing Painter ] ;
-UseHeaders [ FDirName $(HAIKU_TOP) src servers app font ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app stackandtile ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app decorator ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app drawing Painter ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src servers app font ] ;
 UsePrivateHeaders app shared interface graphics ;
 UseLibraryHeaders agg ;
 UsePrivateHeaders kernel ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system kernel file_corruption ;
+SubDir FUSION_TOP src tests system kernel file_corruption ;
 
 HaikuSubInclude disk_system ;
 HaikuSubInclude driver ;

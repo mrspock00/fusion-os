@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin debug time_stats ;
+SubDir FUSION_TOP src bin debug time_stats ;
 
 UsePrivateHeaders kernel ;
 UsePrivateHeaders libroot ;

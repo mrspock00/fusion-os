@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons accelerants 3dfx ;
+SubDir FUSION_TOP src add-ons accelerants 3dfx ;
 
 UsePrivateHeaders graphics ;
 UsePrivateHeaders [ FDirName graphics 3dfx ] ;

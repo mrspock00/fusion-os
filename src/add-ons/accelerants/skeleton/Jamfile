@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons accelerants skeleton ;
+SubDir FUSION_TOP src add-ons accelerants skeleton ;
 
 UsePrivateHeaders graphics ;
 UsePrivateHeaders [ FDirName graphics skeleton ] ;
@@ -21,4 +21,4 @@ Addon skel.accelerant :
 
 Depends skel.accelerant : skel.driver ;
 
-SubInclude HAIKU_TOP src add-ons accelerants skeleton engine ;
+SubInclude FUSION_TOP src add-ons accelerants skeleton engine ;

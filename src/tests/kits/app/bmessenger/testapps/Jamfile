@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tests kits app bmessenger testapps ;
+SubDir FUSION_TOP src tests kits app bmessenger testapps ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) src tests kits app common ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src tests kits app common ] ;
 
 local commonObjects = <src!tests!kits!app!common>CommonTestApp.o ;
 

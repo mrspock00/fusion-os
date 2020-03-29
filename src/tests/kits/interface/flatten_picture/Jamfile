@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits interface flatten_picture ;
+SubDir FUSION_TOP src tests kits interface flatten_picture ;
 
 SimpleTest FlattenPictureTest :
 	PictureTest.cpp

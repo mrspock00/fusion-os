@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src bin debug scheduling_recorder ;
+SubDir FUSION_TOP src bin debug scheduling_recorder ;
 
 UsePrivateHeaders debug kernel libroot shared ;
 UsePrivateSystemHeaders ;

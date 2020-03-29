@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits package solver ;
+SubDir FUSION_TOP src kits package solver ;
 
 # add-on implementing a libsolv based BSolver
 

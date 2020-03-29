@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src tools rc ;
+SubDir FUSION_TOP src tools rc ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src bin rc ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src bin rc ] ;
 
 USES_BE_API on <build>librdef.a <build>rc = true ;
 

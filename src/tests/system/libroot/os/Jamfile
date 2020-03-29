@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system libroot os ;
+SubDir FUSION_TOP src tests system libroot os ;
 
 SimpleTest DriverSettingsTest :
 	DriverSettingsTest.cpp
@@ -28,4 +28,4 @@ SimpleTest system_watching_test :
 SEARCH on [ FGristFiles
 		driver_settings.cpp
 		parsedate.cpp
-	] = [ FDirName $(HAIKU_TOP) src system libroot os ] ;
+	] = [ FDirName $(FUSION_TOP) src system libroot os ] ;

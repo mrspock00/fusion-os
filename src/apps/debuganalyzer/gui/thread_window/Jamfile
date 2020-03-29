@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps debuganalyzer gui thread_window ;
+SubDir FUSION_TOP src apps debuganalyzer gui thread_window ;
 
 UsePrivateHeaders debug interface kernel shared ;
 UsePrivateSystemHeaders ;

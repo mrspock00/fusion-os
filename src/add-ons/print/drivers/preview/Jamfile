@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons print drivers preview ;
+SubDir FUSION_TOP src add-ons print drivers preview ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers libs print libprint ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers libs print libprint ] ;
 
 AddResources Preview : Preview.rdef ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bluetooth ;
+SubDir FUSION_TOP src add-ons kernel bluetooth ;
 
-SubInclude HAIKU_TOP src add-ons kernel bluetooth btCoreData ;
-SubInclude HAIKU_TOP src add-ons kernel bluetooth hci ;
+SubInclude FUSION_TOP src add-ons kernel bluetooth btCoreData ;
+SubInclude FUSION_TOP src add-ons kernel bluetooth hci ;

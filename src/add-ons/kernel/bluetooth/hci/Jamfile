@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel bluetooth hci ;
+SubDir FUSION_TOP src add-ons kernel bluetooth hci ;
 
 UsePrivateKernelHeaders ;
 UsePrivateHeaders net bluetooth ;

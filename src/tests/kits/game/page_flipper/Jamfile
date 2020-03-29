@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits game page_flipper ;
+SubDir FUSION_TOP src tests kits game page_flipper ;
 
 SimpleTest PageFlipper
 	: page_flip.cpp

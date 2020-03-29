@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tools cppunit ;
+SubDir FUSION_TOP src tools cppunit ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers tools elfsymbolpatcher ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers tools elfsymbolpatcher ] : true ;
 UseCppUnitHeaders ;
 
 SEARCH_SOURCE += [ FDirName $(SUBDIR) cppunit ] ;

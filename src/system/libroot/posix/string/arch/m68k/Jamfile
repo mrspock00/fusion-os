@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src system libroot posix string arch m68k ;
+SubDir FUSION_TOP src system libroot posix string arch m68k ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup m68k ] {

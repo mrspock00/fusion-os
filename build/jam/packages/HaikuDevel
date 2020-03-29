@@ -65,10 +65,10 @@ AddHeaderDirectoryToPackage posix ;
 # private headers
 AddHeaderDirectoryToPackage private ;
 CopyDirectoryToPackage develop headers private libs compat
-	: [ FDirName $(HAIKU_TOP) src libs compat freebsd_network ]
+	: [ FDirName $(FUSION_TOP) src libs compat freebsd_network ]
 	: : -x *.c -x *.cpp -x *.awk -x Jamfile -x miidevs -x usbdevs ;
 CopyDirectoryToPackage develop headers private libs compat
-	: [ FDirName $(HAIKU_TOP) src libs compat freebsd_wlan ]
+	: [ FDirName $(FUSION_TOP) src libs compat freebsd_wlan ]
 	: : -x *.c -x Jamfile ;
 
 # create be -> os symlink for now
@@ -82,7 +82,7 @@ AddHeaderDirectoryToPackage compatibility gnu : gnu ;
 if $(HAIKU_GCC_VERSION_$(architecture)[1]) = 2 {
 	# GCC 2 only -- for GCC 4 they come with the gcc package
 	CopyDirectoryToPackage develop headers c++
-		: [ FDirName $(HAIKU_TOP) headers cpp ] : 2.95.3 ;
+		: [ FDirName $(FUSION_TOP) headers cpp ] : 2.95.3 ;
 }
 
 
@@ -91,7 +91,7 @@ AddSymlinkToPackage data deskbar menu Applications
 	: ../../../../apps/Debugger : Debugger ;
 
 # Debugging tools
-SEARCH on leak_analyser.sh = [ FDirName $(HAIKU_TOP) src bin ] ;
+SEARCH on leak_analyser.sh = [ FDirName $(FUSION_TOP) src bin ] ;
 AddFilesToPackage bin : leak_analyser.sh ;
 
 BuildHaikuPackage $(haikuDevelPackage) : haiku_devel ;

@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons print drivers postscript ;
+SubDir FUSION_TOP src add-ons print drivers postscript ;
 
-SubDirHdrs [ FDirName $(HAIKU_TOP) headers libs print libprint ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) headers libs print libprint ] ;
 
 AddResources PS\ Compatible : PS.rdef ;
 

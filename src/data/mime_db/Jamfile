@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src data mime_db ;
+SubDir FUSION_TOP src data mime_db ;
 
 
 rule BuildMimeDB superTypes

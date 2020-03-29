@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src apps terminal ;
+SubDir FUSION_TOP src apps terminal ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src kits tracker ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src kits tracker ] ;
 
 UsePrivateHeaders libroot kernel shared system ;
 UsePrivateHeaders textencoding ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons input_server devices serial_mouse ;
+SubDir FUSION_TOP src add-ons input_server devices serial_mouse ;
 
 UsePrivateHeaders input ;
 

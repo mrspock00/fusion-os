@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src preferences deskbar ;
+SubDir FUSION_TOP src preferences deskbar ;
 
-SubDirSysHdrs $(HAIKU_TOP) src apps deskbar ;
+SubDirSysHdrs $(FUSION_TOP) src apps deskbar ;
 
 Preference <preference>Deskbar
 	:

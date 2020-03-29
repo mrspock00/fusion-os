@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits media mp3_decoder_test ;
+SubDir FUSION_TOP src tests kits media mp3_decoder_test ;
 
 local ffmpegHeaders = [ BuildFeatureAttribute ffmpeg : headers : path ] ;
 UseHeaders $(ffmpegHeaders) ;

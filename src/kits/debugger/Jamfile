@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src kits debugger ;
+SubDir FUSION_TOP src kits debugger ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) headers compatibility bsd ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers compatibility bsd ] : true ;
 
 # for syscall_numbers.h
 UseHeaders [ FDirName $(TARGET_COMMON_DEBUG_OBJECT_DIR_$(TARGET_PACKAGING_ARCH))
@@ -70,7 +70,7 @@ SEARCH_SOURCE += [ FDirName $(SUBDIR) value values ] ;
 
 SubDirHdrs [ FDirName $(SUBDIR) demangler ] ;
 SubDirHdrs [ FDirName $(SUBDIR) dwarf ] ;
-SubDirHdrs [ FDirName $(HAIKU_TOP) src bin debug ] ;
+SubDirHdrs [ FDirName $(FUSION_TOP) src bin debug ] ;
 
 SourceHdrs
 	DwarfFunctionDebugInfo.cpp

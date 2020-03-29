@@ -1,6 +1,6 @@
-SubDir HAIKU_TOP src add-ons input_server ;
+SubDir FUSION_TOP src add-ons input_server ;
 
-SubInclude HAIKU_TOP src add-ons input_server devices ;
-SubInclude HAIKU_TOP src add-ons input_server filters ;
-SubInclude HAIKU_TOP src add-ons input_server methods ;
+SubInclude FUSION_TOP src add-ons input_server devices ;
+SubInclude FUSION_TOP src add-ons input_server filters ;
+SubInclude FUSION_TOP src add-ons input_server methods ;
 

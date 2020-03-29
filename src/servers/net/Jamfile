@@ -1,15 +1,15 @@
-SubDir HAIKU_TOP src servers net ;
+SubDir FUSION_TOP src servers net ;
 
 UsePrivateHeaders app net shared storage ;
 
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) src libs compat freebsd_wlan ] : true ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers os add-ons network_settings ]
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src libs compat freebsd_wlan ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers os add-ons network_settings ]
 	: true ;
 
-#UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared libppp headers ] ;
-#UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared libkernelppp headers ] ;
-#UseHeaders [ FDirName $(HAIKU_TOP) src tests kits net DialUpPreflet ] ;
+#UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared libppp headers ] ;
+#UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared libkernelppp headers ] ;
+#UseHeaders [ FDirName $(FUSION_TOP) src tests kits net DialUpPreflet ] ;
 
 SubDirCcFlags $(defines) ;
 SubDirC++Flags $(defines) ;

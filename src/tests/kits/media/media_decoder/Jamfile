@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests kits media media_decoder ;
+SubDir FUSION_TOP src tests kits media media_decoder ;
 
 UsePrivateHeaders media_decoder ;
 

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits print ;
+SubDir FUSION_TOP src kits print ;
 
 UsePrivateHeaders shared print ;
 

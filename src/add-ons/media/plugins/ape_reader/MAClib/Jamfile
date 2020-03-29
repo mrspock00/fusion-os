@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons media plugins ape_reader MAClib ;
+SubDir FUSION_TOP src add-ons media plugins ape_reader MAClib ;
 
 SubDirHdrs [ FDirName $(SUBDIR) ../LibMonkeysAudio ] ;
 

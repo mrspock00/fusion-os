@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps sudoku ;
+SubDir FUSION_TOP src apps sudoku ;
 
 UsePrivateHeaders shared ;
 

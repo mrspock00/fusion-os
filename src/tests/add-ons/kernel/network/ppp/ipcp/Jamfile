@@ -1,11 +1,11 @@
-SubDir HAIKU_TOP src tests add-ons kernel network ppp ipcp ;
+SubDir FUSION_TOP src tests add-ons kernel network ppp ipcp ;
 
 UseLegacyHeaders network ;
-UseHeaders [ FDirName $(HAIKU_TOP) headers posix ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) headers posix ] : true ;
 UsePrivateHeaders net ;
-UseHeaders [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp shared libkernelppp headers ] : true ;
+UseHeaders [ FDirName $(FUSION_TOP) src add-ons kernel network ppp shared libkernelppp headers ] : true ;
 
-SEARCH_SOURCE += [ FDirName $(HAIKU_TOP) src add-ons kernel network ppp ipcp ] ;
+SEARCH_SOURCE += [ FDirName $(FUSION_TOP) src add-ons kernel network ppp ipcp ] ;
 
 Addon <userland>ipcp :
 	ipcp.cpp

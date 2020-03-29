@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src kits debugger arch x86 disasm ;
+SubDir FUSION_TOP src kits debugger arch x86 disasm ;
 
 UsePrivateHeaders shared ;
 

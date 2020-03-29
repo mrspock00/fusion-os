@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src libs alm ;
+SubDir FUSION_TOP src libs alm ;
 
 
 UseLibraryHeaders linprog alm ;
 UsePrivateHeaders shared ;
-UseHeaders [ FDirName $(HAIKU_TOP) src kits interface ] ;
+UseHeaders [ FDirName $(FUSION_TOP) src kits interface ] ;
 
 
 local architectureObject ;

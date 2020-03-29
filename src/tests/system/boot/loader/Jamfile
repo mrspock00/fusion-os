@@ -1,16 +1,16 @@
-SubDir HAIKU_TOP src tests system boot loader ;
+SubDir FUSION_TOP src tests system boot loader ;
 
 UsePrivateHeaders [ FDirName kernel disk_device_manager ] ;
 UsePrivateHeaders [ FDirName kernel util ] ;
 UsePrivateHeaders kernel shared storage system ;
-SubDirSysHdrs $(HAIKU_TOP) headers private kernel arch $(TARGET_KERNEL_ARCH) ;
-SubDirSysHdrs $(HAIKU_TOP) headers private system arch $(TARGET_ARCH) ;
-SubDirSysHdrs $(HAIKU_TOP) src tests system boot loader ;
-SubDirHdrs $(HAIKU_TOP) src system boot loader ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel partitioning_systems amiga ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel partitioning_systems apple ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel partitioning_systems gpt ;
-SubDirHdrs $(HAIKU_TOP) src add-ons kernel partitioning_systems intel ;
+SubDirSysHdrs $(FUSION_TOP) headers private kernel arch $(TARGET_KERNEL_ARCH) ;
+SubDirSysHdrs $(FUSION_TOP) headers private system arch $(TARGET_ARCH) ;
+SubDirSysHdrs $(FUSION_TOP) src tests system boot loader ;
+SubDirHdrs $(FUSION_TOP) src system boot loader ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel partitioning_systems amiga ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel partitioning_systems apple ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel partitioning_systems gpt ;
+SubDirHdrs $(FUSION_TOP) src add-ons kernel partitioning_systems intel ;
 
 # we need to redefine certain calls in the boot loader so that
 # they will really be used instead of their POSIX counterparts
@@ -127,37 +127,37 @@ SimpleTest BootLoaderTest :
 # Tell Jam where to find the utility sources
 
 SEARCH on [ FGristFiles list.cpp ring_buffer.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system kernel util ] ;
+	= [ FDirName $(FUSION_TOP) src system kernel util ] ;
 
 SEARCH on [ FGristFiles KMessage.cpp ]
-    = [ FDirName $(HAIKU_TOP) src system kernel messaging ] ;
+    = [ FDirName $(FUSION_TOP) src system kernel messaging ] ;
 
 SEARCH on [ FGristFiles strlcat.c strlcpy.c ]
-	= [ FDirName $(HAIKU_TOP) src system libroot posix string ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot posix string ] ;
 
 SEARCH on [ FGristFiles driver_settings.cpp ]
-	= [ FDirName $(HAIKU_TOP) src system libroot os ] ;
+	= [ FDirName $(FUSION_TOP) src system libroot os ] ;
 
 SEARCH on [ FGristFiles
 		main.cpp vfs.cpp partitions.cpp
 		heap.cpp RootFileSystem.cpp
 		elf.cpp menu.cpp loader.cpp
 		kernel_args.cpp load_driver_settings.cpp pager.cpp
-	] = [ FDirName $(HAIKU_TOP) src system boot loader ] ;
+	] = [ FDirName $(FUSION_TOP) src system boot loader ] ;
 
 # partitioning system modules
 
 SEARCH on [ FGristFiles amiga_rdb.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems amiga ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems amiga ] ;
 
 SEARCH on [ FGristFiles apple.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems apple ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems apple ] ;
 
 SEARCH on [ FGristFiles gpt.cpp Header.cpp crc32.cpp utility.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems gpt ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems gpt ] ;
 
 SEARCH on [ FGristFiles intel.cpp PartitionMap.cpp PartitionMapParser.cpp ]
-	= [ FDirName $(HAIKU_TOP) src add-ons kernel partitioning_systems intel ] ;
+	= [ FDirName $(FUSION_TOP) src add-ons kernel partitioning_systems intel ] ;
 
 
-SubInclude HAIKU_TOP src tests system boot loader file_systems ;
+SubInclude FUSION_TOP src tests system boot loader file_systems ;

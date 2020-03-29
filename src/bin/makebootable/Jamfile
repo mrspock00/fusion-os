@@ -1,5 +1,5 @@
-SubDir HAIKU_TOP src bin makebootable ;
+SubDir FUSION_TOP src bin makebootable ;
 
 if $(TARGET_KERNEL_PLATFORM) {
-	SubInclude HAIKU_TOP src bin makebootable platform $(TARGET_KERNEL_PLATFORM) ;
+	SubInclude FUSION_TOP src bin makebootable platform $(TARGET_KERNEL_PLATFORM) ;
 }

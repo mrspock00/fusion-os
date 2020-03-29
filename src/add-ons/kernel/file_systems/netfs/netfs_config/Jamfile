@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons kernel file_systems netfs netfs_config ;
+SubDir FUSION_TOP src add-ons kernel file_systems netfs netfs_config ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) headers fs ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) headers shared ] ;

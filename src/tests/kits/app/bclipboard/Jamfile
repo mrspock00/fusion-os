@@ -1,1 +1,1 @@
-SubDir HAIKU_TOP src tests kits app bclipboard ;
+SubDir FUSION_TOP src tests kits app bclipboard ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps cortex NodeManager ;
+SubDir FUSION_TOP src apps cortex NodeManager ;
 
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) ] ;
 SubDirHdrs [ FDirName $(SUBDIR) $(DOTDOT) Persistence ] ;

@@ -1,9 +1,9 @@
-SubDir HAIKU_TOP src add-ons kernel drivers disk ;
+SubDir FUSION_TOP src add-ons kernel drivers disk ;
 
-SubInclude HAIKU_TOP src add-ons kernel drivers disk floppy ;
-SubInclude HAIKU_TOP src add-ons kernel drivers disk mmc ;
-SubInclude HAIKU_TOP src add-ons kernel drivers disk norflash ;
-SubInclude HAIKU_TOP src add-ons kernel drivers disk nvme ;
-SubInclude HAIKU_TOP src add-ons kernel drivers disk scsi ;
-SubInclude HAIKU_TOP src add-ons kernel drivers disk usb ;
-SubInclude HAIKU_TOP src add-ons kernel drivers disk virtual ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk floppy ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk mmc ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk norflash ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk nvme ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk scsi ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk usb ;
+SubInclude FUSION_TOP src add-ons kernel drivers disk virtual ;

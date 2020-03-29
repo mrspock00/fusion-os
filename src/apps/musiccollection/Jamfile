@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src apps musiccollection ;
+SubDir FUSION_TOP src apps musiccollection ;
 
 UsePrivateHeaders storage shared ;
 UseLibraryHeaders lp_solve linprog alm ;

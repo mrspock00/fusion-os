@@ -1,10 +1,10 @@
-SubDir HAIKU_TOP src tests add-ons kernel ;
+SubDir FUSION_TOP src tests add-ons kernel ;
 
-SubInclude HAIKU_TOP src tests add-ons kernel bus_managers ;
-SubInclude HAIKU_TOP src tests add-ons kernel busses ;
-SubInclude HAIKU_TOP src tests add-ons kernel debugger ;
-SubInclude HAIKU_TOP src tests add-ons kernel drivers ;
-SubInclude HAIKU_TOP src tests add-ons kernel file_systems ;
-SubInclude HAIKU_TOP src tests add-ons kernel kernelland_emu ;
-SubInclude HAIKU_TOP src tests add-ons kernel network ;
-SubInclude HAIKU_TOP src tests add-ons kernel partitioning_systems ;
+SubInclude FUSION_TOP src tests add-ons kernel bus_managers ;
+SubInclude FUSION_TOP src tests add-ons kernel busses ;
+SubInclude FUSION_TOP src tests add-ons kernel debugger ;
+SubInclude FUSION_TOP src tests add-ons kernel drivers ;
+SubInclude FUSION_TOP src tests add-ons kernel file_systems ;
+SubInclude FUSION_TOP src tests add-ons kernel kernelland_emu ;
+SubInclude FUSION_TOP src tests add-ons kernel network ;
+SubInclude FUSION_TOP src tests add-ons kernel partitioning_systems ;

@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src libs stdc++ legacy ;
+SubDir FUSION_TOP src libs stdc++ legacy ;
 
 local architectureObject ;
 for architectureObject in [ MultiArchSubDirSetup x86_gcc2 ] {
@@ -16,7 +16,7 @@ for architectureObject in [ MultiArchSubDirSetup x86_gcc2 ] {
 		# but this doesn't work yet, as the libio we are using here and the one
 		# contained in our libroot are different versions.
 		local glibcDir
-			= [ FDirName $(HAIKU_TOP) src system libroot posix glibc ] ;
+			= [ FDirName $(FUSION_TOP) src system libroot posix glibc ] ;
 		SYSHDRS =
 			$(SUBDIR)
 			[ FDirName $(glibcDir) libio ]
@@ -24,14 +24,14 @@ for architectureObject in [ MultiArchSubDirSetup x86_gcc2 ] {
 			[ FDirName $(glibcDir) stdio-common ]
 			[ FDirName $(glibcDir) include ]
 			[ FDirName $(glibcDir) include arch x86 ]
-			[ FDirName $(HAIKU_TOP) headers cpp ]
+			[ FDirName $(FUSION_TOP) headers cpp ]
 			$(glibcDir)
-			[ FDirName $(HAIKU_TOP) headers posix ]
-			[ FDirName $(HAIKU_TOP) headers os ]
-			[ FDirName $(HAIKU_TOP) headers os kernel ]
-			[ FDirName $(HAIKU_TOP) headers os storage ]
-			[ FDirName $(HAIKU_TOP) headers os support ]
-			[ FDirName $(HAIKU_TOP) headers build gcc-2.95.3 ]
+			[ FDirName $(FUSION_TOP) headers posix ]
+			[ FDirName $(FUSION_TOP) headers os ]
+			[ FDirName $(FUSION_TOP) headers os kernel ]
+			[ FDirName $(FUSION_TOP) headers os storage ]
+			[ FDirName $(FUSION_TOP) headers os support ]
+			[ FDirName $(FUSION_TOP) headers build gcc-2.95.3 ]
 				# so that include_next will work
 			;
 

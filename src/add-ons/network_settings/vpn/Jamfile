@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src add-ons network_settings vpn ;
+SubDir FUSION_TOP src add-ons network_settings vpn ;
 
 UsePublicHeaders [ FDirName add-ons network_settings ] ;
 UsePrivateHeaders app libroot kernel net shared ;
-UseHeaders [ FDirName $(HAIKU_TOP) src preferences network ] : false ;
+UseHeaders [ FDirName $(FUSION_TOP) src preferences network ] : false ;
 
 AddResources VPNInterface : VPNInterface.rdef ;
 

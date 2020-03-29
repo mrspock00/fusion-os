@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src add-ons translators rtf ;
+SubDir FUSION_TOP src add-ons translators rtf ;
 
 # It's called RTF-Translator (with a dash) to differentiate it from the
 # RTFTranslator that comes with Gobe Productive (that doesn't support

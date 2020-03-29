@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests servers app draw_string_offsets ;
+SubDir FUSION_TOP src tests servers app draw_string_offsets ;
 
 AddSubDirSupportedPlatforms libbe_test ;
 

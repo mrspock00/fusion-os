@@ -1,4 +1,4 @@
-SubDir HAIKU_TOP src tests system boot heap ;
+SubDir FUSION_TOP src tests system boot heap ;
 
 UsePrivateKernelHeaders ;
 
@@ -15,4 +15,4 @@ SimpleTest heapTest :
 # Tell Jam where to find the utility sources
 SEARCH on [ FGristFiles
 		heap.cpp
-	] = [ FDirName $(HAIKU_TOP) src system boot loader ] ;
+	] = [ FDirName $(FUSION_TOP) src system boot loader ] ;

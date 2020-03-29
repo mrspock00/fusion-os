@@ -1,8 +1,8 @@
-SubDir HAIKU_TOP src tests system ;
+SubDir FUSION_TOP src tests system ;
 
-SubInclude HAIKU_TOP src tests system benchmarks ;
-SubInclude HAIKU_TOP src tests system boot ;
-SubInclude HAIKU_TOP src tests system glue ;
-SubInclude HAIKU_TOP src tests system kernel ;
-SubInclude HAIKU_TOP src tests system libroot ;
-SubInclude HAIKU_TOP src tests system network ;
+SubInclude FUSION_TOP src tests system benchmarks ;
+SubInclude FUSION_TOP src tests system boot ;
+SubInclude FUSION_TOP src tests system glue ;
+SubInclude FUSION_TOP src tests system kernel ;
+SubInclude FUSION_TOP src tests system libroot ;
+SubInclude FUSION_TOP src tests system network ;
