@@ -11,4 +11,4 @@
 
 bool is_dark;
 
-#endif	// COLORS_H
+#endif	// BOOLX_H
