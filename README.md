@@ -21,8 +21,8 @@ FreeBSD = sudo pkg install bison git nasm gawk texinfo xorriso wget u-boot-tools
 
 # Configure:
 
-mkdir generated.x86_64; cd generated.x86_64
-../configure --build-cross-tools x86_64 ../../buildtools
+mkdir generated.x86_64
+cd generated.x86_64 && ../configure --build-cross-tools x86_64 ../../buildtools
 
 # Build:
 
