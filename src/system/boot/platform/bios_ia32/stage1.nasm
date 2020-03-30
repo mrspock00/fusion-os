@@ -642,7 +642,7 @@ kNotADirectoryString		db	"not a directory", 0
 kBadInodeMagicString		db	"bad inode", 0
 kNoZbeosString				db	"no loader", 0
 %else
-kErrorString				db	"bios_ia32 stage1: Fusion:  Failed to load OS. Press any key to reboot..."
+kErrorString				db	"bios_ia32 stage1: Failed to load OS. Press any key to reboot..."
 							db	0
 %endif
 

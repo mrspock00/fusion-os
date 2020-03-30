@@ -39,17 +39,30 @@
 #include <boot/vfs.h>
 
 
-struct izin {
+/*struct izin {
 	bool izin_onyuk;
-	bool izin_desk;	
-};
+	bool izin_desk = false;	 // tr: eger masaustu ortamina gelirse ancak true degeri dondurebilir olacak.
+};*/
 
-izin iz;
+bool izin_onyuk;
+bool izin_desk = false;	
+
+
+
+typedef struct izinss {
+	bool izin_onyuk_s;
+	bool izin_desk_s = false;	 // tr: eger masaustu ortamina gelirse ancak true degeri dondurebilir olacak.
+} izin_t;
+
+
+
+//izin iz;
 
 class izin_class {
 public:
-	virtual void 		izin_onyuk(izin* izs, bool ef);
-	virtual void 		izin_shutdown(izin* iz, bool f);
+	virtual void 		izin_onyuk(bool ef);
+	virtual void 		izin_shutdown(bool f);
 	//extern void 		imp_modules();
 };
+
 #endif // IZIN_H
