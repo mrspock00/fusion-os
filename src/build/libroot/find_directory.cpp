@@ -20,9 +20,6 @@
 #include <find_directory_private.h>
 
 
-#ifndef HAIKU_BUILD_GENERATED_DIRECTORY
-#	error HAIKU_BUILD_GENERATED_DIRECTORY not defined!
-#endif
 
 
 /*! make dir and its parents if needed */
@@ -67,19 +64,19 @@ find_directory(directory_which which, dev_t device, bool createIt,
 	const char* path;
 	switch (which) {
 		case B_SYSTEM_TEMP_DIRECTORY:
-			path = HAIKU_BUILD_GENERATED_DIRECTORY "/tmp";
+			path = "../../tmp";
 			break;
 		case B_SYSTEM_SETTINGS_DIRECTORY:
-			path = HAIKU_BUILD_GENERATED_DIRECTORY "/system/settings";
+			path = "../../system/settings";
 			break;
 		case B_SYSTEM_CACHE_DIRECTORY:
-			path = HAIKU_BUILD_GENERATED_DIRECTORY "/system/cache";
+			path = "../../system/cache";
 			break;
 		case B_USER_SETTINGS_DIRECTORY:
-			path = HAIKU_BUILD_GENERATED_DIRECTORY "/user/settings";
+			path = "../../user/settings";
 			break;
 		case B_USER_CACHE_DIRECTORY:
-			path = HAIKU_BUILD_GENERATED_DIRECTORY "/user/cache";
+			path = "../../user/cache";
 			break;
 		default:
 			return B_BAD_VALUE;
