@@ -50,6 +50,8 @@ typedef int32 sem_id;
 typedef int32 team_id;
 typedef int32 thread_id;
 
+typedef size_t fsize;
+
 typedef int8_t integer8;
 typedef int16_t integer16;
 typedef int32_t integer32;
@@ -60,14 +62,12 @@ typedef uint8_t uinteger8;
 typedef uint16_t uinteger16;
 typedef uint32_t uinteger32;
 typedef uint64_t uinteger64;
-
-
 /* Areas */
 
 typedef struct area_info {
 	area_id		area;
 	char		name[B_OS_NAME_LENGTH];
-	size_t		size;
+	fsize		size;
 	uint32		lock;
 	uint32		protection;
 	team_id		team;
@@ -175,7 +175,7 @@ extern status_t		_get_next_port_info(team_id team, int32 *cookie,
    changed in the future. */
 
 typedef struct port_message_info {
-	size_t		size;
+	fsize		size;
 	uid_t		sender;
 	gid_t		sender_group;
 	team_id		sender_team;
@@ -236,9 +236,9 @@ extern status_t		set_sem_owner(sem_id id, team_id team);
 
 /* system private, use the macros instead */
 extern status_t		_get_sem_info(sem_id id, struct sem_info *info,
-						size_t infoSize);
+						fsize infoSize);
 extern status_t		_get_next_sem_info(team_id team, int32 *cookie,
-						struct sem_info *info, size_t infoSize);
+						struct sem_info *info, fsize infoSize);
 
 #define get_sem_info(sem, info) \
 	_get_sem_info((sem), (info), sizeof(*(info)))
@@ -269,9 +269,9 @@ extern status_t		kill_team(team_id team);
 	/* see also: send_signal() */
 
 /* system private, use macros instead */
-extern status_t		_get_team_info(team_id id, team_info *info, size_t size);
+extern status_t		_get_team_info(team_id id, team_info *info, fsize size);
 extern status_t		_get_next_team_info(int32 *cookie, team_info *info,
-						size_t size);
+						fsize size);
 
 #define get_team_info(id, info) \
 	_get_team_info((id), (info), sizeof(*(info)))
@@ -294,7 +294,7 @@ enum {
 
 /* system private, use macros instead */
 extern status_t		_get_team_usage_info(team_id team, int32 who,
-						team_usage_info *info, size_t size);
+						team_usage_info *info, fsize size);
 
 #define get_team_usage_info(team, who, info) \
 	_get_team_usage_info((team), (who), (info), sizeof(*(info)))
@@ -608,7 +608,7 @@ extern double		is_computer_on_fire(void);
 
 /* signal related functions */
 int		send_signal(thread_id threadID, unsigned int signal);
-void	set_signal_stack(void* base, size_t size);
+void	set_signal_stack(void* base, fsize size);
 
 
 /* WARNING: Experimental API! */
