@@ -1,6 +1,6 @@
 /*
- * Copyright 2001-2019 Haiku, Inc. All rights reserved.
- * Distributed under the terms of the MIT License.
+ * Copyright 2020 Ferhat Gecdogan All rights reserved.
+ * Distributed under the terms of the GPLv3 License.
  */
 #ifndef	_VIEW_H
 #define	_VIEW_H
@@ -80,7 +80,7 @@ const uint32 B_INPUT_METHOD_AWARE		= 0x00400000UL;	/* 23 */
 const uint32 B_SCROLL_VIEW_AWARE		= 0x00200000UL;	/* 22 */
 const uint32 B_SUPPORTS_LAYOUT			= 0x00100000UL;	/* 21 */
 const uint32 B_INVALIDATE_AFTER_LAYOUT	= 0x00080000UL;	/* 20 */
-
+const uint32 B_TRANSPARENT	= 0x00040000UL; 
 #define _RESIZE_MASK_ (0xffff)
 
 const uint32 _VIEW_TOP_					= 1UL;
