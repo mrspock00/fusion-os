@@ -1,6 +1,8 @@
 /*
- * Copyright 2004-2019, Haiku, Inc. All rights reserved.
- * Distributed under the terms of the MIT License.
+ * Copyright 2020, Ferhat Gecdogan. All rights reserved.
+ * Distributed under the terms of the GPLv3 License.
+ * Authors :
+ * 		Ferhat Gecdogan <ferhatgectao@gmail.com>
  */
 #ifndef _OS_H
 #define _OS_H
@@ -13,6 +15,8 @@
 #include <SupportDefs.h>
 #include <StorageDefs.h>
 
+
+#include <stddef.h> 
 
 #ifdef __cplusplus
 extern "C" {
@@ -45,6 +49,17 @@ typedef int32 port_id;
 typedef int32 sem_id;
 typedef int32 team_id;
 typedef int32 thread_id;
+
+typedef int8_t integer8;
+typedef int16_t integer16;
+typedef int32_t integer32;
+typedef int64_t integer64;
+
+/* Unsigned Types*/
+typedef uint8_t uinteger8;
+typedef uint16_t uinteger16;
+typedef uint32_t uinteger32;
+typedef uint64_t uinteger64;
 
 
 /* Areas */
