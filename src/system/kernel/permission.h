@@ -1,3 +1,12 @@
+/*
+ * Copyright 2020, Ferhat Gecdogan. All Rights Reserved.
+ * Distributed under the terms of the GPLv3 License.
+ *
+ * Authors:
+ *		Ferhat Gecdogan <ferhatgectao@gmail.com>
+ */
+
+
 #ifndef PERMISSION_H
 #define PERMISSION_H
 
@@ -35,34 +44,8 @@
 #include <vfs.h>
 #include <vm/vm.h>
 #include <boot/kernel_args.h>
-
 #include <boot/vfs.h>
 
 
-/*struct izin {
-	bool izin_onyuk;
-	bool izin_desk = false;	 // tr: eger masaustu ortamina gelirse ancak true degeri dondurebilir olacak.
-};*/
 
-bool izin_onyuk;
-bool izin_desk = false;	
-
-
-
-typedef struct izinss {
-	bool izin_onyuk_s;
-	bool izin_desk_s = false;	 // tr: eger masaustu ortamina gelirse ancak true degeri dondurebilir olacak.
-} izin_t;
-
-
-
-//izin iz;
-
-class izin_class {
-public:
-	virtual void 		izin_onyuk(bool ef);
-	virtual void 		izin_shutdown(bool f);
-	//extern void 		imp_modules();
-};
-
-#endif // PERMISSION
+#endif // PERMISSION_H

@@ -1,5 +1,10 @@
-/* Telif hakki Fegeya 2020*/
-
+/*
+ * Copyright 2020, Ferhat Gecdogan. All Rights Reserved.
+ * Distributed under the terms of the GPLv3 License.
+ *
+ * Authors:
+ *		Ferhat Gecdogan <ferhatgectao@gmail.com>
+ */
 
 #include <string.h>
 
