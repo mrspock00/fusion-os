@@ -46,13 +46,13 @@ BootPromptApp::MessageReceived(BMessage* message)
 	switch (message->what) {
 		case MSG_BOOT_DESKTOP:
 			BLaunchRoster().Target("desktop");
+			PostMessage(B_CLOSE_REQUESTED);
 			sExitValue = 1;
-			PostMessage(B_QUIT_REQUESTED);
 			break;
 		case MSG_RUN_INSTALLER:
 			BLaunchRoster().Target("installer");
+			PostMessage(B_CLOSE_REQUESTED);
 			sExitValue = 0;
-			PostMessage(B_QUIT_REQUESTED);
 			break;
 
 		default:

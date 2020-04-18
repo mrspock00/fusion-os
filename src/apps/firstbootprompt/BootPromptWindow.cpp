@@ -166,7 +166,7 @@ BootPromptWindow::BootPromptWindow()
 	fInfoTextView->MakeResizable(false);
 
 	// Carefully designed to not exceed the 640x480 resolution with a 12pt font.
-	float width = fInfoTextView->StringWidth("Thank you for trying out FegeyaOS."
+	float width = fInfoTextView->StringWidth("Thank you for trying out Fegeya Fusion."
 		"") * 1.5;
 	float height = be_plain_font->Size() * 23;
 
@@ -304,7 +304,7 @@ BootPromptWindow::_InitCatalog(bool saveSettings)
 void
 BootPromptWindow::_UpdateStrings()
 {
-	SetTitle(B_TRANSLATE("Welcome to FegeyaOS!                                                                                                                                                                                                                                            "));
+	SetTitle(B_TRANSLATE("Welcome to Fegeya Fusion !                                                                                                                                                                                                                                            "));
 
 	fInfoTextView->SetText(NULL);
 
