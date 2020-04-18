@@ -35,7 +35,7 @@ KernelMergeObject kernel_core.o :
 	heap.cpp
 	image.cpp
 	int.cpp
-	izin.cpp
+	permission.cpp
 	kernel_daemon.cpp
 	linkhack.c
 	listeners.cpp

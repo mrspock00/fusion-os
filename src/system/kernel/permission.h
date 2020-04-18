@@ -1,5 +1,5 @@
-#ifndef IZIN_H
-#define IZIN_H
+#ifndef PERMISSION_H
+#define PERMISSION_H
 
 
 #include <debug.h>
@@ -65,4 +65,4 @@ public:
 	//extern void 		imp_modules();
 };
 
-#endif // IZIN_H
+#endif // PERMISSION

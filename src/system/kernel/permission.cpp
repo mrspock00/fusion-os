@@ -7,7 +7,7 @@
 #include <FindDirectory.h>
 #include <OS.h>
 #include "../boot/loader/zarar.h"
-#include "izin.h"
+#include "permission.h"
 #include "../boot/loader/loader.h"
 // bootloader_h'dan alinacak olan booldan kontrol edilecek
 #define A_IZIN 1
