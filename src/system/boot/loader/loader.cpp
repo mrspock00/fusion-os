@@ -1,6 +1,9 @@
 /*
- * Copyright 2003-2009, Axel Dörfler, axeld@pinc-software.de.
- * Distributed under the terms of the MIT License.
+ * Copyright 2020, Ferhat Gecdogan. All Rights Reserved.
+ * Distributed under the terms of the GPLv3 License.
+ *
+ * Authors:
+ *		Ferhat Gecdogan <ferhatgectao@gmail.com>
  */
 
 
@@ -16,11 +19,10 @@
 #include <boot/platform.h>
 #include <boot/stdio.h>
 #include <boot/partitions.h>
-#include <Catalog.h>
-#include <Locale.h>
+
 #include <unistd.h>
 #include <string.h>
-#include "zarar.h"
+
 
 #ifndef BOOT_ARCH
 #	error BOOT_ARCH has to be defined to differentiate the kernel per platform
@@ -56,7 +58,7 @@ static const char *sAddonPaths[] = {
 };
 
 
-static int
+int
 open_maybe_packaged(BootVolume& volume, const char* path, int openMode)
 {
 	if (strncmp(path, kSystemDirectoryPrefix, strlen(kSystemDirectoryPrefix))
@@ -86,7 +88,6 @@ find_kernel(BootVolume& volume, const char** name = NULL)
 }
 
 
-
 bool
 is_bootable(Directory *volume)
 {
@@ -107,27 +108,28 @@ is_bootable(Directory *volume)
 	return true;
 }
 
+
 status_t
 load_kernel(stage2_args* args, BootVolume& volume)
 {
-
 	const char *name;
 	int fd = find_kernel(volume, &name);
 	if (fd < B_OK)
 		return fd;
 
 	dprintf("load kernel %s...\n", name);
-	// kernel yuklenir.
+
 	elf_init();
 	preloaded_image *image;
 	status_t status = elf_load_image(fd, &image);
-	
+
 	close(fd);
+
 	if (status < B_OK) {
 		dprintf("loading kernel failed: %" B_PRIx32 "!\n", status);
 		return status;
 	}
-	
+
 	gKernelArgs.kernel_image = image;
 
 	status = elf_relocate_image(gKernelArgs.kernel_image);
@@ -137,7 +139,7 @@ load_kernel(stage2_args* args, BootVolume& volume)
 	}
 
 	gKernelArgs.kernel_image->name = kernel_args_strdup(name);
-	
+
 	return B_OK;
 }
 
@@ -174,31 +176,11 @@ load_modules_from(BootVolume& volume, const char* path)
 }
 
 
-/*status_t
-add_de_in_ram(bool load)
-{	
-	if(load == true)
-	{	
-				
-	} else {
-	dprintf("This is not loading or RAM is full");
-	}
-
-	
-}	*/
-
-struct Operation {
-	bool boolean;
-	bool stage1;
-	bool stage2;
-	bool stage3;
-};
-
-
 status_t
 load_modules(stage2_args* args, BootVolume& volume)
 {
-	Operation as;
+	int32 failed = 0;
+
 	// ToDo: this should be mostly replaced by a hardware oriented detection mechanism
 
 	int32 i = 0;
@@ -220,7 +202,6 @@ load_modules(stage2_args* args, BootVolume& volume)
 			char path[B_FILE_NAME_LENGTH];
 			snprintf(path, sizeof(path), "%s/%s", sAddonPaths[0], paths[i]);
 			load_modules_from(volume, path);
-			as.stage1 = true;
 		}
 	}
 
@@ -230,53 +211,6 @@ load_modules(stage2_args* args, BootVolume& volume)
 	load_modules_from(volume, path);
 	snprintf(path, sizeof(path), "%s/%s", sAddonPaths[0], "partitioning_systems");
 	load_modules_from(volume, path);
-	//as.stage1 = as.stage2; this code its code given an error
+
 	return B_OK;
 }
-void op(bool iz_n)
-{
-	Operation as;
-	const char *pth[] = {"true","false", NULL};
-	for(int32 i = 0; pth[i]; i++)
-	{
-		if(strcmp(pth[i], "true") == 1)
-		{
-			iz_n = true;
-			as.boolean = iz_n;
-
-		} else {
-			if(strcmp(pth[i], "false") == 1)
-			{
-				iz_n = false;
-				as.boolean = iz_n;
-			}
-		}
-
-	} 
-}
-
-
-
-void
-Bootloader_s::BootLoader_stage3(BootVolume& volume, stage3_t* n, bool boolean)
-{
-	
-	Operation as;
-	const char *path_izin[] = {"izin", NULL};
-	boolean = true;
-	if(boolean == true)
-	{
-		for(int32 i = 0; path_izin[i]; i++) 
-		{
-			char paths_f[B_FILE_NAME_LENGTH];
-			load_modules_from(volume, paths_f);
-			boolean = true;	
-			as.stage3 = true;
-		}
-	} else {
-		//n = false;
-		boolean = true;
-	}
-	op(true);
-}
-// not typedef struct this is only struct because not use a_t
