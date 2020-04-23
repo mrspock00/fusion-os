@@ -1,12 +1,9 @@
 /*
- * Copyright 2006-2010, Haiku, Inc. All Rights Reserved.
- * Distributed under the terms of the MIT License.
- *
- * Support for i915 chipset and up based on the X driver,
- * Copyright 2006-2007 Intel Corporation.
+ * Copyright 2020, Ferhat Gecdogan. All Rights Reserved.
+ * Distributed under the terms of the GPLv3 License.
  *
  * Authors:
- *		Axel Dörfler, axeld@pinc-software.de
+ *		Ferhat Gecdogan <ferhatgectao@gmail.com>
  */
 
 
@@ -308,6 +305,22 @@ set_frame_buffer_base()
 	set_frame_buffer_registers(INTEL_DISPLAY_B_BASE, INTEL_DISPLAY_B_SURFACE);
 }
 
+static bool
+limit_modes_gen3_lvds(display_mode* _mode)
+{
+	if(gInfo->shared_info->panel_mode.virtual_width < _mode->virtual_width)
+	{
+		return false;
+	}
+	if(gInfo->shared_info->panel_mode.virtual_height < _mode->virtual_height)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+
 
 /*!	Creates the initial mode list of the primary accelerant.
 	It's called from intel_init_accelerant().
@@ -343,6 +356,12 @@ create_mode_list(void)
 		colorSpaceCount = 0;
 	}
 
+	int32 four = 4;
+	check_display_mode_hook limitMode = NULL;
+	if(gInfo->shared_info->device_type.Generation() <  four)
+	{
+		limitMode = limit_modes_gen3_lvds;
+	}
 	// If no EDID, but have vbt from driver, use that mode
 	if (!gInfo->has_edid && gInfo->shared_info->got_vbt) {
 		// We could not read any EDID info. Fallback to creating a list with
@@ -351,7 +370,7 @@ create_mode_list(void)
 		// TODO: support lower modes via scaling and windowing
 		gInfo->mode_list_area = create_display_modes("intel extreme modes",
 			NULL, &gInfo->shared_info->panel_mode, 1,
-			supportedSpaces, colorSpaceCount, NULL, &list, &count);
+			supportedSpaces, colorSpaceCount, limitMode, &list, &count);
 	} else {
 		// Otherwise return the 'real' list of modes
 		gInfo->mode_list_area = create_display_modes("intel extreme modes",
