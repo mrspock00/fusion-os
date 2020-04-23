@@ -1335,7 +1335,7 @@ TDragRegion::AttachedToWindow()
 	BView::AttachedToWindow();
 
 	if (be_control_look != NULL)
-		SetViewUIColor(B_MENU_BACKGROUND_COLOR, 1.1);
+		SetViewUIColor(B_MENU_BACKGROUND_COLOR, 1.0);
 	else
 		SetViewUIColor(B_MENU_BACKGROUND_COLOR);
 
@@ -1674,7 +1674,7 @@ TResizeControl::AttachedToWindow()
 	BView::AttachedToWindow();
 
 	if (be_control_look != NULL)
-		SetViewUIColor(B_MENU_BACKGROUND_COLOR, 1.1);
+		SetViewUIColor(B_MENU_BACKGROUND_COLOR, 1.0);
 	else
 		SetViewUIColor(B_MENU_BACKGROUND_COLOR);
 }

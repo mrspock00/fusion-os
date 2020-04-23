@@ -184,6 +184,8 @@ TBarApp::QuitRequested()
 }
 
 
+
+
 void
 TBarApp::SaveSettings()
 {
@@ -260,7 +262,7 @@ TBarApp::InitSettings()
 	// window
 	settings.alwaysOnTop = fDefaultSettings.alwaysOnTop = true;
 	settings.autoRaise = fDefaultSettings.autoRaise = false;
-	settings.autoHide = fDefaultSettings.autoHide = true; 
+	settings.autoHide = fDefaultSettings.autoHide = false; 
 
 	clock_settings clock;
 	clock.showSeconds = false;
@@ -525,6 +527,7 @@ TBarApp::MessageReceived(BMessage* message)
 			if (fPreferencesWindow != NULL)
 				fPreferencesWindow->PostMessage(kUpdatePreferences);
 
+			
 			fBarWindow->Lock();
 			fBarView->HideDeskbar(fSettings.autoHide);
 			fBarWindow->Unlock();

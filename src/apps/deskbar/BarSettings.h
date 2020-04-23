@@ -62,6 +62,7 @@ struct desk_settings {
 	bool alwaysOnTop;
 	bool autoRaise;
 	bool autoHide;
+	//bool _hide;
 };
 
 struct clock_settings {

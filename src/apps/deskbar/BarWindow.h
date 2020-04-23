@@ -50,6 +50,7 @@ public:
 	virtual	void				MenusBeginning();
 	virtual	void				MenusEnded();
 	virtual	bool				QuitRequested();
+	//virtual bool				OpenRequested();
 	virtual	void				WorkspaceActivated(int32 workspace,
 									bool activate);
 	virtual	void				ScreenChanged(BRect size, color_space depth);

@@ -69,7 +69,7 @@ const uint32 kSuspendSystem = 304;
 const uint32 kTextModeSystem = 305;
 
 // icon size constants
-const int32 kMinimumIconSize = 16;
+const int32 kMinimumIconSize = 16; // 16x16px
 const int32 kMaximumIconSize = 96;
 const int32 kIconSizeInterval = 8;
 const int32 kIconCacheCount = (kMaximumIconSize - kMinimumIconSize)
@@ -115,6 +115,7 @@ public:
 	virtual							~TBarApp();
 
 	virtual	bool					QuitRequested();
+	//virtual bool					OpenRequested();
 	virtual	void					MessageReceived(BMessage* message);
 	virtual	void					RefsReceived(BMessage* refs);
 

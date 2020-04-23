@@ -55,7 +55,7 @@ All rights reserved.
 #include "TeamMenu.h"
 
 
-const float kSepItemWidth = 5.0f;
+const float kSepItemWidth = 5.0f; // I will add textbox, and default width is 5<dot>0f, this variable be will is changeable(?)
 
 
 //	#pragma mark - TSeparatorItem
@@ -81,7 +81,7 @@ TSeparatorItem::Draw()
 
 	menu->PushState();
 
-	menu->SetHighColor(tint_color(base, 1.22));
+	menu->SetHighColor(tint_color(base, 1.0)); // dark -> dark 
 	frame.top--;
 		// need to expand the frame for some reason
 

@@ -113,7 +113,7 @@ TWindowMenuItem::Draw()
 
 	// TODO: Tint this smartly based on the low color, this does
 	// nothing to black.
-	rgb_color menuColor = tint_color(ui_color(B_MENU_BACKGROUND_COLOR), 1.07);
+	rgb_color menuColor = tint_color(ui_color(B_MENU_BACKGROUND_COLOR), 1.0);
 	BRect frame(Frame());
 	BMenu* menu = Menu();
 
@@ -124,7 +124,7 @@ TWindowMenuItem::Draw()
 	if ((!IsSelected() && !menu->IsRedrawAfterSticky())
 		|| barview->Dragging() || !IsEnabled()) {
 
-		rgb_color shadow = tint_color(menuColor, 1.09);
+		rgb_color shadow = tint_color(menuColor, 1.0);
 		menu->SetHighColor(shadow);
 		frame.right = frame.left + kHPad / 2;
 		menu->FillRect(frame);

@@ -849,7 +849,7 @@ TExpandoMenuBar::DrawBackground(BRect updateRect)
 		bounds.left = 0;
 
 	if (be_control_look != NULL) {
-		SetHighColor(tint_color(menuColor, 1.22));
+		SetHighColor(tint_color(menuColor, 1.0));
 		StrokeLine(bounds.LeftTop(), bounds.LeftBottom());
 		bounds.left++;
 		uint32 borders = BControlLook::B_TOP_BORDER
