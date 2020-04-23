@@ -656,6 +656,11 @@ extern ssize_t		wait_for_objects_etc(object_wait_info* infos, int numInfos,
 						uint32 flags, bigtime_t timeout);
 
 
+
+
+
+
+
 #ifdef __cplusplus
 }
 #endif

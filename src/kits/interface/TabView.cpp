@@ -15,7 +15,7 @@
 #include <TabViewPrivate.h>
 
 #include <new>
-
+#include <Window.h>
 #include <math.h>
 #include <string.h>
 
@@ -709,17 +709,44 @@ BTabView::KeyDown(const char* bytes, int32 numBytes)
 }
 
 
+
 void
 BTabView::MouseDown(BPoint where)
 {
-	for (int32 i = 0; i < CountTabs(); i++) {
-		if (TabFrame(i).Contains(where)
-			&& i != Selection()) {
-			Select(i);
-			return;
-		}
+	uint32 buttons = 0;
+	BMessage* curr_message_ = Window()->CurrentMessage();
+	if(curr_message_ != nullptr)
+	{
+		// FindInt32 because, I'm defined int32 variable.
+		curr_message_->FindInt32("buttons", (int32*)&buttons);
 	}
 
+	int32 select = Selection();
+	int32 TabNumber = CountTabs();
+
+	if(buttons)
+	{
+		if(select > 0 && TabNumber > 1)
+		{
+			Select(Selection() -1);
+		} else if(buttons)
+		{
+			 if(select < TabNumber -1)
+			 {
+				 Select(Selection() + 1);
+			 }
+		} 
+	} else {
+		for (int32 t = 0; t < CountTabs(); t++)
+		{
+			if(TabFrame(t).Contains(where)
+				&& t != Selection()) {
+					Select(t);
+					return;
+				}
+
+		}
+	}
 	BView::MouseDown(where);
 }
 
