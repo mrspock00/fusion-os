@@ -45,7 +45,7 @@ All rights reserved.
 // Private app_server defines that I need to use
 
 #define _DESKTOP_W_TYPE_ 1024
-#define _FLOATER_W_TYPE_ 4
+#define _FLOATER_W_TYPE_ 5 // character size
 #define _STD_W_TYPE_ 0
 
 
@@ -60,11 +60,13 @@ const uint32 kAddTeam = 'AdTm';
 const uint32 kRemoveTeam = 'RmTm';
 const uint32 kRestart = 'Rtrt';
 const uint32 kShutDown = 'ShDn';
+const uint32 kTextMode = 'TtMd';
 
 // from roster_private.h
 const uint32 kShutdownSystem = 301;
 const uint32 kRebootSystem = 302;
 const uint32 kSuspendSystem = 304;
+const uint32 kTextModeSystem = 305;
 
 // icon size constants
 const int32 kMinimumIconSize = 16;

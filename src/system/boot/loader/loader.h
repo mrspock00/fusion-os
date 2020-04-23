@@ -5,7 +5,6 @@
 #ifndef LOADER_H
 #define LOADER_H
 
-
 #include <boot/vfs.h>
 
 extern bool is_bootable(Directory* volume);

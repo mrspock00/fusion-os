@@ -5282,14 +5282,23 @@ user_strlcpy(char* to, const char* from, size_t size)
 		// NOTE: Since arch_cpu_user_strlcpy() determines the length of \a from,
 		// the source address might still overflow.
 
+	if (IS_USER_ADDRESS(from) && !IS_USER_ADDRESS((addr_t)from + maxSize))
+	{
+		maxSize = USER_TOP; // I will add addr_t -> from
+		maxSize -= (addr_t)from;
+	}
 	ssize_t result = arch_cpu_user_strlcpy(to, from, maxSize);
-
-	// If we hit the address overflow boundary, fail.
-	if (result < 0 || (result >= 0 && (size_t)result >= maxSize
-			&& maxSize < size)) {
-		return B_BAD_ADDRESS;
+	if(result < 0)
+	{
+		return result;
 	}
 
+
+	if ((size_t)result >= maxSize && maxSize < size)
+	{
+		return B_BAD_ADDRESS;
+	}
+	
 	return result;
 }
 

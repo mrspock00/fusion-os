@@ -45,7 +45,19 @@
 #include <vm/vm.h>
 #include <boot/kernel_args.h>
 #include <boot/vfs.h>
+#include <OS.h>
 
+typedef char fchar;
 
+class FPermission {
+public:
+    FPermission();
+    ~FPermission();
+    void        GetPermission(fchar, fchar); // I will add variable.. 
+private:
+    uinteger8   permission_value;
+    bool    desktop_permission_value;
+
+};
 
 #endif // PERMISSION_H

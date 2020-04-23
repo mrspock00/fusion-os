@@ -12,3 +12,18 @@
 #include <permission.h>
 #include "../boot/loader/loader.h"
 
+FPermission::FPermission()
+{
+
+}
+
+FPermission::~FPermission()
+{
+
+}
+
+void
+FPermission::GetPermission(fchar loader_init, fchar _path)
+{
+    
+}

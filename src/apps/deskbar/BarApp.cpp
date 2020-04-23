@@ -38,7 +38,7 @@ All rights reserved.
 
 #include <locale.h>
 #include <strings.h>
-
+#include "../terminal/TermApp.h"
 #include <AppFileInfo.h>
 #include <Autolock.h>
 #include <Bitmap.h>
@@ -81,6 +81,7 @@ const uint32 kShowDeskbarMenu		= 'BeMn';
 const uint32 kShowTeamMenu			= 'TmMn';
 
 static const color_space kIconColorSpace = B_RGBA32;
+//TermApp app;
 
 
 int
@@ -257,9 +258,9 @@ TBarApp::InitSettings()
 	settings.recentFoldersCount = fDefaultSettings.recentFoldersCount = 10;
 	settings.recentAppsCount = fDefaultSettings.recentAppsCount = 10;
 	// window
-	settings.alwaysOnTop = fDefaultSettings.alwaysOnTop = false;
+	settings.alwaysOnTop = fDefaultSettings.alwaysOnTop = true;
 	settings.autoRaise = fDefaultSettings.autoRaise = false;
-	settings.autoHide = fDefaultSettings.autoHide = false;
+	settings.autoHide = fDefaultSettings.autoHide = true; 
 
 	clock_settings clock;
 	clock.showSeconds = false;
@@ -675,7 +676,11 @@ TBarApp::MessageReceived(BMessage* message)
 
 			break;
 		}
-
+		case kTextModeSystem:
+		{
+			//app.Run();
+			
+		}
 		case kShowSplash:
 			run_be_about();
 			break;

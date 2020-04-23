@@ -294,6 +294,10 @@ B_TRANSLATE_MARK_VOID("About this system")
 
 	BMenu* shutdownMenu = new BMenu(B_TRANSLATE("Shutdown" B_UTF8_ELLIPSIS));
 
+
+	item = new BMenuItem(B_TRANSLATE("Only-Text-Mode"),
+		new BMessage(kTextModeSystem));
+	
 	item = new BMenuItem(B_TRANSLATE("Restart system"),
 		new BMessage(kRebootSystem));
 	item->SetEnabled(!dragging);
@@ -378,6 +382,7 @@ TDeskbarMenu::ResetTargets()
 				case kTrackerFirst:
 				case kRebootSystem:
 				case kSuspendSystem:
+				case kTextModeSystem:
 				case kShutdownSystem:
 				case kRealignReplicants:
 				case kShowHideTime:
