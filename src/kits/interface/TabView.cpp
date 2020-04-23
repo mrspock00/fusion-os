@@ -1407,10 +1407,10 @@ BTabView::_BorderWidth() const
 	switch (fBorderStyle) {
 		default:
 		case B_FANCY_BORDER:
-			return 3.0f;
+			return 6.0f;
 
 		case B_PLAIN_BORDER:
-			return 1.0f;
+			return 2.0f;
 
 		case B_NO_BORDER:
 			return 0.0f;
@@ -1427,7 +1427,7 @@ BTabView::_LayoutContainerView(bool layouted)
 		switch (fBorderStyle) {
 			default:
 			case B_FANCY_BORDER:
-				topBorderOffset = 1.0f;
+				topBorderOffset = 5.0f;
 				break;
 
 			case B_PLAIN_BORDER:
@@ -1435,7 +1435,7 @@ BTabView::_LayoutContainerView(bool layouted)
 				break;
 
 			case B_NO_BORDER:
-				topBorderOffset = -1.0f;
+				topBorderOffset = -5.0f;
 				break;
 		}
 		BGroupLayout* layout = dynamic_cast<BGroupLayout*>(GetLayout());

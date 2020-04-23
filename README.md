@@ -1,6 +1,7 @@
 # fusion-os
 Fegeya Fusion
 
+![Fusion](Fusion.png)
 
 # Build:
 
@@ -33,10 +34,6 @@ jam -q -j(yourcpucore) @nightly-anyboot
 
 Build Jam:
 Not now (You're should using Haiku's Buildtools. There in: https://github.com/haiku/buildtools)
-
-
-
-![fegeya-fusion](https://user-images.githubusercontent.com/54369961/78505915-357a9780-777f-11ea-8c17-2351f67e2710.png)
 
 
 
